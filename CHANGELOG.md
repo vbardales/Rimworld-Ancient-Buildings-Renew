@@ -51,6 +51,11 @@ First release. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWo
 - `Languages/French/`, 12 keys.
 - `<incompatibleWith>ancientbld.core</incompatibleWith>`: the `defName`s are unchanged, so the
   two mods cannot load together.
+- `About/Preview.png`, made for this port: the mod's own corner of road at dusk, fence, barrier,
+  lamppost and vending machine in one frame, with the name engraved on it. It replaces
+  SyndicateGamingNetwork's showcase, which is no longer shipped.
+- `About/ModIcon.png`, the repository's mascot. An earlier icon, a crop of the mod's own lamppost
+  texture, was dropped for being off that style.
 
 ### Removed
 
@@ -71,4 +76,3 @@ First release. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWo
 - The balance, including the two places it invites a change: the stove has no research
   prerequisite, and it inherits `workTableRoomRole` = `Workshop` rather than `Kitchen`. See
   [ATTRIBUTION.md](ATTRIBUTION.md) for why both were left alone.
-- `About/Preview.png`, SyndicateGamingNetwork's own.

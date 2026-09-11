@@ -30,15 +30,21 @@ research, no dependency:
 | `ConFence` | concrete fence | Structure |
 
 Their stats, costs, power draw, comps and graphics are SyndicateGamingNetwork's, unchanged. So
-are the eight textures the mod ships, byte for byte, and `About/Preview.png`, which is their own
-showcase of the fence and the lampposts.
+are the eight textures the mod ships, byte for byte.
 
-The mod ships **no `About/ModIcon.png`**. There was one — the mod's own lamppost texture, cropped
-to its opaque bounds and scaled to 128 px — and it was removed on 2026-09-11 with the rest of the
-off-style icons. The repository draws a single mascot across all its mods, and an icon that is
-not her is worse than none, because she is what makes the family read at 32 px in the mod list.
-Nothing of SyndicateGamingNetwork's is affected either way: the crop was of their texture, and
-the texture is still here.
+**The two Workshop images are not theirs.** `About/Preview.png` is a banner made for this port:
+the mod's own corner of road at dusk, with the fence, the barrier, the lamppost and the vending
+machine in one frame, and the mod's name engraved on it. It replaced SyndicateGamingNetwork's own
+showcase of the fence and the lampposts on 2026-09-11, and that image is no longer shipped. It is
+still reachable in this repository's published history, at commit `dacc55f`, where it was
+committed before the replacement; removing it going forward is a choice about what this mod hands
+out, not an attempt to unpublish it.
+
+`About/ModIcon.png` is the repository's mascot, the same character across every mod, which is
+what makes the family read at 32 px in the mod list. An earlier icon — the mod's own lamppost
+texture, cropped to its opaque bounds and scaled to 128 px — was removed on 2026-09-11 with the
+rest of the off-style icons, and the mascot took its place. Nothing of SyndicateGamingNetwork's
+is affected either way: the crop was of their texture, and the texture is still here.
 
 ## The one def that is not SyndicateGamingNetwork's
 

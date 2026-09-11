@@ -32,6 +32,8 @@ The MIT licence above covers only what the 1.6 port added:
   - AB_AirConditioner, a def written from scratch for a texture the original
     mod shipped and never declared. The def is the port's; the texture is not
   - the rewritten labels and descriptions, and the French translation
+  - About/Preview.png and About/ModIcon.png, both made for this port. The
+    buildings the banner shows are SyndicateGamingNetwork's; the image is not
   - the packaging and the documentation
 
 IT DOES NOT COVER THE ORIGINAL MOD. The five buildings, their stats, their
@@ -43,8 +45,9 @@ here:
 SyndicateGamingNetwork never declared a licence for them, so none is granted
 here and none can be. They are redistributed under the usual practice for
 abandoned mods - explicit credit, a link to the original, and removal on
-request. About/Preview.png is theirs as it stands, and so is the air conditioner
-texture. The mod ships no ModIcon.png at all.
+request. The air conditioner texture is theirs too. Their own showcase image is
+no longer shipped: the About/Preview.png and About/ModIcon.png in this mod are
+the port's work and fall under the licence above.
 
 If SyndicateGamingNetwork asks for this to be taken down, it comes down.
 Immediately, and without discussion.
