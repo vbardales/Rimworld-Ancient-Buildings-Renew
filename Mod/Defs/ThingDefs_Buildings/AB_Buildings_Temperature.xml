@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    NEW. This def is not SyndicateGamingNetwork's - the texture is.
+
+    AB_AirConditioner.png shipped in the original mod, finished, 64x64, and no def declared it.
+    It is the only piece of art in there that the game never loaded: a rusted condenser seen
+    from above, a fan in a round housing over a vent grille. This file gives it the building it
+    was drawn for. It lives apart from AB_Buildings_Structure.xml so that the boundary between
+    what was ported and what was added is visible in the file listing, not only in the comments.
+
+    The design follows the other four rather than inventing a new idea. Every building in this
+    mod is a cheaper, cruder variant of something vanilla already has - a concrete fence beside
+    the fence, a barrier beside the sandbags, a one-tile stove beside the three-tile one - and
+    each pays for what it saves. So this is a cooler: the same machine, in the same place in the
+    tech tree, cheaper and quicker to put up, and thirstier and weaker once it runs.
+
+                                   vanilla cooler   this
+      steel / components                 90 / 3     70 / 2
+      work to build                        1600     1200
+      construction skill                      5        4
+      power                                200W     250W
+      cooling (energyPerSecond)             -21      -16
+
+    It is deliberately NOT free of the research. AirConditioning is a real progression gate -
+    it is what stands between a colony and a walk-in freezer - and handing it over for the price
+    of one mod would change the game rather than furnish it. The rest of this mod asks for no
+    research because none of it unlocks anything; this would.
+  -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>AB_AirConditioner</defName>
+    <label>ancient air conditioner</label>
+    <description>A salvaged air-cooling unit that fits into a wall. Cool air comes out one side, while hot exhaust comes out the other. Older and cruder than a modern cooler: it drinks more power and moves less heat, but it is quicker to put together out of less.</description>
+    <thingClass>Building_Cooler</thingClass>
+    <graphicData>
+      <!--
+        Graphic_Single, because there is one texture and only one. That is not a shortcut: a
+        Graphic_Single on a rotatable building is drawn turned to face its rotation, so the
+        grille swings round with the unit and goes on marking the exhaust side, which is the
+        one thing about a cooler a player has to be able to read at a glance.
+      -->
+      <texPath>Things/Building/ABSingle/AB_AirConditioner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <blockWeather>true</blockWeather>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <statBases>
+      <WorkToBuild>1200</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <costList>
+      <Steel>70</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_Cooler</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <!--
+      isAirtight and canPlaceOverWall are what make this a wall unit rather than a box in the
+      middle of a room, and they are not decoration: Building_Cooler reads the room on the cold
+      side and the room on the hot side. Set in the open, both cells are the same room and the
+      machine does nothing at all but draw power.
+    -->
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <isAirtight>true</isAirtight>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>-16</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <designationCategory>Temperature</designationCategory>
+    <researchPrerequisites>
+      <li>AirConditioning</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+  </ThingDef>
+
+</Defs>

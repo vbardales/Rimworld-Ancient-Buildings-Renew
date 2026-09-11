@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- EN: simple kitchen stove -->
+  <ABKitchenstove.label>cuisinière simple</ABKitchenstove.label>
+  <!-- EN: A simple stove top for cooking meals. -->
+  <ABKitchenstove.description>Une simple plaque de cuisson pour préparer les repas.</ABKitchenstove.description>
+
+  <!-- EN: vending machine -->
+  <ABVending.label>distributeur automatique</ABVending.label>
+  <!-- EN: A simple vending machine altered to store meals and other cooking materials. -->
+  <ABVending.description>Un simple distributeur automatique, modifié pour y ranger des repas et de quoi cuisiner.</ABVending.description>
+
+  <!-- EN: concrete barrier -->
+  <ConcreteBarrier.label>barrière en béton</ConcreteBarrier.label>
+  <!-- EN: A traffic management solution allowing for cover from gunfire. -->
+  <ConcreteBarrier.description>Un dispositif de gestion du trafic qui offre aussi un abri contre les tirs.</ConcreteBarrier.description>
+
+  <!-- EN: lamppost -->
+  <AB_Lamppost.label>lampadaire</AB_Lamppost.label>
+  <!-- EN: A traffic management solution to allow sight in dark environments. This one runs on solar energy, to help free up the energy grid. -->
+  <AB_Lamppost.description>Un dispositif de gestion du trafic qui permet d'y voir quand il fait sombre. Celui-ci fonctionne à l'énergie solaire, ce qui soulage d'autant le réseau électrique.</AB_Lamppost.description>
+
+  <!-- EN: concrete fence -->
+  <ConFence.label>clôture en béton</ConFence.label>
+  <!-- EN: A fence made of concrete. -->
+  <ConFence.description>Une clôture faite de béton.</ConFence.description>
+
+</LanguageData>

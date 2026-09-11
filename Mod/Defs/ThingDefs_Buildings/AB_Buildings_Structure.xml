@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    "Ancient" Buildings, by SyndicateGamingNetwork, brought forward from 1.3 to 1.6.
+
+    The five ThingDefs the mod shipped, no C#, no patch, no research. A sixth def, the air
+    conditioner, is new and lives in AB_Buildings_Temperature.xml; nothing in this file is.
+    The defNames are SyndicateGamingNetwork's
+    own and are deliberately unchanged, so a save moves between the original mod and this
+    port without losing a single building. Two of them - ConcreteBarrier and ConFence - carry
+    no author prefix; a sweep of all 10 360 subscribed Workshop mods and of Core and every DLC
+    found no other def by either name, so they are kept as they are rather than renamed. A
+    rename cannot be undone: it would take every barrier and fence already built out of every
+    existing save.
+
+    What the port changed is marked PORT below. Everything else - the stats, the costs, the
+    textures, the balance - is as SyndicateGamingNetwork wrote it.
+  -->
+
+  <!--==================== Ancient WorkBuildings ====================-->
+
+  <ThingDef ParentName="BenchBase">
+    <defName>ABKitchenstove</defName>
+    <label>simple kitchen stove</label>
+    <description>A simple stove top for cooking meals.</description>
+    <thingClass>Building_WorkTable_HeatPush</thingClass>
+    <graphicData>
+      <texPath>Things/Building/ABSingle/AB_Stove</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkTableWorkSpeedFactor>0.9</WorkTableWorkSpeedFactor>
+    </statBases>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <recipes>
+      <li>CookMealSimple</li>
+      <li>CookMealFine</li>
+      <li>CookMealFine_Veg</li>
+      <li>CookMealFine_Meat</li>
+      <li>CookMealLavish</li>
+      <li>CookMealLavish_Veg</li>
+      <li>CookMealLavish_Meat</li>
+      <li>CookMealSurvival</li>
+      <li>CookMealSimpleBulk</li>
+      <li>CookMealFineBulk</li>
+      <li>CookMealFineBulk_Veg</li>
+      <li>CookMealFineBulk_Meat</li>
+      <li>CookMealLavishBulk</li>
+      <li>CookMealLavishBulk_Veg</li>
+      <li>CookMealLavishBulk_Meat</li>
+      <li>CookMealSurvivalBulk</li>
+      <li>Make_Pemmican</li>
+      <li>Make_PemmicanBulk</li>
+      <!--
+        PORT. The recipe list above is the vanilla electric stove's, copied as it stood in 1.3.
+        Biotech shipped in 1.4 and added two recipes to that list; without them, a colony whose
+        only stove is this one cannot make baby food at all. MayRequire keeps both entries inert
+        when Biotech is absent, exactly as vanilla writes them.
+      -->
+      <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFood</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFoodBulk</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3</heatPerSecond>
+      </li>
+    </comps>
+    <building>
+      <isMealSource>true</isMealSource>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>ABVending</defName>
+    <label>vending machine</label>
+    <description>A simple vending machine altered to store meals and other cooking materials.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>Things/Building/ABSingle/AB_VendingMachine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>50</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>0.5</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <!--
+        PORT, both lines. Storage groups arrived in 1.4, after this mod stopped: a storage
+        building with no storageGroupTag is the one piece of storage in the game with no
+        "link storage settings" gizmo, which reads as broken rather than as deliberate. Its
+        own tag rather than Shelf, because this machine's fixed filter is wider than a
+        shelf's and a shared group would hand shelves settings they cannot honour.
+
+        Blueprint_Storage is the other half: it is what lets the filter be set on the
+        blueprint, before the thing is built. Every vanilla storage building in 1.6 declares
+        one - the shelves and the nutrient paste hopper Blueprint_Storage, the bookcases
+        Blueprint_StorageWithRoomHighlight - and this one never did.
+      -->
+      <storageGroupTag>ABVending</storageGroupTag>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>FoodMeals</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
+
+  <!--==================== Ancient Buildings ====================-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ConcreteBarrier</defName>
+    <label>concrete barrier</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>A traffic management solution allowing for cover from gunfire.</description>
+    <graphicData>
+      <texPath>Things/Building/ABSingle/AB_ConcreteBarrier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(231,216,206)</color>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>42</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <!--
+      PORT. Draw styles replaced placingDraggableDimensions in 1.4 (see ConFence below). This
+      def never declared the old field, so it was placed one cell at a time in 1.3 as well -
+      but every low-cover piece in 1.6 carries Defenses, sandbags and barricades included, and
+      a road barrier laid one square at a time is a chore the game stopped asking for.
+    -->
+    <drawStyleCategory>Defenses</drawStyleCategory>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>15</costStuffCount>
+    <costList>
+      <Steel>45</Steel>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.5</resourcesFractionWhenDeconstructed>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <repairEffect>ConstructDirt</repairEffect>
+    <designationCategory>Security</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>AB_Lamppost</defName>
+    <label>lamppost</label>
+    <thingClass>Building</thingClass>
+    <description>A traffic management solution to allow sight in dark environments. This one runs on solar energy, to help free up the energy grid.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/ABSingle/AB_Lamppost</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(1,2)</drawSize>
+      <drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.28, 0.5, 0.28)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>15</costStuffCount>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.5</resourcesFractionWhenDeconstructed>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <!--
+      Unchanged, and checked rather than assumed: CompProperties_Glower still takes glowRadius
+      and a 0-255 glowColor with a zero alpha in 1.6 - the vanilla standing lamp writes
+      (214,148,94,0) in the same shape. There is no power comp here on purpose, so nothing
+      gates the light: CompGlower looks for a CompPowerTrader, a CompFlickable or a
+      CompRefuelable to decide whether to be lit, finds none, and lights. That is what makes
+      this lamppost solar.
+    -->
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>19</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Structure</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ConFence</defName>
+    <label>concrete fence</label>
+    <description>A fence made of concrete.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/ABLinked/ABConFence_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Asymmetric</linkType>
+      <linkFlags>
+        <li>Fences</li>
+      </linkFlags>
+      <asymmetricLink>
+        <linkFlags>
+          <li>Wall</li>
+          <li>Rock</li>
+        </linkFlags>
+        <linkToDoors>true</linkToDoors>
+        <drawDoorBorderEast>
+          <color>(0,0,0)</color>
+          <size>(0.04, 0.77)</size>
+          <offset>(0.5, 0, -0.08)</offset>
+        </drawDoorBorderEast>
+        <drawDoorBorderWest>
+          <color>(0,0,0)</color>
+          <size>(0.04, 0.77)</size>
+          <offset>(-0.5, 0, -0.08)</offset>
+        </drawDoorBorderWest>
+      </asymmetricLink>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.35,0.1,0.3,0.7)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/AB_UI/AB_ConFenceIcon</uiIconPath>
+    <uiIconPathsStuff>
+      <li>
+        <appearance>Metal</appearance>
+        <iconPath>Things/Building/AB_UI/AB_ConFenceIcon</iconPath>
+      </li>
+    </uiIconPathsStuff>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToBuild>70</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costStuffCount>5</costStuffCount>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>80</pathCost>
+    <blockWind>false</blockWind>
+    <fillPercent>0.25</fillPercent>
+    <!--
+      PORT, and the one change without which the mod would have shipped quietly worse than it
+      was. This line used to read:
+
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+
+      1.4 replaced that field with the DrawStyle system, and the field is gone from the game
+      entirely - not renamed, not aliased. RimWorld does not stop for an XML element that
+      matches no field: it logs one line and carries on with the field unset. The fence would
+      have loaded, built and looked right, and only refused to be dragged into a line, one
+      cell per click, with nothing on screen to say why. Defenses is the category the vanilla
+      fence, sandbags and barricade all use.
+    -->
+    <drawStyleCategory>Defenses</drawStyleCategory>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <fertility>0</fertility>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <building>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <ai_chillDestination>false</ai_chillDestination>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <relatedBuildCommands>
+        <li>PenMarker</li>
+        <li>FenceGate</li>
+      </relatedBuildCommands>
+      <blueprintGraphicData>
+        <texPath>Things/Building/ABLinked/ABConFence_BPAtlas</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+      </blueprintGraphicData>
+    </building>
+  </ThingDef>
+
+</Defs>
