@@ -40,7 +40,7 @@ remembered. Each means something different here.
 | `Could not find type named` | the `Class=` resolver | A `Class="..."` that does not exist — the four comps on the air conditioner, `CompProperties_Glower` on the lamppost. In 1.6 this loses the whole def, it does not degrade it. |
 | `Could not find a type named` | `ParseHelper.ParseType` | A type named in element **text**: `thingClass`, `blueprintClass`, `inspectorTabs`, `placeWorkers`. Different message, different code path, same cause. |
 | `Failed to find any textures at` | the graphic loader | A `texPath` with nothing behind it. All ten paths were checked against the files on disk, case included, so this would mean a packaging fault. |
-| `Config error in` | `ThingDef.ConfigErrors` | The consistency rules the game applies only at load, which no offline checker replays. This is the line most likely to be the one that appears. |
+| `Config error in` | `ThingDef.ConfigErrors` | The consistency rules the game applies only at load. Twenty-six of them are now replayed offline by `Check-ConfigErrors.ps1`, which this mod passes; the rest, listed at the end of that script's output, can still appear here. |
 
 A clean run means **none of those naming `AB_`, `ConFence`, `ConcreteBarrier` or `ABVending`**.
 Lines naming other mods are not ours to fix, and are worth leaving in the paste anyway.
@@ -126,6 +126,10 @@ Run on 2026-09-11, all clean. Not worth eyes on again:
 - Every C# type named in the XML exists — `Check-XmlClasses.ps1`, 19 of them.
 - No unguarded reference to a third-party type — `Check-TypeRefs.ps1`.
 - All 12 translation keys land on something — `Check-DefInjected.ps1`.
+- The six defs break none of the 26 load-time consistency rules that can be decided offline —
+  `Check-ConfigErrors.ps1`, written for this mod on 2026-09-12 and calibrated against the game's
+  own 13 809 defs. It is the one that would have caught the air conditioner had its `fillPercent`
+  and its `isAirtight` disagreed.
 - The ten `texPath` and `uiIconPath` values each point at a file that exists, case included.
 
 The two Workshop images were checked the same day and are not part of the run either: the banner
