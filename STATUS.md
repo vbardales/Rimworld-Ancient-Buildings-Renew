@@ -54,4 +54,5 @@ name, the description and the `packageId` are frozen when the Workshop item is c
 `SetItemDescription` never runs again.
 
 Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a dead source,
-`alive` no licence but a living source, `forbidden` a written refusal, `original` nothing reused.
+`alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
+to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
