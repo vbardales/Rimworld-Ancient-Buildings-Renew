@@ -1,19 +1,20 @@
 ---
-mod:        Ancient Buildings Renew
-packageId:  nelim.ancientbuildingsrenew
-repo:       Rimworld-Ancient-Buildings-Renew
-visibility: public
-detached:   yes
-stage:      done
-licence:    silent
-licence_at: four places, the About and the Steam page among them
-showcase:   complete
+mod:          Ancient Buildings Renew
+packageId:    nelim.ancientbuildingsrenew
+repo:         Rimworld-Ancient-Buildings-Renew
+visibility:   public
+detached:     yes
+stage:        done
+licence:      silent
+licence_at:   four places, the About and the Steam page among them
+dependencies: none
+showcase:     complete
 tested_on:
 workshop:
 remaining:
   - unverified: never seen running in game
-session:    local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:    2026-09-12, by the thread that holds this mod
+session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
+updated:      2026-09-12, by the thread that holds this mod
 ---
 
 # Ancient Buildings Renew — status
@@ -21,8 +22,8 @@ updated:    2026-09-12, by the thread that holds this mod
 A status sheet, read by a sweep over every mod rather than by asking each thread one at a time.
 It lives at the root, never in `Mod/`, so Steam never receives it.
 
-The fields above were deduced from disk on 2026-09-12 by that sweep, and the three it cannot
-deduce are filled in here by the thread that holds this mod:
+The sweep deduces from disk what disk can tell it. The fields it cannot are filled in here by the
+thread that holds this mod:
 
 - **`stage: done`** — the content is finished and verified cold. Six defs, no C#, no patches, no
   dependencies. Six offline checkers pass, including `Check-ConfigErrors.ps1`, which was written
@@ -32,6 +33,13 @@ deduce are filled in here by the thread that holds this mod:
   most cannot be made from a log — the concrete fence has to be dragged out in a line by hand.
 - **`remaining`** — one entry, `unverified`, for exactly that reason. There is no known defect
   and no missing feature.
+- **`dependencies: none`** — the value means the mod needs nothing, as against `declared` when
+  every mod it needs is named in the About's `modDependencies` and `to check` when a non-vanilla
+  `loadAfter` suggests one that is not. Here it is literal: no dependency, no `loadAfter`, no DLC
+  requirement, and the two Biotech recipes on the stove are `MayRequire`, which is inert when
+  Biotech is absent. An undeclared dependency is not cosmetic: on 2026-09-11 Reequilibrage animaux
+  took 47 vanilla animals down with it, Muffalo included, because the class it injects belongs to
+  a mod that was not declared and not loaded.
 
 `detached: yes` since 2026-09-11: this folder is its own git repository, on `main`, with one
 remote pointing at the public repository above. The monorepo ignores it and tracks none of its
