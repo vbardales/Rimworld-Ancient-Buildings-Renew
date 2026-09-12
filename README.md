@@ -1,4 +1,6 @@
-# Ancient Buildings Renew
+# Ancient Buildings Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 Port of **SyndicateGamingNetwork's "Ancient" Buildings** to RimWorld 1.6.
 
@@ -155,10 +157,10 @@ byte `AB_ConcreteBarrier.png`, which the mod still ships, and nothing references
 The port was checked with the repository's static checks, against RimWorld 1.6 alone — the mod
 builds on no framework:
 
-```bash
-pwsh -File scripts/Check-XmlFields.ps1 -ModPath AncientBuildingsRenew/Mod
-pwsh -File scripts/Check-DefRefs.ps1   -ModPath AncientBuildingsRenew/Mod
-```
+The six shared checkers live in the parent workspace's `scripts/` directory and are
+not bundled in this standalone repository. They require the local RimWorld 1.6
+installation; the class checker also requires `../rw16_types.txt`, its type index.
+See [TESTING.md](TESTING.md) for the complete commands, results and manual scenarios.
 
 `Check-XmlFields.ps1` reported exactly one unknown element in the whole mod, and it was
 `placingDraggableDimensions` — the one that mattered. `Check-DefRefs.ps1` resolves every def
@@ -172,4 +174,4 @@ assembly by hand.
 See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence position and what exactly was carried over.
 
 The port work was done with the help of an AI assistant (Claude, by Anthropic), under human
-direction and in-game testing.
+direction. In-game validation is planned before publication; see [TESTING.md](TESTING.md).

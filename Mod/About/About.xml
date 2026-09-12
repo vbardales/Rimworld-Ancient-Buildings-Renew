@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <packageId>nelim.ancientbuildingsrenew</packageId>
-  <name>Ancient Buildings Renew</name>
+  <name>Ancient Buildings Renew (unofficial)</name>
   <author>SyndicateGamingNetwork - 1.6 port: nelim</author>
   <supportedVersions>
     <li>1.6</li>
@@ -10,7 +10,9 @@
   <incompatibleWith>
     <li>ancientbld.core</li>
   </incompatibleWith>
-  <description>Six buildings in the style of the ruins the world is already full of: a concrete fence, a concrete road barrier, a solar lamppost, a vending machine that stores meals, a small kitchen stove that fits in one tile, and an old air conditioner.
+  <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+Six buildings in the style of the ruins the world is already full of: a concrete fence, a concrete road barrier, a solar lamppost, a vending machine that stores meals, a small kitchen stove that fits in one tile, and an old air conditioner.
 
 No DLC and no dependencies. Five of the six ask for no research at all and are available from the first day of a colony.
 
@@ -51,7 +53,7 @@ Content mod: removing it mid-save destroys anything already built from it.
 
 Source, changelog and attribution: https://github.com/vbardales/Rimworld-Ancient-Buildings-Renew
 
-The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction and in-game testing. Thanks to SyndicateGamingNetwork for the buildings.
+The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction. Thanks to SyndicateGamingNetwork for the buildings.
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
 </ModMetaData>

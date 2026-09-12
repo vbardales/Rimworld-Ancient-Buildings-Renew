@@ -1,6 +1,7 @@
 # Test scenarios
 
-This mod has never been loaded by RimWorld. Everything below is what the first run has to settle.
+In-game validation is pending and will be completed before publication. Everything below is
+what that run has to settle. Record the game version, DLCs, date and results here after testing.
 
 **Why this file is short, and why it still matters.** Six `ThingDef`s, no C#, no patch operations
 and no dependencies: there is no modlist interaction to enumerate, so one run covers the lot. But
@@ -22,7 +23,16 @@ emptied at the same time.
 nelim.ancientbuildingsrenew        this mod            anywhere in the list
 ```
 
-Biotech must be on for the stove's last two bills. It is in the current list already.
+Run the building scenarios with Core, this mod and Biotech enabled. Use a temporary test
+colony. The stove's last two bills require Biotech.
+
+### Without Biotech or any other DLC
+
+- Restart with only Core and this mod enabled, and create a temporary test colony.
+- Check the log for the errors listed below, especially unresolved baby-food recipes.
+- Verify all six buildings can be built once their requirements are met.
+- Build the stove: baby-food bills must be absent, while ordinary meal bills remain usable.
+- Cook a simple meal successfully, then save and reload; the buildings and bills must persist.
 
 ## What to search the log for
 
@@ -118,7 +128,22 @@ climatiseur*. Twelve keys in all, six labels and six descriptions.
 
 ## Settled without the game
 
-Run on 2026-09-11, all clean. Not worth eyes on again:
+Rerun on 2026-09-12: all six checkers passed. Run again after changes to the defs or
+translations. From this repository's root, with PowerShell 7 and RimWorld 1.6 installed:
+
+```powershell
+pwsh -NoProfile -File ../scripts/Check-XmlFields.ps1 -ModPath ./Mod
+pwsh -NoProfile -File ../scripts/Check-DefRefs.ps1 -ModPath ./Mod
+pwsh -NoProfile -File ../scripts/Check-XmlClasses.ps1 -ModPath ./Mod -TypeLists ../rw16_types.txt
+pwsh -NoProfile -File ../scripts/Check-TypeRefs.ps1 -ModPath ./Mod
+pwsh -NoProfile -File ../scripts/Check-DefInjected.ps1 -TransMod ./Mod
+pwsh -NoProfile -File ../scripts/Check-ConfigErrors.ps1 -ModPath ./Mod
+```
+
+These scripts and the type index are shared workspace prerequisites, outside this Git
+repository. A standalone clone does not include them. The scripts default to the Steam
+RimWorld installation under `C:\Program Files (x86)\Steam\steamapps\common\RimWorld`;
+consult their parameters for a different installation location.
 
 - Every element maps to a real 1.6 field — `Check-XmlFields.ps1`. This is the check that found
   `placingDraggableDimensions`, and it is the only reason the drag test above exists.

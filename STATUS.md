@@ -1,5 +1,5 @@
 ---
-mod:          Ancient Buildings Renew
+mod:          Ancient Buildings Renew (unofficial)
 packageId:    nelim.ancientbuildingsrenew
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
