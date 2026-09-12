@@ -17,13 +17,9 @@ CH="/c/Program Files/Google/Chrome/Application/chrome.exe"
 B="$(pwd -W 2>/dev/null || pwd)"
 mkdir -p Mod/About
 
-"$CH" --headless --no-sandbox --disable-gpu --hide-scrollbars \
-  --window-size=896,504 --force-device-scale-factor=1 \
-  --screenshot="$B/_tools/preview-raw.png" "file:///$B/_tools/preview.html" >/dev/null 2>&1
-
-ffmpeg -v error -y -i _tools/preview-raw.png \
-  -compression_level 100 -pred mixed Mod/About/Preview.png
-rm -f _tools/preview-raw.png
+# Preview now uses the palette-driven Art composition, font readiness and contrast QA.
+# Requires playwright and sharp resolvable by Node (NODE_PATH may point at the runtime bundle).
+node Art/render-preview.cjs
 
 ffmpeg -v error -y -i Art/ModIcon-source.png -vf "scale=128:128:flags=lanczos" \
   -compression_level 100 -pred mixed Mod/About/ModIcon.png
