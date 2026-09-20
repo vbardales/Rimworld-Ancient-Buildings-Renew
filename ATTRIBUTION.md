@@ -14,7 +14,7 @@ description and nowhere else.
 
 This is the usual convention for ports on the RimWorld Workshop: republished with **credit by
 name** and **removal on request, without argument**. The `<author>` field reads
-`SyndicateGamingNetwork - 1.6 port: nelim`, and the removal clause is in the description.
+`SyndicateGamingNetwork - 1.6 adapted by Nelim`, and the removal clause is in the description.
 
 ## What was carried over
 
