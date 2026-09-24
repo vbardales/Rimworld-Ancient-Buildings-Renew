@@ -36,7 +36,14 @@ colony. The stove's last two bills require Biotech.
 
 ## Existing-save migration from the original mod
 
-Status: not executed. Run on disposable copies; preserve the original save and mod list.
+Status: **opportunistic, and not a gate** (decision of 2026-09-24). No migration run is planned, and
+`tested` does not wait for one. If a save that contains the original mod's buildings turns up, the
+protocol below is what to run on a disposable copy, and its result is recorded in `docs/runs/`. For
+the `tested` gate the scenario is **not applicable**, for that reason. Until it has run, the
+description's sentence that a save moves between the two mods is a consequence of keeping the
+`defName`s, not a tested result.
+
+When it does run: preserve the original save and mod list, and work on copies only.
 
 Preconditions: an existing save containing the original mod's five buildings
 (`ABKitchenstove`, `ABVending`, `AB_Lamppost`, `ConcreteBarrier`, `ConFence`). Record its
@@ -179,8 +186,8 @@ scope, decided from what the six checkers already settle offline and what they c
 a designator, and the PickleTools catalogue has no step for either (Pickle's own step catalogue was
 not searched, so this is to be confirmed before a step is written). A new step would cost more than
 the manual run it replaces; cooling across a wall is a temperature reading that a person takes
-once; the existing-save migration needs the original mod's save and cannot be a fixture. These stay
-manual scenarios in this file. That is a cost decision, not a judgement that the check matters less.
+once; the existing-save migration is opportunistic and is not planned at all (see its section). The drag
+and the wall cooling stay manual scenarios in this file. That is a cost decision, not a judgement that the check matters less.
 
 **Not tested at all:** what RimWorld does with the declaration itself, such as its warning for a
 missing dependency or its load order. `../AUDIT.md`: the game is not what is under test.
@@ -196,7 +203,7 @@ by RimWorld, and `tested_on` in `STATUS.md` stays empty until then.
 |---|---|---|
 | Minimal, with DLC | Core, the DLCs, this mod | the six buildings, the drag test, baby-food bills **present** |
 | Without DLC | Core, this mod | baby-food bills **absent** and no unresolved-recipe error: the only conditional scenario the defs contain |
-| Original mod replaced | Core, the original `ancientbld.core` first, then swapped for this mod, on a copy of a save | the existing-save migration protocol above |
+| Original mod replaced | Core, the original `ancientbld.core` first, then swapped for this mod, on a copy of a save | **opportunistic, not a gate**: the existing-save migration protocol above, only if a suitable save turns up |
 | Incompatibility looked at | Core, this mod **and** `ancientbld.core` together, on a new throwaway colony and never on the migration save | that the declared incompatibility is still true: the five shared `defName`s must log `Adding duplicate`, and the mod list must flag the pair. A declaration ages; this is how it is read again |
 | With optional mods | not applicable | the mod declares no `loadAfter` and needs nothing, so there is no optional set to stage |
 
@@ -209,12 +216,14 @@ by RimWorld, and `tested_on` in `STATUS.md` stays empty until then.
    is vacuous today, and is written down so that it is not forgotten the day a suite is added. A
    `@wip` scenario is not a passed scenario: it is repaired and rerun, or deleted with its reason.
 2. **Every conditional scenario has run, with its condition present.** For this mod the
-   conditions are three: Biotech present and Biotech absent for the stove, and the original mod
-   present for the migration. A scenario skipped for want of its condition is not a pass. Cite a
+   conditions are two: Biotech present and Biotech absent for the stove. The incompatibility pass
+   loads the original mod as a pass of its own, and the migration is opportunistic and not applicable
+   to this gate. A scenario skipped for want of its condition is not a pass. Cite a
    report only after reading its set name and the scenario it shows: the report folder is shared by
    the whole machine.
 3. **No manual test left to validate.** Every scenario in this file is green, or is listed here as
-   not applicable with its reason. The capture of each state is opened and looked at: a green run
+   not applicable with its reason. Listed so far: the existing-save migration, opportunistic by
+   decision of 2026-09-24. The capture of each state is opened and looked at: a green run
    says the path was followed, not that the image shows what it should.
 
 **Which proofs to keep, and how to cut them down**, is written in

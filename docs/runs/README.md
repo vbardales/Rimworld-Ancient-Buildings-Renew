@@ -39,7 +39,7 @@ current one. So a run's evidence is cut down as soon as a newer one replaces it.
 | Stove: baby-food bills | one capture of the bill list **with** Biotech, one **without**. Both, or the conditional scenario has not run |
 | Air conditioner: cools across a wall | one capture of the two room temperatures, one of the unit built in the open doing nothing |
 | English and French | one capture per building of its label and description in each language: twelve in all, not one per action |
-| Existing-save migration | the mod list and counts before and after as text, the load log, and one capture of the reloaded colony |
+| Existing-save migration, **only if it is ever run** (opportunistic, not a gate) | the mod list and counts before and after as text, the load log, and one capture of the reloaded colony |
 | Every pass | its `Player.log`, as text |
 
 **Keep an older report only** when it is the sole proof of a check the latest run did not repeat.

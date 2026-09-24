@@ -19,11 +19,11 @@ evidence:     "none from a game run, since none has happened. Rules for what a r
 remaining:
   - feature: "preTest -> done: four Pickle scenarios to write in a test companion under Tests/Pickle (loads clean, the stove without Biotech, the declared incompatibility, the French labels), scope justified in TESTING.md. No .feature file exists."
   - unverified: interactive building controls and UI regressions belong to done -> tested
-  - unverified: execute the existing-save migration scenario now written in TESTING.md
+  - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not applicable to done -> tested."
   - unverified: never seen running in game
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
-  - unverified: "(done -> tested) conditional scenarios: three conditions, none has run: Biotech present and Biotech absent for the stove, and the original mod present for the migration. A fourth run, the incompatibility pass, loads both mods. A scenario skipped for want of its condition is not a pass. TESTING.md now names the passes."
-  - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green, none is listed not applicable."
+  - unverified: "(done -> tested) conditional scenarios: two conditions, none has run: Biotech present and Biotech absent for the stove. A third run, the incompatibility pass, loads both mods. A scenario skipped for want of its condition is not a pass. TESTING.md now names the passes."
+  - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. Listed not applicable: the existing-save migration, opportunistic."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
 updated:      2026-09-24, audited against AUDIT.md (done -> preTest)
@@ -73,7 +73,8 @@ what the log table in `TESTING.md` asks a person to read. The previous audit, of
 2026-09-21 wording and passed this step on the manual scenarios alone.
 
 `TESTING.md` now carries the scope, section "What belongs in Pickle, and what does not": four scenarios
-in Pickle, the drag, the wall cooling and the migration kept manual with the reason. **The scenarios
+in Pickle, the drag and the wall cooling kept manual with the reason, and the migration opportunistic
+by decision of 2026-09-24, so not applicable to the `tested` gate. **The scenarios
 themselves are not written.**
 
 ### Defect found in the audit, and corrected
