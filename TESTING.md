@@ -178,10 +178,11 @@ by RimWorld, and `tested_on` in `STATUS.md` stays empty until then.
 **The three checks for `done -> tested`**, from `../AUDIT.md`:
 
 1. **No scenario parked in `@wip`.** This mod has no Pickle suite and no `.feature` file, so
-   nothing can be parked: verified 2026-09-24 with `find . -name '*.feature'` (none) and a search
-   for `@wip` (none). The check is vacuous today and is written down so that it is not forgotten the
-   day a suite is added. A `@wip` scenario is not a passed scenario; it is repaired and rerun, or
-   deleted with its reason.
+   nothing can be parked. Verified 2026-09-24: `find . -name '*.feature'` finds none, so there is
+   no file in which the tag could sit. Search the `.feature` files only, because this file and
+   `STATUS.md` name the tag in their prose and would answer a search of the whole tree. The check
+   is vacuous today, and is written down so that it is not forgotten the day a suite is added. A
+   `@wip` scenario is not a passed scenario: it is repaired and rerun, or deleted with its reason.
 2. **Every conditional scenario has run, with its condition present.** For this mod the
    conditions are three: Biotech present and Biotech absent for the stove, and the original mod
    present for the migration. A scenario skipped for want of its condition is not a pass. Cite a

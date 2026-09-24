@@ -21,9 +21,9 @@ remaining:
   - unverified: execute the existing-save migration scenario now written in TESTING.md
   - unverified: never seen running in game
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
-  - "verified (done -> tested), no @wip: the mod has no Pickle suite and no .feature file, so nothing is parked waiting to be repaired or deleted. The check is vacuous, which is different from a suite having passed it. Checked 2026-09-24."
-  - "unverified (done -> tested), conditional scenarios: three conditions, none has run: Biotech present and Biotech absent for the stove, and the original mod present for the migration. A fourth run, the incompatibility pass, loads both mods. A scenario skipped for want of its condition is not a pass. TESTING.md now names the passes."
-  - "unverified (done -> tested), manual tests: every scenario of TESTING.md is still to be run and validated. None is green, none is listed not applicable."
+  - unverified: "(done -> tested) conditional scenarios: three conditions, none has run: Biotech present and Biotech absent for the stove, and the original mod present for the migration. A fourth run, the incompatibility pass, loads both mods. A scenario skipped for want of its condition is not a pass. TESTING.md now names the passes."
+  - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green, none is listed not applicable."
+  - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
 updated:      2026-09-24, prepublished 0.1.0 recorded, tested gate written out
 audit_revision: e389720674c46092553b0d86a382465f5fa5bd25
@@ -46,6 +46,12 @@ because nothing has been uploaded".
   frozen at that text.
 - `CHANGELOG.md` opens with `## [1.0.0] — unreleased` above `## [0.1.0] — 2026-09-23`, "Creation of
   a publishIdFile". `1.0.0` arrives with `published` and stays unreleased until then.
+- **The description was found short and corrected in three places.** The 0.1.0 text dropped the only
+  line pointing to ATTRIBUTION.md and the licence. `Mod/About/About.xml` (what the mod list shows)
+  now has the sections in the required order, and `Mod/README.template.md` carries the same text in
+  Markdown for a publish that sends a description. `Mod/.steamignore` keeps the template and
+  `*.dds` out of an upload staged through it. Two credits in it are unconfirmed: Codex (OpenAI)
+  for the audits, and the name of the image model, which the text leaves generic.
 - **Not yet done for this item:** the visibility and subscription test (subscribing to one's own
   item, testing it, then making it public by hand), and everything under `prepublished` in
   `../AUDIT.md`. The item is not public and this mod is not `prepublished` as a stage.

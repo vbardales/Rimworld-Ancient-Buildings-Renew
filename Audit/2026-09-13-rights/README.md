@@ -37,7 +37,8 @@ undertaking and MIT scope limited to port additions remain coherent with that de
 
 The first workflow transition now passes alongside the already verified independent Git
 repository, public GitHub origin and pushed commit. No source assets or mod functionality
-were changed. The next pending gate is the icon's remaining 32 px visual verification.
+were changed. The icon's 32 px visual check was completed afterwards: its result is `ModIcon-32.png`
+in this folder, and `STATUS.md` records it.
 
 ## Where the raw captures are
 

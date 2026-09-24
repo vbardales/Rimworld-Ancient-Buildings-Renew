@@ -7,8 +7,10 @@ This mod has never been run in the game, so this folder holds nothing else yet. 
 history goes here the day `TESTING.md` is executed.
 
 The evidence itself - `Player.log`, screenshots, films - stays **on disk**, under
-`Tests/Manual/evidence/<date>/scenario-XX/`, and is ignored by git. It is not backed up: if the
-machine is lost, the summaries here and the history are what remains.
+`Tests/Manual/evidence/<date>/<check>/`, and is ignored by git. `<check>` is `fence`, `barrier`,
+`lamppost`, `vending`, `stove`, `air-conditioner`, `l10n` or `migration`, the sections of
+`TESTING.md`. It is not backed up: if the machine is lost, the summaries here and the history are
+what remains.
 
 A summary must carry, since the media are not beside it:
 
@@ -30,7 +32,7 @@ current one. So a run's evidence is cut down as soon as a newer one replaces it.
 
 | Check | The one proof to keep |
 |---|---|
-| The fence drags out as a line | one capture of the placed run of blueprints from a single drag, with the cursor path visible. Not a film: a line of N blueprints from one gesture proves it |
+| The fence drags out as a line | one capture of the finished run of blueprints. The summary says how many gestures laid it: one press-and-drag, N blueprints. A still cannot show the drag, so a film only if a reader could not tell a dragged run from N single clicks |
 | The barrier drags the same way | the same, on the barrier |
 | Lamppost lights with no power, refuses a roof | one capture lit at night with no conduit in frame, one of the placement refusal |
 | Vending machine: link gizmo, blueprint filter | one capture of the gizmo, one of the filter set on the blueprint |
