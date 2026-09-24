@@ -51,9 +51,9 @@ The original defNames are kept, so a save moves between the two mods without los
 
 Content mod: removing it mid-save destroys anything already built from it.
 
-Source, changelog and attribution: https://github.com/vbardales/Rimworld-Ancient-Buildings-Renew
-
 The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction. Thanks to SyndicateGamingNetwork for the buildings.
 
-If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+[url=https://github.com/vbardales/Rimworld-Ancient-Buildings-Renew]Source code on GitHub[/url]</description>
 </ModMetaData>
