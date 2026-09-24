@@ -51,9 +51,19 @@ The original defNames are kept, so a save moves between the two mods without los
 
 Content mod: removing it mid-save destroys anything already built from it.
 
-The port work was done with the help of an AI assistant (Claude, by Anthropic), under human direction. Thanks to SyndicateGamingNetwork for the buildings.
+IF I GO QUIET
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+AI-GENERATED
+
+The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The two images, the preview and the icon, were generated with an AI image model and lettered afterwards in HTML. Stated openly: working with these tools is my job.
+
+THANKS
+
+SyndicateGamingNetwork, for the buildings, the artwork and the balance this mod is made of. I only brought them forward.
+
+What is reused and how it differs is detailed in ATTRIBUTION.md in the source repository, and LICENSE says what the MIT grant covers: the port's own additions, not SyndicateGamingNetwork's work.
 
 [url=https://github.com/vbardales/Rimworld-Ancient-Buildings-Renew]Source code on GitHub[/url]</description>
 </ModMetaData>

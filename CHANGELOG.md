@@ -40,6 +40,9 @@ First release of the port. Port of SyndicateGamingNetwork's **"Ancient" Building
   environments" in the lamppost's.
 - `packageId` changed from `ancientbld.core` to `nelim.ancientbuildingsrenew`.
 - `<supportedVersions>` set to 1.6.
+- The Steam description gains the pointer to `ATTRIBUTION.md` and the licence, its AI-generated and
+  thanks sections and the closing source link, and is carried by `Mod/README.template.md`, so a
+  publish that sends a description corrects the page. The `0.1.0` text was frozen without them.
 - `About/PublishedFileId.txt` dropped: it names SyndicateGamingNetwork's Workshop item. This mod's
   own arrives with `0.1.0`, below.
 
@@ -94,4 +97,6 @@ step and this version is not public.
   commit, and is not sent again by later updates.
 - The folder sent also held eight `.dds` files, one beside each texture, generated on 2026-09-23 at
   14:12 and never part of the source. Each has a tracked `.png` twin, which is what the game loads.
-  They are ignored by git from now on, so no later upload from a checkout carries them.
+  They are ignored by git and by `Mod/.steamignore` from now on, so no upload made from a checkout
+  carries them. An in-game upload made from a working folder that still holds them would, because
+  the game sends the folder as it is on disk.

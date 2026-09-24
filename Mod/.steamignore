@@ -1,0 +1,5 @@
+# Kept out of the Workshop upload (semantic-release-steam and publish-tag.yml stage Mod/ through this file).
+/README.template.md
+/README.md
+# Generated copies of the textures. Each has a .png twin, which is what the game loads.
+*.dds
