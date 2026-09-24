@@ -2,9 +2,12 @@
 
 All notable changes to this mod are documented here.
 
-## [1.0.0] — 2026-09-05
+## [1.0.0] — unreleased
 
-First release. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWorld 1.6.
+On release: create the `v1.0.0` tag and the matching GitHub release. The Workshop item so far holds
+only the private `0.1.0` prepublication below, which created it.
+
+First release of the port. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWorld 1.6.
 
 ### Fixed
 
@@ -37,7 +40,8 @@ First release. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWo
   environments" in the lamppost's.
 - `packageId` changed from `ancientbld.core` to `nelim.ancientbuildingsrenew`.
 - `<supportedVersions>` set to 1.6.
-- `About/PublishedFileId.txt` dropped: it names SyndicateGamingNetwork's Workshop item.
+- `About/PublishedFileId.txt` dropped: it names SyndicateGamingNetwork's Workshop item. This mod's
+  own arrives with `0.1.0`, below.
 
 ### Added
 
@@ -76,3 +80,18 @@ First release. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWo
 - The balance, including the two places it invites a change: the stove has no research
   prerequisite, and it inherits `workTableRoomRole` = `Workshop` rather than `Kitchen`. See
   [ATTRIBUTION.md](ATTRIBUTION.md) for why both were left alone.
+
+## [0.1.0] — 2026-09-23
+
+Creation of a publishIdFile. The prepublication whose only purpose is to create the Workshop item,
+which Steam creates private: RimWorld never calls `SetItemVisibility`, so going public is a manual
+step and this version is not public.
+
+- `About/PublishedFileId.txt` created and committed (`3806708945`). It is what ties this repository
+  to that item: lose it and the next upload creates a second item rather than updating this one.
+- The upload was `Mod/` as it stands at the commit that adds that file, and nothing else changed
+  since. The description on the Steam page is the `<description>` of `About/About.xml` at that
+  commit, and is not sent again by later updates.
+- The folder sent also held eight `.dds` files, one beside each texture, generated on 2026-09-23 at
+  14:12 and never part of the source. Each has a tracked `.png` twin, which is what the game loads.
+  They are ignored by git from now on, so no later upload from a checkout carries them.
