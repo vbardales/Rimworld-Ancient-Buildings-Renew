@@ -23,7 +23,7 @@ remaining:
   - unverified: never seen running in game
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
   - unverified: "(done -> tested) conditional scenarios: three, none has run. 03 needs Biotech, 04 is the pass without Biotech, 05 needs ancientbld.core. A skipped scenario is not a pass: each must have played in the pass that gives it its condition. The migration is opportunistic and not applicable."
-  - unverified: "(done -> tested) Pickle: play the four passes of Tests/Pickle/README.md, compare scenarios played with discovered, read exitReason first. Values reasoned but not run: the fence prints Defenses, the four cells are free on test-colony, the duplicate is an error or a warning. ancientbld.core is not yet in the WSL Workshop cache."
+  - unverified: "(done -> tested) Pickle: play the four passes of Tests/Pickle/README.md, compare scenarios played with discovered, read exitReason first. Values reasoned but not run: the fence prints Defenses, the four cells are free on test-colony, the duplicate is an error or a warning. ancientbld.core is in the WSL Workshop cache since 2026-09-24."
   - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. Listed not applicable: the existing-save migration, opportunistic."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
@@ -60,15 +60,15 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   `05` needs `ancientbld.core`. Each must have played in the pass that gives it its condition before
   `tested`.
 - **No `@wip`.** None of the seven features carries it.
-- **Tickets in flight, 2026-09-24 at 17:00.** The five tickets queued directly at 10:38 are dead: their
+- **Tickets in flight, 2026-09-24 at 17:00, updated 16:58.** The five tickets queued directly at 10:38 are dead: their
   launchers died with the session, as TicketDispatcher confirmed and a process check did (none of the five pids
   exists). Three passes were then deposited as requests with `Submit-PickleRun.ps1`, owner
   `local_893d3a1c-6b23-490a-911f-243a435eb1a7`, at 16:46: minimal English (`20260924-164609-481-ec7f`), minimal
   French (`20260924-164610-417-3592`) and Biotech left out (`20260924-164611-253-5396`). The download of the
-  original mod was run once with `Use-Wsl.ps1`, as the dispatcher asked, and is still waiting for the lock: it
-  was moved to the background after the tool's ten-minute limit, and its label carries the session id so the
-  dispatcher can see whose it is. **The incompatibility pass is not deposited yet**: it needs the download
-  finished first. No watcher runs. Nothing has been played.
+  original mod was run once with `Use-Wsl.ps1`, as the dispatcher asked, and finished at about 16:57: item
+  2566355159 is in the WSL cache, `packageId` `ancientbld.core`, 732 KB. The incompatibility pass was deposited
+  right after (`20260924-165721-724-f314`). Four requests are now with the dispatcher. No watcher runs. Nothing
+  has been played.
 
 ### Work strictly needed for the next transition, `done -> tested`
 

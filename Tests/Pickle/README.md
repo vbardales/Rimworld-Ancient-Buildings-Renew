@@ -58,7 +58,7 @@ asserts Biotech is absent from the passes that keep it.
 # Biotech left out
 -DepMap wsl-deps.sans-biotech.map -Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/sans-biotech
 
-# the original mod beside it (its Workshop item must be in the WSL cache first)
+# the original mod beside it (its Workshop item is in the WSL cache since 2026-09-24)
 -DepMap wsl-deps.incompat-original.map -Language English -Filter '05-original-mod-incompatibility' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/incompat-original
 ```
 
@@ -105,7 +105,7 @@ deliberately wrong line was reported as undefined, so the check does bite.
   fixture; whether a stove's interaction cell is free there is not known.
 - Whether the duplicate is logged as an error or a warning is not known, which is why the incompatibility
   step reads both.
-- `ancientbld.core` has not been downloaded into the WSL install's Workshop cache.
+- `ancientbld.core` was downloaded into the WSL install's Workshop cache on 2026-09-24 (item 2566355159, 732 KB).
 - `../../../PickleTools/Headless/README.md` lists a step, `an error matching ... was logged`, that the
   installed Pickle build does not have: 201 steps were read out of it by reflection and it is not among
   them. This suite does not depend on it.
