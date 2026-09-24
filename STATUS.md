@@ -60,11 +60,18 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   `05` needs `ancientbld.core`. Each must have played in the pass that gives it its condition before
   `tested`.
 - **No `@wip`.** None of the seven features carries it.
+- **Tickets in flight, 2026-09-24 at 14:40.** Five were queued directly at 10:38-10:39, before the
+  dispatcher's protocol was read: the download of the original mod (`Use-Wsl.ps1`, process 21328) and the four
+  passes (31804, 47212, 35096, 40044). Their processes survived the session restart and were at ranks 8 to 12
+  of 34. They carry no `local_` id in their label, so the dispatcher sees them as unowned. TicketDispatcher was
+  asked to adopt them, or to say whether to cancel and deposit requests instead. No watcher runs: the queue is
+  the dispatcher's to watch. Nothing has been played.
 
 ### Work strictly needed for the next transition, `done -> tested`
 
-1. Build the step DLL, then play the four passes through `scripts/Run-PickleWsl.ps1` under the lock, one at
-   a time, and compare the scenarios played with the ones each pass should play
+1. Build the step DLL, then play the four passes as requests deposited with
+   `Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1` (one per pass, every scenario of the pass, no
+   `::` filter: this is the initial validation, not a fix), and compare the scenarios played with the ones each pass should play
    (`Tests/Pickle/README.md`). `ancientbld.core` (Workshop 2566355159) has to be downloaded into the WSL
    install first, through `Use-Wsl.ps1`.
 2. Run the manual scenarios of `TESTING.md`, English and French: the fence and barrier drag, the storage

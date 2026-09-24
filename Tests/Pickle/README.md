@@ -35,21 +35,31 @@ fence that could not be dragged. The drag stays a manual scenario.
 
 ## Passes
 
-One at a time, from the collection root, each through the shared queue and never by hand. Read
-`../../../AUDIT.md` first: the machine has one RimWorld, and nothing here launches the game on Windows.
+One request per pass, deposited from the collection root, never a launcher run by hand and never a process
+kept in a session. `../../../AUDIT.md` first: the machine has one RimWorld, and nothing here launches the game
+on Windows. `Rimworld-Ticket-Dispatcher/docs/WELCOME.md` is the protocol: a session registers once, deposits
+a request and keeps nothing running, and the dispatcher wakes it by message.
 
-```powershell
+The arguments below are the ones each request carries. Deposit each with
+`Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod AncientBuildingsRenew -Owner local_<session id> -Label "<what is tested>"`
+and the `-Language`, `-DepMap`, `-Filter` and `-EvidenceDir` shown. **Which kind of ticket it is decides its
+filter.** An exploration or a fix plays as little as possible, `-Filter '::<scenario name>'`. A first or a final
+validation plays every scenario of its pass. The exclusion terms in the filters below are not a subset
+chosen to save time: they keep out the scenarios that make no sense in that pass, such as the one that
+asserts Biotech is absent from the passes that keep it.
+
+```text
 # minimal, English
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientBuildingsRenew -Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@without-biotech' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-en
+-Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@without-biotech' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-en
 
 # minimal, French: no map to load, so no @save
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientBuildingsRenew -Language French -Filter 'Ancient Buildings Renew - Pickle tests,!@en-only,!@without-biotech,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-fr
+-Language French -Filter 'Ancient Buildings Renew - Pickle tests,!@en-only,!@without-biotech,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-fr
 
 # Biotech left out
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientBuildingsRenew -DepMap wsl-deps.sans-biotech.map -Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/sans-biotech
+-DepMap wsl-deps.sans-biotech.map -Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/sans-biotech
 
-# the original mod beside it
-powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod AncientBuildingsRenew -DepMap wsl-deps.incompat-original.map -Language English -Filter '05-original-mod-incompatibility' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/incompat-original
+# the original mod beside it (its Workshop item must be in the WSL cache first)
+-DepMap wsl-deps.incompat-original.map -Language English -Filter '05-original-mod-incompatibility' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/incompat-original
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
@@ -68,9 +78,9 @@ no optional-mod pass to run. Biotech is the only DLC it touches, so it is the on
 `test-colony` fixture was written with every DLC active, which is why the pass without Biotech plays no map.
 `../../TESTING.md` still runs Core alone by hand.
 
-A session waits for its ticket with the `Monitor` tool on a read-only poll of `scripts/Pickle-Status.ps1`,
-which is what a heartbeat is under Codex, never with a cron and never with a script launched in the
-background from a shell.
+A session does not watch the queue: no `Monitor`, no heartbeat, no cron, no loop. The dispatcher wakes it
+at `START`, at `END` (the lock returned, which is not the verdict) and, for a deposited request, with
+`RUN_DONE`. A ticket launched directly from a session belongs to that session and can be lost with it.
 
 ## Before queuing
 
