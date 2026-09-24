@@ -182,7 +182,7 @@ run**. Running them, reading their reports and looking at what they capture is `
 | `02` placement | minimal | the real build designator accepts the fence, barrier, vending machine and stove |
 | `03` stove with Biotech | minimal | the stove takes a meal bill and both baby-food bills |
 | `04` stove without Biotech | `sans-biotech` | the two recipes do not exist, and nothing logged names the stove or them |
-| `05` original mod | `incompat-original` | with `ancientbld.core` beside it, the game logs a duplicate for the shared defNames |
+| `05` original mod | `incompat-original` | with `ancientbld.core` beside it, the original still loads and still carries the field 1.6 removed (the game does not log the shared defNames) |
 | `06`, `07` labels | English pass, French pass | the six labels and six descriptions of the loaded defs, in the language the game started in |
 
 The French check is an assertion on the loaded defs, not a capture: a language folder the game does
@@ -226,7 +226,7 @@ filters and the number of scenarios each should play are in
 | Minimal, French | Core, the DLCs, this mod, French | Pickle `01`, `07`; by hand, the French labels in the menus |
 | Without Biotech | Core, the other DLCs, this mod | Pickle `01`, `04`, `06`: baby-food recipes **absent**, no unresolved-recipe error |
 | Core alone | Core, this mod | **by hand only**: every other DLC left out too, meal bills still usable on the stove |
-| Incompatibility looked at | Core, this mod **and** `ancientbld.core` together | Pickle `05`: the declared incompatibility is still true, the shared defNames log a duplicate. A declaration ages; this is how it is read again |
+| Incompatibility looked at | Core, this mod **and** `ancientbld.core` together | Pickle `05`: the declared incompatibility is still true: the original still loads beside this mod and still carries the field 1.6 removed. The game logs no duplicate for the shared defNames (seen 2026-09-24). A declaration ages; this is how it is read again |
 | Original mod replaced | Core, the original `ancientbld.core` first, then swapped for this mod, on a copy of a save | **opportunistic, not a gate**: the existing-save migration protocol above, only if a suitable save turns up |
 | With optional mods | not applicable | the mod declares no `loadAfter` and needs nothing, so there is no optional set to stage |
 

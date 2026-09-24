@@ -62,8 +62,8 @@ namespace AncientBuildingsRenew.PickleSteps
 
         /// <summary>
         /// Passes when something logged as an error or a warning contains all of the given texts.
-        /// It is here for the declared incompatibility: two mods defining the same def make the game
-        /// log a duplicate, and that line is the symptom the About.xml declaration is about.
+        /// It is here for the declared incompatibility: the original mod still ships a field 1.6 removed, and
+        /// the game logs that when it reads its def next to this mod's. The game does not log the shared defNames.
         /// </summary>
         [Then("Ancient Buildings Renew: an error or a warning was logged naming {string} and {string}")]
         public void SomethingNamesBoth(PickleContext ctx, string first, string second)

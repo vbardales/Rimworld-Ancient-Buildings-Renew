@@ -5,24 +5,23 @@
 #
 # and is skipped by requirement in every other pass, where it counts as skipped and not as passed.
 #
-# About.xml declares the two incompatible because they define the same five defNames. RimWorld does not
-# refuse two mods that do: it logs each duplicate and keeps one copy. So the symptom asserted is exactly
-# that, and it stays green while the incompatibility is still true. If the original stops defining them, or
-# stops loading on 1.6, the scenario goes red, and that is the day the incompatibleWith line can be
-# reconsidered.
+# About.xml declares the two incompatible because they define the same five defNames (read from the original's
+# Defs in the Workshop cache on 2026-09-25: ABKitchenstove, ABVending, AB_Lamppost, ConFence, ConcreteBarrier).
+# The first run showed that RimWorld does not log those duplicates at all: both mods load, one copy of each
+# def wins, and nothing in the log says so. So the game gives no duplicate line to assert.
 #
-# It starts from the main menu, not from a save: the conflict is settled while the defs load, and a save that
-# failed to load because of it would end the scenario before it could show the symptom.
+# What the log does show is the original's own defect, which is the reason the port exists: the original's
+# fence still declares the field RimWorld 1.4 deleted, and the game reports it when it reads that def. That
+# error is asserted, and it goes red the day the original is updated, which is the day the incompatibleWith
+# line can be reconsidered. It also proves the original's defs were really read next to ours.
 #
-# The duplicate is asserted, not merely tolerated, and a passing scenario is what says so. The tag below
-# stops the errors it is about from failing it on their own account. Pickle's own vocabulary has no step for
-# "an error was logged", so this uses this suite's own, which reads RimWorld's log.
+# It starts from the main menu, not from a save: the defs are read while the game loads. The tag below stops
+# the error it is about from failing the scenario on its own account.
 @requires:ancientbld.core @allow-errors
 Feature: the declared incompatibility with the original mod is still true
 
-  Scenario: the two mods define the same buildings and the game logs the duplicates
+  Scenario: the original mod loads beside this one and still carries the field 1.6 removed
     Given the main menu is open
     Then mod "ancientbld.core" is loaded
     And mod "nelim.ancientbuildingsrenew" is loaded
-    And Ancient Buildings Renew: an error or a warning was logged naming "duplicate" and "ConFence"
-    And Ancient Buildings Renew: an error or a warning was logged naming "duplicate" and "ABVending"
+    And Ancient Buildings Renew: an error or a warning was logged naming "placingDraggableDimensions" and "ThingDef"

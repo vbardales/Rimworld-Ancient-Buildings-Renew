@@ -12,7 +12,7 @@ why. Nothing in this folder is part of `Mod/`, which is what Steam receives whol
 | `02-placement` | minimal, English | the real build designator accepts the fence, barrier, vending machine and stove on an open map |
 | `03-stove-with-biotech` | minimal, English | with Biotech the stove takes a meal bill **and** both baby-food bills |
 | `04-stove-without-biotech` | `sans-biotech` | with Biotech left out, the two recipes do not exist and nothing logged names the stove or them |
-| `05-original-mod-incompatibility` | `incompat-original` | with `ancientbld.core` beside it, the game logs a duplicate for the shared defNames |
+| `05-original-mod-incompatibility` | `incompat-original` | with `ancientbld.core` beside it, the original still loads and still carries the field 1.6 removed (the game does not log the shared defNames) |
 | `06-labels-en`, `07-labels-fr` | English pass, French pass | the six labels and six descriptions of the loaded defs, in the language the game started in |
 
 Seven features, thirteen scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
@@ -98,13 +98,10 @@ deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
 
-- **Nothing has been run.** Every scenario, including its expected values, is unverified until a pass plays it.
-- The value `Defenses` for the fence is what a `DrawStyleCategoryDef` prints as, its `defName`, and a
-  reading of the step's source rather than of a run.
-- The cells `(140..152, 155)` on `test-colony` come from Adaptive Storage Neolithic's suite on the same
-  fixture; whether a stove's interaction cell is free there is not known.
-- Whether the duplicate is logged as an error or a warning is not known, which is why the incompatibility
-  step reads both.
+- **Read the run history before trusting a value here**: `../../docs/runs/`. Three passes have played (2026-09-24); the incompatibility scenario was rewritten after its first run.
+- Confirmed by the first passes (2026-09-24): the fence prints `Defenses`, and the four cells on `test-colony` are free (the placement scenario passed).
+- The first incompatibility run showed the game logs no duplicate for the shared defNames; scenario 05 now asserts the original's own
+  `placingDraggableDimensions` error instead.
 - `ancientbld.core` was downloaded into the WSL install's Workshop cache on 2026-09-24 (item 2566355159, 732 KB).
 - `../../../PickleTools/Headless/README.md` lists a step, `an error matching ... was logged`, that the
   installed Pickle build does not have: 201 steps were read out of it by reflection and it is not among

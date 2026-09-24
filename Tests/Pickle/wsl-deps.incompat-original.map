@@ -2,9 +2,9 @@
 #
 # ancientbld.core, Workshop 2566355159 - "Ancient" Buildings by SyndicateGamingNetwork, which declares 1.3
 # and nothing further. About.xml names it in incompatibleWith because the two define the same five defNames.
-# RimWorld does not refuse two mods that do: it logs each duplicate and keeps one copy. This pass stages
-# both and plays 05-original-mod-incompatibility, which asserts that symptom, so a green run says the
-# incompatibility is still true.
+# RimWorld does not refuse two mods that do: it keeps one copy of each and, as the first run showed, logs nothing about it. This pass stages
+# both and plays 05-original-mod-incompatibility, which asserts that the original still loads with its 1.4-removed field, so a green run says the
+# incompatibility is still worth declaring.
 #
 # The item has to be in the WSL install's Workshop cache before this pass can stage it. That is a download,
 # so it goes through Use-Wsl.ps1 like any other work on the machine (PickleTools/Headless/README.md, "The
