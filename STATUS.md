@@ -1,4 +1,8 @@
 ---
+localization: complete
+translation_en: complete
+translation_fr: complete
+settings_audit: not_applicable
 mod:          Ancient Buildings Renew (unofficial)
 packageId:    nelim.ancientbuildingsrenew
 repo:         Rimworld-Ancient-Buildings-Renew
@@ -6,18 +10,275 @@ visibility:   public
 detached:     yes
 stage:        done
 licence:      silent
-licence_at:   four places, the About and the Steam page among them
+licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
 showcase:     complete
 tested_on:
-workshop:
+workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
+evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
+  - unverified: interactive building controls and UI regressions belong to done -> tested
+  - unverified: execute the existing-save migration scenario now written in TESTING.md
   - unverified: never seen running in game
+  - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
+  - "verified (done -> tested), no @wip: the mod has no Pickle suite and no .feature file, so nothing is parked waiting to be repaired or deleted. The check is vacuous, which is different from a suite having passed it. Checked 2026-09-24."
+  - "unverified (done -> tested), conditional scenarios: three conditions, none has run: Biotech present and Biotech absent for the stove, and the original mod present for the migration. A fourth run, the incompatibility pass, loads both mods. A scenario skipped for want of its condition is not a pass. TESTING.md now names the passes."
+  - "unverified (done -> tested), manual tests: every scenario of TESTING.md is still to be run and validated. None is green, none is listed not applicable."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-09-12, by the thread that holds this mod
+updated:      2026-09-24, prepublished 0.1.0 recorded, tested gate written out
+audit_revision: e389720674c46092553b0d86a382465f5fa5bd25
+previous_stage: done
 ---
 
 # Ancient Buildings Renew — status
+
+## Prepublication and the tested gate — 2026-09-24
+
+**Current decision: stage stays `done`.** This section supersedes the earlier sections below where
+they disagree, notably "Nothing was committed, pushed or published" and "`workshop` is empty
+because nothing has been uploaded".
+
+- **The `0.1.0` prepublication was made on 2026-09-23.** The Workshop item is `3806708945`, private
+  as Steam creates every item. Commit `43acebf`, `Add published Workshop file ID for 0.1.0`, adds
+  `About/PublishedFileId.txt`. It also adds the `About.xml` description that had been edited on
+  2026-09-20 and never committed, so Mod/ at that commit is what Steam received, apart from eight
+  generated `.dds` files that were in the folder and are now ignored. The description on the page is
+  frozen at that text.
+- `CHANGELOG.md` opens with `## [1.0.0] — unreleased` above `## [0.1.0] — 2026-09-23`, "Creation of
+  a publishIdFile". `1.0.0` arrives with `published` and stays unreleased until then.
+- **Not yet done for this item:** the visibility and subscription test (subscribing to one's own
+  item, testing it, then making it public by hand), and everything under `prepublished` in
+  `../AUDIT.md`. The item is not public and this mod is not `prepublished` as a stage.
+- **`.dds` files are ignored.** Eight sat untracked in `Mod/Textures`, each beside a tracked `.png`
+  twin, which is what the game loads. Nothing was tracked, so nothing was removed from git.
+- **Evidence.** No game run has happened, so no test evidence exists to cut down. The rules are
+  written in `docs/runs/README.md`: one proof per check, the log of every pass as text, nothing
+  about a superseded revision, captures reviewed then minified, all on disk and ignored by git. The
+  rights evidence under `Audit/2026-09-13-rights/` is not test evidence and is kept: its README,
+  inventory, the original About and the 32 px icon are versioned, and the two raw Steam captures
+  (155 KB, another author's page and its commenters) are on disk only.
+- **The three checks for `done -> tested`** are written out in `TESTING.md`, section "Passing to
+  `tested`", with the five passes that section names. No `@wip` scenario exists, vacuously, because
+  there is no Pickle suite. The conditional scenarios and the manual tests are all still to run.
+- **One thing worth a decision.** `../AUDIT.md` asks, for `preTest -> done`, that Pickle features be
+  written and their scope justified. None exists here and the earlier audit passed that step on the
+  manual scenarios alone. The drag test, the gizmos and the temperature across a wall are the kind of
+  thing only a running game shows, so a suite is plausible; whether it is worth writing for six
+  XML-only defs is the open question.
+
+## Offline completion — 2026-09-13
+
+**Current decision: `Preview générée` -> `done`.** This section supersedes previous
+next-step and completion notes below. The user authorized continuing the remaining work.
+
+- About.xml now ends with the exact Steam-formatted Source code on GitHub link to the
+  previously verified repository; the redundant bare source URL was removed. Parsed XML
+  and assertions on the final link and repository URL passed. Credits and adoption text
+  are preserved.
+- TESTING.md now includes the missing original-mod existing-save migration scenario:
+  disposable copy, fixture prerequisites, exclusive mod replacement, building/material/
+  bill/filter comparisons, functional checks, save/restart/reload and EN/FR checks.
+  It is explicitly marked not executed.
+- Naming, preview, settings, localization and dependency checks already pass. The preview
+  screenshot comparison remains a user waiver, not an executed test. No settings page or
+  shortcut is needed, as justified by the source inventory and clarified options rule.
+- Six automated XML checks passed in this audit. Defs, language resources, textures,
+  dependencies and version declarations are unchanged since those runs. Only About's
+  documentation text changed, so the targeted XML/link checks above cover the affected
+  surface; compilation and custom C# unit tests remain not applicable.
+- `git diff --check` passed. Earlier changes in STATUS.md and TESTING.md were preserved.
+
+Delivered version: HEAD `e389720674c46092553b0d86a382465f5fa5bd25` plus the uncommitted
+About description correction. Current About.xml SHA256:
+`8AD33D4ABC96855FA82FCFB5713230CCA25DBC04014F241696EDB31AA084C673`.
+The audit_revision field records base HEAD; this paragraph identifies the delivered delta.
+
+### Exact next work: done -> tested
+
+Execute TESTING.md on RimWorld 1.6: building scenarios, clean Core-only and Biotech cases,
+English/French UI, save/reload and original-mod existing-save migration. Record fixture,
+game/DLC versions, actions, observed results and logs; fix failures and rerun affected
+regressions. No custom settings persistence or MainButtons integration scenario applies.
+No interactive run has been performed here and `tested_on` remains empty. Nothing was
+committed, pushed or published. Native game control is unavailable in this session; these
+remaining results require an actual interactive game run, not another offline assertion.
+## User override — 2026-09-13
+
+**Current decision: `ModIcon générée` -> `Preview générée`.** The user explicitly waived
+the pending side-by-side comparison with a game screenshot ("non, j'override"). This
+waiver overrides that STYLE_RIMWORLD.md requirement for this audit. The comparison was
+not performed and is not recorded as a successful test. All other preview checks already
+passed; `showcase: complete` therefore includes this documented waiver.
+
+This section supersedes earlier notes identifying that comparison as blocking. The next
+outstanding item remains the required final formatted Source code on GitHub link in
+About.xml's description, recorded below. The waiver does not apply to that item or to
+functional in-game tests; `tested_on` remains empty. No delivered file was changed.
+
+## Icon follow-up — 2026-09-13
+
+**Current decision: `horsMonoRepo` -> `ModIcon générée`.** This supersedes the earlier
+next-step notes below. The installed 128 x 128 PNG (21,946 bytes) was reduced to 32 x 32
+with System.Drawing high-quality bicubic interpolation solely for inspection. The delivered
+image was not altered. Source SHA256:
+`039AD8396DCAFB725BD4FD451D76D07C5D13449A41F989330D670EDA8995A565`.
+
+The actual 32 px image was opened and visually examined. The orange head, face and tuft
+remain readable; the stone column at its right remains distinguishable from the head and
+dark background. Foreground rubble loses fine detail but does not obscure either main
+silhouette. One mascot, no lettering, no second character. The small-size readability
+criterion passes. Evidence: [ModIcon-32.png](Audit/2026-09-13-rights/ModIcon-32.png).
+This is an offline visual check, not a claim of inspection inside the game.
+
+Build is not applicable to this XML-only mod, and the six existing automated checks on
+unchanged delivered content remain valid. Earlier Git/rights prerequisites now pass.
+`showcase: partial` remains because the preview's comparison alongside an actual game
+screenshot is still unverified. That comparison is the exact next check required to pass
+`Preview générée`; existing preview dimensions, weight and composition checks are retained.
+No image generation, development or publication was performed.
+## Rights follow-up — 2026-09-13
+
+**Current decision: `dansMonoRepo` -> `horsMonoRepo`** (original declared stage: `done`).
+The first transition now passes. Evidence is preserved in
+[Audit/2026-09-13-rights/README.md](Audit/2026-09-13-rights/README.md), with the original
+About, complete source file inventory and SHA256 hashes, live Steam HTML and all 26 comments.
+No licence, permission or explicit prohibition was found in these inspected sources.
+Source version 1.3 and the live page's last update of 6 August 2021 support `silent` under
+the user's workflow. The port's scoped MIT grant, public/unofficial naming and removal
+undertaking remain consistent; no upstream permission is inferred.
+
+Two earlier uncertainties are resolved: original files were inaccessible inside the
+sandbox but are present at the documented Workshop path; the removal message is hidden
+HTML (`display: none`), not a displayed removal notice. The live response therefore does
+not contradict the README. Earlier rights limitations below are historical and superseded.
+Current Git and offline test evidence remains applicable: no delivered content was changed.
+The remaining icon-size check prevents the next cumulative transition; later pending work
+remains recorded separately. Only audit/status evidence was added; nothing was published.
+## Cumulative workflow audit — 2026-09-13
+
+**Initial decision, superseded by the rights follow-up below: `done` -> `dansMonoRepo`.** This was the
+workflow baseline, not a claim that the independent repository has physically moved back
+into the monorepo. `detached: yes` remains correct. Later work cannot replace cumulative
+prerequisites. This section and the current front matter supersede historical completion
+claims below, which are retained as historical evidence.
+
+Correction following the user's clarification on 2026-09-13: a remote in the parent
+monorepo is neither required nor expected after detachment. The independent origin and
+pushed commit satisfy the Git criteria. Source/Def analysis and applicable automated tests
+suffice for the options gate; interactive checks belong exclusively to `done -> tested`.
+The earlier remote defect and runtime settings blocker are withdrawn. Settings now pass as
+`not_applicable`, and localization is `complete`. The cumulative stage remains at the baseline
+solely because the separate upstream rights evidence gap below remains unresolved; neither
+Git nor settings is a reason for this retained stage.
+
+Authority: the user's nine-transition workflow, with `../PUBLISHING.md`,
+`../STYLE_RIMWORLD.md`, `../MOD_SETTINGS.md` and `../TRANSLATIONS.md`, all read.
+The user's subsequent Git and settings clarifications override conflicting protocol text.
+Audited HEAD and remote main: `e389720674c46092553b0d86a382465f5fa5bd25`.
+Only STATUS.md and TESTING.md were modified at entry. Their existing changes are preserved;
+this audit edits only STATUS.md. No delivered files, Git configuration or history changed.
+
+### Ordered findings
+
+| Transition | Result and evidence |
+| --- | --- |
+| dansMonoRepo -> horsMonoRepo | **Validated:** independent Git root, no files tracked by parent, folder ignored by parent, independent origin, PUBLIC GitHub repository, pushed main equal to HEAD. No parent remote is required; its absence is normal. Names/packageId and English README/ATTRIBUTION/CHANGELOG/scoped LICENSE are consistent; distributed LICENSE and ATTRIBUTION copies are byte-identical. **Validated on follow-up:** source inventory/About, live page and all 26 comments substantiate silent; see Audit/2026-09-13-rights/README.md. |
+| horsMonoRepo -> ModIcon generated | **Not applicable, justified:** C# build/DLL freshness; no source project or custom assembly is delivered. Six offline checkers pass. **Validated:** installed PNG, 128 x 128, 21,946 bytes; native-size visual inspection shows one orange winking mascot with ancient stone props. **Validated on follow-up:** the 32 px derivative was visually inspected; mascot head and stone column remain distinguishable. See the icon follow-up and retained QA PNG. |
+| ModIcon generated -> Preview generated | **Validated with user waiver:** installed PNG, 896 x 504, 616,784 bytes, below 900 KB and 1 MB; visually inspected at full size and using Art/preview-268.png. High oblique camera, tiled ground, warm lamp pool, cool stone palette, no readable face, identifiable buildings and unclipped title/version. Comparison alongside an actual game screenshot was explicitly waived by the user on 2026-09-13, not executed. |
+| Preview generated -> preOptions | **Validated locally:** blue secondary ink and amber accent visibly distinct at both sizes; English description; exact unofficial suffix in About/README and separate preview tag; Renew at 65 percent in secondary ink; no connective words needing reduction. Palette/HTML/QA files exist. **Corrected on follow-up:** description now ends with the required formatted Source code on GitHub link; XML and exact final link verified. |
+| preOptions -> options | **Not applicable, justified; gate validated in isolation:** no relevant global settings need identified; source/Def inventory confirms no settings page or MainButtons shortcut, and applicable automated XML checks pass. `settings_audit: not_applicable`. No runtime check is required for this gate. |
+| options -> l10n | **Validated offline:** six English labels/descriptions and all 12 French values, exact key sets, no duplicate/empty French entries, meaning reviewed, injection checker passes. Native English Def values supply English resources; no duplicate English folder is needed. `localization`, `translation_en` and `translation_fr` are `complete`; settings no longer block this gate. Runtime language checks remain unverified for done -> tested only. |
+| l10n -> preTest | **Validated offline:** parents/typed references/classes resolve against installed 1.6; no external types, assemblies, patches or LoadFolders. Two baby-food recipes have Biotech MayRequire guards; DLC remains optional. About declares 1.6 and original package incompatibility, with no third-party dependency or load-order requirement. Runtime DLC present/absent cases remain pending. |
+| preTest -> done | **Validated in isolation:** existing automated XML tests executed successfully; TESTING.md provides building, DLC-free and EN/FR scenarios with actions and expected results. C# unit tests are not applicable without custom C# logic. **Completed on follow-up:** TESTING.md now defines an explicit original-mod existing-save migration protocol, including fixture prerequisites, before/after checks, restart and language checks. All earlier gates now pass, including the documented preview waiver. Execution remains pending for tested. |
+| done -> tested | **Unverified:** no game run, runtime UI, migration or regression result demonstrated. Player.log is zero bytes, last modified 2026-09-11 18:23:25; an empty log is not a successful test. `tested_on` stays empty. |
+
+### Executed checks and freshness
+
+All six commands below were executed from this repository on 2026-09-13 and returned exit 0:
+
+- `pwsh -NoProfile -File ../scripts/Check-XmlFields.ps1 -ModPath ./Mod`:
+  3 files checked, no unknown fields.
+- `pwsh -NoProfile -File ../scripts/Check-DefRefs.ps1 -ModPath ./Mod`:
+  6 defs, well-formed XML, all parents and typed references resolved.
+- `pwsh -NoProfile -File ../scripts/Check-XmlClasses.ps1 -ModPath ./Mod -TypeLists ../rw16_types.txt`:
+  all 19 type references resolved.
+- `pwsh -NoProfile -File ../scripts/Check-TypeRefs.ps1 -ModPath ./Mod`:
+  zero unguarded third-party references. The checker reports three ambiguous generic field
+  names skipped; these are a checker limitation, not three detected mod defects.
+- `pwsh -NoProfile -File ../scripts/Check-DefInjected.ps1 -TransMod ./Mod`:
+  11,592 defs indexed, 12 keys, zero errors.
+- `pwsh -NoProfile -File ../scripts/Check-ConfigErrors.ps1 -ModPath ./Mod`:
+  6/6 defs, 26 rules, no config error. Computed/cross-def and runtime-only rules remain
+  outside its coverage, as explicitly reported by the checker.
+
+Installed game Version.txt: `1.6.4871 rev590`. Scripts/type index are shared workspace
+prerequisites outside this Git repository, as TESTING.md already documents. An independent
+XML comparison found 12 English fields, 12 French entries, zero differences/duplicates/empty
+French values. Native image decoding confirmed formats, dimensions and sizes above.
+SHA256 comparison confirmed both distributed documentation copies match their root originals.
+
+Git checks: `git rev-parse --show-toplevel`, `git status --short`, `git remote -v`,
+`git ls-remote origin refs/heads/main`, and
+`gh repo view vbardales/Rimworld-Ancient-Buildings-Renew --json name,visibility,url`.
+The network checks succeeded outside the restricted sandbox after initial access failures.
+Parent checks used the command-local prefix
+`git -c safe.directory=C:/Users/nelim/Documents/rimworld -C ..` with `remote -v`,
+`config --get-regexp '^remote\..*\.url$'`, `ls-files AncientBuildingsRenew` and
+`check-ignore AncientBuildingsRenew/STATUS.md`; no global Git setting was changed.
+
+Delivered content and Art evidence are unchanged from HEAD. Existing preview QA reports
+minimum contrasts 10.47/8.25/6.62/6.21/9.97 for title/suffix/tag/summary/badge. These and its
+font measurements are historical results, not newly executed rendering/contrast tests.
+Visual inspection in this audit covered the installed icon at native size, the installed
+preview and Art/preview-268.png. No image was generated, edited or rebuilt.
+Repeat affected checks after changes to Defs, text, images, options or dependencies.
+
+### Rights evidence limits
+
+`licence: silent` remains the documented decision, not a newly established permission.
+LICENSE expressly excludes original buildings/textures from the port's MIT grant.
+After finding Firecrawl CLI unavailable, the web tool retrieved the
+[original Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2566355159).
+The indexed response was reported as crawled four months ago: version 1.3, last update
+6 August 2021, no permission statement in its description or ten displayed comments.
+It shows the author display name Siyndee and a removal notice; the README's categorical
+claim that the item is not withdrawn therefore needs a live recheck, not a conclusion
+from potentially stale indexed/template text. Not all 26 comments were retrieved.
+Original package files were not found at the standard Steam Workshop item path checked.
+The historical four-place licence check is only partly corroborated. Preserve dated original
+About/file inventory and inspect remaining relevant author statements before validating the
+first gate. Silence and the port's MIT additions are not evidence of upstream permission.
+
+### Settings audit
+
+Costs, research, power, cooling and light radius are fixed building balance; no concrete
+need for global player configuration was identified. The port deliberately retains the
+upstream balance. Storage filters/grouping, cooking bills, target temperature and power
+toggles use inherited per-building vanilla controls; they are not XML-only mod settings.
+No ModSettings implementation, custom UI, MainButtonDef, global settings persistence or
+customization integration is shipped. The reviewed sources and definitions expose neither
+an empty settings page nor a shortcut. Together with the concrete inventory of player needs
+and successful applicable XML checks, this justifies `settings_audit: not_applicable` under
+the user's clarified rule. No additional artificial settings test is needed.
+
+Interactive checks belong to `done -> tested`, not to this options gate. No game was
+launched, config changed or log cleared, and no runtime success is asserted. RIMMSQOL
+reveal/shared persistence, reset/input validation and global settings migration tests are
+not applicable because no relevant settings or shortcut are shipped. No integration version
+is certified. Inherited building controls and UI regressions still require the functional
+scenarios in TESTING.md before `tested`.
+
+### Previous next-transition work (completed by the icon follow-up)
+
+The rights follow-up validates `horsMonoRepo`. To validate `ModIcon generated`, complete
+and record the remaining 32 px icon visual check. Compilation is not applicable, and the
+six existing offline checkers already passed on unchanged delivered content. No remote in
+the parent monorepo and no interactive settings check is required.
+Then reassess sequentially using the later work already present. Remaining later checks and
+the description-link defect are listed in `remaining`; no development or publication was
+performed to manufacture a better status.
+
+## Historical status and evidence (superseded where noted above)
 
 A status sheet, read by a sweep over every mod rather than by asking each thread one at a time.
 It lives at the root, never in `Mod/`, so Steam never receives it.
@@ -31,8 +292,8 @@ thread that holds this mod:
 - **`tested_on`** — empty, and that is the honest state: this mod has never been loaded by
   RimWorld. `TESTING.md` says what the first run has to settle, and the one check that matters
   most cannot be made from a log — the concrete fence has to be dragged out in a line by hand.
-- **`remaining`** — one entry, `unverified`, for exactly that reason. There is no known defect
-  and no missing feature.
+- **`remaining`** — in-game validation, including the English and French display checks.
+  There is no known defect and no missing feature.
 - **`dependencies: none`** — the value means the mod needs nothing, as against `declared` when
   every mod it needs is named in the About's `modDependencies` and `to check` when a non-vanilla
   `loadAfter` suggests one that is not. Here it is literal: no dependency, no `loadAfter`, no DLC
@@ -82,6 +343,41 @@ Preview overlay recomposed on 2026-09-12 according to `../STYLE_RIMWORLD.md`:
 `workshop` is empty because nothing has been uploaded. Read `PUBLISHING.md` before it is: the
 name, the description and the `packageId` are frozen when the Workshop item is created, and
 `SetItemDescription` never runs again.
+
+## Translation audit
+
+Audited on 2026-09-13 against `../PUBLISHING.md` and `../TRANSLATIONS.md`.
+Content revision: `e389720674c46092553b0d86a382465f5fa5bd25`; the audit changes only
+this status sheet and `TESTING.md`.
+
+- Scope: the entire published `Mod/` tree. Two Def files contain six concrete ThingDefs;
+  their six labels and six descriptions are the complete inventory of owned in-game text.
+  No assemblies, C# source, patches, LoadFolders, version-specific content, custom UI,
+  Keyed resources or grammar resources are shipped. All nested Def fields were reviewed;
+  the other string values name vanilla defs, classes, textures or internal data.
+- Inventory: `ABKitchenstove`, `ABVending`, `ConcreteBarrier`, `AB_Lamppost`, `ConFence`
+  and `AB_AirConditioner`, each with `.label` and `.description`. English is supplied by
+  the nonempty source fields in `Mod/Defs/ThingDefs_Buildings/`; an English DefInjected
+  copy is unnecessary. Both files under `Mod/Languages/French/DefInjected/ThingDef/`
+  provide all 12 French values. Meaning and terminology were reviewed against English;
+  no text changes were needed. No parameters, grammar tokens or rich-text tags occur.
+- Verification: parsed both Def files and both French files as XML and compared the exact
+  expected `defName.field` set with French entries. Result: 12 English fields, 12 French
+  entries, zero missing, duplicate, unexpected or empty entries, and no TODO/PLACEHOLDER
+  markers. `pwsh -NoProfile -File ../scripts/Check-DefInjected.ps1 -TransMod ./Mod`
+  completed successfully: 11,592 defs indexed, 12 keys checked, zero errors.
+- Vanilla supplies the inherited building interfaces, recipes, research, categories,
+  stats, placement messages and generated blueprint/material labels. The mod neither
+  supplies nor constructs Keyed keys for them. The two Biotech recipe references are
+  conditional, with no owned text overrides. About metadata, licences and repository
+  documentation are outside the in-game gate.
+- All three fields certify offline readiness only. English and French runtime rendering,
+  including vanilla interfaces and conditional recipes, remains unverified in `remaining`;
+  `TESTING.md` now specifies the checks in both languages. The historical `stage: done`
+  is preserved and does not assert that the mod has been tested in game.
+
+Repeat this audit after changes to Defs or language resources; reset affected translation
+fields to `unchecked` until revalidated.
 
 Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a dead source,
 `alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing

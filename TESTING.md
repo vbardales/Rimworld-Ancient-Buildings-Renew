@@ -34,6 +34,31 @@ colony. The stove's last two bills require Biotech.
 - Build the stove: baby-food bills must be absent, while ordinary meal bills remain usable.
 - Cook a simple meal successfully, then save and reload; the buildings and bills must persist.
 
+## Existing-save migration from the original mod
+
+Status: not executed. Run on disposable copies; preserve the original save and mod list.
+
+Preconditions: an existing save containing the original mod's five buildings
+(`ABKitchenstove`, `ABVending`, `AB_Lamppost`, `ConcreteBarrier`, `ConFence`). Record its
+game version, DLCs and mod list. If no suitable save exists, create a baseline with the
+original mod on a compatible game version and record that this is a constructed fixture.
+Record building counts, materials, positions, stove bills and vending storage filters.
+Separate any base-game version migration errors from this mod's replacement behavior.
+
+1. Back up the save. Disable `ancientbld.core`, enable `nelim.ancientbuildingsrenew` on
+   RimWorld 1.6 and retain the save's other required content. Never enable both mods together.
+2. Load the copied save. Expect all five building types, counts, positions and materials
+   to survive; existing bills and storage filters must remain usable. Investigate any
+   missing def, duplicate def, exception or lost building in the log.
+3. Exercise each building using the scenarios below, including fence dragging for newly
+   placed segments and storage linking. Research AirConditioning and build the newly added
+   cooler; it need not exist in the original save.
+4. Save under a new name, restart and reload. Expect the buildings, bills and filters to
+   persist and function. Repeat the relevant UI checks in English and French.
+
+Record fixture identity, game versions, DLCs, mod lists, before/after observations, log
+paths and pass/fail per action. No migration compatibility is certified until this run passes.
+
 ## What to search the log for
 
 `Player.log` sits in
@@ -118,13 +143,58 @@ Lines naming other mods are not ours to fix, and are worth leaving in the paste 
   behaviour — both its cells are then the same room — and it is not a fault to report.
 - Can be flicked off, and can break down.
 
-## French
+## English and French
 
-Switch the language and check the six labels and their descriptions: *clôture en béton*,
+Run this check in English, then restart in French. Check all six building labels and
+descriptions in the build menus and information windows, including blueprints and buildings
+made from different materials. The French labels are: *clôture en béton*,
 *barrière en béton*, *lampadaire*, *distributeur automatique*, *cuisinière simple*, *vieux
 climatiseur*. Twelve keys in all, six labels and six descriptions.
 
+In both languages, exercise cooking bills (including baby food with Biotech), storage filters
+and linking, temperature controls, power/flick gizmos, placement rejection messages and the
+fence's related build commands. These interfaces use vanilla text. Check for raw keys,
+unexpected English fallback in French, broken formatting and clipped text. Repeat the
+DLC-free scenario in both languages. Record results separately from the offline translation
+audit; these runtime checks have not yet been performed.
+
 ---
+
+## Passing to `tested`
+
+`tested` is claimed only when every line below is true. None is yet: the mod has never been loaded
+by RimWorld, and `tested_on` in `STATUS.md` stays empty until then.
+
+**The passes, and what each covers.** A vert on one says nothing about the others.
+
+| Pass | Mods loaded | Covers |
+|---|---|---|
+| Minimal, with DLC | Core, the DLCs, this mod | the six buildings, the drag test, baby-food bills **present** |
+| Without DLC | Core, this mod | baby-food bills **absent** and no unresolved-recipe error: the only conditional scenario the defs contain |
+| Original mod replaced | Core, the original `ancientbld.core` first, then swapped for this mod, on a copy of a save | the existing-save migration protocol above |
+| Incompatibility looked at | Core, this mod **and** `ancientbld.core` together, on a new throwaway colony and never on the migration save | that the declared incompatibility is still true: the five shared `defName`s must log `Adding duplicate`, and the mod list must flag the pair. A declaration ages; this is how it is read again |
+| With optional mods | not applicable | the mod declares no `loadAfter` and needs nothing, so there is no optional set to stage |
+
+**The three checks for `done -> tested`**, from `../AUDIT.md`:
+
+1. **No scenario parked in `@wip`.** This mod has no Pickle suite and no `.feature` file, so
+   nothing can be parked: verified 2026-09-24 with `find . -name '*.feature'` (none) and a search
+   for `@wip` (none). The check is vacuous today and is written down so that it is not forgotten the
+   day a suite is added. A `@wip` scenario is not a passed scenario; it is repaired and rerun, or
+   deleted with its reason.
+2. **Every conditional scenario has run, with its condition present.** For this mod the
+   conditions are three: Biotech present and Biotech absent for the stove, and the original mod
+   present for the migration. A scenario skipped for want of its condition is not a pass. Cite a
+   report only after reading its set name and the scenario it shows: the report folder is shared by
+   the whole machine.
+3. **No manual test left to validate.** Every scenario in this file is green, or is listed here as
+   not applicable with its reason. The capture of each state is opened and looked at: a green run
+   says the path was followed, not that the image shows what it should.
+
+**Which proofs to keep, and how to cut them down**, is written in
+[`docs/runs/README.md`](docs/runs/README.md): one proof per check, the log of every pass as text,
+nothing about a superseded revision, captures reviewed at full size and then minified. Evidence
+stays on disk and is ignored by git; what is versioned is the day's summary in `docs/runs/`.
 
 ## Settled without the game
 
