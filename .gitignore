@@ -37,3 +37,21 @@ PROMPT_*.md
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Generated DDS copies of the textures. Each has a tracked .png twin in the same folder, which is
+# what the game loads, so the .dds add nothing to the source. Eight of them sat in Mod/ when the
+# 0.1.0 prepublication of 2026-09-23 was uploaded; they never were tracked, and this keeps them
+# from ever being committed. They stay on disk locally.
+*.dds
+
+# Test evidence lives on disk and is ignored. The record that is versioned is the text summary in
+# docs/runs/. What to keep, and how to cut it down, is written in docs/runs/README.md.
+Tests/Pickle/evidence/
+Tests/Manual/evidence/
+evidence/
+
+# Raw captures of another author's Steam page and of its comment thread, kept on disk as the dated
+# proof behind the `silent` licence decision. They hold other people's names and words, so they do
+# not go into a public repository; the summary next to them, README.md, does.
+Audit/*/steam-page.html
+Audit/*/steam-comments.json

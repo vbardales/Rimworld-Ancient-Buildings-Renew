@@ -1,0 +1,72 @@
+[
+  {
+    "path": "About\\About.xml",
+    "bytes": 310,
+    "sha256": "E7FA9B37A55FB13F25A1D32101FFF721170A8A4B601409BE3F7B94985F182B76"
+  },
+  {
+    "path": "About\\Preview.png",
+    "bytes": 588081,
+    "sha256": "25228F3A05FAFD2AD7BB1BD82FF2654A2347DDFB824FAE5809EBAAC3EB9D349A"
+  },
+  {
+    "path": "About\\PublishedFileId.txt",
+    "bytes": 10,
+    "sha256": "7EA248CBB2F15FC03AE6FB0AECF76D2866A833B94DBC2FCCF74D359E2950A56C"
+  },
+  {
+    "path": "Defs\\ThingDefs_Buildings\\AB_Buildings_Structure.xml",
+    "bytes": 11519,
+    "sha256": "171D857AB6746C93C5E006659B1B8982297E094A3E3A8F3D93506E1835838B3D"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABLinked\\ABConFence_Atlas.png",
+    "bytes": 12884,
+    "sha256": "BB26AFDBCB0133930618C52D286FA50FE030C2E7FC23ECAE5CDDC3491A85EA89"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABLinked\\ABConFence_BPAtlas.png",
+    "bytes": 14415,
+    "sha256": "FA7F2CCEEC030F2204C7857E1711912FF56BAC38304ED98DFE637F4C6571E05E"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABSingle\\AB_AirConditioner.png",
+    "bytes": 4478,
+    "sha256": "A78971BEFBC572AD33F796922782A0875378DCB11FE1ADAB333C7230402DFB56"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABSingle\\AB_ConcreteBarrier.png",
+    "bytes": 795,
+    "sha256": "8327ECE455166A22386EDEFEF5703C28D92B147B14A3EBB9A4F132B27F82480C"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABSingle\\AB_Lamppost.png",
+    "bytes": 5275,
+    "sha256": "D08FC46F94644ABAF510732CFB527A8A41F39362142B429C8C9A9F849BBECDA8"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABSingle\\AB_Stove.png",
+    "bytes": 3087,
+    "sha256": "D221E62ECACA45DBAA5B47A5970037DCAA976BF7704D3CE8126FAEBF4B6B10AA"
+  },
+  {
+    "path": "Textures\\Things\\Building\\ABSingle\\AB_VendingMachine.png",
+    "bytes": 1368,
+    "sha256": "F4613439C6FF5D6972CFB62CDFCEADA99E9CA610880C4AD3339AA17387976538"
+  },
+  {
+    "path": "Textures\\Things\\Building\\AB_UI\\AB_ConcreteBarrierIcon.png",
+    "bytes": 795,
+    "sha256": "8327ECE455166A22386EDEFEF5703C28D92B147B14A3EBB9A4F132B27F82480C"
+  },
+  {
+    "path": "Textures\\Things\\Building\\AB_UI\\AB_ConFenceIcon.png",
+    "bytes": 1269,
+    "sha256": "3719061517898F5D3FED937984AADBB715679F4D9952E2A1F08A2168E4AB38D5"
+  },
+  {
+    "path": "Textures\\Things\\Building\\AB_UI\\AB_LamppostIcon.psd",
+    "bytes": 23577,
+    "sha256": "A13F9144DF5732E6CFB6297EF467107317961A0E74D9A68CBDD81DB9D1256A3C"
+  }
+]
