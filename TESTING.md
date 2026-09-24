@@ -170,24 +170,43 @@ audit; these runtime checks have not yet been performed.
 ## What belongs in Pickle, and what does not
 
 `../AUDIT.md` asks, for `preTest -> done`, that Pickle scenarios be written and their scope
-justified: only what a running game can show stays in Gherkin. None is written yet. This is the
-scope, decided from what the six checkers already settle offline and what they cannot.
+justified: only what a running game can show stays in Gherkin. They are written, in
+[`Tests/Pickle/`](Tests/Pickle/README.md): seven features, thirteen scenarios, and **none has been
+run**. Running them, reading their reports and looking at what they capture is `done -> tested`.
 
-**In Pickle, because only a loaded game shows it and a person should not have to look:**
+**In Pickle, because only a loaded game shows it and a person should not have to read a log:**
 
-| Scenario | Pass | Asserts |
+| Feature | Pass | Asserts |
 |---|---|---|
-| The mod loads clean | minimal, with DLC | no error logged and none from this mod, the six defs exist |
-| The stove without Biotech | without DLC, Biotech left out of the pass map | no unresolved-recipe error; Biotech reported not active |
-| The declared incompatibility is still true | Core, this mod and `ancientbld.core` | `an error matching "Adding duplicate" was logged`, in a passing scenario, not as an expected failure |
-| French labels and descriptions | one pass run in French | one `@review` capture per building, opened and looked at afterwards |
+| `01` the mod loads | every pass but the incompatibility one | the six defs exist and **nothing logged while the defs loaded names one of them**; the fence and barrier carry `drawStyleCategory` `Defenses` |
+| `02` placement | minimal | the real build designator accepts the fence, barrier, vending machine and stove |
+| `03` stove with Biotech | minimal | the stove takes a meal bill and both baby-food bills |
+| `04` stove without Biotech | `sans-biotech` | the two recipes do not exist, and nothing logged names the stove or them |
+| `05` original mod | `incompat-original` | with `ancientbld.core` beside it, the game logs a duplicate for the shared defNames |
+| `06`, `07` labels | English pass, French pass | the six labels and six descriptions of the loaded defs, in the language the game started in |
 
-**Not in Pickle, and why:** the fence and barrier drag and the storage-link gizmo need a real drag or
-a designator, and the PickleTools catalogue has no step for either (Pickle's own step catalogue was
-not searched, so this is to be confirmed before a step is written). A new step would cost more than
-the manual run it replaces; cooling across a wall is a temperature reading that a person takes
-once; the existing-save migration is opportunistic and is not planned at all (see its section). The drag
-and the wall cooling stay manual scenarios in this file. That is a cost decision, not a judgement that the check matters less.
+The French check is an assertion on the loaded defs, not a capture: a language folder the game does
+not find fails silently, and a def label read back in the wrong language is what shows it. An earlier
+draft of this section asked for one `@review` capture per building. It is replaced, and no capture is
+owed for it.
+
+**Two things Pickle's shipped steps cannot do here, and what stands in for them.**
+
+- Pickle's `no errors were logged` reads what is logged after a scenario is armed, and arming clears
+  its buffer, so an error logged while the defs loaded is gone before the first step. That is where this
+  mod can fail, so `01` and `04` read RimWorld's own log through two local steps in
+  `Tests/Pickle/Source/`. The shipped step is kept for `02` and `03`, which ask about what happens after
+  a map is loaded.
+- The shipped `I designate` step places a blueprint on each cell directly, so it would pass on a fence
+  that could not be dragged. The drag stays manual. What Pickle can assert is the loaded field, which
+  is `(null)` in the state the original port was in.
+
+**Not in Pickle, and why:** the fence and barrier drag, and the storage-link gizmo, need a real drag or a
+gizmo click the shipped steps do not give; cooling across a wall is a temperature reading a person takes
+once; the existing-save migration is opportunistic and is not planned at all (see its section). The drag,
+the gizmo and the wall cooling stay manual scenarios in this file. That is a cost decision, not a
+judgement that the check matters less. One manual half remains for the stove: with Biotech left out, that
+an ordinary meal bill still works needs a map, and the map fixture was written with every DLC active.
 
 **Not tested at all:** what RimWorld does with the declaration itself, such as its warning for a
 missing dependency or its load order. `../AUDIT.md`: the game is not what is under test.
@@ -197,34 +216,40 @@ missing dependency or its load order. `../AUDIT.md`: the game is not what is und
 `tested` is claimed only when every line below is true. None is yet: the mod has never been loaded
 by RimWorld, and `tested_on` in `STATUS.md` stays empty until then.
 
-**The passes, and what each covers.** A vert on one says nothing about the others.
+**The passes, and what each covers.** A vert on one says nothing about the others. The commands, the
+filters and the number of scenarios each should play are in
+[`Tests/Pickle/README.md`](Tests/Pickle/README.md).
 
 | Pass | Mods loaded | Covers |
 |---|---|---|
-| Minimal, with DLC | Core, the DLCs, this mod | the six buildings, the drag test, baby-food bills **present** |
-| Without DLC | Core, this mod | baby-food bills **absent** and no unresolved-recipe error: the only conditional scenario the defs contain |
+| Minimal, English | Core, the DLCs, this mod | Pickle `01`, `02`, `03`, `06`; by hand, the fence and barrier drag, the gizmo, the wall cooling |
+| Minimal, French | Core, the DLCs, this mod, French | Pickle `01`, `07`; by hand, the French labels in the menus |
+| Without Biotech | Core, the other DLCs, this mod | Pickle `01`, `04`, `06`: baby-food recipes **absent**, no unresolved-recipe error |
+| Core alone | Core, this mod | **by hand only**: every other DLC left out too, meal bills still usable on the stove |
+| Incompatibility looked at | Core, this mod **and** `ancientbld.core` together | Pickle `05`: the declared incompatibility is still true, the shared defNames log a duplicate. A declaration ages; this is how it is read again |
 | Original mod replaced | Core, the original `ancientbld.core` first, then swapped for this mod, on a copy of a save | **opportunistic, not a gate**: the existing-save migration protocol above, only if a suitable save turns up |
-| Incompatibility looked at | Core, this mod **and** `ancientbld.core` together, on a new throwaway colony and never on the migration save | that the declared incompatibility is still true: the five shared `defName`s must log `Adding duplicate`, and the mod list must flag the pair. A declaration ages; this is how it is read again |
 | With optional mods | not applicable | the mod declares no `loadAfter` and needs nothing, so there is no optional set to stage |
 
 **The three checks for `done -> tested`**, from `../AUDIT.md`:
 
-1. **No scenario parked in `@wip`.** This mod has no Pickle suite and no `.feature` file, so
-   nothing can be parked. Verified 2026-09-24: `find . -name '*.feature'` finds none, so there is
-   no file in which the tag could sit. Search the `.feature` files only, because this file and
-   `STATUS.md` name the tag in their prose and would answer a search of the whole tree. The check
-   is vacuous today, and is written down so that it is not forgotten the day a suite is added. A
-   `@wip` scenario is not a passed scenario: it is repaired and rerun, or deleted with its reason.
-2. **Every conditional scenario has run, with its condition present.** For this mod the
-   conditions are two: Biotech present and Biotech absent for the stove. The incompatibility pass
-   loads the original mod as a pass of its own, and the migration is opportunistic and not applicable
-   to this gate. A scenario skipped for want of its condition is not a pass. Cite a
-   report only after reading its set name and the scenario it shows: the report folder is shared by
-   the whole machine.
-3. **No manual test left to validate.** Every scenario in this file is green, or is listed here as
+1. **No scenario parked in `@wip`.** The suite has seven `.feature` files and none carries the tag:
+   `grep -rn "@wip" Tests/Pickle/Mod/Pickle/Features` finds nothing, checked 2026-09-24. Search that
+   folder only, because this file and `STATUS.md` name the tag in their prose and would answer a search
+   of the whole tree. A `@wip` scenario is not a passed scenario: it is repaired and rerun, or deleted
+   with its reason.
+2. **Every conditional scenario has run, with its condition present.** The conditions are three,
+   and each is a tag on a feature. `03` needs `@requires:Ludeon.RimWorld.Biotech`, so it plays in the
+   minimal pass and is skipped in the pass without Biotech. `04` is `@without-biotech`, so it plays only
+   in that pass and is left out of the others by filter. `05` needs `@requires:ancientbld.core`, so it
+   plays only in its own pass and is skipped everywhere else. **A skipped scenario is not a passed one:**
+   each has to appear as played in the pass that gives it its condition, and a report is cited only
+   after reading its set name and the scenarios it shows, because the report folder is shared by the
+   whole machine. The migration is opportunistic and not applicable to this gate.
+3. **No manual test left to validate.** Every manual scenario in this file is green, or is listed here as
    not applicable with its reason. Listed so far: the existing-save migration, opportunistic by
    decision of 2026-09-24. The capture of each state is opened and looked at: a green run
-   says the path was followed, not that the image shows what it should.
+   says the path was followed, not that the image shows what it should. No Pickle scenario here is
+   tagged `@review`, so no capture of theirs is owed.
 
 **Which proofs to keep, and how to cut them down**, is written in
 [`docs/runs/README.md`](docs/runs/README.md): one proof per check, the log of every pass as text,
@@ -261,6 +286,10 @@ consult their parameters for a different installation location.
   own 13 809 defs. It is the one that would have caught the air conditioner had its `fillPercent`
   and its `isAirtight` disagreed.
 - The ten `texPath` and `uiIconPath` values each point at a file that exists, case included.
+- The Pickle suite is statically sound: `Tests/Pickle/Check-Steps.ps1` resolves all 80 step lines to
+  exactly one step each in the installed Pickle build and compiles the suite's two local patterns, and
+  the step project builds. A deliberately undefined line was reported, so the check bites. Static: it
+  proves the text of a step exists, not that a scenario passes.
 
 The two Workshop images were checked the same day and are not part of the run either: the banner
 read at 268 px with its title, its lamp pool and three separated concrete volumes, the icon read

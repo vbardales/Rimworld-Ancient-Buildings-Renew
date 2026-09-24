@@ -1,0 +1,10 @@
+# Pass "sans-biotech": Core and the other DLCs, with Biotech left out of ModsConfig.
+#
+# The only DLC this mod touches is Biotech: the stove lists two baby-food recipes under MayRequire, and
+# they have to drop out cleanly, with no unresolved recipe, when Biotech is not active. Leaving the other
+# DLCs in is deliberate: they play no part in that guard, and the manual pass in ../../TESTING.md that runs
+# Core alone still covers the case where all of them are absent.
+#
+# No save is played in this pass. The test-colony fixture was written with every DLC active, and its own
+# errors about missing Biotech content would be read as this mod's. See @save in the features.
+!ludeon.rimworld.biotech

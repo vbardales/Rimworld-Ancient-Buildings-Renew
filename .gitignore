@@ -55,3 +55,9 @@ evidence/
 # not go into a public repository; the summary next to them, README.md, does.
 Audit/*/steam-page.html
 Audit/*/steam-comments.json
+
+# The Pickle suite's step DLL is built from Tests/Pickle/Source before every run and is not part of the
+# source: Pickle loads it when the game starts, so a stale one tests the previous code. Rebuild, never
+# commit. Its intermediates go to .build/ above.
+Tests/Pickle/Mod/Pickle/Assemblies/
+Tests/Pickle/Evidence/
