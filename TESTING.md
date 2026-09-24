@@ -160,6 +160,31 @@ audit; these runtime checks have not yet been performed.
 
 ---
 
+## What belongs in Pickle, and what does not
+
+`../AUDIT.md` asks, for `preTest -> done`, that Pickle scenarios be written and their scope
+justified: only what a running game can show stays in Gherkin. None is written yet. This is the
+scope, decided from what the six checkers already settle offline and what they cannot.
+
+**In Pickle, because only a loaded game shows it and a person should not have to look:**
+
+| Scenario | Pass | Asserts |
+|---|---|---|
+| The mod loads clean | minimal, with DLC | no error logged and none from this mod, the six defs exist |
+| The stove without Biotech | without DLC, Biotech left out of the pass map | no unresolved-recipe error; Biotech reported not active |
+| The declared incompatibility is still true | Core, this mod and `ancientbld.core` | `an error matching "Adding duplicate" was logged`, in a passing scenario, not as an expected failure |
+| French labels and descriptions | one pass run in French | one `@review` capture per building, opened and looked at afterwards |
+
+**Not in Pickle, and why:** the fence and barrier drag and the storage-link gizmo need a real drag or
+a designator, and the PickleTools catalogue has no step for either (Pickle's own step catalogue was
+not searched, so this is to be confirmed before a step is written). A new step would cost more than
+the manual run it replaces; cooling across a wall is a temperature reading that a person takes
+once; the existing-save migration needs the original mod's save and cannot be a fixture. These stay
+manual scenarios in this file. That is a cost decision, not a judgement that the check matters less.
+
+**Not tested at all:** what RimWorld does with the declaration itself, such as its warning for a
+missing dependency or its load order. `../AUDIT.md`: the game is not what is under test.
+
 ## Passing to `tested`
 
 `tested` is claimed only when every line below is true. None is yet: the mod has never been loaded

@@ -1,3 +1,5 @@
+UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+
 Six buildings in the style of the ruins the world is already full of: a concrete fence, a concrete road barrier, a solar lamppost, a vending machine that stores meals, a small kitchen stove that fits in one tile, and an old air conditioner.
 
 No DLC and no dependencies. Five of the six ask for no research at all and are available from the first day of a colony.

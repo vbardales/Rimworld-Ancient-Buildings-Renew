@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildingsrenew
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-stage:        done
+stage:        preTest
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
@@ -17,6 +17,7 @@ tested_on:
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
+  - feature: "preTest -> done: four Pickle scenarios to write in a test companion under Tests/Pickle (loads clean, the stove without Biotech, the declared incompatibility, the French labels), scope justified in TESTING.md. No .feature file exists."
   - unverified: interactive building controls and UI regressions belong to done -> tested
   - unverified: execute the existing-save migration scenario now written in TESTING.md
   - unverified: never seen running in game
@@ -25,17 +26,92 @@ remaining:
   - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green, none is listed not applicable."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-09-24, prepublished 0.1.0 recorded, tested gate written out
-audit_revision: e389720674c46092553b0d86a382465f5fa5bd25
+updated:      2026-09-24, audited against AUDIT.md (done -> preTest)
+audit_revision: f040b4696f53ee0cb71d872f2b984ead104148c0
 previous_stage: done
 ---
 
 # Ancient Buildings Renew — status
 
+## Audit against AUDIT.md — 2026-09-24
+
+**Previous stage `done` -> retained stage `preTest`.** This section supersedes the earlier ones where
+they disagree. `stage` uses the workflow's own states, so the code is the state: `preTest` means every
+criterion up to and including `l10n -> preTest` is established, and `preTest -> done` is not.
+
+Audited revision: `f040b4696f53ee0cb71d872f2b984ead104148c0`, working tree clean, `origin/main` equal
+to it. Four files were edited during the audit and are listed at the end. No game was launched, no image
+generated, nothing published.
+
+### Transitions, in order
+
+| Transition | Result | Evidence |
+|---|---|---|
+| dansMonoRepo -> horsMonoRepo | **Validated** | Git root is this folder; origin is the public `Rimworld-Ancient-Buildings-Renew`, `main` pushed and equal to HEAD; the parent tracks 0 files and ignores the folder, and its lack of a remote is normal. `STATUS.md` initialised. Licence `silent` with its evidence in `Audit/2026-09-13-rights/`. `packageId` `nelim.ancientbuildingsrenew`, folder `AncientBuildingsRenew`, repo and name coherent. README, ATTRIBUTION, LICENSE, CHANGELOG in English; the two documents `Mod/` needs are byte-identical to the root copies. |
+| -> ModIcon generated | **Validated** | `Mod/About/ModIcon.png`, 128 x 128 PNG, 21 946 bytes, opened and looked at: the mascot and the stone props. C# build not applicable: no source, no assembly. |
+| -> Preview generated | **Validated** | `Mod/About/Preview.png`, 896 x 504 PNG, 616 784 bytes, under 1 MB, opened and looked at: high oblique camera, tiled ground, one lamp pool, one small figure seen from behind. |
+| -> preOptions | **Validated** | Blue secondary ink and the amber rule are distinct on the image. The description is English. The name ends with ` (unofficial)` after `Renew` as `PUBLISHING.md` requires for a public `silent` mod, and the description opens with the required UNOFFICIAL paragraph. |
+| -> options | **Validated, not applicable justified** | No assembly, no `ModSettings`, no `MainButtonDef` anywhere in `Mod/` (searched), so there is no page and no shortcut to be empty. `settings_audit: not_applicable`. |
+| -> l10n | **Validated** | Independent comparison: 12 English fields, 12 French keys, none missing either way, none empty, none identical to the English. `Check-DefInjected` resolves all 12. English comes from the Def values. |
+| -> preTest | **Validated** | No dependency, no `loadAfter`, no `LoadFolders`, no patch. `incompatibleWith` names the original's real `packageId`, `ancientbld.core`, read from the preserved original About. The one DLC dependency, the two baby-food recipes, is guarded by `MayRequire` Biotech. |
+| preTest -> done | **Not established** | See below. |
+| done -> tested | Not reached | No game run has happened. |
+
+### Why `preTest -> done` is not established
+
+The offline half passes. All six checkers ran on this revision and came back clean: `Check-XmlFields`,
+`Check-DefRefs`, `Check-XmlClasses` (19 types), `Check-TypeRefs`, `Check-DefInjected` (12 keys) and
+`Check-ConfigErrors` (6 of 6, 26 rules). C# unit tests are not applicable, there being no C#. The manual
+scenarios in `TESTING.md` carry their expected results.
+
+The Pickle half does not. `AUDIT.md` asks for Pickle scenarios written and their scope justified, and
+`../PickleTools/Authoring/README.md` is explicit that a running game is what Pickle is for: the rendered
+UI, an interaction, load-time behaviour. This mod has all three. No `.feature` file exists, and until
+today nothing said why. Not applicable would need a justification that holds, and it does not: the load-time
+log, the Biotech-absent stove and the declared incompatibility are exactly what a loaded game shows and
+what the log table in `TESTING.md` asks a person to read. The previous audit, of 2026-09-13, predates the
+2026-09-21 wording and passed this step on the manual scenarios alone.
+
+`TESTING.md` now carries the scope, section "What belongs in Pickle, and what does not": four scenarios
+in Pickle, the drag, the wall cooling and the migration kept manual with the reason. **The scenarios
+themselves are not written.**
+
+### Defect found in the audit, and corrected
+
+`Mod/README.template.md`, written earlier the same day, began with "Six buildings..." and left out the
+UNOFFICIAL paragraph that `PUBLISHING.md` requires the description to start with. `About.xml` had it, so
+the frozen 0.1.0 page is right, but a publish that sent the template would have overwritten the page
+without it. The paragraph is restored and the template is again identical to `About.xml` at its opening.
+Rendered with the release plugin's converter it is 5 731 characters of BBCode and passes the
+`.steamignore` check.
+
+### Work strictly needed for the next transition
+
+1. Write the four Pickle scenarios above in a test companion under `Tests/Pickle/`, outside `Mod/`,
+   with the pass maps `TESTING.md` names: minimal with DLC, without DLC, incompatibility, French.
+2. Confirm in Pickle's own step catalogue that no step exists for a designator drag, before deciding the
+   drag stays manual.
+
+Running them, reading their captures, and everything else under `done -> tested` come after.
+
+### Reservations, not blockers
+
+- The functional scenarios are bullet lists of expected results under each building. The authoring guide
+  asks for setup, action, expected result and evidence as separate columns. It is a readability point.
+- `Mod/README.template.md` and `Mod/.steamignore` sit in the folder an in-game upload sends as it is, so
+  the template reaches players by that route. It is small and harmless.
+- No workflow that sends the template exists for this mod: the manual publish workflow sends no
+  description and the generated one skips a mod with no `Source/*.csproj`. Recorded as a defect below.
+
+### Files changed by the audit
+
+`Mod/README.template.md` (the opening paragraph), `TESTING.md` (the Pickle scope), `STATUS.md`, and the
+session title.
+
 ## Prepublication and the tested gate — 2026-09-24
 
-**Current decision: stage stays `done`.** This section supersedes the earlier sections below where
-they disagree, notably "Nothing was committed, pushed or published" and "`workshop` is empty
+**Current decision, superseded the same day by the audit section above: stage is `preTest`.**
+This section supersedes the earlier sections below where they disagree, notably "Nothing was committed, pushed or published" and "`workshop` is empty
 because nothing has been uploaded".
 
 - **The `0.1.0` prepublication was made on 2026-09-23.** The Workshop item is `3806708945`, private
@@ -67,7 +143,7 @@ because nothing has been uploaded".
 - **The three checks for `done -> tested`** are written out in `TESTING.md`, section "Passing to
   `tested`", with the five passes that section names. No `@wip` scenario exists, vacuously, because
   there is no Pickle suite. The conditional scenarios and the manual tests are all still to run.
-- **One thing worth a decision.** `../AUDIT.md` asks, for `preTest -> done`, that Pickle features be
+- **Decided by the audit above: the Pickle suite is required, and stage is `preTest` until it is written.** `../AUDIT.md` asks, for `preTest -> done`, that Pickle features be
   written and their scope justified. None exists here and the earlier audit passed that step on the
   manual scenarios alone. The drag test, the gizmos and the temperature across a wall are the kind of
   thing only a running game shows, so a suite is plausible; whether it is worth writing for six
