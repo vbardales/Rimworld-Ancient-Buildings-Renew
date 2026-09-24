@@ -60,12 +60,15 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   `05` needs `ancientbld.core`. Each must have played in the pass that gives it its condition before
   `tested`.
 - **No `@wip`.** None of the seven features carries it.
-- **Tickets in flight, 2026-09-24 at 14:40.** Five were queued directly at 10:38-10:39, before the
-  dispatcher's protocol was read: the download of the original mod (`Use-Wsl.ps1`, process 21328) and the four
-  passes (31804, 47212, 35096, 40044). Their processes survived the session restart and were at ranks 8 to 12
-  of 34. They carry no `local_` id in their label, so the dispatcher sees them as unowned. TicketDispatcher was
-  asked to adopt them, or to say whether to cancel and deposit requests instead. No watcher runs: the queue is
-  the dispatcher's to watch. Nothing has been played.
+- **Tickets in flight, 2026-09-24 at 17:00.** The five tickets queued directly at 10:38 are dead: their
+  launchers died with the session, as TicketDispatcher confirmed and a process check did (none of the five pids
+  exists). Three passes were then deposited as requests with `Submit-PickleRun.ps1`, owner
+  `local_893d3a1c-6b23-490a-911f-243a435eb1a7`, at 16:46: minimal English (`20260924-164609-481-ec7f`), minimal
+  French (`20260924-164610-417-3592`) and Biotech left out (`20260924-164611-253-5396`). The download of the
+  original mod was run once with `Use-Wsl.ps1`, as the dispatcher asked, and is still waiting for the lock: it
+  was moved to the background after the tool's ten-minute limit, and its label carries the session id so the
+  dispatcher can see whose it is. **The incompatibility pass is not deposited yet**: it needs the download
+  finished first. No watcher runs. Nothing has been played.
 
 ### Work strictly needed for the next transition, `done -> tested`
 
