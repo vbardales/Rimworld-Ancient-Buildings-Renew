@@ -41,6 +41,7 @@ current one. So a run's evidence is cut down as soon as a newer one replaces it.
 | English and French | one capture per building of its label and description in each language: twelve in all, not one per action |
 | Existing-save migration, **only if it is ever run** (opportunistic, not a gate) | the mod list and counts before and after as text, the load log, and one capture of the reloaded colony |
 | Every pass | its `Player.log`, as text |
+| Every Pickle pass | the four text files of its report (`summary.json`, `summary.md`, `junit.xml`, `Player.log`), copied by the launcher's `-EvidenceDir` under `Tests/Pickle/evidence/<pass>/`, with `exitReason` and the played and discovered counts read before anything else. The launcher's `report.html` and `messages.ndjson` are deleted: they are large and add nothing the four files do not carry. No Pickle scenario here is `@review`, so no capture is owed |
 
 **Keep an older report only** when it is the sole proof of a check the latest run did not repeat.
 

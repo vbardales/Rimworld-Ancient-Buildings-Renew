@@ -8,30 +8,70 @@ packageId:    nelim.ancientbuildingsrenew
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        done
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
 showcase:     complete
 tested_on:
+pickle_scenarios: "13 written in 7 features, 0 run; statically checked 2026-09-24 (80 step lines resolved)"
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
-  - feature: "preTest -> done: four Pickle scenarios to write in a test companion under Tests/Pickle (loads clean, the stove without Biotech, the declared incompatibility, the French labels), scope justified in TESTING.md. No .feature file exists."
   - unverified: interactive building controls and UI regressions belong to done -> tested
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not applicable to done -> tested."
   - unverified: never seen running in game
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
-  - unverified: "(done -> tested) conditional scenarios: two conditions, none has run: Biotech present and Biotech absent for the stove. A third run, the incompatibility pass, loads both mods. A scenario skipped for want of its condition is not a pass. TESTING.md now names the passes."
+  - unverified: "(done -> tested) conditional scenarios: three, none has run. 03 needs Biotech, 04 is the pass without Biotech, 05 needs ancientbld.core. A skipped scenario is not a pass: each must have played in the pass that gives it its condition. The migration is opportunistic and not applicable."
+  - unverified: "(done -> tested) Pickle: play the four passes of Tests/Pickle/README.md, compare scenarios played with discovered, read exitReason first. Values reasoned but not run: the fence prints Defenses, the four cells are free on test-colony, the duplicate is an error or a warning. ancientbld.core is not yet in the WSL Workshop cache."
   - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. Listed not applicable: the existing-save migration, opportunistic."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-09-24, audited against AUDIT.md (done -> preTest)
-audit_revision: f040b4696f53ee0cb71d872f2b984ead104148c0
-previous_stage: done
+updated:      2026-09-24, Pickle suite written (preTest -> done)
+audit_revision: 9ad00f701e2f09690debf62764e9af425726deb2
+previous_stage: preTest
 ---
 
 # Ancient Buildings Renew — status
+
+## Pickle suite written — 2026-09-24
+
+**Previous stage `preTest` -> retained stage `done`.** The one criterion that held `preTest -> done`
+back is now established, so every criterion up to and including it is. This section supersedes the audit
+section below on that point, and only on that one.
+
+Audited revision: `9ad00f701e2f09690debf62764e9af425726deb2`. Since the audit at `f040b46`, `Mod/Defs`,
+`Mod/Languages` and `Mod/About` are byte-for-byte unchanged (`git diff --stat`), so the six offline checkers
+that passed there still describe what is delivered; only `Mod/README.template.md` moved.
+
+- **Pickle scenarios written, scope justified.** `Tests/Pickle/`: seven features, thirteen scenarios, two
+  local steps. Scope and passes are in `TESTING.md`, section "What belongs in Pickle, and what does not", and
+  in `Tests/Pickle/README.md`. Statically checked: `Check-Steps.ps1` resolves all 80 step lines to exactly one
+  step in the installed Pickle build; a deliberately undefined line was reported. The step project builds.
+- **Not run, and not required for `done`.** Nothing has been played. `AUDIT.md`, as clarified on
+  2026-09-21: executing Pickle, reading its reports and its captures belong to `done -> tested`.
+- **Two findings that shaped the suite**, both read out of the installed Pickle by decompiling it and not
+  guessed. Its `no errors were logged` only sees errors after a scenario is armed, so an error logged while
+  the defs load is invisible to it; the suite reads RimWorld's own log instead. And its `I designate` step
+  places blueprints cell by cell, so it cannot show that the fence can be dragged, which is why the drag
+  stays manual. `../PickleTools/Headless/README.md` lists a step, `an error matching ... was logged`, that
+  the installed build does not have (201 steps read by reflection); worth correcting there.
+- **The passes and their tags are the conditional scenarios.** `03` needs Biotech, `04` is Biotech-absent,
+  `05` needs `ancientbld.core`. Each must have played in the pass that gives it its condition before
+  `tested`.
+- **No `@wip`.** None of the seven features carries it.
+
+### Work strictly needed for the next transition, `done -> tested`
+
+1. Build the step DLL, then play the four passes through `scripts/Run-PickleWsl.ps1` under the lock, one at
+   a time, and compare the scenarios played with the ones each pass should play
+   (`Tests/Pickle/README.md`). `ancientbld.core` (Workshop 2566355159) has to be downloaded into the WSL
+   install first, through `Use-Wsl.ps1`.
+2. Run the manual scenarios of `TESTING.md`, English and French: the fence and barrier drag, the storage
+   gizmo, the wall cooling, the Core-only pass. The migration is opportunistic and not a gate.
+3. Check the values the suite could only reason about: that `Defenses` is what the loaded field prints as,
+   that the four cells are free on `test-colony`, and whether the duplicate is logged as an error or a
+   warning.
 
 ## Audit against AUDIT.md — 2026-09-24
 
