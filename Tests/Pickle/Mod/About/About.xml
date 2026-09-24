@@ -6,7 +6,7 @@
   <supportedVersions><li>1.6</li></supportedVersions>
   <description>In-game validation scenarios for Ancient Buildings Renew. Development only; never published.</description>
   <modDependencies>
-    <li><packageId>nelim.ancientbuildingsrenew</packageId><displayName>Ancient Buildings Renew (unofficial)</displayName></li>
+    <li><packageId>nelim.ancientbuildingsrenew</packageId><displayName>Ancient Buildings Renew (unofficial)</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/3806708945</steamWorkshopUrl></li>
     <li><packageId>rimworks.pickle</packageId><displayName>Pickle</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/3791648678</steamWorkshopUrl></li>
   </modDependencies>
   <loadAfter><li>nelim.ancientbuildingsrenew</li><li>rimworks.pickle</li></loadAfter>
