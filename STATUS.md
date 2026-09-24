@@ -82,9 +82,8 @@ that passed there still describe what is delivered; only `Mod/README.template.md
    install first, through `Use-Wsl.ps1`.
 2. Run the manual scenarios of `TESTING.md`, English and French: the fence and barrier drag, the storage
    gizmo, the wall cooling, the Core-only pass. The migration is opportunistic and not a gate.
-3. Check the values the suite could only reason about: that `Defenses` is what the loaded field prints as,
-   that the four cells are free on `test-colony`, and whether the duplicate is logged: it is not (first run), so 05 asserts the original's own error, and a
-   warning.
+3. Values the suite could only reason about, now settled by runs: `Defenses` is what the loaded field prints as, the four
+   cells are free on `test-colony`, and the duplicate is not logged at all, so 05 asserts the original's own error.
 
 ## Audit against AUDIT.md — 2026-09-24
 
