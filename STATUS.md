@@ -14,7 +14,7 @@ licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
 showcase:     complete
 tested_on:
-pickle_scenarios: "13 written in 7 features, 0 run; statically checked 2026-09-24 (80 step lines resolved)"
+pickle_scenarios: "13 written in 7 features; minimal English played (7 passed, 1 failed from the companion's About, 1 skipped as expected), fix ticket deposited; French, without-Biotech and incompatibility passes queued"
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
@@ -67,8 +67,11 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   French (`20260924-164610-417-3592`) and Biotech left out (`20260924-164611-253-5396`). The download of the
   original mod was run once with `Use-Wsl.ps1`, as the dispatcher asked, and finished at about 16:57: item
   2566355159 is in the WSL cache, `packageId` `ancientbld.core`, 732 KB. The incompatibility pass was deposited
-  right after (`20260924-165721-724-f314`). Four requests are now with the dispatcher. No watcher runs. Nothing
-  has been played.
+  right after (`20260924-165721-724-f314`). Four requests are now with the dispatcher. No watcher runs.
+  **First run back, 2026-09-24 22:46:** minimal English played 9 scenarios: 7 passed, 1 skipped as expected (05, no
+  original mod), 1 failed. The warning came from the Pickle-tests companion's own About.xml (its dependency had no
+  Workshop URL), not from the mod. The URL was added (commit `d7e3bf9`) and a one-scenario fix ticket deposited
+  (`20260924-224726-056-d868`). Three requests wait. One line in `docs/runs/2026-09-24.txt`.
 
 ### Work strictly needed for the next transition, `done -> tested`
 
