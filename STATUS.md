@@ -71,7 +71,7 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   **First run back, 2026-09-24 22:46:** minimal English played 9 scenarios: 7 passed, 1 skipped as expected (05, no
   original mod), 1 failed. The warning came from the Pickle-tests companion's own About.xml (its dependency had no
   Workshop URL), not from the mod. The URL was added (commit `d7e3bf9`) and a one-scenario fix ticket deposited
-  (`20260924-224726-056-d868`). Three requests wait. One line in `docs/runs/2026-09-24.txt`.
+  (`20260924-224726-056-d868`). Second run back, 22:5x: minimal French played 6 of 6, 5 passed, the same identifier scenario failed on the same cause (staged before the fix), 1 skipped as expected. Two requests wait besides the fix ticket. Lines in `docs/runs/2026-09-24.txt`.
 
 ### Work strictly needed for the next transition, `done -> tested`
 
