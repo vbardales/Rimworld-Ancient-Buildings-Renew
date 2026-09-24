@@ -37,15 +37,15 @@ The original defNames are kept, so a save moves between the two mods without los
 
 Content mod: removing it mid-save destroys anything already built from it.
 
-## If I go quiet
+## IF I GO QUIET
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
-## AI-generated
+## AI-GENERATED
 
-The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The two images, the preview and the icon, were generated with an AI image model and lettered afterwards in HTML. Stated openly: working with these tools is my job.
+The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The two images, the preview background and the icon, were generated with DALL-E (OpenAI), and the preview was lettered afterwards in HTML. Stated openly: working with these tools is my job.
 
-## Thanks
+## THANKS
 
 SyndicateGamingNetwork, for the buildings, the artwork and the balance this mod is made of. I only brought them forward.
 

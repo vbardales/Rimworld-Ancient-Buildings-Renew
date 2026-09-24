@@ -50,8 +50,9 @@ because nothing has been uploaded".
   line pointing to ATTRIBUTION.md and the licence. `Mod/About/About.xml` (what the mod list shows)
   now has the sections in the required order, and `Mod/README.template.md` carries the same text in
   Markdown for a publish that sends a description. `Mod/.steamignore` keeps the template and
-  `*.dds` out of an upload staged through it. Two credits in it are unconfirmed: Codex (OpenAI)
-  for the audits, and the name of the image model, which the text leaves generic.
+  `*.dds` out of an upload staged through it. The tools are named as `../PUBLISHING.md`
+  asks: Claude Code (Anthropic), Codex (OpenAI) for the audits, DALL-E (OpenAI) for the two images,
+  confirmed by Virginie on 2026-09-24.
 - **Not yet done for this item:** the visibility and subscription test (subscribing to one's own
   item, testing it, then making it public by hand), and everything under `prepublished` in
   `../AUDIT.md`. The item is not public and this mod is not `prepublished` as a stage.
