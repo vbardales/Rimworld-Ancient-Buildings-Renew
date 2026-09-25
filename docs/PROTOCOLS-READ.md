@@ -20,9 +20,9 @@ Where the versions come from:
 | Document | Version read | Useful? | What matters for this mod | Re-read when |
 |---|---|---|---|---|
 | `AGENTS.md` | `3a1d2cb` 2026-09-24 | yes | the ordered gates, the evidence rules (one text line per run in `docs/runs/`, never a folder), CI-only publishing | its hash moves; it is 46 lines |
-| `AUDIT.md` | `49cd841` 2026-09-25 | **essential** | the chain and every gate; the absolute rules on RimWorld; Pickle rules (passes, incompatibility passes that **assert**, `@requires`, `exitReason` first, evidence copies); the fail-fast policy of 2026-09-25 for the `1.0.0`; `tested` needs no `@wip`, every conditional scenario played, no manual test left; the session title | its hash moves. It is long: read the Pickle bullets, steps 9 to 11 and "fail fast" |
-| `PUBLISHING.md` | `0743ff9` 2026-09-25 | yes, from `prepublished` on | description order and the ` (unofficial)` opening; the gallery folder numbered `01-`, `02-`; the AI and THANKS lines (Pickle and RimLogging are named as development-only); thanks comments and the registry `WORKSHOP_COMMENTS.md`; the Steam change note **starts with the version number**; topics and social preview; `PUBLICATION.md` | its hash moves, or before writing `PUBLICATION.md` or a change note |
-| `TRANSLATIONS.md` | `b83933b` 2026-09-23 | little now | the gate is passed (`localization`, `translation_en`, `translation_fr` complete). The runtime display check is covered by Pickle `06` and `07` | a player-facing text, a Def or a language file changes |
+| `AUDIT.md` | `49cd841`, then the diff to `448991f` (2026-09-25) | **essential** | the chain and every gate; the absolute rules on RimWorld; Pickle rules (passes, incompatibility passes that **assert**, `@requires`, `exitReason` first, evidence copies); the fail-fast policy of 2026-09-25 for the `1.0.0`; `tested` needs no `@wip`, every conditional scenario played, no manual test left; the session title | its hash moves. It is long: read the Pickle bullets, steps 9 to 11 and "fail fast" |
+| `PUBLISHING.md` | `0743ff9`, then the diff to `16f3c59` (2026-09-25) | yes, from `prepublished` on | description order and the ` (unofficial)` opening; the gallery folder numbered `01-`, `02-`; the AI and THANKS lines (Pickle and RimLogging are named as development-only); thanks comments and the registry `WORKSHOP_COMMENTS.md`; the Steam change note **starts with the version number**; topics and social preview; `PUBLICATION.md` | its hash moves, or before writing `PUBLICATION.md` or a change note |
+| `TRANSLATIONS.md` | `b83933b`, then the diff to `f5c2d9d` (2026-09-25) | little now | the gate is passed (`localization`, `translation_en`, `translation_fr` complete). The runtime display check is covered by Pickle `06` and `07` | a player-facing text, a Def or a language file changes |
 | `STYLE_RIMWORLD.md` | `7311308` 2026-09-25 | **no** | image generation and the preview lettering: sessions generate no image and this mod's images are done. Only "ModIcon: control, not generation" and the file limits (Preview under 1 MB, icon 128 px) apply, and they are checked | `Preview.png` or `ModIcon.png` is touched |
 | `scripts/SEARCHING.md` | `372c447` 2026-09-23 | **no** | corpus search. The defName collision sweep (10 360 mods) is done and recorded | a defName or a class is added |
 | `PickleTools/README.md` | `d6d8db1` 2026-09-25 | some | the table of shared step tools. This suite stages none of them (no `path:PickleTools/...` line in its maps) | a step is needed that Pickle lacks |
@@ -77,6 +77,12 @@ Gaps in this repository, kept out of the fix list of this commit except the firs
 
 Checked and fine: the repository is public, has the three topics (`rimworld`, `rimworld-mod`, `mod`) and a
 custom social preview image.
+
+## What moved after the first reading (2026-09-25)
+
+- `AUDIT.md` `448991f`: for any upload done by the CI (an update, or a `1.0.0` on an item a `0.1.0` prepublication created) the tag and the GitHub release follow the upload, and the description can be corrected by the CI (`update_description`), never from `About.xml`. Consistent with this repository.
+- `PUBLISHING.md` `16f3c59`: **one source for the Steam description**, decided by the owner today. It is written once, in Markdown, in a fenced block under `## Steam description` of `PUBLICATION.md`; the CI converts it to BBCode and generates the plain `<description>` of `About.xml` from it, and every dry-run stops if they differ. Not adopted here yet: this repository uses `Mod/README.template.md` as a whole-file source, which keeps working. Adopting it changes the SHA, so it waits for the next publication or the owner's word. A change note may also start with `[h3]1.0.0[/h3]`.
+- `TRANSLATIONS.md` `f5c2d9d`: rules for counts and plurals in Keyed text. This mod has no Keyed text and no counted phrase, so nothing applies.
 
 ## What the requests to come must follow
 
