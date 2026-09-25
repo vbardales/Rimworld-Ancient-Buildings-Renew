@@ -62,6 +62,7 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   `05` needs `ancientbld.core`. Each must have played in the pass that gives it its condition before
   `tested`.
 - **No `@wip`.** None of the seven features carries it.
+- **Manual scenarios moved into Pickle, 2026-09-25.** The owner does not launch the game, so the manual run of TESTING.md is replaced by scenarios the game plays for itself in the WSL: features 08 to 11 (fence and barrier drag through the game's own draw style and DesignateMultiCell, roof refusal, glow grid at night, deterioration rate, link gizmo, blueprint storage settings, research gate, power draw) and a second step class, BuildingSteps.cs. Commit 8b31e8c; four first-run tickets deposited (6b1e, 68a2, f94a, 54bb). None has run. Not automated for now: the pointer itself, the wall cooling between two rooms, the rain short circuit, and whether the French reads well. TESTING.md is to be rewritten once these have run.
 - **Tickets in flight, 2026-09-24 at 17:00, updated 16:58.** The five tickets queued directly at 10:38 are dead: their
   launchers died with the session, as TicketDispatcher confirmed and a process check did (none of the five pids
   exists). Three passes were then deposited as requests with `Submit-PickleRun.ps1`, owner
