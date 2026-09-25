@@ -24,8 +24,11 @@ remaining:
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
   - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. The captures to send, one at a time, and what only the person can say are in TESTING.md, section Manual run. Listed not applicable: the existing-save migration, opportunistic."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
+  - defect: "(read 2026-09-25) neither About.xml nor Mod/README.template.md names Pickle among the thanks, although this mod now has a Pickle suite. PUBLISHING.md asks for the test tools really used, named as development-only. Fix in both files before the 1.0.0; the live page is frozen."
+  - unverified: "(prepublished) PUBLICATION.md is not written: gallery order, thanks comments (check WORKSHOP_COMMENTS.md first; recipients: SyndicateGamingNetwork item 2566355159 and Pickle), dependencies, adult-content answers, and the version-numbered Steam change note under ### 1.0.0"
+  - unverified: "(prepublished) a manual publish workflow that sends Mod/README.template.md: Rimworld-Release-Admin/scripts/generate-publish-workflow.sh --description-markdown Mod/README.template.md with --require Defs --forbid Assemblies (OPERATIONS.md). Not run: it writes .github/ and waits for the owner. The dry-run cannot read a private item page, so the description is read by hand"
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-09-24, Pickle suite written (preTest -> done)
+updated:      2026-09-25, all Pickle passes green, docs read (stage unchanged, done)
 audit_revision: 9ad00f701e2f09690debf62764e9af425726deb2
 previous_stage: preTest
 ---
