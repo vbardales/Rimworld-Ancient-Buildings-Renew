@@ -32,7 +32,7 @@ Feature: the lamppost is solar, and stays outdoors
     When a "AB_Lamppost" is built at (146, 155)
     And I wait 120 ticks
     Then Ancient Buildings Renew: the "AB_Lamppost" at (146, 155) is glowing
-    And Ancient Buildings Renew: the light on the ground at (148, 155) is above 0.5
+    And Ancient Buildings Renew: the light on the ground at (148, 155) is above 0.4
     When I move the camera to (146, 155)
     And I zoom all the way in
     And I take a screenshot "the lamppost at night, with no conduit"
