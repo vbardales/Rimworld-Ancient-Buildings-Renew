@@ -52,11 +52,10 @@ not read: it is read when `PUBLICATION.md` is written.
 Gaps in this repository, kept out of the fix list of this commit except the first:
 
 1. **`Tests/Pickle/README.md` said "none has been run"** after four passes had played. Fixed in this commit.
-2. **The Steam description credits no test tool.** `PUBLISHING.md` asks the thanks to name the test tools
-   really used, Pickle notably, as development-only and never a dependency. This mod now has a Pickle suite,
-   and neither `About.xml` nor `Mod/README.template.md` names Pickle. The frozen page cannot be edited from
-   `About.xml`, but the template and the source should agree before the `1.0.0`. A thanks comment for
-   Pickle's Workshop page belongs in `PUBLICATION.md` too, to be checked against `WORKSHOP_COMMENTS.md`.
+2. **The Steam description names no test tool.** `PUBLISHING.md` asks the thanks to name the test tools really used,
+   Pickle notably. Neither `About.xml` nor `Mod/README.template.md` does. The owner answered on 2026-09-25 that the
+   thanks to Pickle has already been placed, so nothing is to be added here; recorded as her statement, not
+   as something found in these files.
 3. **The `defect` "no workflow sends the template" has a route now.** `generate-publish-workflow.sh ... --description-markdown
    Mod/README.template.md` (`OPERATIONS.md`) writes a manual publish workflow that sends the converted
    description. It was not run, and it writes into `.github/`, so it waits for the owner's word.
