@@ -14,7 +14,7 @@ licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
 showcase:     complete
 tested_on:
-pickle_scenarios: "13 written in 7 features; minimal English played (7 passed, 1 failed from the companion's About, 1 skipped as expected), without-Biotech pass fully green (8 of 8, 04 played); French pass 5 of 6 (identifier scenario failed before the fix); incompatibility pass failed on a wrong assumption, scenario 05 rewritten; ticket d868 green (identifier scenario), d8b5 queued"
+pickle_scenarios: "13 written in 7 features; minimal English played (7 passed, 1 failed from the companion's About, 1 skipped as expected), without-Biotech pass fully green (8 of 8, 04 played); French pass 5 of 6 (identifier scenario failed before the fix); incompatibility pass failed on a wrong assumption, scenario 05 rewritten; tickets d868 and d8b5 green; no ticket left; the French pass still shows the identifier scenario failed (pre-fix tree)"
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
@@ -22,8 +22,8 @@ remaining:
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not applicable to done -> tested."
   - unverified: never seen running in game
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
-  - unverified: "(done -> tested) conditional scenarios: three, none has run. 03 needs Biotech, 04 is the pass without Biotech, 05 needs ancientbld.core. A skipped scenario is not a pass: each must have played in the pass that gives it its condition. The migration is opportunistic and not applicable."
-  - unverified: "(done -> tested) Pickle: play the four passes of Tests/Pickle/README.md, compare scenarios played with discovered, read exitReason first. Values now confirmed by runs: Defenses, the four free cells. The duplicate is not logged at all (scenario 05 rewritten). ancientbld.core is in the WSL Workshop cache since 2026-09-24."
+  - verified: "(done -> tested) conditional scenarios: all three played and passed on 2026-09-24/25. 03 (needs Biotech) in minimal-en, 04 (without Biotech) in sans-biotech, 05 (needs ancientbld.core) in fix-incompat, after its rewrite. None skipped in the pass that gives it its condition. The migration is opportunistic and not applicable."
+  - verified: "(done -> tested) Pickle: the four passes have played and every scenario has a green run: minimal-en and sans-biotech and fix-identifier and fix-incompat, minimal-fr all but the identifier scenario (fixed since, not replayed in French). No @wip. Values confirmed by runs: Defenses, the four free cells; the duplicate is not logged, so 05 asserts the original error."
   - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. Listed not applicable: the existing-save migration, opportunistic."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
