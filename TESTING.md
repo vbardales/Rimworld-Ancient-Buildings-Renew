@@ -165,6 +165,107 @@ unexpected English fallback in French, broken formatting and clipped text. Repea
 DLC-free scenario in both languages. Record results separately from the offline translation
 audit; these runtime checks have not yet been performed.
 
+## Manual run: what to send, and who checks what
+
+The manual scenarios above are run by a person, in the game. The session that keeps this repository
+cannot play the game and only sees what is sent to it. So the run is a series of **captures, sent one at
+a time**, and each one is read for what it can show. What it cannot show stays the person's to say, and
+stays pending until it is said.
+
+**How it goes.**
+
+1. One capture per message: **one image at a time, one video at a time**, in the order of the tables
+   below, named by its ID (`F1`, `B2`, ...). The session looks at each at full size before anything else,
+   writes what it saw **and what the capture does not show** in the day's summary (`docs/runs/`), then
+   minifies or deletes it by the rules of `docs/runs/README.md`. The files go under
+   `Tests/Manual/evidence/<date>/<check>/`, ignored by git.
+2. A still shows a state, never a gesture or a duration. A video is asked for **only** where the check
+   is a gesture or the passing of time, and the table says so.
+3. A check is green only when a capture shows it, or when the person says so in words ("yes, one gesture",
+   "no, it stayed dark after midnight") and the summary records that as their statement, not as something
+   seen. Nothing is inferred from a capture that does not show it.
+4. Setup: Core, Biotech and this mod, a temporary test colony. The developer mode is fine to spawn
+   colonists, skip research, or speed time; say so in the message when it was used.
+
+**The tables.** *I read* is what the session verifies from the capture. *Only you* is what it cannot, and
+the person answers yes or no in the same message.
+
+Fence (Structure)
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| F1 | image: the run of fence blueprints laid by **one** press-and-drag, ten cells or more, with a bend | the blueprints form a continuous line and how many there are | that it was **one gesture** and not ten clicks. If you cannot say for sure, send `F1v` |
+| F1v | video, only if F1 leaves a doubt: press, pull, release | the line appearing while the button is held | nothing more |
+| F2 | image: the fence joined to a wall on one end and to rock on the other | no gap in the drawn run | that the joins look right |
+| F3 | image: a fence gate placed in the line | the gate is part of the line | that it opens and closes |
+| F4 | image: a pen marker inside a ring of fence, its inspect text open | the text says the pen is enclosed | nothing more |
+| F5 | image: the build menu, fence icon in view | the icon is not a stretched fence segment | whether it reads as the mod's own icon |
+
+Barrier (Security)
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| B1 | image: the run of barrier blueprints laid by one press-and-drag | same as F1 | that it was one gesture (`B1v` if in doubt) |
+| B2 | image: the barrier selected, its information window open | the cover figure and the stats as printed | that a colonist standing behind it is actually protected in a shooting test |
+| B3 | video, five seconds: a colonist ordered across the barrier | the pawn crossing the barrier cell | that it walks over rather than round |
+
+Lamppost (Structure)
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| L1 | image: the placement refused under a roof, with the message on screen | the refusal text | nothing more |
+| L2 | image: placed outdoors, at night, no conduit in frame, the clock visible | lit, wide radius, the hour | that it **stays lit all night**: say yes or no |
+| L3 | image: the lamppost selected | no power tab, no flick gizmo | nothing more |
+
+Vending machine (Furniture)
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| V1 | image: the storage tab open | the filter defaults to meals | nothing more |
+| V2 | image: the link storage gizmo visible, then a second image with two machines linked | the gizmo and the group | nothing more |
+| V3 | image: the blueprint selected with its filter already set, before it is built | the filter on the blueprint | nothing more |
+| V4 | image: a meal stored in it, outdoors, inspected | no deterioration line, the room stats without its beauty | that a meal stays sound after **several days**: say yes or no |
+
+Stove (Production)
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| S1 | image: the bill list **with Biotech** | every meal bill, baby food and bulk baby food included | nothing more |
+| S2 | image: the bill list **without Biotech** | the same list with **no** baby food, ordinary meals present | nothing more |
+| S3 | image: the stove selected | the 300 W draw as printed | that it warms the room, and short-circuits in rain outdoors |
+| S4 | image: a meal it cooked, inspected, beside one from a vanilla stove | the two are the same meal | nothing more |
+
+Air conditioner (Temperature)
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| A1 | two images: the menu before `AirConditioning` is researched, and after | absent, then present | nothing more |
+| A2 | image: the unit in a wall, both room temperatures readable | one side cooled, the other heated | nothing more |
+| A3 | image: the blueprint rotated before building | the drawn grille turned with it | whether the grille faces the exhaust side |
+| A4 | image: the unit built in the open | it does nothing but draw power | nothing more |
+| A5 | nothing to send | | that it can be flicked off and that it breaks down: yes or no |
+
+English and French
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| EN1..EN6 | six images, one per building: its label in the build menu and its description in the information window, in **English** | the text against the twelve keys, raw keys, clipped text | nothing more |
+| FR1..FR6 | the same six, in **French** | the text against the twelve keys, raw keys, English fallback, clipped text | whether the French reads naturally and is right for a player |
+| LG | one image per language of the cooking bills, the storage filters, the placement refusal and the power gizmos | raw keys, fallback, clipping | nothing more |
+
+Core alone, and the log
+
+| ID | Send | I read | Only you |
+|---|---|---|---|
+| C1 | image: with Core and this mod only, the stove's bill list | ordinary meal bills present, none for baby food | nothing more |
+| C2 | image: the same colony after a save and a reload, the buildings and their bills visible | they are all still there | nothing more |
+| P1 | text: the `Player.log` of each pass, as a file | searched for the strings in "What to search the log for" | nothing more |
+
+**What a capture can never settle**, whatever is sent: that a gesture was one gesture, that something
+holds over time, that something feels right, and whether a translation reads well. Those are the person's
+to say. The session records them as statements. The offline checkers and the Pickle passes have already
+settled what a file or the log can prove, so none of these tables asks for a capture of it.
+
 ---
 
 ## What belongs in Pickle, and what does not

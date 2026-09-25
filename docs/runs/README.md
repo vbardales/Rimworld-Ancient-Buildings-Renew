@@ -28,7 +28,7 @@ never a folder per run.
 The disk is shared by every mod, and evidence of a superseded build proves nothing about the
 current one. So a run's evidence is cut down as soon as a newer one replaces it.
 
-**Keep, for the revision now in the repository, one proof per check:**
+**Keep, for the revision now in the repository, one proof per check.** The captures of a manual run are asked for one at a time, by ID, in `TESTING.md` ("Manual run: what to send, and who checks what"), which also says what each capture can and cannot settle:
 
 | Check | The one proof to keep |
 |---|---|

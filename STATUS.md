@@ -22,7 +22,7 @@ remaining:
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not applicable to done -> tested."
   - unverified: never seen running in game
   - unverified: English and French runtime display checks in TESTING.md, with and without Biotech
-  - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. Listed not applicable: the existing-save migration, opportunistic."
+  - unverified: "(done -> tested) manual tests: every scenario of TESTING.md is still to be run and validated. None is green. The captures to send, one at a time, and what only the person can say are in TESTING.md, section Manual run. Listed not applicable: the existing-save migration, opportunistic."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so unless a workflow that sends it exists the page is edited by hand."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
 updated:      2026-09-24, Pickle suite written (preTest -> done)
