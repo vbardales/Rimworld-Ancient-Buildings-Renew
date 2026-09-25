@@ -14,7 +14,7 @@ licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
 showcase:     complete
 tested_on:
-pickle_scenarios: "13 written in 7 features; minimal English played (7 passed, 1 failed from the companion's About, 1 skipped as expected), without-Biotech pass fully green (8 of 8, 04 played); French pass 5 of 6 (identifier scenario failed before the fix); incompatibility pass failed on a wrong assumption, scenario 05 rewritten; tickets d868 and d8b5 queued"
+pickle_scenarios: "13 written in 7 features; minimal English played (7 passed, 1 failed from the companion's About, 1 skipped as expected), without-Biotech pass fully green (8 of 8, 04 played); French pass 5 of 6 (identifier scenario failed before the fix); incompatibility pass failed on a wrong assumption, scenario 05 rewritten; ticket d868 green (identifier scenario), d8b5 queued"
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
@@ -71,7 +71,7 @@ that passed there still describe what is delivered; only `Mod/README.template.md
   **First run back, 2026-09-24 22:46:** minimal English played 9 scenarios: 7 passed, 1 skipped as expected (05, no
   original mod), 1 failed. The warning came from the Pickle-tests companion's own About.xml (its dependency had no
   Workshop URL), not from the mod. The URL was added (commit `d7e3bf9`) and a one-scenario fix ticket deposited
-  (`20260924-224726-056-d868`). Second run back, 22:5x: minimal French played 6 of 6, 5 passed, the same identifier scenario failed on the same cause (staged before the fix), 1 skipped as expected. Third run back: without-Biotech played 8 of 8, all passed, scenario 04 included, and the identifier scenario green on the fixed tree. Fourth run back: the incompatibility pass FAILED on a wrong assumption (the game logs no duplicate for the shared defNames; both mods load, the original logs its own placingDraggableDimensions error). Scenario 05 was rewritten to assert that error (commit `398fd63`) and a one-scenario ticket deposited (`20260925-000135-189-d8b5`). Two tickets wait: `d868` and `d8b5`. Lines in `docs/runs/2026-09-24.txt`.
+  (`20260924-224726-056-d868`). Second run back, 22:5x: minimal French played 6 of 6, 5 passed, the same identifier scenario failed on the same cause (staged before the fix), 1 skipped as expected. Third run back: without-Biotech played 8 of 8, all passed, scenario 04 included, and the identifier scenario green on the fixed tree. Fourth run back: the incompatibility pass FAILED on a wrong assumption (the game logs no duplicate for the shared defNames; both mods load, the original logs its own placingDraggableDimensions error). Scenario 05 was rewritten to assert that error (commit `398fd63`) and a one-scenario ticket deposited (`20260925-000135-189-d8b5`). `d868` came back 2026-09-25: the identifier scenario passed on its own (1 of 1). One ticket waits: `d8b5`. Lines in `docs/runs/2026-09-24.txt`.
 
 ### Work strictly needed for the next transition, `done -> tested`
 
