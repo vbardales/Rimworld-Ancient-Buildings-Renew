@@ -4,6 +4,9 @@
 # The refusal is the designator's own answer for a roofed cell, given as the translation key of the message a
 # player reads. The light is measured on the game's glow grid, on a cell two squares from the lamp, at two in
 # the morning, before the lamp exists and after it does, so a bright test map cannot pass it by itself.
+# The game caps artificial light at 0.5 on this grid (GlowGrid.GroundGlowAt takes Min(0.5, ...) and shows it as
+# "Lit (50%)"), so a lamp is above 0.4 and never above 0.5: the first run read exactly 0.5 against a bound of
+# 0.5.
 # The absence of a power and of a flick component is read from the def: that is what makes it solar.
 Feature: the lamppost is solar, and stays outdoors
 
