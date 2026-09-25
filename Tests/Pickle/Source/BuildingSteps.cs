@@ -189,6 +189,18 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(!DesignatorFor(ctx, defName).Visible, "the build designator for " + defName + " is shown");
         }
 
+        /// <summary>
+        /// Puts every research back to unfinished. The test colony is a late one and has AirConditioning done, so a
+        /// scenario about a research gate has to start by undoing it. Finishing a project finishes its
+        /// prerequisites too, so the step that finishes AirConditioning afterwards still works.
+        /// </summary>
+        [Given("Ancient Buildings Renew: no research is finished")]
+        public void NoResearchFinished(PickleContext ctx)
+        {
+            ctx.Assert(Find.ResearchManager != null, "no game is running");
+            Find.ResearchManager.ResetAllProgress();
+        }
+
         [Given("Ancient Buildings Renew: a constructed roof covers \\({int}, {int}\\)")]
         public void RoofCovers(PickleContext ctx, int x, int z)
         {

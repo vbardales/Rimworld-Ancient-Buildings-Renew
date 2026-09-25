@@ -2,7 +2,9 @@
 #
 # The stove is a heat pusher that works only when powered, and it draws 300 W: both are read from the def as
 # the game loaded it. The air conditioner is hidden from the architect menu until AirConditioning is
-# finished, and shown once it is: the designator's own visibility, before and after the research.
+# finished, and shown once it is: the designator's own visibility, before and after the research. The test
+# colony is a late one with AirConditioning already done (the first run found the designator shown), so the
+# scenario undoes all research first.
 Feature: the stove draws its power, and the air conditioner waits for its research
 
   Scenario: the stove draws 300 W and pushes heat only when powered
@@ -14,6 +16,7 @@ Feature: the stove draws its power, and the air conditioner waits for its resear
   @save
   Scenario: the air conditioner is hidden until AirConditioning is finished
     Given the save "test-colony" is loaded
+    And Ancient Buildings Renew: no research is finished
     Then Ancient Buildings Renew: the build designator for "AB_AirConditioner" is not available
     Given research "AirConditioning" is finished
     Then Ancient Buildings Renew: the build designator for "AB_AirConditioner" is available
