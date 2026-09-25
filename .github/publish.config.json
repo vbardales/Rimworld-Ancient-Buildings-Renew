@@ -1,0 +1,17 @@
+{
+  "templateStamp": "683151266dd1",
+  "workshopId": "3806708945",
+  "packageId": "nelim.ancientbuildingsrenew",
+  "releaseTitle": "Ancient Buildings Renew {version}",
+  "requirePaths": [
+    "Defs"
+  ],
+  "forbidPaths": [
+    "Assemblies"
+  ],
+  "previewFile": "About/Preview.png",
+  "description": {
+    "file": "Mod/README.template.md",
+    "format": "markdown"
+  }
+}
