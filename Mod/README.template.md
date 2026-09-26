@@ -29,7 +29,7 @@ The vending machine gained the two things a storage building has needed since 1.
 
 The stove gained the two baby-food recipes Biotech added to the vanilla stove's bill list in 1.4. They are inert without Biotech.
 
-The labels are lower case, as the game writes them, and one typo in the lamppost's description is fixed. French was added. Nothing else moved: the stats, the costs, the power draw, the textures and the defNames are as they were.
+The labels are lower case, as the game writes them, and one typo in the lamppost's description is fixed. French was added. Nothing else moved: the stats, the costs, the power draw and the defNames are as they were, and so are the textures, except that the lamppost now draws a soft cone of light under its head.
 
 ## Credit and removal
 
@@ -45,7 +45,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-GENERATED
 
-The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The two images, the preview background and the icon, were generated with DALL-E (OpenAI), and the preview was lettered afterwards in HTML. Stated openly: working with these tools is my job.
+The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The images, the preview background, the icon and the lamppost light cone, were generated with DALL-E (OpenAI), and the preview was lettered afterwards in HTML. Stated openly: working with these tools is my job.
 
 ## THANKS
 
