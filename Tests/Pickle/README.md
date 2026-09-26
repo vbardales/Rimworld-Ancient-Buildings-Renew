@@ -1,7 +1,7 @@
 # Pickle suite for Ancient Buildings Renew
 
-In-game scenarios for a mod that ships six `ThingDef`s, no code and no patch. **All four passes and their fix tickets have
-played, each scenario has a green run (2026-09-24 and 25, `../../docs/runs/`).** `../../TESTING.md` says what belongs here, what stays manual and
+In-game scenarios for a mod that ships six `ThingDef`s, no code and no patch. **All four passes, features 08 to 11 and their fix tickets have
+played, each scenario has a green run (2026-09-24 to 26, `../../docs/runs/`).** `../../TESTING.md` says what belongs here, what stays manual and
 why. Nothing in this folder is part of `Mod/`, which is what Steam receives whole.
 
 ## What is asserted
@@ -14,9 +14,14 @@ why. Nothing in this folder is part of `Mod/`, which is what Steam receives whol
 | `04-stove-without-biotech` | `sans-biotech` | with Biotech left out, the two recipes do not exist and nothing logged names the stove or them |
 | `05-original-mod-incompatibility` | `incompat-original` | with `ancientbld.core` beside it, the original still loads and still carries the field 1.6 removed (the game does not log the shared defNames) |
 | `06-labels-en`, `07-labels-fr` | English pass, French pass | the six labels and six descriptions of the loaded defs, in the language the game started in |
+| `08-fence-and-barrier-drag` | minimal, English, `@save @review` | the fence and the barrier offer the line style, and one drag from (140,155) to (150,155) lays blueprints at 140, 145 and 150; screenshots |
+| `09-lamppost` | comps: every pass; refusal and night light: minimal, English | glower and no power or flick comp; a roofed cell is refused with the game's message; at 2 h the light two cells away goes from below 0.4 to above 0.4 once the lamp is built (the game caps it at 0.5); capture |
+| `10-vending-machine` | minimal, English, `@save` | the built machine offers the link-storage command, its blueprint has storage settings, a meal on it does not deteriorate and the same meal on the ground does |
+| `11-stove-and-air-conditioner` | stove and AC defs: every pass; research gate: minimal, English | the stove draws 300 W with a powered heat pusher and a flick comp; the AC draws 250 W with a temperature control and is hidden until `AirConditioning` is finished (research is undone first, the colony had it) |
 
-Seven features, thirteen scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
-text. There is no local step for anything Pickle already says: two, in `Source/LoggedMessageSteps.cs`.
+Eleven features, twenty-three scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
+text. Local steps: `Source/LoggedMessageSteps.cs` (two, for the log) and `Source/BuildingSteps.cs` (the rest, all
+prefixed "Ancient Buildings Renew: ").
 
 ## Two limits worth knowing before reading a green
 
@@ -27,11 +32,12 @@ through this suite's two steps. That log is bounded, so a long modlist can push 
 why every pass here stages a small set. `02` and `03` do use the shipped step, and it is right for them: they
 ask about what happens after the map is loaded.
 
-**The drag is not tested.** The fence was broken in one way: RimWorld 1.4 deleted the field that made it
-draggable, and the game loaded it with nothing set, so it built and looked right and could not be pulled out
-in a line. `01` asserts the loaded field, which comes back as `(null)` in that state. It cannot show the drag
-itself, because the shipped `I designate` step places a blueprint on each cell directly and would pass on a
-fence that could not be dragged. The drag stays a manual scenario.
+**The drag is tested through the game's own drawing style, not through the pointer.** The fence was broken in one
+way: RimWorld 1.4 deleted the field that made it draggable, and the game loaded it with nothing set, so it built
+and looked right and could not be pulled out in a line. `01` asserts the loaded field, and `08` asks the build
+designator for its styles and ends a drag through the style worker. The shipped `I designate` step places a blueprint
+on each cell directly and would pass on a fence that could not be dragged, so it is not used for this. What no
+scenario reaches is the pointer's own press and release, which is the engine's.
 
 ## Passes
 
@@ -64,9 +70,9 @@ asserts Biotech is absent from the passes that keep it.
 
 | Pass | Scenarios it should play | Skipped by requirement |
 |---|---|---|
-| minimal, English | 8: `01` x4, `02`, `03`, `06` x2 | `05` (1) |
-| minimal, French | 6: `01` x4, `07` x2 | `05` (1) |
-| sans-biotech | 8: `01` x4, `04` x2, `06` x2 | `05` (1) |
+| minimal, English | 18: `01` x4, `02`, `03`, `06` x2, `08` x2, `09` x3, `10` x2, `11` x3 | `05` (1) |
+| minimal, French | 9: `01` x4, `07` x2, and the three that need no map: `09` comps, `11` stove, `11` AC defs | `05` (1) |
+| sans-biotech | 11: `01` x4, `04` x2, `06` x2, `09` comps, `11` stove and AC defs | `05` (1) |
 | incompat-original | 1: `05` | none |
 
 Compare those numbers with what a report says it discovered and played, and read `exitReason` before the
@@ -76,7 +82,7 @@ pass but its own, and each has to have run in the pass that gives it its conditi
 Why the passes are these and not others. The mod declares no dependency and no `loadAfter`, so there is
 no optional-mod pass to run. Biotech is the only DLC it touches, so it is the only one left out. The
 `test-colony` fixture was written with every DLC active, which is why the pass without Biotech plays no map.
-`../../TESTING.md` still runs Core alone by hand.
+`../../TESTING.md` still describes the Core-alone run, which is not automated.
 
 A session does not watch the queue: no `Monitor`, no heartbeat, no cron, no loop. The dispatcher wakes it
 at `START`, at `END` (the lock returned, which is not the verdict) and, for a deposited request, with
@@ -93,12 +99,12 @@ The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: 
 because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
 Pickle's own vocabulary read from the installed assemblies and against this suite's two steps, and fails on
 an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
-not that the step does what the scenario hopes. Checked on 2026-09-24: 80 step lines, all resolved. A
+not that the step does what the scenario hopes. Checked on 2026-09-26: 20 local patterns, 140 step lines, all resolved. A
 deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
 
-- **Read the run history before trusting a value here**: `../../docs/runs/`. Four passes and three fix tickets have played (2026-09-24 and 25); the incompatibility scenario was rewritten after its first run.
+- **Read the run history before trusting a value here**: `../../docs/runs/`. Four passes, fix tickets and features 08 to 11 have played (2026-09-24 to 26); the incompatibility scenario was rewritten after its first run.
 - Confirmed by the first passes (2026-09-24): the fence prints `Defenses`, and the four cells on `test-colony` are free (the placement scenario passed).
 - The first incompatibility run showed the game logs no duplicate for the shared defNames; scenario 05 now asserts the original's own
   `placingDraggableDimensions` error instead.

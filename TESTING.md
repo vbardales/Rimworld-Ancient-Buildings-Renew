@@ -165,149 +165,77 @@ unexpected English fallback in French, broken formatting and clipped text. Repea
 DLC-free scenario in both languages. Record results separately from the offline translation
 audit; these runtime checks have not yet been performed.
 
-## Manual run: what to send, and who checks what
+## The plan: the game is not launched by a person, Pickle plays it
 
-The manual scenarios above are run by a person, in the game. The session that keeps this repository
-cannot play the game and only sees what is sent to it. So the run is a series of **captures, sent one at
-a time**, and each one is read for what it can show. What it cannot show stays the person's to say, and
-stays pending until it is said.
+The owner does not launch the game (2026-09-25), and neither does this session. Every check of the
+sections above that a running game can answer is a Pickle scenario, played by the dispatcher; the
+session reads the report and the captures, then shows the ones that matter to the owner. There is no
+series of captures to send any more, and no ID (`F1`, `B2`, ...) to quote. An earlier draft of this
+section had them; it is replaced.
 
-**How it goes.**
+**What is automated, by building.** Feature files are in [`Tests/Pickle/`](Tests/Pickle/README.md).
 
-1. One capture per message: **one image at a time, one video at a time**, in the order of the tables
-   below, named by its ID (`F1`, `B2`, ...). The session looks at each at full size before anything else,
-   writes what it saw **and what the capture does not show** in the day's summary (`docs/runs/`), then
-   minifies or deletes it by the rules of `docs/runs/README.md`. The files go under
-   `Tests/Manual/evidence/<date>/<check>/`, ignored by git.
-2. A still shows a state, never a gesture or a duration. A video is asked for **only** where the check
-   is a gesture or the passing of time, and the table says so.
-3. A check is green only when a capture shows it, or when the person says so in words ("yes, one gesture",
-   "no, it stayed dark after midnight") and the summary records that as their statement, not as something
-   seen. Nothing is inferred from a capture that does not show it.
-4. Setup: Core, Biotech and this mod, a temporary test colony. The developer mode is fine to spawn
-   colonists, skip research, or speed time; say so in the message when it was used.
-
-**The tables.** *I read* is what the session verifies from the capture. *Only you* is what it cannot, and
-the person answers yes or no in the same message.
-
-Fence (Structure)
-
-| ID | Send | I read | Only you |
+| Building | Check | Scenario | State |
 |---|---|---|---|
-| F1 | image: the run of fence blueprints laid by **one** press-and-drag, ten cells or more, with a bend | the blueprints form a continuous line and how many there are | that it was **one gesture** and not ten clicks. If you cannot say for sure, send `F1v` |
-| F1v | video, only if F1 leaves a doubt: press, pull, release | the line appearing while the button is held | nothing more |
-| F2 | image: the fence joined to a wall on one end and to rock on the other | no gap in the drawn run | that the joins look right |
-| F3 | image: a fence gate placed in the line | the gate is part of the line | that it opens and closes |
-| F4 | image: a pen marker inside a ring of fence, its inspect text open | the text says the pen is enclosed | nothing more |
-| F5 | image: the build menu, fence icon in view | the icon is not a stretched fence segment | whether it reads as the mod's own icon |
+| fence, barrier | offers the line style; one drag from (140,155) to (150,155) lays blueprints at 140, 145 and 150 | `08` | green |
+| lamppost | solar (a glower, no power comp, no flick comp) | `09` | green |
+| lamppost | refuses a roofed cell with the game's message, accepts an open one | `09` | green |
+| lamppost | at 2 h the ground two cells away goes from below 0.4 to above 0.4 once it is built; capture kept | `09` | green (2026-09-26) |
+| vending machine | offers the link-storage command; its blueprint has storage settings; a meal on it does not deteriorate and the same meal on the ground does | `10` | green |
+| stove | 300 W, heat pusher, flickable | `11` | green |
+| stove | bill list with and without Biotech | `03`, `04` | green |
+| air conditioner | hidden until `AirConditioning` is finished, then shown | `11` | green |
+| air conditioner | 250 W and a temperature control | `11` | green |
+| all six | labels and descriptions, English and French | `06`, `07` | green |
+| all six | load without an error naming them; the fence and barrier carry `Defenses` | `01` | green |
+| all six | the real designator accepts them on an open map | `02` | green |
+| original mod | beside it, the original still loads with the field 1.6 removed | `05` | green |
 
-Barrier (Security)
+**Not automated, and what happens to each.** A check that is neither here nor in the table is not
+"passed": it is listed below with its reason, or it is pending work.
 
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| B1 | image: the run of barrier blueprints laid by one press-and-drag | same as F1 | that it was one gesture (`B1v` if in doubt) |
-| B2 | image: the barrier selected, its information window open | the cover figure and the stats as printed | that a colonist standing behind it is actually protected in a shooting test |
-| B3 | video, five seconds: a colonist ordered across the barrier | the pawn crossing the barrier cell | that it walks over rather than round |
+| Check | Why not | Status |
+|---|---|---|
+| the pointer's own press-and-drag | the engine's input, not the mod; the scenario drives the same style worker and designator the pointer ends in | proposed **not applicable: engine**, awaits the owner's word |
+| cooling through a wall, in a room on each side | needs walls, roofs and power; a local step is possible (`CompPowerTrader.PowerOn`, two enclosed rooms, `the temperature at` steps) | **pending**, to write |
+| grille turned with the rotation | a drawing, not a value | pending: capture `@review`, to be looked at by the owner |
+| air conditioner in the open does nothing but draw power | vanilla `Building_Cooler` behaviour, not the mod's | proposed not applicable: vanilla |
+| stove short-circuits in rain outdoors | a weather event over time | **pending**, to write or list not applicable with the owner |
+| a barrier gives cover; a pawn walks over it | vanilla `Building` behaviour of `passability` and `fillPercent`, read from the def | to be written as def assertions, or listed not applicable |
+| fence gate, pen enclosed, joins to wall and rock | vanilla link and pen logic | pending def assertions |
+| the French reads naturally | a judgement | **the owner's**, not automatable |
+| the light of the lamppost reads as lit | looks: a wide soft glow, no cone (the owner asked for it and chose on 2026-09-26 to keep the light points as they are) | **decided: no change** |
+| existing-save migration | opportunistic, not a gate | not applicable, as above |
 
-Lamppost (Structure)
+**How a capture is used.** A scenario tagged `@review` writes a screenshot. The session opens it at full
+size, writes what it shows **and what it does not show** in the day's line of `docs/runs/`, then keeps the
+JPEG next to the four text files of the report. A still never proves a gesture or a duration; those are
+asserted by steps (`I wait N ticks`, the hour) or listed above. The developer mode is used by Pickle to set
+the hour and to finish research, and a scenario says so.
 
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| L1 | image: the placement refused under a roof, with the message on screen | the refusal text | nothing more |
-| L2 | image: placed outdoors, at night, no conduit in frame, the clock visible | lit, wide radius, the hour | that it **stays lit all night**: say yes or no |
-| L3 | image: the lamppost selected | no power tab, no flick gizmo | nothing more |
-
-Vending machine (Furniture)
-
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| V1 | image: the storage tab open | the filter defaults to meals | nothing more |
-| V2 | image: the link storage gizmo visible, then a second image with two machines linked | the gizmo and the group | nothing more |
-| V3 | image: the blueprint selected with its filter already set, before it is built | the filter on the blueprint | nothing more |
-| V4 | image: a meal stored in it, outdoors, inspected | no deterioration line, the room stats without its beauty | that a meal stays sound after **several days**: say yes or no |
-
-Stove (Production)
-
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| S1 | image: the bill list **with Biotech** | every meal bill, baby food and bulk baby food included | nothing more |
-| S2 | image: the bill list **without Biotech** | the same list with **no** baby food, ordinary meals present | nothing more |
-| S3 | image: the stove selected | the 300 W draw as printed | that it warms the room, and short-circuits in rain outdoors |
-| S4 | image: a meal it cooked, inspected, beside one from a vanilla stove | the two are the same meal | nothing more |
-
-Air conditioner (Temperature)
-
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| A1 | two images: the menu before `AirConditioning` is researched, and after | absent, then present | nothing more |
-| A2 | image: the unit in a wall, both room temperatures readable | one side cooled, the other heated | nothing more |
-| A3 | image: the blueprint rotated before building | the drawn grille turned with it | whether the grille faces the exhaust side |
-| A4 | image: the unit built in the open | it does nothing but draw power | nothing more |
-| A5 | nothing to send | | that it can be flicked off and that it breaks down: yes or no |
-
-English and French
-
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| EN1..EN6 | six images, one per building: its label in the build menu and its description in the information window, in **English** | the text against the twelve keys, raw keys, clipped text | nothing more |
-| FR1..FR6 | the same six, in **French** | the text against the twelve keys, raw keys, English fallback, clipped text | whether the French reads naturally and is right for a player |
-| LG | one image per language of the cooking bills, the storage filters, the placement refusal and the power gizmos | raw keys, fallback, clipping | nothing more |
-
-Core alone, and the log
-
-| ID | Send | I read | Only you |
-|---|---|---|---|
-| C1 | image: with Core and this mod only, the stove's bill list | ordinary meal bills present, none for baby food | nothing more |
-| C2 | image: the same colony after a save and a reload, the buildings and their bills visible | they are all still there | nothing more |
-| P1 | text: the `Player.log` of each pass, as a file | searched for the strings in "What to search the log for" | nothing more |
-
-**What a capture can never settle**, whatever is sent: that a gesture was one gesture, that something
-holds over time, that something feels right, and whether a translation reads well. Those are the person's
-to say. The session records them as statements. The offline checkers and the Pickle passes have already
-settled what a file or the log can prove, so none of these tables asks for a capture of it.
+**What a capture can never settle:** that something holds over a long time, that it feels right, and
+whether a translation reads well. Those are the owner's to say and are recorded as her statement.
 
 ---
 
 ## What belongs in Pickle, and what does not
 
-`../AUDIT.md` asks, for `preTest -> done`, that Pickle scenarios be written and their scope
-justified: only what a running game can show stays in Gherkin. They are written, in
-[`Tests/Pickle/`](Tests/Pickle/README.md): seven features, thirteen scenarios, and **none has been
-run**. Running them, reading their reports and looking at what they capture is `done -> tested`.
+`../AUDIT.md` asks that only what a running game can show stays in Gherkin. The suite is in
+[`Tests/Pickle/`](Tests/Pickle/README.md): eleven features, twenty-three scenarios, all with a green run
+(2026-09-24 to 26, `docs/runs/`). Running them, reading the reports and looking at what they capture was
+`done -> tested`.
 
-**In Pickle, because only a loaded game shows it and a person should not have to read a log:**
-
-| Feature | Pass | Asserts |
-|---|---|---|
-| `01` the mod loads | every pass but the incompatibility one | the six defs exist and **nothing logged while the defs loaded names one of them**; the fence and barrier carry `drawStyleCategory` `Defenses` |
-| `02` placement | minimal | the real build designator accepts the fence, barrier, vending machine and stove |
-| `03` stove with Biotech | minimal | the stove takes a meal bill and both baby-food bills |
-| `04` stove without Biotech | `sans-biotech` | the two recipes do not exist, and nothing logged names the stove or them |
-| `05` original mod | `incompat-original` | with `ancientbld.core` beside it, the original still loads and still carries the field 1.6 removed (the game does not log the shared defNames) |
-| `06`, `07` labels | English pass, French pass | the six labels and six descriptions of the loaded defs, in the language the game started in |
-
-The French check is an assertion on the loaded defs, not a capture: a language folder the game does
-not find fails silently, and a def label read back in the wrong language is what shows it. An earlier
-draft of this section asked for one `@review` capture per building. It is replaced, and no capture is
-owed for it.
-
-**Two things Pickle's shipped steps cannot do here, and what stands in for them.**
+**Why some checks use steps written for this suite** (`Tests/Pickle/Source/`):
 
 - Pickle's `no errors were logged` reads what is logged after a scenario is armed, and arming clears
   its buffer, so an error logged while the defs loaded is gone before the first step. That is where this
-  mod can fail, so `01` and `04` read RimWorld's own log through two local steps in
-  `Tests/Pickle/Source/`. The shipped step is kept for `02` and `03`, which ask about what happens after
-  a map is loaded.
-- The shipped `I designate` step places a blueprint on each cell directly, so it would pass on a fence
-  that could not be dragged. The drag stays manual. What Pickle can assert is the loaded field, which
-  is `(null)` in the state the original port was in.
-
-**Not in Pickle, and why:** the fence and barrier drag, and the storage-link gizmo, need a real drag or a
-gizmo click the shipped steps do not give; cooling across a wall is a temperature reading a person takes
-once; the existing-save migration is opportunistic and is not planned at all (see its section). The drag,
-the gizmo and the wall cooling stay manual scenarios in this file. That is a cost decision, not a
-judgement that the check matters less. One manual half remains for the stove: with Biotech left out, that
-an ordinary meal bill still works needs a map, and the map fixture was written with every DLC active.
+  mod can fail, so `01` and `04` read RimWorld's own log through two local steps. The shipped step is kept
+  for `02` and `03`.
+- Pickle's `I designate` step places a blueprint on each cell directly and would pass on a fence that
+  could not be dragged. `08` therefore asks the designator for its drawing styles and ends a drag through
+  the game's own style worker, so the loaded field is exercised and not only read.
+- The lamp, the vending machine and the air conditioner are asked of the game (light on the glow grid,
+  deterioration rate, designator visibility) through local steps in `Source/BuildingSteps.cs`.
 
 **Not tested at all:** what RimWorld does with the declaration itself, such as its warning for a
 missing dependency or its load order. `../AUDIT.md`: the game is not what is under test.
