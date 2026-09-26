@@ -200,9 +200,10 @@ section had them; it is replaced.
 | cooling through a wall, in a room on each side | needs walls, roofs and power; a local step is possible (`CompPowerTrader.PowerOn`, two enclosed rooms, `the temperature at` steps) | **pending**, to write |
 | grille turned with the rotation | a drawing, not a value | pending: capture `@review`, to be looked at by the owner |
 | air conditioner in the open does nothing but draw power | vanilla `Building_Cooler` behaviour, not the mod's | proposed not applicable: vanilla |
-| stove short-circuits in rain outdoors | a weather event over time | **pending**, to write or list not applicable with the owner |
-| a barrier gives cover; a pawn walks over it | vanilla `Building` behaviour of `passability` and `fillPercent`, read from the def | to be written as def assertions, or listed not applicable |
-| fence gate, pen enclosed, joins to wall and rock | vanilla link and pen logic | pending def assertions |
+| stove short-circuits in rain outdoors | a weather event over time; the flag `shortCircuitInRain` of its power component is asserted instead | scenario `12` written 2026-09-26, **not yet played** |
+| a barrier gives cover; a pawn walks over it | vanilla behaviour of `fillPercent` and `passability`, asserted on the def | scenario `12` written 2026-09-26, **not yet played** |
+| fence gate, pen enclosed | vanilla pen logic: `isFence` and the related build commands `PenMarker`, `FenceGate`, asserted on the def | scenario `12` written 2026-09-26, **not yet played** |
+| fence joins to wall and rock | vanilla link logic of the atlas texture; a drawing | pending: capture `@review`, or not applicable |
 | the French reads naturally | a judgement | **the owner's**, not automatable |
 | the light of the lamppost reads as lit | looks: a wide soft glow, no cone (the owner asked for it and chose on 2026-09-26 to keep the light points as they are) | **decided: no change** |
 | existing-save migration | opportunistic, not a gate | not applicable, as above |

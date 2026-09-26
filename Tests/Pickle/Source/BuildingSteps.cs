@@ -104,6 +104,46 @@ namespace AncientBuildingsRenew.PickleSteps
                 defName + " draws " + power.PowerConsumption + " watts, not " + watts);
         }
 
+        /// <summary>The stove's rain short circuit is a flag of its power component, read as the game loaded it.</summary>
+        [Then("Ancient Buildings Renew: the def {string} short-circuits in rain")]
+        public void ShortCircuitsInRain(PickleContext ctx, string defName)
+        {
+            CompProperties_Power power = Def(ctx, defName).GetCompProperties<CompProperties_Power>();
+            ctx.Assert(power != null, defName + " has no power component");
+            ctx.Assert(power.shortCircuitInRain, defName + " does not short-circuit in rain");
+        }
+
+        /// <summary>Cover and walking over are the def's fill percent and passability, not the mod's own code.</summary>
+        [Then("Ancient Buildings Renew: the def {string} has a fill percent of {float}")]
+        public void HasFillPercent(PickleContext ctx, string defName, float fill)
+        {
+            ThingDef def = Def(ctx, defName);
+            ctx.Assert(Math.Abs(def.fillPercent - fill) < 0.001f, defName + " has a fill percent of " + def.fillPercent + ", not " + fill);
+        }
+
+        [Then("Ancient Buildings Renew: the def {string} lets pawns walk over it")]
+        public void LetsPawnsWalkOver(PickleContext ctx, string defName)
+        {
+            ThingDef def = Def(ctx, defName);
+            ctx.Assert(def.passability == Traversability.PassThroughOnly, defName + " has the passability " + def.passability + ", not PassThroughOnly");
+        }
+
+        /// <summary>An animal pen counts a def as a fence by its building.isFence flag.</summary>
+        [Then("Ancient Buildings Renew: the def {string} counts as a fence for an animal pen")]
+        public void CountsAsFence(PickleContext ctx, string defName)
+        {
+            ThingDef def = Def(ctx, defName);
+            ctx.Assert(def.building != null && def.building.isFence, defName + " is not flagged isFence, so a pen would leak through it");
+        }
+
+        [Then("Ancient Buildings Renew: the def {string} offers the related build command {string}")]
+        public void OffersRelatedCommand(PickleContext ctx, string defName, string related)
+        {
+            ThingDef def = Def(ctx, defName);
+            List<string> have = (def.building?.relatedBuildCommands ?? new List<ThingDef>()).Select(d => d.defName).ToList();
+            ctx.Assert(have.Contains(related), defName + " offers no related build command '" + related + "'; it offers: " + Names(have));
+        }
+
         // ---- the build designator, and the drag ------------------------------------------------
 
         private static Designator_Build DesignatorFor(PickleContext ctx, string defName)
