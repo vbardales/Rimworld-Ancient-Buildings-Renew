@@ -29,12 +29,19 @@
 # before. Split into five waits of 500 ticks each: the same total, each comfortably under the step's own
 # budget.
 #
+# The replay after that (0787) got past the wait and read 146.2C at (142, 152) against a bound of "below
+# 22": not a runaway, but the wrong side. RimWorld's z increases NORTHWARD, so (142, 152), the higher z,
+# is north of the unit, not south as the scenario's own comment above assumed - IntVec3.South is the lower
+# z. Building_Cooler pushes its exhaust heat into the north cell (142, 152) and cools the south one (142,
+# 150) toward the target: exactly the 146.2C reading, on the side this scenario had backwards. The two
+# assertions are swapped to match.
+#
 # The unit is powered directly (Ancient Buildings Renew: ... is powered on), bypassing the grid: this
 # scenario is about the two sides of the unit, not about power reaching it.
 Feature: the air conditioner cools one side of a wall and heats the other
 
   @save @review
-  Scenario: the air conditioner cools the room south of it and warms the room north of it
+  Scenario: the air conditioner cools the room south of it (the lower z) and warms the room north of it
     Given the save "test-colony" is loaded
     And a "Wall" is built at (141, 149)
     And a "Wall" is built at (142, 149)
@@ -60,8 +67,8 @@ Feature: the air conditioner cools one side of a wall and heats the other
     And I wait 500 ticks
     And I wait 500 ticks
     And I wait 500 ticks
-    Then the temperature at (142, 152) is below 22
-    And the temperature at (142, 150) is above 23
+    Then the temperature at (142, 150) is below 22
+    And the temperature at (142, 152) is above 23
     When I move the camera to (142, 151)
     And I zoom all the way in
     And I take a screenshot "the air conditioner cooling one side of a wall"
