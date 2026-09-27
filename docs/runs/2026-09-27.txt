@@ -1,0 +1,1 @@
+0927 09-lamppost-cone-strong (tree cf4028e, EN, test-colony): lamp lights, cone now clearly visible in capture, stronger alpha and colour fixed the near-invisible first version (evidence/09-lamppost-cone-1, tree 8178b4d); Player.log no errors; capture kept (lamppost-night-strong.jpg)
