@@ -43,6 +43,31 @@ namespace AncientBuildingsRenew.PickleSteps
                 .FirstOrDefault(t => t.def.defName.Equals(defName, StringComparison.OrdinalIgnoreCase));
         }
 
+        /// <summary>
+        /// The shipped "a {string} is built at" step gives no way to set a rotation, and the air
+        /// conditioner's grille (TESTING.md: "rotate it before building and the drawn grille must turn with
+        /// it") is a drawing, not a value a def-reading step can check. This spawns the real thing directly,
+        /// facing the given direction, so a screenshot can show whether the texture turned with it.
+        /// </summary>
+        [When("Ancient Buildings Renew: a {string} is built at \\({int}, {int}\\) facing {word}")]
+        public void IsBuiltFacing(PickleContext ctx, string defName, int x, int z, string facing)
+        {
+            Map map = Find.CurrentMap;
+            ctx.Assert(map != null, "no map is loaded");
+            ThingDef def = Def(ctx, defName);
+            Rot4 rot;
+            switch (facing.ToLowerInvariant())
+            {
+                case "north": rot = Rot4.North; break;
+                case "east": rot = Rot4.East; break;
+                case "south": rot = Rot4.South; break;
+                case "west": rot = Rot4.West; break;
+                default: ctx.Assert(false, "'" + facing + "' is not North, East, South or West"); return;
+            }
+            Thing thing = ThingMaker.MakeThing(def, GenStuff.DefaultStuffFor(def));
+            GenSpawn.Spawn(thing, new IntVec3(x, 0, z), map, rot);
+        }
+
         private static Thing BlueprintAt(string defName, int x, int z)
         {
             Map map = Find.CurrentMap;
