@@ -198,7 +198,7 @@ section had them; it is replaced.
 |---|---|---|
 | the pointer's own press-and-drag | the engine's input, not the mod; the scenario drives the same style worker and designator the pointer ends in | proposed **not applicable: engine**, awaits the owner's word |
 | cooling through a wall, in a room on each side | needs walls, roofs and power | scenario `13`, green since 2026-09-27 (`docs/runs/`); took eight fix tickets: a forced roof outside an enclosed room does not hold, `Building_Cooler.TickRare` reads only its own north/south neighbours (decompiled to find this), a per-step wait timeout, and z increasing northward, not southward |
-| grille turned with the rotation | a drawing, not a value | scenario `14`, written 2026-09-27, `@review`, **not yet played**: two units side by side, facing North and East, one capture |
+| grille turned with the rotation | a drawing, not a value | scenario `14`, green since 2026-09-28: two units side by side, the grille bar visibly moved from the bottom edge to the left edge between North and East |
 | air conditioner in the open does nothing but draw power | vanilla `Building_Cooler` behaviour, not the mod's | proposed not applicable: vanilla |
 | stove short-circuits in rain outdoors | a weather event over time; the flag `shortCircuitInRain` of its power component is asserted instead | scenario `12`, green since 2026-09-26 |
 | a barrier gives cover; a pawn walks over it | vanilla behaviour of `fillPercent` and `passability`, asserted on the def | scenario `12`, green since 2026-09-26 |

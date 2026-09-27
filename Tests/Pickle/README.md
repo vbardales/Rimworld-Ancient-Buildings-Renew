@@ -20,7 +20,7 @@ why. Nothing in this folder is part of `Mod/`, which is what Steam receives whol
 | `11-stove-and-air-conditioner` | stove and AC defs: every pass; research gate: minimal, English | the stove draws 300 W with a powered heat pusher and a flick comp; the AC draws 250 W with a temperature control and is hidden until `AirConditioning` is finished (research is undone first, the colony had it) |
 | `12-def-claims` | every pass | the barrier's fill percent and passability, the fence's `isFence` flag with the pen marker and gate as related commands, the stove's `shortCircuitInRain`, green since 2026-09-26 |
 | `13-wall-cooling` | minimal, English, `@save @review` | the air conditioner, built into a wall running east-west and powered on directly, cools the room to its south and warms the room to its north |
-| `14-air-conditioner-grille` | minimal, English, `@save @review` | two units, facing North and East, side by side, one capture: does the drawn grille turn with the rotation (written 2026-09-27, not yet played) |
+| `14-air-conditioner-grille` | minimal, English, `@save @review` | two units, facing North and East, side by side, one capture: the drawn grille bar visibly moves from the bottom edge to the left edge, green since 2026-09-28 |
 
 Fourteen features, twenty-eight scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
 text. Local steps: `Source/LoggedMessageSteps.cs` (two, for the log) and `Source/BuildingSteps.cs` (the rest, all
