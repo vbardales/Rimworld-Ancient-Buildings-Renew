@@ -18,8 +18,8 @@ why. Nothing in this folder is part of `Mod/`, which is what Steam receives whol
 | `09-lamppost` | comps: every pass; refusal and night light: minimal, English | glower and no power or flick comp; a roofed cell is refused with the game's message; at 2 h the light two cells away goes from below 0.4 to above 0.4 once the lamp is built (the game caps it at 0.5); capture |
 | `10-vending-machine` | minimal, English, `@save` | the built machine offers the link-storage command, its blueprint has storage settings, a meal on it does not deteriorate and the same meal on the ground does |
 | `11-stove-and-air-conditioner` | stove and AC defs: every pass; research gate: minimal, English | the stove draws 300 W with a powered heat pusher and a flick comp; the AC draws 250 W with a temperature control and is hidden until `AirConditioning` is finished (research is undone first, the colony had it) |
-| `12-def-claims` | every pass | the barrier's fill percent and passability, the fence's `isFence` flag with the pen marker and gate as related commands, the stove's `shortCircuitInRain` |
-| `13-wall-cooling` | minimal, English, `@save @review` | the air conditioner, built in a wall and powered on directly, cools the roofed cell it faces and warms the other (written 2026-09-27, not yet played) |
+| `12-def-claims` | every pass | the barrier's fill percent and passability, the fence's `isFence` flag with the pen marker and gate as related commands, the stove's `shortCircuitInRain`, green since 2026-09-26 |
+| `13-wall-cooling` | minimal, English, `@save @review` | the air conditioner, built into a wall running east-west and powered on directly, cools the room to its south and warms the room to its north |
 
 Thirteen features, twenty-seven scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
 text. Local steps: `Source/LoggedMessageSteps.cs` (two, for the log) and `Source/BuildingSteps.cs` (the rest, all
