@@ -14,7 +14,7 @@ licence_at:   Audit/2026-09-13-rights/README.md
 dependencies: none
 showcase:     complete
 tested_on:
-pickle_scenarios: "26 written in 12 features (12-def-claims, 3 scenarios, written 2026-09-26, not yet played), the other 23 have a green run (2026-09-24 to 26): the four passes with their fix tickets, then 08 fence and barrier drag, 09 lamppost (night light replay 3743 green, capture opened), 10 vending machine, 11 stove and air conditioner; no ticket left"
+pickle_scenarios: "27 written in 13 features (12-def-claims and 13-wall-cooling, 4 scenarios, written 2026-09-26 and 27, not yet played), the other 23 have a green run (2026-09-24 to 26): the four passes with their fix tickets, then 08 fence and barrier drag, 09 lamppost (night light replay 3743 green, capture opened), 10 vending machine, 11 stove and air conditioner; no ticket left"
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:

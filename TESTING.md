@@ -197,7 +197,7 @@ section had them; it is replaced.
 | Check | Why not | Status |
 |---|---|---|
 | the pointer's own press-and-drag | the engine's input, not the mod; the scenario drives the same style worker and designator the pointer ends in | proposed **not applicable: engine**, awaits the owner's word |
-| cooling through a wall, in a room on each side | needs walls, roofs and power; a local step is possible (`CompPowerTrader.PowerOn`, two enclosed rooms, `the temperature at` steps) | **pending**, to write |
+| cooling through a wall, in a room on each side | needs walls, roofs and power | scenario `13` written 2026-09-27, `@review`, **not yet played** (wording and the two-cell setup are unconfirmed until the first replay) |
 | grille turned with the rotation | a drawing, not a value | pending: capture `@review`, to be looked at by the owner |
 | air conditioner in the open does nothing but draw power | vanilla `Building_Cooler` behaviour, not the mod's | proposed not applicable: vanilla |
 | stove short-circuits in rain outdoors | a weather event over time; the flag `shortCircuitInRain` of its power component is asserted instead | scenario `12` written 2026-09-26, **not yet played** |

@@ -249,6 +249,21 @@ namespace AncientBuildingsRenew.PickleSteps
             map.roofGrid.SetRoof(new IntVec3(x, 0, z), RoofDefOf.RoofConstructed);
         }
 
+        /// <summary>
+        /// Turns a built thing's power comp on directly, without a grid, a conduit or a generator: the wall
+        /// cooling scenario asks only whether the air conditioner cools and heats once powered, not whether
+        /// power reaches it, which the shipped power-net simulation already covers for every building.
+        /// </summary>
+        [When("Ancient Buildings Renew: the {string} at \\({int}, {int}\\) is powered on")]
+        public void IsPoweredOn(PickleContext ctx, string defName, int x, int z)
+        {
+            Thing thing = BuiltThingAt(defName, x, z);
+            ctx.Assert(thing != null, "no " + defName + " stands at (" + x + ", " + z + ")");
+            CompPowerTrader power = thing.TryGetComp<CompPowerTrader>();
+            ctx.Assert(power != null, defName + " has no power trader component");
+            power.PowerOn = true;
+        }
+
         // ---- what a built thing does -----------------------------------------------------------
 
         [Then("Ancient Buildings Renew: the light on the ground at \\({int}, {int}\\) is above {float}")]

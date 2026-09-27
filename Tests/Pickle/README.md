@@ -18,9 +18,10 @@ why. Nothing in this folder is part of `Mod/`, which is what Steam receives whol
 | `09-lamppost` | comps: every pass; refusal and night light: minimal, English | glower and no power or flick comp; a roofed cell is refused with the game's message; at 2 h the light two cells away goes from below 0.4 to above 0.4 once the lamp is built (the game caps it at 0.5); capture |
 | `10-vending-machine` | minimal, English, `@save` | the built machine offers the link-storage command, its blueprint has storage settings, a meal on it does not deteriorate and the same meal on the ground does |
 | `11-stove-and-air-conditioner` | stove and AC defs: every pass; research gate: minimal, English | the stove draws 300 W with a powered heat pusher and a flick comp; the AC draws 250 W with a temperature control and is hidden until `AirConditioning` is finished (research is undone first, the colony had it) |
-| `12-def-claims` | every pass | the barrier's fill percent and passability, the fence's `isFence` flag with the pen marker and gate as related commands, the stove's `shortCircuitInRain` (written 2026-09-26, not yet played) |
+| `12-def-claims` | every pass | the barrier's fill percent and passability, the fence's `isFence` flag with the pen marker and gate as related commands, the stove's `shortCircuitInRain` |
+| `13-wall-cooling` | minimal, English, `@save @review` | the air conditioner, built in a wall and powered on directly, cools the roofed cell it faces and warms the other (written 2026-09-27, not yet played) |
 
-Twelve features, twenty-six scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
+Thirteen features, twenty-seven scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
 text. Local steps: `Source/LoggedMessageSteps.cs` (two, for the log) and `Source/BuildingSteps.cs` (the rest, all
 prefixed "Ancient Buildings Renew: ").
 
@@ -71,7 +72,7 @@ asserts Biotech is absent from the passes that keep it.
 
 | Pass | Scenarios it should play | Skipped by requirement |
 |---|---|---|
-| minimal, English | 21: `01` x4, `02`, `03`, `06` x2, `08` x2, `09` x3, `10` x2, `11` x3, `12` x3 | `05` (1) |
+| minimal, English | 22: `01` x4, `02`, `03`, `06` x2, `08` x2, `09` x3, `10` x2, `11` x3, `12` x3, `13` | `05` (1) |
 | minimal, French | 12: `01` x4, `07` x2, `12` x3, and the three that need no map: `09` comps, `11` stove, `11` AC defs | `05` (1) |
 | sans-biotech | 14: `01` x4, `04` x2, `06` x2, `09` comps, `11` stove and AC defs, `12` x3 | `05` (1) |
 | incompat-original | 1: `05` | none |
@@ -100,7 +101,7 @@ The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: 
 because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
 Pickle's own vocabulary read from the installed assemblies and against this suite's two steps, and fails on
 an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
-not that the step does what the scenario hopes. Checked on 2026-09-26: 25 local patterns, 149 step lines, all resolved. A
+not that the step does what the scenario hopes. Checked on 2026-09-26: 26 local patterns, 161 step lines, all resolved. A
 deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
