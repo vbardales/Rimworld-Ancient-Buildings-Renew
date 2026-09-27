@@ -13,6 +13,11 @@
 # like the vanilla cooler's own default, not indefinitely. 18 was never reachable. The bounds below are set
 # against the outdoor temperature the run itself reported (22.6-22.7C), not a number picked from nowhere.
 #
+# The replay after that (343c) read 21.6C on BOTH sides, the exact value the cooled side had read before: a
+# coincidence that reads like the two rooms are really one. A direct check of the game's own room system
+# (CompTempControl exchanges heat between rooms, not between fixed cells) now runs before the wait, so a
+# merged room fails with its own clear message instead of a numeric coincidence.
+#
 # The unit is powered directly (Ancient Buildings Renew: ... is powered on), bypassing the grid: this
 # scenario is about the two sides of the unit, not about power reaching it.
 Feature: the air conditioner cools one side of a wall and heats the other
@@ -41,6 +46,7 @@ Feature: the air conditioner cools one side of a wall and heats the other
     And Ancient Buildings Renew: a constructed roof covers (141, 151)
     And Ancient Buildings Renew: a constructed roof covers (143, 151)
     And Ancient Buildings Renew: a constructed roof covers (144, 151)
+    Then Ancient Buildings Renew: (141, 151) and (144, 151) are in different rooms
     When Ancient Buildings Renew: the "AB_AirConditioner" at (142, 151) is powered on
     And I wait 2500 ticks
     Then the temperature at (141, 151) is below 22

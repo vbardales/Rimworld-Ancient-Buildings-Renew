@@ -283,6 +283,24 @@ namespace AncientBuildingsRenew.PickleSteps
             power.PowerOn = true;
         }
 
+        /// <summary>
+        /// Diagnostic for the wall-cooling scenario (2026-09-27): two temperature readings came back equal,
+        /// as if the two rooms the walls were meant to separate were really one. This asks the game's own
+        /// room system directly, which is what CompTempControl exchanges heat between, rather than trusting
+        /// a coincidence of numbers.
+        /// </summary>
+        [Then("Ancient Buildings Renew: \\({int}, {int}\\) and \\({int}, {int}\\) are in different rooms")]
+        public void AreInDifferentRooms(PickleContext ctx, int x1, int z1, int x2, int z2)
+        {
+            Map map = Find.CurrentMap;
+            ctx.Assert(map != null, "no map is loaded");
+            Room a = new IntVec3(x1, 0, z1).GetRoom(map);
+            Room b = new IntVec3(x2, 0, z2).GetRoom(map);
+            ctx.Assert(a != null, "(" + x1 + ", " + z1 + ") is not in any room (outdoors, or the region system has not caught up)");
+            ctx.Assert(b != null, "(" + x2 + ", " + z2 + ") is not in any room (outdoors, or the region system has not caught up)");
+            ctx.Assert(a != b, "(" + x1 + ", " + z1 + ") and (" + x2 + ", " + z2 + ") are the same room (" + a.CellCount + " cells), not two separate ones");
+        }
+
         // ---- what a built thing does -----------------------------------------------------------
 
         [Then("Ancient Buildings Renew: the light on the ground at \\({int}, {int}\\) is above {float}")]
