@@ -23,6 +23,12 @@
 # neighbours are the two rooms. South is the cooled, target-seeking side; north gets the exhaust
 # (Building_Cooler.TickRare: intVec = South, cooled toward target; intVec2 = North, heat pushed into it).
 #
+# The replay after that (15ec, then 34bb identically) failed on the wait itself: "Step 'And I wait 2500
+# ticks' timed out after 5s". That is a per-step wall-clock budget, not a scenario one, and this scenario
+# now does more setup (15 buildings, plus the room check) than the ones that reached 2500 ticks in one step
+# before. Split into five waits of 500 ticks each: the same total, each comfortably under the step's own
+# budget.
+#
 # The unit is powered directly (Ancient Buildings Renew: ... is powered on), bypassing the grid: this
 # scenario is about the two sides of the unit, not about power reaching it.
 Feature: the air conditioner cools one side of a wall and heats the other
@@ -49,7 +55,11 @@ Feature: the air conditioner cools one side of a wall and heats the other
     And Ancient Buildings Renew: a constructed roof covers (142, 152)
     Then Ancient Buildings Renew: (142, 150) and (142, 152) are in different rooms
     When Ancient Buildings Renew: the "AB_AirConditioner" at (142, 151) is powered on
-    And I wait 2500 ticks
+    And I wait 500 ticks
+    And I wait 500 ticks
+    And I wait 500 ticks
+    And I wait 500 ticks
+    And I wait 500 ticks
     Then the temperature at (142, 152) is below 22
     And the temperature at (142, 150) is above 23
     When I move the camera to (142, 151)
