@@ -1,0 +1,1 @@
+0928 14-air-conditioner-grille (tree 013aa26, EN, test-colony): 1 scenario passed, exit 0, 1 attempt; capture opened: two AC units, facing North and East, the drawn grille bar visibly moved from the bottom edge to the left edge between them, confirming it turns with rotation (grille.jpg)
