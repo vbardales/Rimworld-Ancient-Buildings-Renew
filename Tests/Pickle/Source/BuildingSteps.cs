@@ -104,6 +104,25 @@ namespace AncientBuildingsRenew.PickleSteps
                 defName + " draws " + power.PowerConsumption + " watts, not " + watts);
         }
 
+        /// <summary>
+        /// Diagnostic for the lamppost's light cone (2026-09-27): the capture showed no cone, so this reads
+        /// graphicData back from the loaded def, which the shipped "def field" step cannot reach since it is
+        /// nested. Separates "the def did not load what the source says" from "it loaded but did not render".
+        /// </summary>
+        [Then("Ancient Buildings Renew: the def {string} draws the texture {string} at size {float} by {float}")]
+        public void DrawsTextureAtSize(PickleContext ctx, string defName, string texPath, float width, float height)
+        {
+            ThingDef def = Def(ctx, defName);
+            GraphicData g = def.graphicData;
+            ctx.Assert(g != null, defName + " has no graphicData");
+            ctx.Assert(
+                string.Equals(g.texPath, texPath, StringComparison.Ordinal),
+                defName + " draws the texture '" + g.texPath + "', not '" + texPath + "'");
+            ctx.Assert(
+                Math.Abs(g.drawSize.x - width) < 0.01f && Math.Abs(g.drawSize.y - height) < 0.01f,
+                defName + " draws at size " + g.drawSize.x + " by " + g.drawSize.y + ", not " + width + " by " + height);
+        }
+
         /// <summary>The stove's rain short circuit is a flag of its power component, read as the game loaded it.</summary>
         [Then("Ancient Buildings Renew: the def {string} short-circuits in rain")]
         public void ShortCircuitsInRain(PickleContext ctx, string defName)

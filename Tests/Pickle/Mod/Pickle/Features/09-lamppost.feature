@@ -16,6 +16,13 @@ Feature: the lamppost is solar, and stays outdoors
     And Ancient Buildings Renew: the def "AB_Lamppost" carries no component of class "CompProperties_Power"
     And Ancient Buildings Renew: the def "AB_Lamppost" carries no component of class "CompProperties_Flickable"
 
+  # Diagnostic, 2026-09-27: the capture of the night scenario showed no light cone (evidence/09-lamppost-cone-1).
+  # This checks the loaded def before looking further at the render, since the shipped "def field" step cannot
+  # reach graphicData, which is nested.
+  Scenario: the lamppost draws its lit texture at the enlarged size
+    Given the main menu is open
+    Then Ancient Buildings Renew: the def "AB_Lamppost" draws the texture "Things/Building/ABSingle/AB_LamppostLit" at size 3 by 4
+
   @save
   Scenario: the lamppost refuses a roofed cell and accepts an open one
     Given the save "test-colony" is loaded
