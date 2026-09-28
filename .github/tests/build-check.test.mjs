@@ -19,7 +19,7 @@ async function setup({ build }) {
   await writeFile(join(cwd, 'Source', 'X.csproj'), '<Project/>');
   git(cwd, 'init', '-q', '--initial-branch=main'); git(cwd, 'add', '.'); git(cwd, 'commit', '-q', '-m', 'one');
   const bin = await mkdtemp(join(tmpdir(), 'dotnet-'));
-  await writeFile(join(bin, 'dotnet'), '#!/usr/bin/env bash\n[[ "${STUB_FAIL:-}" != 1 ]] || { echo "error CS1002" >&2; exit 1; }\nprintf "%s" "${STUB_DLL:-committed}" > Mod/Assemblies/X.dll\necho "built $*" >> "$STUB_LOG"\n');
+  await writeFile(join(bin, 'dotnet'), '#!/usr/bin/env bash\n[[ "${STUB_FAIL:-}" != 1 ]] || { echo "error CS1002" >&2; exit 1; }\nprintf "%s" "${STUB_DLL:-committed}" > Mod/Assemblies/X.dll\n[[ -z "${STUB_EXTRA_FILE:-}" ]] || printf "stray" > "$STUB_EXTRA_FILE"\necho "built $*" >> "$STUB_LOG"\n');
   await chmod(join(bin, 'dotnet'), 0o755);
   const log = join(bin, 'log');
   await writeFile(log, '');
@@ -52,6 +52,16 @@ test('a build that differs is reported with both hashes, and the committed file 
   assert.match(r.stdout, /::warning::The runner's build differs/);
   assert.match(await readFile(t.summary, 'utf8'), /Mod\/Assemblies\/X\.dll: committed [0-9a-f]{64}, rebuilt [0-9a-f]{64}/);
   assert.equal(await readFile(join(t.cwd, 'Mod', 'Assemblies', 'X.dll'), 'utf8'), 'committed', 'what ships is what is committed');
+});
+
+test('a file the build leaves under Mod/ that Git never tracked is discarded, not shipped', async () => {
+  const t = await setup({ build: { project: 'Source/X.csproj' } });
+  const strayPath = join(t.cwd, 'Mod', 'Assemblies', 'Stray.dll');
+  const r = t.run({ STUB_EXTRA_FILE: strayPath });
+  assert.equal(r.status, 0, r.stderr);
+  assert.match(r.stdout, /::warning::The build left files under Mod\/ that Git does not track/);
+  assert.match(await readFile(t.summary, 'utf8'), /Mod\/Assemblies\/Stray\.dll/);
+  await assert.rejects(readFile(strayPath));
 });
 
 test('a project that does not compile, or that is not in the commit, stops the run', async () => {
