@@ -19,6 +19,6 @@ Feature: the French labels and descriptions reach the loaded definitions
     Then def "ConFence" field "description" is "Une clôture faite de béton."
     And def "ConcreteBarrier" field "description" is "Un dispositif de gestion du trafic qui offre aussi un abri contre les tirs."
     And def "AB_Lamppost" field "description" is "Un dispositif de gestion du trafic qui permet d'y voir quand il fait sombre. Celui-ci fonctionne à l'énergie solaire, ce qui soulage d'autant le réseau électrique."
-    And def "ABVending" field "description" is "Un simple distributeur automatique, modifié pour y ranger des repas et de quoi cuisiner."
+    And def "ABVending" field "description" is "Un simple distributeur automatique, modifié pour y ranger des repas et des ingrédients."
     And def "ABKitchenstove" field "description" is "Une simple plaque de cuisson pour préparer les repas."
     And def "AB_AirConditioner" field "description" is "Un groupe de froid récupéré, qui s'encastre dans un mur. L'air frais sort d'un côté, l'air chaud de l'autre. Plus vieux et plus fruste qu'un climatiseur moderne : il consomme davantage et déplace moins de chaleur, mais il se monte plus vite et avec moins."

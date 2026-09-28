@@ -9,7 +9,7 @@
   <!-- EN: vending machine -->
   <ABVending.label>distributeur automatique</ABVending.label>
   <!-- EN: A simple vending machine altered to store meals and other cooking materials. -->
-  <ABVending.description>Un simple distributeur automatique, modifié pour y ranger des repas et de quoi cuisiner.</ABVending.description>
+  <ABVending.description>Un simple distributeur automatique, modifié pour y ranger des repas et des ingrédients.</ABVending.description>
 
   <!-- EN: concrete barrier -->
   <ConcreteBarrier.label>barrière en béton</ConcreteBarrier.label>
