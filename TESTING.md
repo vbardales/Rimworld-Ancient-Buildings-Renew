@@ -196,7 +196,7 @@ section had them; it is replaced.
 
 | Check | Why not | Status |
 |---|---|---|
-| the pointer's own press-and-drag | the engine's input, not the mod; the scenario drives the same style worker and designator the pointer ends in. PickleTools confirmed on 2026-09-28 (decompiled installed Pickle) that its input backends expose only MoveTo, Click (one press and release at one point), Key and GetMouseLocation: no separate mouse-down, mouse-up or drag, and none planned that it could find | proposed **not applicable: engine**, awaits the owner's word |
+| the pointer's own press-and-drag | the engine's input, not the mod; the scenario drives the same style worker and designator the pointer ends in. PickleTools confirmed on 2026-09-28 (decompiled installed Pickle) that its input backends expose only MoveTo, Click (one press and release at one point), Key and GetMouseLocation: no separate mouse-down, mouse-up or drag, and none planned that it could find | **not applicable: engine**, accepted by the owner on 2026-09-28 |
 | cooling through a wall, in a room on each side | needs walls, roofs and power | scenario `13`, green since 2026-09-27 (`docs/runs/`); took eight fix tickets: a forced roof outside an enclosed room does not hold, `Building_Cooler.TickRare` reads only its own north/south neighbours (decompiled to find this), a per-step wait timeout, and z increasing northward, not southward |
 | grille turned with the rotation | a drawing, not a value | scenario `14`, green since 2026-09-28: two units side by side, the grille bar visibly moved from the bottom edge to the left edge between North and East |
 | air conditioner in the open does nothing but draw power | vanilla `Building_Cooler` behaviour, not the mod's | proposed not applicable: vanilla |
