@@ -163,7 +163,7 @@ and linking, temperature controls, power/flick gizmos, placement rejection messa
 fence's related build commands. These interfaces use vanilla text. Check for raw keys,
 unexpected English fallback in French, broken formatting and clipped text. Repeat the
 DLC-free scenario in both languages. Record results separately from the offline translation
-audit; these runtime checks have not yet been performed.
+audit. The six labels and six descriptions were read side by side with the English by the owner on 2026-09-28: she changed the vending machine ("des ingrédients") and the air conditioner ("climatiseur antique", "appareil de climatisation remis en état", "il se construit plus vite et avec moins"), then validated the rest, recorded as her statement. Pickle 07 asserts the loaded texts.
 
 ## The plan: the game is not launched by a person, Pickle plays it
 
@@ -204,7 +204,7 @@ section had them; it is replaced.
 | a barrier gives cover; a pawn walks over it | vanilla behaviour of `fillPercent` and `passability`, asserted on the def | scenario `12`, green since 2026-09-26 |
 | fence gate, pen enclosed | vanilla pen logic: `isFence` and the related build commands `PenMarker`, `FenceGate`, asserted on the def | scenario `12`, green since 2026-09-26 |
 | fence joins to wall and rock | vanilla link logic of the atlas texture; a drawing | pending: capture `@review`, or not applicable |
-| the French reads naturally | a judgement | **the owner's**, not automatable |
+| the French reads naturally | a judgement | validated by the owner on 2026-09-28 (her statement), after her edits; scenario `07` asserts the final texts |
 | the light of the lamppost reads as lit | looks: a wide soft glow, no cone (the owner asked for it and chose on 2026-09-26 to keep the light points as they are) | **decided: no change** |
 | existing-save migration | opportunistic, not a gate | not applicable, as above |
 
