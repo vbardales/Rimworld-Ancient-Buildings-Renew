@@ -11,6 +11,7 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
+upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
 tested_on:
