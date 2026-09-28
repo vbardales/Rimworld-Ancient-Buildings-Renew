@@ -1,0 +1,4 @@
+# Pass "gallery": Nelim's zen meadow screenshot studio (PickleTools/ScreenshotStudio) beside this mod, for the
+# Workshop gallery captures. PUBLICATION.md decides the final order and which of these are used; this pass only
+# produces them. See PickleTools/ScreenshotStudio/README.md for the fixture and the camera presets.
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
