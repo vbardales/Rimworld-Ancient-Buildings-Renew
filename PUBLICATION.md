@@ -46,10 +46,18 @@ Code, Codex for the audits, DALL-E for the preview background and the icon), `TH
 - **Preview** (`Mod/About/Preview.png`): the mod's own corner of road at dusk, with the fence, the barrier,
   the lamppost and the vending machine in one frame, and the name engraved. Its checks are in `STATUS.md`
   (the audit sections, and the owner's override of 2026-09-13 on the comparison with a game capture).
+  **2026-09-29:** the owner asked for the cut-out `ModIcon.png` added to the frame's bottom-left corner
+  (emptier than bottom-right, which carries the vending machine and barrier), tilted +15°, bled off the
+  left and bottom edges. Composited with ffmpeg (`colorkey` for the cutout, `rotate` on a transparent
+  canvas, `overlay` at negative offsets), no AI image generation. Same 896x504 size. Owner validated.
 - **ModIcon** (`Mod/About/ModIcon.png`, 128 px): the repository's mascot. The 32 px readability control is
-  recorded in `STATUS.md`. This session generates no image and did not touch either file.
+  recorded in `STATUS.md`.
 
 ## Screenshots, in this order
+
+**Gallery image 0** (`Art/Workshop/00-preview.png`): a plain copy of `Preview.png` as it stood before the
+2026-09-29 ModIcon overlay above, i.e. without the corner mascot. Owner's instruction: the first gallery
+image is henceforth this copy, ahead of the numbered candidates below.
 
 **Not settled.** No Workshop screenshot has been chosen or produced. Steam shows the first one large under
 the Preview, so it must be the most demonstrative, not the prettiest, and every image is opened and looked
