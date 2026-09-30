@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: unchecked
 settings_audit: not_applicable
 mod:          Ancient Buildings Renew (unofficial)
 packageId:    nelim.ancientbuildingsrenew
@@ -19,6 +19,7 @@ pickle_scenarios: "28 written in 14 features, every scenario has a green run (20
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
 evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
+  - unverified: "French review by Virginie (translation_fr gender-agreement re-check, 2026-09-30): the 12 DefInjected entries were re-read against the new gender-switch rule, none applies (no text addresses a pawn), no text flagged uncertain. translation_fr stays unchecked until Virginie reviews; only she sets it complete."
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not a gate to any transition."
   - done: "(done -> tested, closed 2026-09-28) 28 Pickle scenarios in 14 features, every one green, scenarios played matching features discovered, exitReason read, no @wip, every @requires scenario played (05 original mod, 03/04 Biotech). Every @review capture opened and looked at: the fence/barrier drag, the lamppost at night (light cone visible), the wall-cooling structure, the two air conditioners facing differently. English and French runtime texts asserted by Pickle (06, 07); the owner read both side by side on 2026-09-28 and changed the vending machine and air conditioner wording, then validated the rest as her statement. No manual test left: the pointer press-and-drag is not applicable (engine input has no press-drag-release primitive, PickleTools confirmed 2026-09-28), accepted by the owner. settings_audit already not_applicable."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so the workflow that sends it now exists (.github/publish-tag.yml, update_description) but has not run, so until it does the page stays as created."
@@ -519,3 +520,22 @@ fields to `unchecked` until revalidated.
 Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a dead source,
 `alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
 to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
+
+### Gender-agreement re-check — 2026-09-30
+
+`translation_fr` reset to `unchecked` for every mod with a `Languages/French` folder, per the
+new rule in `../TRANSLATIONS.md` §3 (French gender switch `{PAWN_gender ? masc : fem : ·neutre}`)
+and the new requirement that only Virginie can mark `translation_fr` `complete`.
+
+- Where the French lives: `Mod/Languages/French/DefInjected/ThingDef/AB_Buildings_Structure.xml`
+  (5 ThingDefs) and `AB_Buildings_Temperature.xml` (1 ThingDef); no Keyed folder, no grammar
+  resources, no C# source, unchanged since the 2026-09-13 audit above.
+- All 12 French entries read again line by line: every one is a building label or description
+  (a fence, a barrier, a lamppost, a stove, a vending machine, an air conditioner). None
+  addresses or describes a pawn, so none takes the three-segment gender switch. The rule does
+  not apply to this mod's text.
+- Nothing here needs Virginie's terminology or tone judgement beyond her review of 2026-09-28
+  (recorded above, `updated:` field), which covered the same 12 entries after her word changes.
+  Flagged for her re-reading regardless, since only she may set `translation_fr` to `complete`:
+  no text is flagged as uncertain.
+- `translation_fr` stays `unchecked` until Virginie reviews. This session does not set it.
