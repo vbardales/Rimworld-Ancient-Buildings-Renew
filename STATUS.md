@@ -9,6 +9,7 @@ repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
 stage:        tested
+workflow_stage: tested
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
 upstream_mod_remotes: N/A
@@ -17,8 +18,9 @@ showcase:     complete
 tested_on:
 pickle_scenarios: "28 written in 14 features, every scenario has a green run (2026-09-24 to 28): the four passes with their fix tickets, then 08 fence and barrier drag, 09 lamppost (night light replay green, light cone added and made visible after a contrast fix), 10 vending machine, 11 stove and air conditioner, 12 def claims, 13 wall cooling (eight fix tickets: an unenclosed forced roof, Building_Cooler reading only its own north/south neighbours, a per-step wait timeout, z increasing northward), 14 the AC grille turning with rotation; no ticket left"
 workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibility and subscription test unverified)"
-evidence:     "none from a game run, since none has happened. Rules for what a run keeps: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
+evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git, 2.8 MB after the 2026-10-01 cut): the text files of every pass, plus the four @review captures that still prove something (08 fence and barrier, 09 lamppost at night, 14 grille, fix-wall-cooling-8). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
+  - feature: "(prepublished) gallery: replay the 15-gallery pass after fix 5987399 (ticket b549 has no result line in docs/runs), open the captures, number the folder from 0- with 0- a copy of Preview.png. Generate FRENCH_REVIEW.md at the root by script (TRANSLATIONS.md, 2026-09-30)."
   - unverified: "French review by Virginie (translation_fr gender-agreement re-check, 2026-09-30): the 12 DefInjected entries were re-read against the new gender-switch rule, none applies (no text addresses a pawn), no text flagged uncertain. translation_fr stays unchecked until Virginie reviews; only she sets it complete."
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not a gate to any transition."
   - done: "(done -> tested, closed 2026-09-28) 28 Pickle scenarios in 14 features, every one green, scenarios played matching features discovered, exitReason read, no @wip, every @requires scenario played (05 original mod, 03/04 Biotech). Every @review capture opened and looked at: the fence/barrier drag, the lamppost at night (light cone visible), the wall-cooling structure, the two air conditioners facing differently. English and French runtime texts asserted by Pickle (06, 07); the owner read both side by side on 2026-09-28 and changed the vending machine and air conditioner wording, then validated the rest as her statement. No manual test left: the pointer press-and-drag is not applicable (engine input has no press-drag-release primitive, PickleTools confirmed 2026-09-28), accepted by the owner. settings_audit already not_applicable."
@@ -28,12 +30,35 @@ remaining:
   - unverified: "(published) dry-run of the publish workflow: green on 2026-09-25, run 36175288435, SHA 1d428aa95643b6b16a81c44a607903623bd1ce8f, version 1.0.0, update_description and update_preview on. Description 5725 bytes sha256 49d2ca017ed179ac27817e1d8874ef566bf3935abb11285aa9fba064226a522b, preview 616784 bytes sha256 af4b40405505a060c2924380375726a52dcd97156f3b474426aed5b9ea0cb7db. Not a publish: nothing was sent to Steam, and no diff against the private page. Any later commit to main, dating the CHANGELOG included, needs a new dry-run"
   - unverified: "(published) steam-production now exists (2026-09-25, created by the CI/CD session at the owner's own word): required reviewer vbardales, secrets STEAM_USERNAME and STEAM_CONFIG_VDF_B64 present, set by the owner at 19:05 UTC. Names only were checked, not values. No publish has run and none may before the manual scenarios, the gallery and the owner's validations"
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-09-28, done -> tested (28 Pickle scenarios green, captures opened, French validated by the owner, pointer gesture not applicable)
+updated:      2026-10-01, audit against AUDIT.md of 2026-09-29: stage tested confirmed, evidence cut from 39 MB to 2.8 MB, protocol versions recorded
 audit_revision: 9ad00f701e2f09690debf62764e9af425726deb2
 previous_stage: done
 ---
 
 # Ancient Buildings Renew — status
+
+## Audit 2026-10-01 (revision `b7d6d06`; working tree: one untracked file, `french-review-2026-09-30.md`)
+
+**Previous stage `tested` -> retained stage `tested`.** `Mod/` did not change, so the gates up to `done` stand. `tested` re-read against
+the stricter `AUDIT.md` (`7fd7475`): no `@wip` in any feature (searched); both conditional tags played (`@requires:Ludeon.RimWorld.Biotech`
+in 03, `@requires:ancientbld.core` in 05; run lines of 2026-09-24 and 25); no manual test left (pointer gesture not applicable, 2026-09-28).
+`workflow_stage: tested` added to the front matter, it was missing. Session title: `ancientbuildingsrenew / tested`.
+
+- **`.dds`**: none tracked (`git ls-files` finds none, no commit ever held one); `*.dds` is in `.gitignore` and `Mod/.steamignore`.
+  The eight files are still on disk in `Mod/Textures/`. Left there, because removing them changes `Mod/` and so the SHA dry-run of
+  2026-09-25. Delete them on disk with the next content commit.
+- **Evidence**: none is tracked. On disk `Tests/Pickle/evidence/` went from 39 MB to 2.8 MB. Deleted: the failed first wall-cooling run
+  `13-wall-cooling` (superseded by the green `fix-wall-cooling-8`, cause in `docs/runs/2026-09-27.txt`), every `report.html` and
+  `messages.ndjson`, and the two PNG captures of `15-gallery` (unusable, `docs/runs/2026-09-30.txt`). Kept: the text files of every pass
+  and the four JPEGs that are the sole proof of a `@review` check (08, 09, 14, fix-wall-cooling-8). No `STATUS.md` field pointed at a deleted file.
+- **Original mod repository**: searched 2026-10-01 (Steam page links, GitHub account `SyndicateGamingNetwork`, GitHub repository and code
+  search for `ancientbld.core`): none. `upstream_mod_remotes` stays `N/A`; no fork and no pull request to prepare. GitLab and Codeberg were not searched directly.
+- **`0.1.0`**: `Mod/About/PublishedFileId.txt` is committed (`3806708945`) and `CHANGELOG.md` already has `[0.1.0]` "creation of a publishIdFile" under `[1.0.0]`. Nothing to add.
+- **New rules since the previous reading** (`TRANSLATIONS.md` `ebadb99`, `PUBLISHING.md` `e0411cc`): French review by Virginie stays open
+  (front matter); the gallery folder is numbered from `0-`, with `0-` a byte copy of `About/Preview.png` (here `Art/Workshop/00-preview.png`
+  is the old two-digit form); a root `FRENCH_REVIEW.md` (four columns, generated by script) is asked for and does not exist (the untracked
+  `french-review-2026-09-30.md` has three columns and another name). None of this lowers `stage`: each is `unverified` or `feature`.
+- Protocol versions read: `docs/PROTOCOLS-READ.md`, section "2026-10-01".
 
 ## Pickle suite written — 2026-09-24
 

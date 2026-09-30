@@ -3,8 +3,8 @@
 One text file per day of testing, written by hand from what was seen. It is the only record of a
 run that lives in git.
 
-This mod has never been run in the game, so this folder holds nothing else yet. The first line of
-history goes here the day `TESTING.md` is executed.
+Runs are logged here from 2026-09-24 (one file per day). Originally:
+the first line of history went here the day the first run played.
 
 The evidence itself - `Player.log`, screenshots, films - stays **on disk**, under
 `Tests/Manual/evidence/<date>/<check>/`, and is ignored by git. `<check>` is `fence`, `barrier`,
