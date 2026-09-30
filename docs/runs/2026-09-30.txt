@@ -1,0 +1,1 @@
+2026-09-30: gallery fix (ticket b549, 5987399): fence built (not just designated), studio presentation mode enabled on both 15-gallery scenarios, after first-run captures (ticket 5a83) were unusable — blueprint-only fence, colonist bar/alerts visible.
