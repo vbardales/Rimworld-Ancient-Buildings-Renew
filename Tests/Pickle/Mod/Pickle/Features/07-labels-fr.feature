@@ -12,7 +12,7 @@ Feature: the French labels and descriptions reach the loaded definitions
     And def "AB_Lamppost" field "label" is "lampadaire"
     And def "ABVending" field "label" is "distributeur automatique"
     And def "ABKitchenstove" field "label" is "cuisinière simple"
-    And def "AB_AirConditioner" field "label" is "climatiseur ancien"
+    And def "AB_AirConditioner" field "label" is "climatiseur antique"
 
   Scenario: the descriptions a player reads in the information windows
     Given the main menu is open

@@ -2,7 +2,7 @@
 <LanguageData>
 
   <!-- EN: ancient air conditioner -->
-  <AB_AirConditioner.label>climatiseur ancien</AB_AirConditioner.label>
+  <AB_AirConditioner.label>climatiseur antique</AB_AirConditioner.label>
   <!-- EN: A salvaged air-cooling unit that fits into a wall. Cool air comes out one side, while hot exhaust comes out the other. Older and cruder than a modern cooler: it drinks more power and moves less heat, but it is quicker to put together out of less. -->
   <AB_AirConditioner.description>Un climatiseur récupéré qui s'encastre dans un mur. L'air frais sort d'un côté, tandis que l'air chaud est expulsé de l'autre. Plus ancien et plus rudimentaire qu'un climatiseur moderne, il consomme davantage d'électricité et évacue moins de chaleur, mais se construit plus vite et avec moins de matériaux.</AB_AirConditioner.description>
 

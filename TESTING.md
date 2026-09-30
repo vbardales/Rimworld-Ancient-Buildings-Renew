@@ -163,7 +163,7 @@ and linking, temperature controls, power/flick gizmos, placement rejection messa
 fence's related build commands. These interfaces use vanilla text. Check for raw keys,
 unexpected English fallback in French, broken formatting and clipped text. Repeat the
 DLC-free scenario in both languages. Record results separately from the offline translation
-audit. The six labels and six descriptions were read side by side with the English by the owner on 2026-09-28: she changed the vending machine ("des ingrédients") and the air conditioner ("climatiseur antique", "appareil de climatisation remis en état", "il se construit plus vite et avec moins"), then validated the rest, recorded as her statement. On 2026-10-01 she applied a further review: barrier, lamppost, fence and air conditioner wording changed (label "climatiseur ancien"; "dispositif de gestion du trafic" gone). The 2026-09-28 wordings quoted above are superseded. Pickle 07 asserts the loaded texts and was replayed after that change.
+audit. The six labels and six descriptions were read side by side with the English by the owner on 2026-09-28: she changed the vending machine ("des ingrédients") and the air conditioner ("climatiseur antique", "appareil de climatisation remis en état", "il se construit plus vite et avec moins"), then validated the rest, recorded as her statement. On 2026-10-01 she applied a further review: barrier, lamppost, fence and air conditioner wording changed (label kept "climatiseur antique" by her word, same day; "dispositif de gestion du trafic" gone). The 2026-09-28 wordings quoted above are superseded. Pickle 07 asserts the loaded texts and was replayed after that change.
 
 ## The plan: the game is not launched by a person, Pickle plays it
 
