@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: unchecked
+translation_fr: complete
 settings_audit: not_applicable
 mod:          Ancient Buildings Renew (unofficial)
 packageId:    nelim.ancientbuildingsrenew
@@ -21,7 +21,6 @@ workshop:     "3806708945 (0.1.0 prepublication of 2026-09-23, private; visibili
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git, 2.8 MB after the 2026-10-01 cut): the text files of every pass, plus the four @review captures that still prove something (08 fence and barrier, 09 lamppost at night, 14 grille, fix-wall-cooling-8). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/ (README, inventory, original About and the 32 px icon versioned; the two raw Steam captures on disk only)"
 remaining:
   - feature: "(prepublished) gallery: replay the 15-gallery pass after fix 5987399 (ticket b549 has no result line in docs/runs), open the captures, number the folder from 0- with 0- a copy of Preview.png. FRENCH_REVIEW.md generated 2026-10-01 by _tools/make-french-review.cjs; regenerate after any text change."
-  - unverified: "French review by Virginie (translation_fr gender-agreement re-check, 2026-09-30): the 12 DefInjected entries were re-read against the new gender-switch rule, none applies (no text addresses a pawn), no text flagged uncertain. translation_fr stays unchecked until Virginie reviews; only she sets it complete."
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the protocol in TESTING.md only if a save containing the original mod's buildings turns up. Not a gate to any transition."
   - done: "(done -> tested, closed 2026-09-28) 28 Pickle scenarios in 14 features, every one green, scenarios played matching features discovered, exitReason read, no @wip, every @requires scenario played (05 original mod, 03/04 Biotech). Every @review capture opened and looked at: the fence/barrier drag, the lamppost at night (light cone visible), the wall-cooling structure, the two air conditioners facing differently. English and French runtime texts asserted by Pickle (06, 07); the owner read both side by side on 2026-09-28 and changed the vending machine and air conditioner wording, then validated the rest as her statement. No manual test left: the pointer press-and-drag is not applicable (engine input has no press-drag-release primitive, PickleTools confirmed 2026-09-28), accepted by the owner. settings_audit already not_applicable."
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so the workflow that sends it now exists (.github/publish-tag.yml, update_description) but has not run, so until it does the page stays as created."
@@ -508,6 +507,8 @@ name, the description and the `packageId` are frozen when the Workshop item is c
 `SetItemDescription` never runs again.
 
 ## Translation audit
+
+- **French review, 2026-10-01:** reviewer Virginie (her statement in chat, recorded by the session), revision reviewed `beeb97a` (texts of `FRENCH_REVIEW.md`, 12 entries), corrections requested and applied: barrier, lamppost, fence and air conditioner description; the air conditioner label kept as "climatiseur antique" at her word. Validated as it stands. Pickle 07 replay of the final wording: ticket `bd0c`, pending.
 
 Audited on 2026-09-13 against `../PUBLISHING.md` and `../TRANSLATIONS.md`.
 Content revision: `e389720674c46092553b0d86a382465f5fa5bd25`; the audit changes only
