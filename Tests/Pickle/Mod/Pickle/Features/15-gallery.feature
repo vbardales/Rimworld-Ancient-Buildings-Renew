@@ -7,6 +7,8 @@
 # safe to build on blind. First pass: the two candidates already proven on test-colony (08, 09), to see
 # where these coordinates land before adding the wall-cooling and vending-link candidates in a follow-up.
 #
+# Second diagnostic, 2026-10-01 (evidence/15-gallery-b): the fence was built at every second cell, so it read
+# as a few dark stubs on dark grass and no line. Now ten contiguous cells, so the pieces link into one run.
 # Diagnostic, 2026-09-29: the first run's captures (evidence/15-gallery) were both unusable as gallery
 # images. The fence was only a blueprint (the shipped drag step ends at DesignateMultiCell, which never
 # finishes construction; feature 08 has the same limit, and is a functional proof, not a gallery source).
@@ -21,9 +23,13 @@ Feature: gallery captures on the screenshot studio
     Given the save "nelim-zen-meadow-studio" is loaded
     And game speed is paused
     When a "ConFence" is built at (118, 92)
+    And a "ConFence" is built at (119, 92)
     And a "ConFence" is built at (120, 92)
+    And a "ConFence" is built at (121, 92)
     And a "ConFence" is built at (122, 92)
+    And a "ConFence" is built at (123, 92)
     And a "ConFence" is built at (124, 92)
+    And a "ConFence" is built at (125, 92)
     And a "ConFence" is built at (126, 92)
     And a "ConFence" is built at (127, 92)
     And Nelim's Pickle Tools: studio presentation mode is enabled
