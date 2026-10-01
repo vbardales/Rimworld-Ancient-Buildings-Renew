@@ -2,3 +2,4 @@
 2026-10-01: French wording changed at the owner's word (barrier, lamppost, fence, air conditioner label and description; Mod/Languages/French and Pickle 07 updated together). Replaces the 2026-09-28 wording. translation_fr stays unchecked until she reviews the result; 07 replay deposited, result below when it returns.
 2026-10-01: air conditioner label put back to 'climatiseur antique' at the owner's word; the other four wordings stand. Ticket bd0c (labelled 001ab42) plays the tree after this commit.
 2026-10-01: French validated by the owner on FRENCH_REVIEW.md (beeb97a); translation_fr complete.
+2026-10-01: Mod/About/ModIcon.png resized 1254 -> 128 px (30 319 bytes) at the owner's word; source kept in Art/ModIcon-source.png. 32 px render looked at.
