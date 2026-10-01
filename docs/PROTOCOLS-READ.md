@@ -113,3 +113,9 @@ Versions from the protocols repository (`git --git-dir=../rimworld-protocols.git
 | `./STATUS.md`, `CHANGELOG.md`, `TESTING.md`, `PUBLICATION.md`, `ATTRIBUTION.md`, `README.md`, `LICENSE`, `Mod/About/About.xml`, `docs/runs/`, `Tests/Pickle/` | this repository | `STATUS.md`, `CHANGELOG.md`, `docs/runs/` read; the rest by grep | mine | `Mod/About/About.xml` checked for packageId and `incompatibleWith` only |
 
 `BACKLOG.md`, `NOTES.md`, `BUGS.md` do not exist in this repository and are not created without content (no pull request is due: the original has no git repository).
+
+## 2026-10-01, later: protocols moved again
+
+- `PUBLISHING.md` `02394c0` (2026-10-01): the animal-mod integrations go from three to four (Dogs mate). **Not applicable**: this mod adds no animal.
+- `STYLE_RIMWORLD.md` / `TRANSLATIONS.md` `c105a43` (2026-10-01, pending edits: preview title font and summary width, echo line-art, translation rules). Not read in full: the Preview is made by the art commits, not by this session; the translation rules were not diffed, the French was validated by the owner on `beeb97a`.
+- Preview changed by art commits (`4298a20`…`7c6c60d`): now `Mod/About/Preview.png` 896 x 504, 653 490 bytes (under 1 MB), byte-identical to `Art/Gallery/0-preview.png`. Opened: title, "Renew (unofficial)", 1.6 badge, ModIcon in the right corner. No defect seen.
