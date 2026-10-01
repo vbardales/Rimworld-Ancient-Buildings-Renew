@@ -1,16 +1,14 @@
 {
   "title": "Ancient Buildings Renew (unofficial)",
+  "titleSize": 46,
   "titleParts": [
-    { "text": "Ancient Buildings", "scale": 0.68 },
-    { "break": true },
-    { "text": "Renew ", "scale": 0.42, "font": "ui", "color": "secondary" },
-    { "text": "(unofficial)", "scale": 0.28, "font": "ui", "color": "secondary" }
+    { "text": "Ancient Buildings", "scale": 1 }
   ],
-  "suffix": "",
-  "tag": "",
+  "suffix": "Renew",
+  "tag": "(unofficial)",
+  "tagInline": true,
   "copyLines": ["Six buildings in the style of the ruins already on the map."],
   "layout": "panel",
-  "panelHeight": 65,
   "backgroundFile": "Preview.png",
   "backgroundPosition": "center",
   "backgroundSize": "cover",
