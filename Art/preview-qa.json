@@ -1,58 +1,46 @@
 {
   "version": "1.6",
+  "paletteSource": "Art/preview-palette.json",
+  "copySource": "Art/preview-copy.json",
+  "iconBadgeCorner": "bottom-left",
   "elements": {
-    "h1": {
+    ".title-main": {
+      "bounds": {
+        "x": 48,
+        "y": 56,
+        "width": 354.59375,
+        "height": 82.78125
+      },
       "fonts": [
         {
           "familyName": "Segoe UI Semibold",
           "postScriptName": "SegoeUI-Semibold",
           "isCustomFont": false,
-          "glyphCount": 22
+          "glyphCount": 18
+        },
+        {
+          "familyName": "RimWordFont",
+          "postScriptName": "RimWordFont",
+          "isCustomFont": true,
+          "glyphCount": 17
         }
-      ],
-      "box": {
-        "x": 50,
-        "y": 54,
-        "width": 430,
-        "height": 101.1875
-      },
-      "minContrast": 10.469688716534629
+      ]
     },
     ".suffix": {
-      "fonts": [
-        {
-          "familyName": "Segoe UI Semibold",
-          "postScriptName": "SegoeUI-Semibold",
-          "isCustomFont": false,
-          "glyphCount": 5
-        }
-      ],
-      "box": {
-        "x": 50,
-        "y": 116.59375,
-        "width": 89.65625,
-        "height": 40
-      },
-      "minContrast": 8.246373216937025
+      "bounds": null,
+      "fonts": []
     },
     ".tag": {
-      "fonts": [
-        {
-          "familyName": "Segoe UI",
-          "postScriptName": "SegoeUI",
-          "isCustomFont": false,
-          "glyphCount": 12
-        }
-      ],
-      "box": {
-        "x": 50,
-        "y": 163.1875,
-        "width": 430,
-        "height": 26.390625
-      },
-      "minContrast": 6.622583954075095
+      "bounds": null,
+      "fonts": []
     },
     "p": {
+      "bounds": {
+        "x": 48,
+        "y": 175.375,
+        "width": 362.25,
+        "height": 60.875
+      },
       "fonts": [
         {
           "familyName": "Segoe UI",
@@ -60,16 +48,15 @@
           "isCustomFont": false,
           "glyphCount": 58
         }
-      ],
-      "box": {
-        "x": 50,
-        "y": 228.578125,
-        "width": 430,
-        "height": 60.875
-      },
-      "minContrast": 6.206598837613044
+      ]
     },
     ".version": {
+      "bounds": {
+        "x": 846.7371826171875,
+        "y": 4.737185001373291,
+        "width": 44.525634765625,
+        "height": 44.52562856674194
+      },
       "fonts": [
         {
           "familyName": "Segoe UI",
@@ -77,15 +64,7 @@
           "isCustomFont": false,
           "glyphCount": 3
         }
-      ],
-      "box": {
-        "x": 846.7371826171875,
-        "y": 4.737185001373291,
-        "width": 44.525634765625,
-        "height": 44.52562856674194
-      },
-      "minContrast": 9.966305394032885
+      ]
     }
-  },
-  "bytes": 616784
+  }
 }
