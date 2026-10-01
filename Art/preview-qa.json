@@ -39,14 +39,14 @@
     ".tag": {
       "bounds": {
         "x": 149.015625,
-        "y": 143.234375,
-        "width": 141.28125,
+        "y": 143.1875,
+        "width": 148.234375,
         "height": 40
       },
       "fonts": [
         {
-          "familyName": "Segoe UI",
-          "postScriptName": "SegoeUI",
+          "familyName": "Segoe UI Semibold",
+          "postScriptName": "SegoeUI-Semibold",
           "isCustomFont": false,
           "glyphCount": 12
         }
