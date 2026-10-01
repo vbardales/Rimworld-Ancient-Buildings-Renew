@@ -55,7 +55,7 @@ Code, Codex for the audits, DALL-E for the preview background and the icon), `TH
 
 ## Screenshots, in this order
 
-**Gallery image 0** (`Art/Workshop/00-preview.png`): a plain copy of `Preview.png` as it stood before the
+**Gallery image 0** (`Art/Gallery/0-preview.png` since the art commits of 2026-10-01, was `Art/Workshop/00-preview.png`): a plain copy of `Preview.png` as it stood before the
 2026-09-29 ModIcon overlay above, i.e. without the corner mascot. Owner's instruction: the first gallery
 image is henceforth this copy, ahead of the numbered candidates below.
 
