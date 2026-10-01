@@ -2,7 +2,7 @@
   "version": "1.6",
   "paletteSource": "Art/preview-palette.json",
   "copySource": "Art/preview-copy.json",
-  "iconBadgeCorner": "bottom-left",
+  "iconBadgeCorner": "bottom-right",
   "elements": {
     ".title-main": {
       "bounds": {
@@ -83,8 +83,10 @@
           "glyphCount": 3
         }
       ]
-    },
-    ".panel": {
+    }
+  },
+  "layout": {
+    "panel": {
       "bounds": {
         "x": 0,
         "y": 0,
@@ -92,7 +94,7 @@
         "height": 300.25
       }
     },
-    ".copy": {
+    "copy": {
       "bounds": {
         "x": 48,
         "y": 30,
