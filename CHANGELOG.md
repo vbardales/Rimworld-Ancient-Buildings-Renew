@@ -20,6 +20,7 @@ First release of the port. Port of SyndicateGamingNetwork's **"Ancient" Building
 
 ### Changed
 
+- `AB_Lamppost`: `glowColor` changed from the original's near-white (217,217,208) to a warm yellow (255,222,150), so a lit lamppost reads as lit. Radius unchanged.
 - `ABVending`: `<storageGroupTag>ABVending</storageGroupTag>` added. Storage groups arrived in
   1.4; a storage building without a tag is the only piece of storage in the game with no *link
   storage settings* gizmo. Its own tag rather than `Shelf`, because its fixed filter is wider
