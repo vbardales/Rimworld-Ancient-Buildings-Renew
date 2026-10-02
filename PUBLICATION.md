@@ -180,3 +180,32 @@ It is credited to you everywhere, and if you would rather it did not exist, just
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945
 ```
+
+## Gallery: story and shot list (rule of 2026-10-02: every gallery capture is a staged photo)
+
+Draft by the session, to be ordered and approved by the owner. Nothing here is final until she has opened the images.
+
+**Story.** *The last stop on the old road.* Mara, a courier, walks a road the world has forgotten. At the rest stop
+the concrete barrier still funnels the road, the fence still runs along it, and the lamppost lights itself every
+night on sunlight it stored. She buys a meal from the vending machine, heats it on the little stove, and cools off
+by the wall unit while the light goes.
+
+**Common set.** One rest stop in the studio's open glade (flowers preset), the same six buildings, the same cells
+(`Tests/Pickle/Mod/Pickle/Features/15-gallery.feature`). Set it up, photograph, pull it down, next shot.
+
+**Subject.** Mara: female, 29, body type `Female`, short dark-brown hair, a deep teal jacket over a cream shirt (teal
+sets off the amber of the lamp and the grey of the concrete), plain boots. No tattoos (they would need Ideology and
+mean nothing here). Everything is chosen, nothing rolled at random.
+
+| # | Shot | Time | Mara | What it must prove |
+|---|---|---|---|---|
+| 1 | The six buildings together | day | walking in from the left | the whole set, at a glance |
+| 2 | Fence and barrier as lines | day | leaning on the barrier, facing the fence | both drag out as lines |
+| 3 | The lamppost | night | standing under the lamp | it is lit, with no power, with a real pool of light |
+| 4 | Vending machine and stove | day | at the machine, back to the stove | one tile each, meals inside |
+| 5 | The air conditioner in a wall | day | beside the wall, in its shade | it fits in a wall |
+
+Menus and windows are screen captures of what they are and are not staged.
+
+**Missing steps, asked of Pickle Tools on 2026-10-02:** place a colonist at a cell facing a direction; remove the studio
+actors. Dressing, hair, body type and age already exist (ColonistRace, Pickle).
