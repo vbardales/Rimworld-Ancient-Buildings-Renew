@@ -347,7 +347,7 @@ this audit edits only STATUS.md. No delivered files, Git configuration or histor
 | --- | --- |
 | dansMonoRepo -> horsMonoRepo | **Validated:** independent Git root, no files tracked by parent, folder ignored by parent, independent origin, PUBLIC GitHub repository, pushed main equal to HEAD. No parent remote is required; its absence is normal. Names/packageId and English README/ATTRIBUTION/CHANGELOG/scoped LICENSE are consistent; distributed LICENSE and ATTRIBUTION copies are byte-identical. **Validated on follow-up:** source inventory/About, live page and all 26 comments substantiate silent; see Audit/2026-09-13-rights/README.md. |
 | horsMonoRepo -> ModIcon generated | **Not applicable, justified:** C# build/DLL freshness; no source project or custom assembly is delivered. Six offline checkers pass. **Validated:** installed PNG, 128 x 128, 21,946 bytes; native-size visual inspection shows one orange winking mascot with ancient stone props. **Validated on follow-up:** the 32 px derivative was visually inspected; mascot head and stone column remain distinguishable. See the icon follow-up and retained QA PNG. |
-| ModIcon generated -> Preview generated | **Validated with user waiver:** installed PNG, 896 x 504, 616,784 bytes, below 900 KB and 1 MB; visually inspected at full size and using Art/preview-268.png. High oblique camera, tiled ground, warm lamp pool, cool stone palette, no readable face, identifiable buildings and unclipped title/version. Comparison alongside an actual game screenshot was explicitly waived by the user on 2026-09-13, not executed. |
+| ModIcon generated -> Preview generated | **Validated with user waiver:** installed PNG, 896 x 504, 616,784 bytes, below 900 KB and 1 MB; visually inspected at full size and using Art/preview-268.png (removed 2026-10-02; the renderer now regenerates diagnostics under ignored Art/.render/). High oblique camera, tiled ground, warm lamp pool, cool stone palette, no readable face, identifiable buildings and unclipped title/version. Comparison alongside an actual game screenshot was explicitly waived by the user on 2026-09-13, not executed. |
 | Preview generated -> preOptions | **Validated locally:** blue secondary ink and amber accent visibly distinct at both sizes; English description; exact unofficial suffix in About/README and separate preview tag; Renew at 65 percent in secondary ink; no connective words needing reduction. Palette/HTML/QA files exist. **Corrected on follow-up:** description now ends with the required formatted Source code on GitHub link; XML and exact final link verified. |
 | preOptions -> options | **Not applicable, justified; gate validated in isolation:** no relevant global settings need identified; source/Def inventory confirms no settings page or MainButtons shortcut, and applicable automated XML checks pass. `settings_audit: not_applicable`. No runtime check is required for this gate. |
 | options -> l10n | **Validated offline:** six English labels/descriptions and all 12 French values, exact key sets, no duplicate/empty French entries, meaning reviewed, injection checker passes. Native English Def values supply English resources; no duplicate English folder is needed. `localization`, `translation_en` and `translation_fr` are `complete`; settings no longer block this gate. Runtime language checks remain unverified for done -> tested only. |
@@ -393,7 +393,7 @@ Delivered content and Art evidence are unchanged from HEAD. Existing preview QA 
 minimum contrasts 10.47/8.25/6.62/6.21/9.97 for title/suffix/tag/summary/badge. These and its
 font measurements are historical results, not newly executed rendering/contrast tests.
 Visual inspection in this audit covered the installed icon at native size, the installed
-preview and Art/preview-268.png. No image was generated, edited or rebuilt.
+preview and Art/preview-268.png (removed 2026-10-02, see Art/Preview.config.json). No image was generated, edited or rebuilt.
 Repeat affected checks after changes to Defs, text, images, options or dependencies.
 
 ### Rights evidence limits
@@ -475,32 +475,33 @@ files.
 
 Preview overlay recomposed on 2026-09-12 according to `../STYLE_RIMWORLD.md`:
 
-- Illustration retained unchanged. `Art/Preview.png` is the unlettered source, copied from
-  `Art/Preview-source.png`, which remains preserved. No replacement illustration generated.
-- Composition and layout: `Art/preview.html`; sole color reference: `Art/preview-palette.json`.
-  Rebuild with `node Art/render-preview.cjs` (Node.js, playwright, sharp and Chrome required).
+- Illustration retained unchanged in the canonical `Art/Preview-source.png`. No replacement
+  illustration generated.
+- Composition, copy and palette: `Art/Preview.config.json`. Rebuild with
+  `node ../scripts/Render-Preview.cjs` (Node.js, Playwright, Sharp and Chrome required).
+  Temporary diagnostics are regenerated under ignored `Art/.render/`.
   `_tools/build-about.sh` delegates the preview to this renderer.
 - The cool slate stone ground supplies the veil and the dominant blue family of the lighter
   secondary tag and title-suffix ink. The lamppost's warm light supplies the vivid amber accent,
   saturated for the rule and version badge; its warm orange family clearly contrasts with the
   dominant cool slate blue. Strong title words and summary use exactly the same primary ink.
   Renew remains in the title at 65% (29.9 px), weight 600, in secondary ink, using a direct span
-  without nested scaling. The unofficial tag remains a separate line.
+  without nested scaling. The unofficial tag follows it inline.
 - The dark veil holds opacity across the full text area before fading, because the original
   short gradient failed contrast over the illuminated barrier. Layout starts at (50, 54),
   with a 46 px title, separate 24 px unofficial tag, 58 by 3 px rule and 430 px summary.
 - Chrome's platform-font inspection confirms Segoe UI (Semibold title, Regular tag/summary,
   Bold badge), with no fallback. Capture waits for `document.fonts.ready` and the image.
   Badge version 1.6 is selected from the delivered About.xml's supportedVersions.
-- Final output: `Mod/About/Preview.png`, 896 by 504, 616784 bytes. Visually checked at full
-  size and at 268 px (`Art/preview-268.png`): no clipping or overlapping text, identifiable
+- Final output: `Mod/About/Preview.png`, 896 by 504. Visually checked at full size: no clipping
+  or overlapping text, identifiable
   title/version, readable reduced Renew suffix and visible rule. The illustration's buildings
   remain distinguishable; amber accent remains distinct from the blue secondary ink.
-- Contrast checked against the rendered background without text (`Art/preview-background.png`),
+- Contrast was checked against the rendered background without text,
   across every pixel of each text bounding box, including corners: title 10.47:1,
   Renew suffix 8.25:1, tag 6.62:1, summary 6.21:1; badge 9.97:1 against its opaque fill.
   All exceed 4.5:1.
-  Font, geometry, contrast and size measurements are retained in `Art/preview-qa.json`.
+  Reproducible font, geometry and background evidence is regenerated under `Art/.render/`.
   Nothing published.
 
 `workshop` is empty because nothing has been uploaded. Read `PUBLISHING.md` before it is: the
