@@ -16,6 +16,11 @@
 # Fifth version (2026-10-02, run 5da9 read): the studio actor Miel stands at the camera cell (154, 98) and
 # walked into every capture, once on the air conditioner itself. All cells are now six cells north (z + 6).
 #
+# Zoom: Pickle's "I zoom all the way in" clamps at root size 12 (CameraSteps.CloseSize, read by the Pickle Tools
+# session 2026-10-02), about 45 px a cell. These scenes ask the camera for 6 directly, wait 90 frames inside that step (the zoom is
+# smoothed), take the screenshot, and only then assert the size read, so a game that bounds the zoom still gives
+# its capture and the failure message gives the value.
+#
 # Cells are a guess at what is free in the glade; a cell holding a plant or a prop is the first thing to
 # check on a failed run. Zoom is the game's maximum ("zoom all the way in"): to make a thing look bigger
 # the composition has to be tight, not the zoom higher.
@@ -49,8 +54,9 @@ Feature: gallery captures on the screenshot studio
     And a "Wall" is built at (152, 101)
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I move the camera to (154, 104)
-    And I zoom all the way in
+    And Ancient Buildings Renew: the camera root size is set to 6
     And I take a screenshot "gallery: the six buildings together, in daylight"
+    Then Ancient Buildings Renew: the camera root size is 6
 
   @save @review
   Scenario: the concrete fence and barrier laid as lines, in daylight, on the studio
@@ -80,8 +86,9 @@ Feature: gallery captures on the screenshot studio
     And a "ConcreteBarrier" is built at (159, 102)
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I move the camera to (154, 103)
-    And I zoom all the way in
+    And Ancient Buildings Renew: the camera root size is set to 6
     And I take a screenshot "gallery: the concrete fence and barrier, laid as lines"
+    Then Ancient Buildings Renew: the camera root size is 6
 
   @save @review
   Scenario: the lamppost lit at night, with no conduit, on the studio
@@ -108,8 +115,9 @@ Feature: gallery captures on the screenshot studio
     Then Ancient Buildings Renew: the "AB_Lamppost" at (154, 104) is glowing
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I move the camera to (154, 104)
-    And I zoom all the way in
+    And Ancient Buildings Renew: the camera root size is set to 6
     And I take a screenshot "gallery: the lamppost at night, with no conduit"
+    Then Ancient Buildings Renew: the camera root size is 6
 
   @save @review
   Scenario: the vending machine with its meals and the one-tile stove, in daylight, on the studio
@@ -123,8 +131,9 @@ Feature: gallery captures on the screenshot studio
     And I spawn a "MealSimple" at (154, 104)
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I move the camera to (153, 104)
-    And I zoom all the way in
+    And Ancient Buildings Renew: the camera root size is set to 6
     And I take a screenshot "gallery: the vending machine and the kitchen stove"
+    Then Ancient Buildings Renew: the camera root size is 6
 
   @save @review
   Scenario: the ancient air conditioner in a wall, in daylight, on the studio
@@ -139,5 +148,6 @@ Feature: gallery captures on the screenshot studio
     And a "Wall" is built at (156, 104)
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I move the camera to (154, 104)
-    And I zoom all the way in
+    And Ancient Buildings Renew: the camera root size is set to 6
     And I take a screenshot "gallery: the ancient air conditioner in a wall"
+    Then Ancient Buildings Renew: the camera root size is 6
