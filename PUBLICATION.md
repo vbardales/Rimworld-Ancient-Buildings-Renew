@@ -140,6 +140,8 @@ Nothing else was rebalanced. It cannot run beside the original mod.
 
 ## Fail fast: the rollback target
 
+**Target for 1.0.0, chosen by the owner on 2026-10-02: back to private visibility.** The item is private until she flips it, and this is the first real release, so there is no earlier good version worth republishing (0.1.0 was never tested). If the regression pass comes back red, she sets the item back to private by hand on Steam; the CI never sends visibility. The fix then goes out as a new version, never a re-publication of 1.0.0. The general rule below applies from the second release on.
+
 A rollback is a **new publication**, not an unpublication: the workflow is dispatched with `ref` = the full
 SHA of the last good commit and the next patch number, and the change note reads "Rolls back to <what>,
 because <what failed>". The version numbers only go up and a tag that exists is refused. The CI never sends
