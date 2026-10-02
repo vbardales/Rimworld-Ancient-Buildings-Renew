@@ -13,6 +13,9 @@
 # Not here, on purpose: the wall cooling (its proof is a temperature, a still shows two plain rooms; 13 keeps
 # it), and the French (a still cannot show wording better than the text does).
 #
+# Fifth version (2026-10-02, run 5da9 read): the studio actor Miel stands at the camera cell (154, 98) and
+# walked into every capture, once on the air conditioner itself. All cells are now six cells north (z + 6).
+#
 # Cells are a guess at what is free in the glade; a cell holding a plant or a prop is the first thing to
 # check on a failed run. Zoom is the game's maximum ("zoom all the way in"): to make a thing look bigger
 # the composition has to be tight, not the zoom higher.
@@ -24,28 +27,28 @@ Feature: gallery captures on the screenshot studio
     And game speed is paused
     And I set the hour to 12
     And I wait 120 ticks
-    When a "ConcreteBarrier" is built at (148, 100)
-    And a "ConcreteBarrier" is built at (149, 100)
-    And a "ConcreteBarrier" is built at (150, 100)
-    And a "ConcreteBarrier" is built at (151, 100)
-    And a "ConcreteBarrier" is built at (152, 100)
-    And a "ConFence" is built at (148, 98)
-    And a "ConFence" is built at (149, 98)
-    And a "ConFence" is built at (150, 98)
-    And a "ConFence" is built at (151, 98)
-    And a "ConFence" is built at (152, 98)
-    And a "ConFence" is built at (153, 98)
-    And a "AB_Lamppost" is built at (156, 99)
-    And a "ABVending" is built at (158, 99)
-    And I spawn a "MealSimple" at (158, 99)
-    And a "ABKitchenstove" is built at (160, 99)
-    And a "Wall" is built at (148, 95)
-    And a "Wall" is built at (149, 95)
-    And a "AB_AirConditioner" is built at (150, 95)
-    And a "Wall" is built at (151, 95)
-    And a "Wall" is built at (152, 95)
+    When a "ConcreteBarrier" is built at (148, 106)
+    And a "ConcreteBarrier" is built at (149, 106)
+    And a "ConcreteBarrier" is built at (150, 106)
+    And a "ConcreteBarrier" is built at (151, 106)
+    And a "ConcreteBarrier" is built at (152, 106)
+    And a "ConFence" is built at (148, 104)
+    And a "ConFence" is built at (149, 104)
+    And a "ConFence" is built at (150, 104)
+    And a "ConFence" is built at (151, 104)
+    And a "ConFence" is built at (152, 104)
+    And a "ConFence" is built at (153, 104)
+    And a "AB_Lamppost" is built at (156, 105)
+    And a "ABVending" is built at (158, 105)
+    And I spawn a "MealSimple" at (158, 105)
+    And a "ABKitchenstove" is built at (160, 105)
+    And a "Wall" is built at (148, 101)
+    And a "Wall" is built at (149, 101)
+    And a "AB_AirConditioner" is built at (150, 101)
+    And a "Wall" is built at (151, 101)
+    And a "Wall" is built at (152, 101)
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 98)
+    And I move the camera to (154, 104)
     And I zoom all the way in
     And I take a screenshot "gallery: the six buildings together, in daylight"
 
@@ -55,28 +58,28 @@ Feature: gallery captures on the screenshot studio
     And game speed is paused
     And I set the hour to 12
     And I wait 120 ticks
-    When a "ConFence" is built at (150, 99)
-    And a "ConFence" is built at (151, 99)
-    And a "ConFence" is built at (152, 99)
-    And a "ConFence" is built at (153, 99)
-    And a "ConFence" is built at (154, 99)
-    And a "ConFence" is built at (155, 99)
-    And a "ConFence" is built at (156, 99)
-    And a "ConFence" is built at (157, 99)
-    And a "ConFence" is built at (158, 99)
-    And a "ConFence" is built at (159, 99)
-    And a "ConcreteBarrier" is built at (150, 96)
-    And a "ConcreteBarrier" is built at (151, 96)
-    And a "ConcreteBarrier" is built at (152, 96)
-    And a "ConcreteBarrier" is built at (153, 96)
-    And a "ConcreteBarrier" is built at (154, 96)
-    And a "ConcreteBarrier" is built at (155, 96)
-    And a "ConcreteBarrier" is built at (156, 96)
-    And a "ConcreteBarrier" is built at (157, 96)
-    And a "ConcreteBarrier" is built at (158, 96)
-    And a "ConcreteBarrier" is built at (159, 96)
+    When a "ConFence" is built at (150, 105)
+    And a "ConFence" is built at (151, 105)
+    And a "ConFence" is built at (152, 105)
+    And a "ConFence" is built at (153, 105)
+    And a "ConFence" is built at (154, 105)
+    And a "ConFence" is built at (155, 105)
+    And a "ConFence" is built at (156, 105)
+    And a "ConFence" is built at (157, 105)
+    And a "ConFence" is built at (158, 105)
+    And a "ConFence" is built at (159, 105)
+    And a "ConcreteBarrier" is built at (150, 102)
+    And a "ConcreteBarrier" is built at (151, 102)
+    And a "ConcreteBarrier" is built at (152, 102)
+    And a "ConcreteBarrier" is built at (153, 102)
+    And a "ConcreteBarrier" is built at (154, 102)
+    And a "ConcreteBarrier" is built at (155, 102)
+    And a "ConcreteBarrier" is built at (156, 102)
+    And a "ConcreteBarrier" is built at (157, 102)
+    And a "ConcreteBarrier" is built at (158, 102)
+    And a "ConcreteBarrier" is built at (159, 102)
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 97)
+    And I move the camera to (154, 103)
     And I zoom all the way in
     And I take a screenshot "gallery: the concrete fence and barrier, laid as lines"
 
@@ -86,25 +89,25 @@ Feature: gallery captures on the screenshot studio
     And game speed is paused
     And I set the hour to 2
     And I wait 120 ticks
-    When a "ConcreteBarrier" is built at (151, 96)
-    And a "ConcreteBarrier" is built at (152, 96)
-    And a "ConcreteBarrier" is built at (153, 96)
-    And a "ConcreteBarrier" is built at (154, 96)
-    And a "ConcreteBarrier" is built at (155, 96)
-    And a "ConcreteBarrier" is built at (156, 96)
-    And a "ConcreteBarrier" is built at (157, 96)
-    And a "ConFence" is built at (151, 100)
-    And a "ConFence" is built at (152, 100)
-    And a "ConFence" is built at (153, 100)
-    And a "ConFence" is built at (154, 100)
-    And a "ConFence" is built at (155, 100)
-    And a "ConFence" is built at (156, 100)
-    And a "ConFence" is built at (157, 100)
-    And a "AB_Lamppost" is built at (154, 98)
+    When a "ConcreteBarrier" is built at (151, 102)
+    And a "ConcreteBarrier" is built at (152, 102)
+    And a "ConcreteBarrier" is built at (153, 102)
+    And a "ConcreteBarrier" is built at (154, 102)
+    And a "ConcreteBarrier" is built at (155, 102)
+    And a "ConcreteBarrier" is built at (156, 102)
+    And a "ConcreteBarrier" is built at (157, 102)
+    And a "ConFence" is built at (151, 106)
+    And a "ConFence" is built at (152, 106)
+    And a "ConFence" is built at (153, 106)
+    And a "ConFence" is built at (154, 106)
+    And a "ConFence" is built at (155, 106)
+    And a "ConFence" is built at (156, 106)
+    And a "ConFence" is built at (157, 106)
+    And a "AB_Lamppost" is built at (154, 104)
     And I wait 120 ticks
-    Then Ancient Buildings Renew: the "AB_Lamppost" at (154, 98) is glowing
+    Then Ancient Buildings Renew: the "AB_Lamppost" at (154, 104) is glowing
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 98)
+    And I move the camera to (154, 104)
     And I zoom all the way in
     And I take a screenshot "gallery: the lamppost at night, with no conduit"
 
@@ -114,12 +117,12 @@ Feature: gallery captures on the screenshot studio
     And game speed is paused
     And I set the hour to 12
     And I wait 120 ticks
-    When a "ABKitchenstove" is built at (152, 98)
-    And a "ABVending" is built at (154, 98)
-    And I spawn a "MealSimple" at (154, 98)
-    And I spawn a "MealSimple" at (154, 98)
+    When a "ABKitchenstove" is built at (152, 104)
+    And a "ABVending" is built at (154, 104)
+    And I spawn a "MealSimple" at (154, 104)
+    And I spawn a "MealSimple" at (154, 104)
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (153, 98)
+    And I move the camera to (153, 104)
     And I zoom all the way in
     And I take a screenshot "gallery: the vending machine and the kitchen stove"
 
@@ -129,12 +132,12 @@ Feature: gallery captures on the screenshot studio
     And game speed is paused
     And I set the hour to 12
     And I wait 120 ticks
-    When a "Wall" is built at (152, 98)
-    And a "Wall" is built at (153, 98)
-    And a "AB_AirConditioner" is built at (154, 98)
-    And a "Wall" is built at (155, 98)
-    And a "Wall" is built at (156, 98)
+    When a "Wall" is built at (152, 104)
+    And a "Wall" is built at (153, 104)
+    And a "AB_AirConditioner" is built at (154, 104)
+    And a "Wall" is built at (155, 104)
+    And a "Wall" is built at (156, 104)
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 98)
+    And I move the camera to (154, 104)
     And I zoom all the way in
     And I take a screenshot "gallery: the ancient air conditioner in a wall"
