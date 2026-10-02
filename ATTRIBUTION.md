@@ -157,7 +157,7 @@ SyndicateGamingNetwork's Workshop item.
   name — `Building_WorkTable_HeatPush`, `Building_Storage`, `CompHeatPusherPowered`,
   `PlaceWorker_NotUnderRoof`, `PlaceWorker_PreventInteractionSpotOverlap` — still exists in 1.6,
   and every def they reference still resolves.
-- **`CompProperties_Glower` was checked, not assumed.** It still takes `glowRadius` and a 0-255
+- **`CompProperties_Glower` was checked, not assumed.** (Since 2026-10-02 `glowColor` is a warm yellow (255,222,150), changed from the original's near-white (217,217,208) at the owner's word; the radius is the original's.) It still takes `glowRadius` and a 0-255
   `glowColor` with a zero alpha; the vanilla standing lamp writes `(214,148,94,0)` in the same
   shape. The lamppost carries no power comp on purpose — `CompGlower` looks for a
   `CompPowerTrader`, a `CompFlickable` or a `CompRefuelable` to decide whether to be lit, finds

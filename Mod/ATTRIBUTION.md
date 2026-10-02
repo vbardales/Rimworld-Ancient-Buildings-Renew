@@ -30,7 +30,9 @@ research, no dependency:
 | `ConFence` | concrete fence | Structure |
 
 Their stats, costs, power draw, comps and graphics are SyndicateGamingNetwork's, unchanged. So
-are the eight textures the mod ships, byte for byte.
+are the eight textures the original ships, byte for byte. One texture is added by this port,
+`AB_LamppostLit.png`: the original lamppost sprite with a soft cone of light drawn under it (the cone was
+generated with DALL-E by the maintainer, then cleaned and composed by script; its sources are in `Art/`).
 
 **The two Workshop images are not theirs.** `About/Preview.png` is a banner made for this port:
 the mod's own corner of road at dusk, with the fence, the barrier, the lamppost and the vending
@@ -155,7 +157,7 @@ SyndicateGamingNetwork's Workshop item.
   name — `Building_WorkTable_HeatPush`, `Building_Storage`, `CompHeatPusherPowered`,
   `PlaceWorker_NotUnderRoof`, `PlaceWorker_PreventInteractionSpotOverlap` — still exists in 1.6,
   and every def they reference still resolves.
-- **`CompProperties_Glower` was checked, not assumed.** It still takes `glowRadius` and a 0-255
+- **`CompProperties_Glower` was checked, not assumed.** (Since 2026-10-02 `glowColor` is a warm yellow (255,222,150), changed from the original's near-white (217,217,208) at the owner's word; the radius is the original's.) It still takes `glowRadius` and a 0-255
   `glowColor` with a zero alpha; the vanilla standing lamp writes `(214,148,94,0)` in the same
   shape. The lamppost carries no power comp on purpose — `CompGlower` looks for a
   `CompPowerTrader`, a `CompFlickable` or a `CompRefuelable` to decide whether to be lit, finds
