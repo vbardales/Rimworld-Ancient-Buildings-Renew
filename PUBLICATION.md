@@ -207,5 +207,5 @@ mean nothing here). Everything is chosen, nothing rolled at random.
 
 Menus and windows are screen captures of what they are and are not staged.
 
-**Missing steps, asked of Pickle Tools on 2026-10-02:** place a colonist at a cell facing a direction; remove the studio
-actors. Dressing, hair, body type and age already exist (ColonistRace, Pickle).
+**Steps asked of Pickle Tools on 2026-10-02, written by it the same day and not yet played (tickets e88b and c019):** place a colonist at a cell facing a direction; remove the studio
+actors; wear and dye a garment; frame a cell at a zoom. A neutral pose and a head type do not exist and are not needed: a paused pawn with no job stands still. Dressing, hair, body type and age already exist (ColonistRace, Pickle). The photo scenes are written once those tickets are green.
