@@ -3,16 +3,19 @@
 # The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador.
 # Time moves a little between pictures and the place is the same: the calm zone of Nelim's tribe, a cream stone square with no roof and no wall
 # shadow (the one neutral light ground among the outdoor places; PickleTools/docs/SANCTUAIRE-LIEUX.md). Each picture takes its own corner of it.
+# Owner's allowance (2026-10-06): anything RimWorld offers is allowed in a gallery picture, other mods included; as many pictures as wanted,
+# each under 2 MB and the whole set under 8 MB (the run's PNGs are about 4 MB: convert the retained ones to JPEG).
 #   1. 06:00  The road comes in: the concrete barrier funnels it, the fence runs beside it. Nelim arrives with Shogun.
-#   2. 11:00  The stop: a vending machine with meals in it and the one-tile stove. Nelim cooks, Shogun waits.
-#   3. 15:00  The heat of the afternoon: the ancient air conditioner set in a wall, Nelim in the cooled shade (south of the unit).
-#   4. 19:00  Dusk: the whole set together, Nelim and Shogun resting among the six buildings.
-#   5. 23:00  Night: the lamppost lit, on sunlight it stored, no conduit anywhere.
+#   2. 09:00  Close on the barrier and the fence, Nelim at the end of the line, Shogun at its foot.
+#   3. 11:00  The stop: a vending machine with meals in it and the one-tile stove. Nelim cooks, Shogun waits.
+#   4. 12:00  Close on the vending machine and its meals, Nelim choosing one.
+#   5. 15:00  The heat of the afternoon: the ancient air conditioner set in a wall, Nelim in the cooled shade (south of the unit).
+#   6. 19:00  Dusk: the whole set together, Nelim and Shogun resting among the six buildings.
+#   7. 23:00  Night: the lamppost lit, on sunlight it stored, no conduit anywhere. The pool of light is the lamppost's own (radius 19 covers the square).
 # Why this place: the places were looked at one by one in docs/SANCTUAIRE-LIEUX.md. The gravel yard is a good road but is full of furniture and lamps;
 # the flat open squares (A to J) are dark earth with flowers; the calm zone is clean, level and light, so concrete and a lit lamp read on it.
 # Colours: the jacket is a deep teal (28, 98, 104), the complement of the lamp's amber and of the grey concrete, so Nelim stands out in every picture.
-# The grey stain seen near Nelim in run 8cf7 is cleaned by "all filth is cleaned" (Pickle Tools). The night picture is lit by the lamppost itself (radius 19 covers the whole 11 x 11 square), not by the zone: that is the subject, not an anomaly.
-# Only daytime animal in the story: a dog, awake at every hour used. Every scenario reloads the save, so the square is fresh, never cleared by hand.
+# The only animal in the story is a dog, awake at every hour used. Every scenario reloads the save and cleans the filth (the grey stain of run 8cf7).
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
 @requires:nelim.pickletools.screenshotstudio
 @review
@@ -52,7 +55,37 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 7
     Then I take a screenshot "gallery 1 - the road comes in"
 
-  Scenario: 2. the stop at eleven, vending machine and stove
+  Scenario: 2. the barrier and the fence up close
+    Given the save "Nelims-tribe" is loaded
+    And game speed is paused
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
+    And I set the hour to 9
+    And I set the weather to "Clear"
+    And a "ConcreteBarrier" is built at (197, 190)
+    And a "ConcreteBarrier" is built at (198, 190)
+    And a "ConcreteBarrier" is built at (199, 190)
+    And a "ConcreteBarrier" is built at (200, 190)
+    And a "ConcreteBarrier" is built at (201, 190)
+    And a "ConcreteBarrier" is built at (202, 190)
+    And a "ConcreteBarrier" is built at (203, 190)
+    And a "ConFence" is built at (197, 188)
+    And a "ConFence" is built at (198, 188)
+    And a "ConFence" is built at (199, 188)
+    And a "ConFence" is built at (200, 188)
+    And a "ConFence" is built at (201, 188)
+    And a "ConFence" is built at (202, 188)
+    And a "ConFence" is built at (203, 188)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    When I wait 60 ticks
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 4.5
+    Then I take a screenshot "gallery 2 - the barrier and the fence up close"
+
+  Scenario: 3. the stop at eleven, vending machine and stove
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
@@ -70,9 +103,28 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 7
-    Then I take a screenshot "gallery 2 - the vending machine and the stove"
+    Then I take a screenshot "gallery 3 - the vending machine and the stove"
 
-  Scenario: 3. the air conditioner at three
+  Scenario: 4. the vending machine up close
+    Given the save "Nelims-tribe" is loaded
+    And game speed is paused
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
+    And I set the hour to 12
+    And I set the weather to "Clear"
+    And a "ABVending" is built at (199, 189)
+    And I spawn a "MealSimple" at (199, 189)
+    And I spawn a "MealSimple" at (199, 189)
+    And I spawn a "MealSimple" at (199, 189)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
+    When I wait 60 ticks
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 3.5
+    Then I take a screenshot "gallery 4 - the vending machine up close"
+
+  Scenario: 5. the air conditioner at three
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
@@ -92,9 +144,9 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 7
-    Then I take a screenshot "gallery 3 - the air conditioner in a wall"
+    Then I take a screenshot "gallery 5 - the air conditioner in a wall"
 
-  Scenario: 4. the six buildings together at dusk
+  Scenario: 6. the six buildings together at dusk
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
@@ -118,7 +170,6 @@ Feature: gallery: a day at the last stop of an old road
     And a "AB_AirConditioner" is built at (199, 185)
     And a "Wall" is built at (200, 185)
     And a "Wall" is built at (201, 185)
-
     And I spawn a "MealSimple" at (203, 188)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing West
@@ -126,9 +177,9 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 8
-    Then I take a screenshot "gallery 4 - the six buildings together at dusk"
+    Then I take a screenshot "gallery 6 - the six buildings together at dusk"
 
-  Scenario: 5. the lamppost at night
+  Scenario: 7. the lamppost at night
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
@@ -159,4 +210,4 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 6
-    Then I take a screenshot "gallery 5 - the lamppost at night"
+    Then I take a screenshot "gallery 7 - the lamppost at night"
