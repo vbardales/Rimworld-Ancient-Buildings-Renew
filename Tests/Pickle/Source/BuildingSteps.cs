@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using RimWorks.Pickle;
 using RimWorld;
 using Verse;
@@ -403,28 +402,6 @@ namespace AncientBuildingsRenew.PickleSteps
             IStoreSettingsParent parent = blueprint as IStoreSettingsParent;
             ctx.Assert(parent != null, "the blueprint for " + defName + " is a " + blueprint.GetType().Name + ", which has no storage settings to set");
             ctx.Assert(parent.GetStoreSettings() != null, "the blueprint for " + defName + " has no storage settings");
-        }
-        /// <summary>
-        /// Pickle's own "I zoom all the way in" clamps at a root size of 12 (CameraSteps.CloseSize), so it
-        /// never gets closer than about 45 px a cell on a 1080 screen. The game itself accepts a smaller root
-        /// size; this asks for one directly, as the screenshot studio's presets do. The zoom is smoothed over
-        /// several frames, so this step waits 90 frames itself, and the step below checks the size read.
-        /// </summary>
-        [When("Ancient Buildings Renew: the camera root size is set to {float}")]
-        public async Task SetCameraRootSize(PickleContext ctx, float size)
-        {
-            ctx.Assert(Find.CameraDriver != null, "no camera driver is loaded");
-            Find.CameraDriver.SetRootSize(size);
-            await ctx.WaitFrames(90);
-        }
-
-        /// <summary>Fails with the value read when the camera did not reach the size asked for: it tells whether the game bounds the zoom.</summary>
-        [Then("Ancient Buildings Renew: the camera root size is {float}")]
-        public void CameraRootSizeIs(PickleContext ctx, float size)
-        {
-            ctx.Assert(Find.CameraDriver != null, "no camera driver is loaded");
-            float read = Find.CameraDriver.RootSize;
-            ctx.Assert(Math.Abs(read - size) < 0.05f, "the camera root size reads " + read + ", not " + size + ": the game bounds the zoom there, or the zoom had not finished");
         }
     }
 }

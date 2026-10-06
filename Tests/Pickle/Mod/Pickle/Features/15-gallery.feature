@@ -1,153 +1,156 @@
-# Workshop gallery captures on Nelim's zen meadow screenshot studio (PickleTools/ScreenshotStudio), not on the
-# bare test-colony fixture 08 and 09 used. PUBLICATION.md decides the final order and which captures go up;
-# this pass only produces candidates for the owner to look at.
+# Workshop gallery of Ancient Buildings Renew: one story, in one place, staged (PUBLISHING.md: every gallery capture is a staged photo).
 #
-# History. First run (2026-09-29): both captures unusable (fence only a blueprint, interface still drawn).
-# Second (2026-10-01): fence built on every second cell, a few dark stubs. Third (d99a): ten contiguous
-# cells, a real line, but built in the studio's "display" room, which is roofed and dark: dark brown fence
-# on a dark floor, low contrast. So everything below is built OUTDOORS in the open glade of the "flowers"
-# preset (camera cell 154,98, daylight) at hour 12, except the lamppost, which is shot at hour 2 on the same
-# glade. The owner asked (2026-10-02) for the scenarios that seem relevant to be written; this is the
-# session's choice of five, and she orders them.
-#
-# Not here, on purpose: the wall cooling (its proof is a temperature, a still shows two plain rooms; 13 keeps
-# it), and the French (a still cannot show wording better than the text does).
-#
-# Fifth version (2026-10-02, run 5da9 read): the studio actor Miel stands at the camera cell (154, 98) and
-# walked into every capture, once on the air conditioner itself. All cells are now six cells north (z + 6).
-#
-# Zoom: Pickle's "I zoom all the way in" clamps at root size 12 (CameraSteps.CloseSize, read by the Pickle Tools
-# session 2026-10-02), about 45 px a cell. These scenes ask the camera for 6 directly, wait 90 frames inside that step (the zoom is
-# smoothed), take the screenshot, and only then assert the size read, so a game that bounds the zoom still gives
-# its capture and the failure message gives the value.
-#
-# Cells are a guess at what is free in the glade; a cell holding a plant or a prop is the first thing to
-# check on a failed run. Zoom is the game's maximum ("zoom all the way in"): to make a thing look bigger
-# the composition has to be tight, not the zoom higher.
-Feature: gallery captures on the screenshot studio
+# The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador.
+# Time moves a little between pictures and the place is the same: the calm zone of Nelim's tribe, a cream stone square with no roof and no wall
+# shadow (the one neutral light ground among the outdoor places; PickleTools/docs/SANCTUAIRE-LIEUX.md). Each picture takes its own corner of it.
+#   1. 06:00  The road comes in: the concrete barrier funnels it, the fence runs beside it. Nelim arrives with Shogun.
+#   2. 11:00  The stop: a vending machine with meals in it and the one-tile stove. Nelim cooks, Shogun waits.
+#   3. 15:00  The heat of the afternoon: the ancient air conditioner set in a wall, Nelim in the cooled shade (south of the unit).
+#   4. 19:00  Dusk: the whole set together, Nelim and Shogun resting among the six buildings.
+#   5. 23:00  Night: the lamppost lit, on sunlight it stored, no conduit anywhere.
+# Why this place: the places were looked at one by one in docs/SANCTUAIRE-LIEUX.md. The gravel yard is a good road but is full of furniture and lamps;
+# the flat open squares (A to J) are dark earth with flowers; the calm zone is clean, level and light, so concrete and a lit lamp read on it.
+# Colours: the jacket is a deep teal (28, 98, 104), the complement of the lamp's amber and of the grey concrete, so Nelim stands out in every picture.
+# Only daytime animal in the story: a dog, awake at every hour used. Every scenario reloads the save, so the square is fresh, never cleared by hand.
+# Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
+@requires:nelim.pickletools.screenshotstudio
+@review
+Feature: gallery: a day at the last stop of an old road
 
-  @save @review
-  Scenario: the six buildings together, in daylight, on the studio
-    Given the save "nelim-zen-meadow-studio" is loaded
+  Scenario: 1. the road comes in at dawn
+    Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And I set the hour to 12
-    And I wait 120 ticks
-    When a "ConcreteBarrier" is built at (148, 106)
-    And a "ConcreteBarrier" is built at (149, 106)
-    And a "ConcreteBarrier" is built at (150, 106)
-    And a "ConcreteBarrier" is built at (151, 106)
-    And a "ConcreteBarrier" is built at (152, 106)
-    And a "ConFence" is built at (148, 104)
-    And a "ConFence" is built at (149, 104)
-    And a "ConFence" is built at (150, 104)
-    And a "ConFence" is built at (151, 104)
-    And a "ConFence" is built at (152, 104)
-    And a "ConFence" is built at (153, 104)
-    And a "AB_Lamppost" is built at (156, 105)
-    And a "ABVending" is built at (158, 105)
-    And I spawn a "MealSimple" at (158, 105)
-    And a "ABKitchenstove" is built at (160, 105)
-    And a "Wall" is built at (148, 101)
-    And a "Wall" is built at (149, 101)
-    And a "AB_AirConditioner" is built at (150, 101)
-    And a "Wall" is built at (151, 101)
-    And a "Wall" is built at (152, 101)
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And I set the hour to 6
+    And I set the weather to "Clear"
+    And a "ConcreteBarrier" is built at (196, 190)
+    And a "ConcreteBarrier" is built at (197, 190)
+    And a "ConcreteBarrier" is built at (198, 190)
+    And a "ConcreteBarrier" is built at (199, 190)
+    And a "ConcreteBarrier" is built at (200, 190)
+    And a "ConcreteBarrier" is built at (201, 190)
+    And a "ConcreteBarrier" is built at (202, 190)
+    And a "ConcreteBarrier" is built at (203, 190)
+    And a "ConcreteBarrier" is built at (204, 190)
+    And a "ConFence" is built at (196, 188)
+    And a "ConFence" is built at (197, 188)
+    And a "ConFence" is built at (198, 188)
+    And a "ConFence" is built at (199, 188)
+    And a "ConFence" is built at (200, 188)
+    And a "ConFence" is built at (201, 188)
+    And a "ConFence" is built at (202, 188)
+    And a "ConFence" is built at (203, 188)
+    And a "ConFence" is built at (204, 188)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 185) facing North
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
+    When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 104)
-    And Ancient Buildings Renew: the camera root size is set to 6
-    And I take a screenshot "gallery: the six buildings together, in daylight"
-    Then Ancient Buildings Renew: the camera root size is 6
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 7
+    Then I take a screenshot "gallery 1 - the road comes in"
 
-  @save @review
-  Scenario: the concrete fence and barrier laid as lines, in daylight, on the studio
-    Given the save "nelim-zen-meadow-studio" is loaded
+  Scenario: 2. the stop at eleven, vending machine and stove
+    Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And I set the hour to 12
-    And I wait 120 ticks
-    When a "ConFence" is built at (150, 105)
-    And a "ConFence" is built at (151, 105)
-    And a "ConFence" is built at (152, 105)
-    And a "ConFence" is built at (153, 105)
-    And a "ConFence" is built at (154, 105)
-    And a "ConFence" is built at (155, 105)
-    And a "ConFence" is built at (156, 105)
-    And a "ConFence" is built at (157, 105)
-    And a "ConFence" is built at (158, 105)
-    And a "ConFence" is built at (159, 105)
-    And a "ConcreteBarrier" is built at (150, 102)
-    And a "ConcreteBarrier" is built at (151, 102)
-    And a "ConcreteBarrier" is built at (152, 102)
-    And a "ConcreteBarrier" is built at (153, 102)
-    And a "ConcreteBarrier" is built at (154, 102)
-    And a "ConcreteBarrier" is built at (155, 102)
-    And a "ConcreteBarrier" is built at (156, 102)
-    And a "ConcreteBarrier" is built at (157, 102)
-    And a "ConcreteBarrier" is built at (158, 102)
-    And a "ConcreteBarrier" is built at (159, 102)
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And I set the hour to 11
+    And I set the weather to "Clear"
+    And a "ABVending" is built at (198, 189)
+    And a "ABKitchenstove" is built at (200, 189)
+    And I spawn a "MealSimple" at (198, 189)
+    And I spawn a "MealSimple" at (198, 189)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 103)
-    And Ancient Buildings Renew: the camera root size is set to 6
-    And I take a screenshot "gallery: the concrete fence and barrier, laid as lines"
-    Then Ancient Buildings Renew: the camera root size is 6
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 7
+    Then I take a screenshot "gallery 2 - the vending machine and the stove"
 
-  @save @review
-  Scenario: the lamppost lit at night, with no conduit, on the studio
-    Given the save "nelim-zen-meadow-studio" is loaded
+  Scenario: 3. the air conditioner at three
+    Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And I set the hour to 2
-    And I wait 120 ticks
-    When a "ConcreteBarrier" is built at (151, 102)
-    And a "ConcreteBarrier" is built at (152, 102)
-    And a "ConcreteBarrier" is built at (153, 102)
-    And a "ConcreteBarrier" is built at (154, 102)
-    And a "ConcreteBarrier" is built at (155, 102)
-    And a "ConcreteBarrier" is built at (156, 102)
-    And a "ConcreteBarrier" is built at (157, 102)
-    And a "ConFence" is built at (151, 106)
-    And a "ConFence" is built at (152, 106)
-    And a "ConFence" is built at (153, 106)
-    And a "ConFence" is built at (154, 106)
-    And a "ConFence" is built at (155, 106)
-    And a "ConFence" is built at (156, 106)
-    And a "ConFence" is built at (157, 106)
-    And a "AB_Lamppost" is built at (154, 104)
-    And I wait 120 ticks
-    Then Ancient Buildings Renew: the "AB_Lamppost" at (154, 104) is glowing
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And I set the hour to 15
+    And I set the weather to "Clear"
+    And a "Wall" is built at (197, 189)
+    And a "Wall" is built at (198, 189)
+    And a "AB_AirConditioner" is built at (199, 189)
+    And a "Wall" is built at (200, 189)
+    And a "Wall" is built at (201, 189)
+    And Ancient Buildings Renew: the "AB_AirConditioner" at (199, 189) is powered on
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 104)
-    And Ancient Buildings Renew: the camera root size is set to 6
-    And I take a screenshot "gallery: the lamppost at night, with no conduit"
-    Then Ancient Buildings Renew: the camera root size is 6
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 7
+    Then I take a screenshot "gallery 3 - the air conditioner in a wall"
 
-  @save @review
-  Scenario: the vending machine with its meals and the one-tile stove, in daylight, on the studio
-    Given the save "nelim-zen-meadow-studio" is loaded
+  Scenario: 4. the six buildings together at dusk
+    Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And I set the hour to 12
-    And I wait 120 ticks
-    When a "ABKitchenstove" is built at (152, 104)
-    And a "ABVending" is built at (154, 104)
-    And I spawn a "MealSimple" at (154, 104)
-    And I spawn a "MealSimple" at (154, 104)
-    And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (153, 104)
-    And Ancient Buildings Renew: the camera root size is set to 6
-    And I take a screenshot "gallery: the vending machine and the kitchen stove"
-    Then Ancient Buildings Renew: the camera root size is 6
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And I set the hour to 19
+    And I set the weather to "Clear"
+    And a "ConcreteBarrier" is built at (196, 190)
+    And a "ConcreteBarrier" is built at (197, 190)
+    And a "ConcreteBarrier" is built at (198, 190)
+    And a "ConcreteBarrier" is built at (199, 190)
+    And a "ConFence" is built at (196, 188)
+    And a "ConFence" is built at (197, 188)
+    And a "ConFence" is built at (198, 188)
+    And a "ConFence" is built at (199, 188)
+    And a "AB_Lamppost" is built at (203, 190)
+    And a "ABVending" is built at (203, 188)
+    And a "ABKitchenstove" is built at (204, 188)
+    And a "Wall" is built at (197, 185)
+    And a "Wall" is built at (198, 185)
+    And a "AB_AirConditioner" is built at (199, 185)
+    And a "Wall" is built at (200, 185)
+    And a "Wall" is built at (201, 185)
 
-  @save @review
-  Scenario: the ancient air conditioner in a wall, in daylight, on the studio
-    Given the save "nelim-zen-meadow-studio" is loaded
-    And game speed is paused
-    And I set the hour to 12
-    And I wait 120 ticks
-    When a "Wall" is built at (152, 104)
-    And a "Wall" is built at (153, 104)
-    And a "AB_AirConditioner" is built at (154, 104)
-    And a "Wall" is built at (155, 104)
-    And a "Wall" is built at (156, 104)
+    And I spawn a "MealSimple" at (203, 188)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing West
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And I move the camera to (154, 104)
-    And Ancient Buildings Renew: the camera root size is set to 6
-    And I take a screenshot "gallery: the ancient air conditioner in a wall"
-    Then Ancient Buildings Renew: the camera root size is 6
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 8
+    Then I take a screenshot "gallery 4 - the six buildings together at dusk"
+
+  Scenario: 5. the lamppost at night
+    Given the save "Nelims-tribe" is loaded
+    And game speed is paused
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And I set the hour to 23
+    And I set the weather to "Clear"
+    And a "ConcreteBarrier" is built at (197, 185)
+    And a "ConcreteBarrier" is built at (198, 185)
+    And a "ConcreteBarrier" is built at (199, 185)
+    And a "ConcreteBarrier" is built at (200, 185)
+    And a "ConcreteBarrier" is built at (201, 185)
+    And a "ConcreteBarrier" is built at (202, 185)
+    And a "ConcreteBarrier" is built at (203, 185)
+    And a "ConFence" is built at (197, 191)
+    And a "ConFence" is built at (198, 191)
+    And a "ConFence" is built at (199, 191)
+    And a "ConFence" is built at (200, 191)
+    And a "ConFence" is built at (201, 191)
+    And a "ConFence" is built at (202, 191)
+    And a "ConFence" is built at (203, 191)
+    And a "AB_Lamppost" is built at (200, 188)
+    And I wait 120 ticks
+    Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing North
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    When I wait 60 ticks
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 6
+    Then I take a screenshot "gallery 5 - the lamppost at night"

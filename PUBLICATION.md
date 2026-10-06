@@ -181,31 +181,30 @@ It is credited to you everywhere, and if you would rather it did not exist, just
 https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945
 ```
 
-## Gallery: story and shot list (rule of 2026-10-02: every gallery capture is a staged photo)
+## Gallery: story and shot list (rule of 2026-10-02, reworked 2026-10-06 for the Sanctuary)
 
-Draft by the session, to be ordered and approved by the owner. Nothing here is final until she has opened the images.
+Draft by the session, to be ordered and approved by the owner. Nothing is final until she has opened the images. Scenarios:
+`Tests/Pickle/Mod/Pickle/Features/15-gallery.feature`, pass `-DepMap wsl-deps.sanctuary.map`.
 
-**Story.** *The last stop on the old road.* Mara, a courier, walks a road the world has forgotten. At the rest stop
-the concrete barrier still funnels the road, the fence still runs along it, and the lamppost lights itself every
-night on sunlight it stored. She buys a meal from the vending machine, heats it on the little stove, and cools off
-by the wall unit while the light goes.
+**Story.** *A day at the last stop of an old road*, told by Nelim (the fixture's one colonist: Virginie) and Shogun, her
+labrador. The place is the same for the five pictures, the calm zone of Nelim's tribe: a cream stone square, no roof, no
+wall shadow, the one level light ground among the outdoor places. Time moves a little between pictures; each takes its own corner.
 
-**Common set.** One rest stop in the studio's open glade (flowers preset), the same six buildings, the same cells
-(`Tests/Pickle/Mod/Pickle/Features/15-gallery.feature`). Set it up, photograph, pull it down, next shot.
+**Why this place.** The named places of `PickleTools/docs/SANCTUAIRE-LIEUX.md` were read one by one. The gravel yard is the most
+road-like but is crowded with furniture and lamps; the free squares A to J and the emerald clearing are dark earth or a painted
+carpet; the houses and gardens are not roads. The calm zone keeps concrete and a lit lamp legible. (Not photographed by this session
+beforehand: the choice rests on the descriptions, and each image is read after the run.)
 
-**Subject.** Mara: female, 29, body type `Female`, short dark-brown hair, a deep teal jacket over a cream shirt (teal
-sets off the amber of the lamp and the grey of the concrete), plain boots. No tattoos (they would need Ideology and
-mean nothing here). Everything is chosen, nothing rolled at random.
+**Subject.** Nelim in a deep teal jacket (28, 98, 104), the complement of the lamp's amber and the grey concrete, so she stands out
+in every picture. No tattoos. Her body and face are the fixture's, not rolled.
 
-| # | Shot | Time | Mara | What it must prove |
-|---|---|---|---|---|
-| 1 | The six buildings together | day | walking in from the left | the whole set, at a glance |
-| 2 | Fence and barrier as lines | day | leaning on the barrier, facing the fence | both drag out as lines |
-| 3 | The lamppost | night | standing under the lamp | it is lit, with no power, with a real pool of light |
-| 4 | Vending machine and stove | day | at the machine, back to the stove | one tile each, meals inside |
-| 5 | The air conditioner in a wall | day | beside the wall, in its shade | it fits in a wall |
+| # | Time | Picture | What it must prove |
+|---|---|---|---|
+| 1 | 06:00 | the barrier and the fence run as lines, Nelim arrives with Shogun | both drag out as lines |
+| 2 | 11:00 | vending machine with meals in it, one-tile stove, Nelim cooks, Shogun waits | one tile each, meals inside |
+| 3 | 15:00 | the ancient air conditioner set in a wall, Nelim in the cooled shade | it fits in a wall |
+| 4 | 19:00 | all six buildings together at dusk, Nelim and Shogun resting | the whole set |
+| 5 | 23:00 | the lamppost lit, no conduit anywhere | it is lit, with no power |
 
-Menus and windows are screen captures of what they are and are not staged.
-
-**Steps asked of Pickle Tools on 2026-10-02, written by it the same day and not yet played (tickets e88b and c019):** place a colonist at a cell facing a direction; remove the studio
-actors; wear and dye a garment; frame a cell at a zoom. A neutral pose and a head type do not exist and are not needed: a paused pawn with no job stands still. Dressing, hair, body type and age already exist (ColonistRace, Pickle). The photo scenes are written once those tickets are green.
+Menus and windows are plain screen captures and are not staged. The pass needs Pickle Tools steps that have not been played at the
+time of writing (camera zoom, place and dress a colonist, animals): the first run is a test of them as much as of the pictures.

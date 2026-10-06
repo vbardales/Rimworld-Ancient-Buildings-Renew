@@ -1,0 +1,6 @@
+# Pass "sanctuary": the Workshop gallery, taken on the save "Nelims-tribe" of PickleTools' ScreenshotStudio (one colonist, vanilla only).
+# Used with -DepMap wsl-deps.sanctuary.map. Replaces wsl-deps.gallery.map (the old zen meadow studio, owner's rule of 2026-10-06).
+# camerazoom: `I frame the cell` and the zoom steps. colonistrace: dress, place and orient the colonist.
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
