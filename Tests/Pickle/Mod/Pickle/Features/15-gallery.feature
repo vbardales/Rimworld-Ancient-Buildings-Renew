@@ -11,6 +11,7 @@
 # Why this place: the places were looked at one by one in docs/SANCTUAIRE-LIEUX.md. The gravel yard is a good road but is full of furniture and lamps;
 # the flat open squares (A to J) are dark earth with flowers; the calm zone is clean, level and light, so concrete and a lit lamp read on it.
 # Colours: the jacket is a deep teal (28, 98, 104), the complement of the lamp's amber and of the grey concrete, so Nelim stands out in every picture.
+# The grey stain seen near Nelim in run 8cf7 is cleaned by "all filth is cleaned" (Pickle Tools). The night picture is lit by the lamppost itself (radius 19 covers the whole 11 x 11 square), not by the zone: that is the subject, not an anomaly.
 # Only daytime animal in the story: a dog, awake at every hour used. Every scenario reloads the save, so the square is fresh, never cleared by hand.
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
 @requires:nelim.pickletools.screenshotstudio
@@ -22,6 +23,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 6
     And I set the weather to "Clear"
     And a "ConcreteBarrier" is built at (196, 190)
@@ -55,6 +57,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 11
     And I set the weather to "Clear"
     And a "ABVending" is built at (198, 189)
@@ -74,6 +77,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 15
     And I set the weather to "Clear"
     And a "Wall" is built at (197, 189)
@@ -95,6 +99,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 19
     And I set the weather to "Clear"
     And a "ConcreteBarrier" is built at (196, 190)
@@ -128,6 +133,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: all animals are removed
     And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 23
     And I set the weather to "Clear"
     And a "ConcreteBarrier" is built at (197, 185)
