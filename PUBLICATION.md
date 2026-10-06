@@ -3,24 +3,24 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status: drafted, 2026-09-25.** Workshop item `3806708945` was created private by the `0.1.0`
-prepublication of 2026-09-23 and its `PublishedFileId.txt` is committed and pushed. No Git tag and no
-GitHub release exist, and none is made by hand: the CI creates them after a successful upload. Nothing
-below has been posted or pasted anywhere. The stage is `done`, not `prepublished` (see `STATUS.md`).
+**Status: updated 2026-10-06.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
+2026-09-23 and its `PublishedFileId.txt` is committed and pushed. No Git tag and no GitHub release exist, and none is
+made by hand: the CI creates them after a successful upload. Nothing below has been posted or pasted anywhere. The stage
+is `tested` (`STATUS.md`); the step to `prepublished` is what this file prepares.
 
 ## What blocks the publication
 
 Not restated from `AUDIT.md`; only what is specific to this mod.
 
-- The manual scenarios of `TESTING.md` are not run (fence and barrier drag, storage gizmo, wall cooling,
-  Core alone, English and French display). They are the owner's, sent as captures one at a time
-  ("Manual run: what to send, and who checks what").
-- The gallery does not exist (see below).
-- The rollback target is not chosen (see "Fail fast").
-- No dry-run of the publish workflow has run. `.github/publish-tag.yml` was generated on 2026-09-25 and
-  pushed; the CI/CD session runs the dry-run once this file is on `main`.
-- The page still carries the description `0.1.0` sent, which lacks the pointer to `ATTRIBUTION.md` and the
-  licence (see "Description").
+- The gallery is not finished: seven staged pictures are written (`15-gallery.feature`), the first run (ticket 8cf7) played
+  5 of its 5 then-scenarios green and its captures were opened and found short (see "Gallery"). A replay waits for Pickle
+  Tools to push its fix for the status icons. Nothing is copied to `Art/Gallery/` yet but `0-preview.png`.
+- The owner's manual validations (table below) are hers.
+- A dry-run of the publish workflow is owed on the final commit: `Mod/` changed after the green dry-run of 2026-09-25
+  (French wording, lamppost light, ModIcon), so that SHA is void. `.github/publish-tag.yml` exists.
+- The page still carries the description `0.1.0` sent, which lacks the pointer to `ATTRIBUTION.md` and the licence
+  (see "Description").
+- The rollback target is chosen (see "Fail fast").
 
 ## Description
 
@@ -37,47 +37,38 @@ against `Mod/README.template.md`, and the page after the publish. The converted 
 characters, under Steam's 8,000-byte limit.
 
 The template opens with the `UNOFFICIAL` paragraph, and ends with `IF I GO QUIET`, `AI-GENERATED` (Claude
-Code, Codex for the audits, DALL-E for the preview background and the icon), `THANKS`, the pointer to
+Code, Codex for the audits, DALL-E for the preview background, the icon and the lamppost light cone), `THANKS`, the pointer to
 `ATTRIBUTION.md` and the licence, and the `[url=...]Source code on GitHub[/url]` line, in the order
 `PUBLISHING.md` sets.
 
 ## Images
 
-- **Preview** (`Mod/About/Preview.png`): the mod's own corner of road at dusk, with the fence, the barrier,
-  the lamppost and the vending machine in one frame, and the name engraved. Its checks are in `STATUS.md`
-  (the audit sections, and the owner's override of 2026-09-13 on the comparison with a game capture).
-  **2026-09-29:** the owner asked for the cut-out `ModIcon.png` added to the frame's bottom-left corner
-  (emptier than bottom-right, which carries the vending machine and barrier), tilted +15°, bled off the
-  left and bottom edges. Composited with ffmpeg (`colorkey` for the cutout, `rotate` on a transparent
-  canvas, `overlay` at negative offsets), no AI image generation. Same 896x504 size. Owner validated.
-- **ModIcon** (`Mod/About/ModIcon.png`, 128 px): the repository's mascot. The 32 px readability control is
-  recorded in `STATUS.md`.
+- **Preview** (`Mod/About/Preview.png`, 896 x 504, under 1 MB): the mod's own corner of road at dusk, with the fence, the
+  barrier, the lamppost and the vending machine in one frame, the name engraved, and the ModIcon cut-out in the
+  bottom-right corner. It is built by the shared renderer from `Art/Preview.config.json` (`node ../scripts/Render-Preview.cjs`);
+  `Art/Gallery/0-preview.png` is its byte-identical copy. Its checks are in `STATUS.md` (the owner's override of 2026-09-13
+  on the comparison with a game capture).
+- **ModIcon** (`Mod/About/ModIcon.png`, 128 x 128): the repository's mascot, delivered by the same renderer from
+  `Art/ModIcon-source.png` (the owner's redrawn source). The 32 px readability control of the earlier icon is in `STATUS.md`;
+  the redrawn one was looked at on 2026-10-06 and the owner decides.
 
 ## Screenshots, in this order
 
-**Gallery image 0** (`Art/Gallery/0-preview.png` since the art commits of 2026-10-01, was `Art/Workshop/00-preview.png`): a plain copy of `Preview.png` as it stood before the
-2026-09-29 ModIcon overlay above, i.e. without the corner mascot. Owner's instruction: the first gallery
-image is henceforth this copy, ahead of the numbered candidates below.
+The gallery folder is `Art/Gallery/` (it was `Art/Workshop/`, with `01-`...). It holds only the images to upload, numbered on one
+digit from `0-` (`PUBLISHING.md`, Images), nothing else, and it is the workflow's `--gallery-dir`:
 
-**Not settled.** No Workshop screenshot has been chosen or produced. Steam shows the first one large under
-the Preview, so it must be the most demonstrative, not the prettiest, and every image is opened and looked
-at before it is listed here: a green capture scenario proves the journey ran, not that the image shows
-anything. The manual run of `TESTING.md` already asks the owner for captures (`F1`, `B2`, `L2`, `S1`, `A2`
-...), some of which may serve. Candidates, in the order to try:
+- `0-preview.png`: a **byte-identical copy of `Mod/About/Preview.png`** (the Preview as it is now, with the ModIcon corner; the
+  former "copy without the mascot" is dropped). Regenerated with the Preview.
+- `1-`, `2-`... the staged pictures of the section "Gallery" below, in page order, each under 2 MB and all together under 8 MB
+  (JPEG, `ffmpeg -q:v 3`). Steam shows the first one large under the Preview, so the order is the owner's choice and the first is
+  the most demonstrative, not the prettiest. Every image is opened and looked at before it is listed: a green scenario proves the
+  journey ran, not that the image shows anything.
 
-| Order | What it should show | Why there |
-|---|---|---|
-| 1 | The fence laid as a line by one drag, with a bend | It is the defect the port exists to fix, and the one thing the log cannot show |
-| 2 | The lamppost lit at night with no conduit in frame | The mod's one unusual claim: solar, no power |
-| 3 | The air conditioner in a wall, both room temperatures readable | The one building that is new |
-| 4 | The vending machine with its link storage gizmo | The 1.4 fix a player can see |
+The old candidate table (fence with a bend, lamppost, air conditioner with temperatures, link gizmo) is replaced by the staged
+series below. The question whether Work Studio's showcase-colony rule applied is answered: the gallery is staged on the Sanctuary
+(`PickleTools/docs/GALERIE.md`).
 
-The gallery is uploaded by hand (`OPERATIONS.md`): a folder that holds only the images to upload, numbered
-`01-`, `02-`... in page order, no old version, no raw capture, no subfolder (`PUBLISHING.md`, Images). It
-would be `Art/Workshop/`, which is also the workflow's `--gallery-dir` once it exists; the CI/CD session
-regenerates the workflow then. **Open question for the owner:** Work Studio's rule is that shots are taken
-on her showcase colony (`PickleTools/ScreenshotStudio`), not on the test fixture. Whether it applies here is
-not written anywhere.
+The gallery is uploaded by hand (`OPERATIONS.md`); the CI/CD session regenerates the workflow once the folder is final.
 
 ## Dependencies and DLCs
 
@@ -97,9 +88,9 @@ and `PUBLISHING.md`; it is hers to change.
 
 | # | What to look at | Why a test cannot |
 |---|---|---|
-| 1 | The fence and the barrier drag out as a line in one gesture (`F1`, `B1`) | The Pickle step that designates places blueprints cell by cell |
+| 1 | The fence and the barrier drag out as a line in one gesture (`F1`, `B1`) | **Not applicable, accepted by the owner on 2026-09-28**: the engine has no press-drag-release primitive. The draw style and the cells a drag would lay are asserted by Pickle 08 |
 | 2 | The lamppost stays lit all night, the vending machine keeps a meal sound over days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
-| 3 | The French reads naturally | The suite proves the strings are loaded, not that they read well |
+| 3 | The French reads naturally | **Done**: the owner reviewed `FRENCH_REVIEW.md` on 2026-10-01 (`translation_fr: complete`) |
 | 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | The installed copy is what players get; the suite plays the working tree |
 | 5 | The gallery: which captures, in which order, on which colony | A composition is a choice |
 | 6 | The description read once more, on the page after the publish | The dry-run cannot read a private page |
@@ -110,8 +101,9 @@ sentence that a save moves between them is a consequence of keeping the `defName
 
 ## Mature content checkboxes
 
-**None of them.** The mod adds six buildings. The two pictures it ships are a road corner at dusk and a
-mascot. The Workshop screenshots are not produced yet; each one must be opened before this answer is final.
+**None of them.** The mod adds six buildings and ships a road corner at dusk and a mascot. The staged gallery shows a colonist in
+a jacket and a dog among concrete, a stove and a lamp: nothing adult, but the answer is final only after the owner has opened every
+retained image.
 
 ## Steam change notes
 
@@ -150,11 +142,10 @@ visibility: making the item private again is a manual act of the owner on Steam.
 `AUDIT.md`, `prepublished -> published`: before the `publish`, every scenario that failed has a green replay,
 the gallery is done and the owner's manual validations are made. The regression pass may follow.
 
-- Scenarios that failed and were replayed green (2026-09-24 and 25): the identifier scenario, in English and in
-  French, and the incompatibility scenario, rewritten. Nothing red is open in the Pickle suite.
-- **The rollback target is not chosen.** The only earlier upload is the private `0.1.0` prepublication, made
-  from the folder as it stood on 2026-09-23 and not from a tagged commit, so it cannot be reproduced. The
-  first real target is the SHA of the `1.0.0` that passes its dry-run, written here at that moment.
+- Scenarios that failed and were replayed green (2026-09-24 to 28): the identifier scenario in English and French, the incompatibility
+  scenario, the wall cooling (eight fix tickets), the lamppost cone and the French wording. Nothing red is open in the suite; the
+  gallery scenarios are captures, not assertions.
+- **The rollback target** is back to private visibility (above). Tag `v1.0.0` becomes the next target once it exists.
 
 ## Comments on other mods' pages
 
@@ -164,21 +155,18 @@ last line, to post **only after item 3806708945 is public**.
 | Recipient | Id | State | Reason |
 |---|---|---|---|
 | "Ancient" Buildings (SyndicateGamingNetwork) | 2566355159 | drafted | The mod this one is a port of, declared incompatible and played by the pass `incompat-original` |
-| Pickle | 3791648678 | already `posted` | Test tool really used. The owner said on 2026-09-25 that the thanks is already placed; only `Covers` changes |
-| RimLogging | 3733484696 | already `posted` | Staged by every Pickle pass. **Open question for the owner:** whether `Ancient Buildings Renew` is added to its `Covers`; the description names neither |
+| Pickle | 3791648678 | `posted` | Covers already lists Ancient Buildings Renew in the registry (`WORKSHOP_COMMENTS.md`): nothing to post |
+| RimLogging | 3733484696 | `posted` | Covers already lists this mod in the registry: nothing to post |
 | PickleTools | 3806142401 | `not_applicable` | Same author, private page. No pass of this suite stages a piece of it |
 | Harmony | 2009463077 | not concerned | The staging installs it; this mod uses none |
 
 ### "Ancient" Buildings, 2566355159
 
+Draft in the shape `WORKSHOP_COMMENTS.md` asks for (one true detail, one thanks, a hidden link, 150 to 350 characters, one or two
+emoticons). To post only after item 3806708945 is public; Virginie rewrites it in her own voice.
+
 ```
-Hello SyndicateGamingNetwork! 🏗️
-
-Thank you for the "Ancient" Buildings: the fence, the lamppost and the vending machine are exactly the worn, lived-in look I want in a colony, and I could not bear that they stopped at 1.3. I brought them forward to 1.6 as Ancient Buildings Renew (unofficial): your five defs, stats and textures are unchanged, the fence drags out in a line again, and I gave your unused air-conditioner texture a def of its own, plus French.
-
-It is credited to you everywhere, and if you would rather it did not exist, just say so and it comes down, no argument, no delay. Thank you for the buildings 💛
-
-https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945
+Your concrete fence, lamppost and vending machine are the worn, lived-in look I wanted in a colony, so they went to 1.6 as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url]: stats and textures untouched, credited to you, and your unused air-conditioner texture finally got a def :) If you'd rather it came down, say so and it does.
 ```
 
 ## Gallery: story and shot list (rule of 2026-10-02, reworked 2026-10-06 for the Sanctuary)
@@ -187,7 +175,7 @@ Draft by the session, to be ordered and approved by the owner. Nothing is final 
 `Tests/Pickle/Mod/Pickle/Features/15-gallery.feature`, pass `-DepMap wsl-deps.sanctuary.map`.
 
 **Story.** *A day at the last stop of an old road*, told by Nelim (the fixture's one colonist: Virginie) and Shogun, her
-labrador. The place is the same for the five pictures, the calm zone of Nelim's tribe: a cream stone square, no roof, no
+labrador. The place is the same for the seven pictures, the calm zone of Nelim's tribe: a cream stone square, no roof, no
 wall shadow, the one level light ground among the outdoor places. Time moves a little between pictures; each takes its own corner.
 
 **Why this place.** The named places of `PickleTools/docs/SANCTUAIRE-LIEUX.md` were read one by one. The gravel yard is the most
@@ -210,5 +198,10 @@ in every picture. No tattoos. Her body and face are the fixture's, not rolled.
 
 **Allowance (owner, 2026-10-06):** anything RimWorld offers is allowed in a gallery picture (props, furniture, plants, set decor, pawns, hairstyles, clothes, animals), other mods included even if they are not hers. As many pictures as wanted, each under 2 MB and all together under 8 MB: the run's PNGs are about 4 MB, so the retained ones are converted to JPEG (`ffmpeg -i x.png -q:v 3 x.jpg`) before they go to `Art/Gallery/`.
 
-Menus and windows are plain screen captures and are not staged. The pass needs Pickle Tools steps that have not been played at the
-time of writing (camera zoom, place and dress a colonist, animals): the first run is a test of them as much as of the pictures.
+Menus and windows are plain screen captures and are not staged.
+
+**First run (ticket 8cf7, 2026-10-06, five scenarios, all green; the series is now seven).** The Pickle Tools steps worked (zoom 6, Nelim
+placed and dressed, Shogun spawned). Reading the captures found: the "no power" status icon drawn on the stove, vending machine and
+air conditioner despite the presentation mode (Pickle Tools fixed it, not yet pushed); a grey stain near Nelim (cleaned by `all filth
+is cleaned`, added); the drawn light cone brown instead of yellow (the sprite is darkened by the night; the real light is the warm
+yellow `glowColor` (255,222,150) set on 2026-10-02). The night picture is lit by the lamppost itself, which is the subject.
