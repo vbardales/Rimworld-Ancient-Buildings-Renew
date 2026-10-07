@@ -1,0 +1,1 @@
+2026-10-07 09-lamppost (ticket ca50, tree 1a81648, EN, test-colony): 4/4 passed, exitReason passed; capture opened: original 1 x 2 sprite on its cell, no cone, warm yellow light on the sand, tooltip 'Lit (50%)'. Replaces the lit-sprite checks of 2026-09-26/27.
