@@ -109,6 +109,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Ravi" stands at (197, 187) facing North
+    And I draft "Ravi"
+    And I draft "Nelim"
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -136,6 +138,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Ravi" stands at (201, 187) facing North
+    And I draft "Ravi"
+    And I draft "Nelim"
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -166,6 +170,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (70, 110, 170)
     And Nelim's Pickle Tools: "Mei" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Mei" stands at (203, 187) facing North
+    And I draft "Mei"
+    And I draft "Nelim"
     And Nelim's Pickle Tools: "Mei" hair colour is rgb (60, 35, 25)
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
@@ -208,6 +214,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Ravi" stands at (202, 189) facing South
+    And I draft "Ravi"
+    And I draft "Nelim"
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
