@@ -157,7 +157,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
     And a colonist "Mei" exists
     And "Mei" gender is female
-    And Nelim's Pickle Tools: "Mei" body type is Thin
+    And Nelim's Pickle Tools: "Mei" body type is Female
     And Nelim's Pickle Tools: "Mei" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Mei" wears "Apparel_Pants" dyed rgb (70, 70, 78)
