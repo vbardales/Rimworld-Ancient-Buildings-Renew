@@ -16,16 +16,17 @@
 # the flat open squares (A to J) are dark earth with flowers; the calm zone is clean, level and light, so concrete and a lit lamp read on it.
 # Colours: the jacket is a deep teal (28, 98, 104), the complement of the lamp's amber and of the grey concrete, so Nelim stands out in every picture.
 # The only animal in the story is a dog, awake at every hour used. Every scenario reloads the save and cleans the filth (the grey stain of run 8cf7).
+# Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes and the filth are Nelim's Pickle Tools'.
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
-@requires:nelim.pickletools.screenshotstudio
+@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio
 @review
 Feature: gallery: a day at the last stop of an old road
 
   Scenario: 1. the road comes in at dawn
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 6
     And I set the weather to "Clear"
@@ -59,8 +60,8 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 2. the barrier and the fence up close
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 9
     And I set the weather to "Clear"
@@ -90,8 +91,8 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 3. the stop at eleven, vending machine and stove
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 11
     And I set the weather to "Clear"
@@ -120,8 +121,8 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 4. the vending machine up close
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 12
     And I set the weather to "Clear"
@@ -149,8 +150,8 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 5. the air conditioner at three
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 15
     And I set the weather to "Clear"
@@ -182,8 +183,8 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 6. the six buildings together at dusk
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 19
     And I set the weather to "Clear"
@@ -225,8 +226,8 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 7. the lamppost at night
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
-    And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I am at the sanctuary "calm-zone"
+    And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 23
     And I set the weather to "Clear"
