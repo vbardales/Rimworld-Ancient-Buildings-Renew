@@ -1,5 +1,5 @@
 # Pass "sanctuary-pawns": the Workshop gallery with varied pawns (bodies, hair, clothes), on the Sanctuary save "Nelims-tribe".
-# Used with -DepMap wsl-deps.sanctuary-pawns.map. Map from TailorMadeWaistlines/Tests/Pickle/wsl-deps.gallery.map (its gallery pass, green),
+# Used with -DepMap wsl-deps.sanctuary-pawns.map. Map from VenusTouchWaistlines/Tests/Pickle/wsl-deps.gallery.map (its gallery pass, green),
 # without its own mod and without AB's visible trousers (that one needs a seeded settings file), so trousers are vanilla.
 # The female body and apparel variants load BEFORE WDI (WDI declares loadAfter on both).
 tiagocc0.FemaleBodyVariants    3798082132
