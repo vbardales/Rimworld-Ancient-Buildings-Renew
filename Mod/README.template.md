@@ -45,7 +45,7 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 ## AI-GENERATED
 
-The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The images, the preview background, the icon and the lamppost light cone, were generated with DALL-E (OpenAI), and the preview was lettered afterwards in HTML. Stated openly: working with these tools is my job.
+The port, its checks and its documentation were written with Claude Code (Anthropic), and audited with Codex (OpenAI), under human direction and review. The images, the preview background and the icon, were generated with DALL-E (OpenAI), and the preview was lettered afterwards in HTML. Stated openly: working with these tools is my job.
 
 ## THANKS
 
