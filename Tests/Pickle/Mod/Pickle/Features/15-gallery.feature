@@ -100,6 +100,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And a colonist "Ravi" exists
+    And "Ravi" gender is male
+    And Nelim's Pickle Tools: "Ravi" body type is Male
+    And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Ravi" stands at (197, 187) facing North
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 7
@@ -119,6 +126,13 @@ Feature: gallery: a day at the last stop of an old road
     And I spawn a "MealSimple" at (199, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
+    And a colonist "Ravi" exists
+    And "Ravi" gender is male
+    And Nelim's Pickle Tools: "Ravi" body type is Male
+    And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Ravi" stands at (201, 187) facing North
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 3.5
@@ -141,6 +155,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And a colonist "Mei" exists
+    And "Mei" gender is female
+    And Nelim's Pickle Tools: "Mei" body type is Thin
+    And Nelim's Pickle Tools: "Mei" hairstyle is "Bob"
+    And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Mei" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Mei" stands at (203, 187) facing North
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 7
@@ -174,6 +195,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    And a colonist "Ravi" exists
+    And "Ravi" gender is male
+    And Nelim's Pickle Tools: "Ravi" body type is Male
+    And Nelim's Pickle Tools: "Ravi" hairstyle is "Mohawk"
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Ravi" stands at (202, 189) facing South
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 8
