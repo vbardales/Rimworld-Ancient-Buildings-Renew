@@ -79,7 +79,7 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (203, 188)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (197, 187)
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 4.5
@@ -205,7 +205,7 @@ Feature: gallery: a day at the last stop of an old road
     And I wait 120 ticks
     Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing North
+    And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     When I wait 60 ticks
     And Nelim's Pickle Tools: studio presentation mode is enabled
