@@ -124,6 +124,7 @@ First release. Port of SyndicateGamingNetwork's "Ancient" Buildings to RimWorld 
 [*]The vending machine can be linked to others and its filter set on the blueprint.
 [*]The stove offers the two baby-food recipes when Biotech is on.
 [*]New: the ancient air conditioner, a wall cooler for the texture the original shipped and never used. It needs the air conditioning research.
+[*]The lamppost draws a soft, pale cone of light under its head, and its light is a warm yellow instead of the original near-white. The radius is unchanged.
 [*]English and French.
 [/list]
 
