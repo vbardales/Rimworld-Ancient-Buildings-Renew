@@ -130,6 +130,16 @@ First release. Port of SyndicateGamingNetwork's "Ancient" Buildings to RimWorld 
 Nothing else was rebalanced. It cannot run beside the original mod.
 ```
 
+### 1.0.1
+
+```
+[b]1.0.1[/b]
+
+The mod now identifies itself as nelim.ancientbuildings (it was nelim.ancientbuildingsrenew in 1.0.0). Nothing else changes: same buildings, same textures, same item.
+
+If you enabled 1.0.0, enable the mod again in your mod list under its new name. A save made with 1.0.0 will report the old id as missing until you do, then loads normally.
+```
+
 ## Fail fast: the rollback target
 
 **Target for 1.0.0, chosen by the owner on 2026-10-02: back to private visibility.** The item is private until she flips it, and this is the first real release, so there is no earlier good version worth republishing (0.1.0 was never tested). If the regression pass comes back red, she sets the item back to private by hand on Steam; the CI never sends visibility. The fix then goes out as a new version, never a re-publication of 1.0.0. The general rule below applies from the second release on.

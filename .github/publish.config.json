@@ -1,7 +1,7 @@
 {
   "templateStamp": "82de20b8aa50",
   "workshopId": "3806708945",
-  "packageId": "nelim.ancientbuildingsrenew",
+  "packageId": "nelim.ancientbuildings",
   "releaseTitle": "Ancient Buildings Renew {version}",
   "requirePaths": [
     "Defs"

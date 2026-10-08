@@ -4,7 +4,7 @@ translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
 mod:          Ancient Buildings Renew (unofficial)
-packageId:    nelim.ancientbuildingsrenew
+packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes

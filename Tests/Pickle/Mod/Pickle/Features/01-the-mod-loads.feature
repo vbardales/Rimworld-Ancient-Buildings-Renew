@@ -11,7 +11,7 @@ Feature: the mod loads clean and defines its six buildings
 
   Scenario: the mod is loaded and its six buildings exist
     Given the main menu is open
-    Then mod "nelim.ancientbuildingsrenew" is loaded
+    Then mod "nelim.ancientbuildings" is loaded
     And def "ConFence" of type "ThingDef" exists
     And def "ConcreteBarrier" of type "ThingDef" exists
     And def "AB_Lamppost" of type "ThingDef" exists
@@ -30,8 +30,8 @@ Feature: the mod loads clean and defines its six buildings
 
   Scenario: the mod's own identifier appears in no error or warning
     Given the main menu is open
-    Then Ancient Buildings Renew: nothing logged as an error or a warning names "nelim.ancientbuildingsrenew"
-    And no warnings from mod "nelim.ancientbuildingsrenew"
+    Then Ancient Buildings Renew: nothing logged as an error or a warning names "nelim.ancientbuildings"
+    And no warnings from mod "nelim.ancientbuildings"
 
   # The one defect this port exists to fix, in its loaded form. The fence declared a field RimWorld 1.4
   # deleted, and the game loaded it with nothing set: it built, it looked right, and it could not be dragged

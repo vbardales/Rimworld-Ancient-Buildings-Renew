@@ -2,10 +2,19 @@
 
 All notable changes to this mod are documented here.
 
-## [1.0.0] — unreleased
+## [1.0.1] — unreleased
 
-On release: create the `v1.0.0` tag and the matching GitHub release. The Workshop item so far holds
-only the private `0.1.0` prepublication below, which created it.
+On release: the CI creates the `v1.0.1` tag and the matching GitHub release.
+
+### Changed
+
+- `packageId` changed from `nelim.ancientbuildingsrenew` to `nelim.ancientbuildings` (the 1.0.0 id carried the word "Renew"). The
+  Workshop item, its content and its files are the same. A player who enabled 1.0.0 must enable the mod again under its new id in the
+  mod list, and a save made with 1.0.0 will report the old id as missing: it loads once the new one is enabled.
+
+## [1.0.0] — 2026-10-08
+
+Released by the CI (run 37831089676, tag `v1.0.0`). The Workshop item before it held only the private `0.1.0` prepublication below, which created it.
 
 First release of the port of SyndicateGamingNetwork's **"Ancient" Buildings** for RimWorld 1.6.
 

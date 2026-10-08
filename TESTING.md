@@ -20,7 +20,7 @@ with the previous list saved beside it as `ModsConfig.xml.bak-20260911-abr`, and
 emptied at the same time.
 
 ```
-nelim.ancientbuildingsrenew        this mod            anywhere in the list
+nelim.ancientbuildings        this mod            anywhere in the list
 ```
 
 Run the building scenarios with Core, this mod and Biotech enabled. Use a temporary test
@@ -52,7 +52,7 @@ original mod on a compatible game version and record that this is a constructed 
 Record building counts, materials, positions, stove bills and vending storage filters.
 Separate any base-game version migration errors from this mod's replacement behavior.
 
-1. Back up the save. Disable `ancientbld.core`, enable `nelim.ancientbuildingsrenew` on
+1. Back up the save. Disable `ancientbld.core`, enable `nelim.ancientbuildings` on
    RimWorld 1.6 and retain the save's other required content. Never enable both mods together.
 2. Load the copied save. Expect all five building types, counts, positions and materials
    to survive; existing bills and storage filters must remain usable. Investigate any

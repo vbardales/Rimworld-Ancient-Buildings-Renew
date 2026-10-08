@@ -14,7 +14,7 @@ Feature: without Biotech the stove's baby-food recipes stay out of the way
   Scenario: Biotech is left out, and so are its recipes
     Given the main menu is open
     Then mod "ludeon.rimworld.biotech" is not loaded
-    And mod "nelim.ancientbuildingsrenew" is loaded
+    And mod "nelim.ancientbuildings" is loaded
     And no def "Make_BabyFood" exists
     And no def "Make_BabyFoodBulk" exists
 

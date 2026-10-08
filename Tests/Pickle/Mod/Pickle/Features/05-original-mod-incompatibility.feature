@@ -23,5 +23,5 @@ Feature: the declared incompatibility with the original mod is still true
   Scenario: the original mod loads beside this one and still carries the field 1.6 removed
     Given the main menu is open
     Then mod "ancientbld.core" is loaded
-    And mod "nelim.ancientbuildingsrenew" is loaded
+    And mod "nelim.ancientbuildings" is loaded
     And Ancient Buildings Renew: an error or a warning was logged naming "placingDraggableDimensions" and "ThingDef"
