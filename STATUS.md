@@ -8,8 +8,8 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-stage:        tested
-workflow_stage: prepublished
+stage:        published
+workflow_stage: published
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
 upstream_mod_remotes: N/A
@@ -29,9 +29,9 @@ remaining:
   - unverified: "(prepublished) rollback, 2026-10-08: the owner set the Workshop item 3806708945 back to private visibility after the 1.0.0 publish (and after posting the thanks comment on 2566355159 while it was public), so the stage goes back from published. Tag v1.0.0 and its release stay (a tag is never reused). Next: the packageId is renamed to nelim.ancientbuildings (commit 818be66, not pushed until Pickle tickets 6598, ca1c and a8bb are read), then a 1.0.1 dry-run on the final SHA, a publish approved by the owner, a public page. 1.0.0 carried the old id nelim.ancientbuildingsrenew."
   - unverified: "(prepublished) 1.0.1 (packageId nelim.ancientbuildings): the owner judged the three Pickle regression tickets (6598, ca1c, a8bb) not indispensable and chose to go ahead (2026-10-08); they were left in the queue unread. Dry-run green: run 37836588161, SHA 1cd35ff94791f61330a0827d9694fb5f852943bd, version 1.0.1, no update_description or update_preview (the page keeps the 1.0.0 description and header), change note read, version above v1.0.0, DRY RUN: nothing was sent to Steam. Publish run 37836720872 approved by the owner: jobs publish and tag-and-release success, tag v1.0.1 on 1cd35ff and the GitHub release Ancient Buildings Renew 1.0.1 (Latest) created by the CI at 20:06 UTC. The three regression tickets (6598, ca1c, a8bb) stay deposited and run when the machine is free; the owner later asked for them to run. Page, visibility (private) and the new id on Steam are not verified by this session."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-10-08, 1.0.0 was published then the owner put the item back to private (the rollback decided 2026-10-02); packageId renamed to nelim.ancientbuildings, 1.0.1 to prepare
+updated:      2026-10-08, 1.0.1 (packageId nelim.ancientbuildings) published by the CI and the owner set the item public again (her word in chat)
 audit_revision: 9ad00f701e2f09690debf62764e9af425726deb2
-previous_stage: published
+previous_stage: tested
 ---
 
 # Ancient Buildings Renew — status
