@@ -205,4 +205,4 @@ Menus and windows are plain screen captures and are not staged.
 **First run (ticket 8cf7, 2026-10-06, five scenarios, all green; the series is now seven).** The Pickle Tools steps worked (zoom 6, Nelim
 placed and dressed, Shogun spawned). Reading the captures found: the "no power" status icon drawn on the stove, vending machine and
 air conditioner despite the presentation mode (Pickle Tools fixed it; ticket ba88 confirmed it gone); a grey stain near Nelim (cleaned by `all filth
-is cleaned`, added); the drawn light cone brown instead of yellow, so the cone texture was recoloured to a warm yellow (hue shifted by script) on 2026-10-08 and kept (it had briefly been dropped on 2026-10-07). Ticket ba88 also showed a thought bubble over Shogun (2) and Nelim touching the barrier (7).
+is cleaned`, added); the drawn light cone brown instead of yellow, so the cone texture was recoloured to a very pale yellow almost white by script on 2026-10-08 and kept (it had briefly been dropped on 2026-10-07). Ticket ba88 also showed a thought bubble over Shogun (2) and Nelim touching the barrier (7).

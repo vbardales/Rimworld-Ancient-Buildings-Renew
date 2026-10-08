@@ -41,7 +41,7 @@ First release of the port. Port of SyndicateGamingNetwork's **"Ancient" Building
   environments" in the lamppost's.
 - `packageId` changed from `ancientbld.core` to `nelim.ancientbuildingsrenew`.
 - `<supportedVersions>` set to 1.6.
-- `AB_Lamppost`: draws a soft cone of warm yellow light under its head, as one new texture, `AB_LamppostLit.png` (the original
+- `AB_Lamppost`: draws a soft cone of light, a very pale yellow almost white, under its head, as one new texture, `AB_LamppostLit.png` (the original
   sprite and a cone on a 3 x 4 cell canvas). The cone is part of the picture, so it shows day and night: the
   lamppost has no on/off state to hang it on. The original `AB_Lamppost.png` is kept, unchanged, as the menu icon.
   The light, its radius and its colour are unchanged.
