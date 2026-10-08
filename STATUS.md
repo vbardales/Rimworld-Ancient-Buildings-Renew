@@ -511,6 +511,7 @@ name, the description and the `packageId` are frozen when the Workshop item is c
 ## Translation audit
 
 - **French review, 2026-10-01:** reviewer Virginie (her statement in chat, recorded by the session), revision reviewed `beeb97a` (texts of `FRENCH_REVIEW.md`, 12 entries), corrections requested and applied: barrier, lamppost, fence and air conditioner description; the air conditioner label kept as "climatiseur antique" at her word. Validated as it stands. Pickle 07 replay of the final wording: ticket `bd0c`, pending.
+- **French review confirmed, 2026-10-08:** Virginie, in chat: "traduction validée". `Mod/Languages/French` unchanged since `adb5d0c` (the texts she reviewed on 2026-10-01 with her corrections); `translation_fr: complete` stands.
 
 Audited on 2026-09-13 against `../PUBLISHING.md` and `../TRANSLATIONS.md`.
 Content revision: `e389720674c46092553b0d86a382465f5fa5bd25`; the audit changes only
