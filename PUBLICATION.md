@@ -12,9 +12,11 @@ is `tested` (`STATUS.md`); the step to `prepublished` is what this file prepares
 
 Not restated from `AUDIT.md`; only what is specific to this mod.
 
-- The gallery is built but not approved: seven staged pictures (`15-gallery.feature`, ticket fd59, 7 of 7 green, every capture
-  opened) are in `Art/Gallery/` as `1-` to `7-` (JPEG, 3.9 MB with `0-preview.png`). The order and the choice are the owner's
-  (see "Gallery").
+- The gallery is built but not approved: seven staged pictures (`15-gallery.feature`, ticket eb8e, 7 of 7 green, every capture
+  opened) are in `Art/Gallery/` as `1-candidate-<name>.jpg` to `7-candidate-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in
+  the order proposed on 2026-10-08: the six together, the lamppost at night, the air conditioner, the vending machine and stove,
+  the road, the barrier and fence, the vending machine close. The owner accepts (the word "candidate" is dropped from the
+  name), reorders or refuses (the file is deleted); see "Gallery".
 - The owner's manual validations (table below) are hers.
 - A dry-run of the publish workflow is owed on the final commit: `Mod/` changed after the green dry-run of 2026-09-25
   (French wording, lamppost light, ModIcon), so that SHA is void. `.github/publish-tag.yml` exists.
