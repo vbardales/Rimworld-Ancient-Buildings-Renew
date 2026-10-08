@@ -7,7 +7,7 @@ All notable changes to this mod are documented here.
 On release: create the `v1.0.0` tag and the matching GitHub release. The Workshop item so far holds
 only the private `0.1.0` prepublication below, which created it.
 
-First release of the port. Port of SyndicateGamingNetwork's **"Ancient" Buildings** to RimWorld 1.6.
+First release of the port of SyndicateGamingNetwork's **"Ancient" Buildings** for RimWorld 1.6.
 
 ### Fixed
 

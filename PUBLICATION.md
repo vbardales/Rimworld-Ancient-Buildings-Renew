@@ -1,9 +1,9 @@
 # Publication
 
-What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
+This sheet records what the Workshop page needs but the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status: updated 2026-10-06.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
+**Status: updated 2026-10-08.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
 2026-09-23 and its `PublishedFileId.txt` is committed and pushed. No Git tag and no GitHub release exist, and none is
 made by hand: the CI creates them after a successful upload. Nothing below has been posted or pasted anywhere. The stage
 is `tested` (`STATUS.md`); the step to `prepublished` is what this file prepares.
@@ -166,7 +166,7 @@ Draft in the shape `WORKSHOP_COMMENTS.md` asks for (one true detail, one thanks,
 emoticons). To post only after item 3806708945 is public; Virginie rewrites it in her own voice.
 
 ```
-Your concrete fence, lamppost and vending machine are the worn, lived-in look I wanted in a colony, so they went to 1.6 as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url]: stats and textures untouched, credited to you, and your unused air-conditioner texture finally got a def :) If you'd rather it came down, say so and it does.
+Your concrete fence, lamppost and vending machine are the worn, lived-in look I wanted in a colony, so they went to 1.6 as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url]: your original textures are preserved and credited to you, and your unused air-conditioner texture finally got a def :) If you'd rather it came down, say so and it does.
 ```
 
 ## Gallery: story and shot list (rule of 2026-10-02, reworked 2026-10-06 for the Sanctuary)
