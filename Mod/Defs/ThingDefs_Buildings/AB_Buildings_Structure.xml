@@ -243,11 +243,11 @@
         The lamppost sprite with a soft cone of light drawn under its head, on a 3 x 4 cell canvas (64 px a
         cell). The lamp sits where it sat on the original 1 x 2 sprite, so it stays on its cell. The cone is
         part of the picture: it is drawn day and night, as the lamppost has no on/off state to hang it on.
-        The soft edge needs Transparent, not Cutout. The original AB_Lamppost.png is kept for the menu icon.
+        The soft edge needs a transparent shader, not Cutout; TransparentPostLight (drawn after the night overlay) keeps the cone yellow in the dark, where Transparent drew it brown. The original AB_Lamppost.png is kept for the menu icon.
       -->
       <texPath>Things/Building/ABSingle/AB_LamppostLit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>Transparent</shaderType>
+      <shaderType>TransparentPostLight</shaderType>
       <drawSize>(3,4)</drawSize>
       <drawRotated>false</drawRotated>
       <shadowData>

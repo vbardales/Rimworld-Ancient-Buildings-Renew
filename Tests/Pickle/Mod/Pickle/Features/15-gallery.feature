@@ -220,7 +220,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" hairstyle is "Mohawk"
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
-    And Nelim's Pickle Tools: "Ravi" stands at (202, 189) facing South
+    And Nelim's Pickle Tools: "Ravi" stands at (200, 190) facing South
     And I draft "Ravi"
     And I draft "Nelim"
     When I wait 60 ticks
