@@ -8,8 +8,8 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-stage:        published
-workflow_stage: published
+stage:        tested
+workflow_stage: prepublished
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
 upstream_mod_remotes: N/A
@@ -26,10 +26,11 @@ remaining:
   - defect: "the Steam page description of 0.1.0 has no pointer to ATTRIBUTION.md and the licence, and is frozen at creation. Mod/README.template.md carries the corrected text. The manual publish-tag.yml sends no description and the generated workflow skips a mod with no Source/*.csproj, so the workflow that sends it now exists (.github/publish-tag.yml, update_description) but has not run, so until it does the page stays as created."
   - unverified: "(published) dry-run of the publish workflow on the final content, green 2026-10-08: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, version 1.0.0, update_description and update_preview on. Log read: Publishing <sha> as version 1.0.0, change note with the lamppost cone and light colour, preview 653490 bytes sha256 54b60b2f0c81b0ce6f9ab619f86e3e107cc5de76779970e7a9db0b976917575f, description 5829 bytes sha256 d2f45d84eaaba10d10139622e404cbf7f238c6746fc551ad247b2310c2d98cfb, DRY RUN: nothing was sent to Steam. A publish must name this SHA exactly (an earlier run, 37828143337 on 8b72d62, had a change note without the lamppost line). The page is private: the diff against it cannot be read."
   - unverified: "(published) publish of 1.0.0, 2026-10-08: run 37831089676 (dispatched with dispatch-publish.sh on SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, options --preview --description, approved by the owner), jobs publish and tag-and-release both success; tag v1.0.0 on that SHA and GitHub release Ancient Buildings Renew 1.0.0 (Latest) created by the CI, 19:45 UTC. The owner then updated the Steam page and uploaded the gallery (Art/Gallery/0 to 7, by hand) and said "fait" in chat on 2026-10-08; this session cannot read the page itself. Rollback target: private visibility."
+  - unverified: "(prepublished) rollback, 2026-10-08: the owner set the Workshop item 3806708945 back to private visibility after the 1.0.0 publish (and after posting the thanks comment on 2566355159 while it was public), so the stage goes back from published. Tag v1.0.0 and its release stay (a tag is never reused). Next: the packageId is renamed to nelim.ancientbuildings (commit 818be66, not pushed until Pickle tickets 6598, ca1c and a8bb are read), then a 1.0.1 dry-run on the final SHA, a publish approved by the owner, a public page. 1.0.0 carried the old id nelim.ancientbuildingsrenew."
 session:      local_893d3a1c-6b23-490a-911f-243a435eb1a7
-updated:      2026-10-08, 1.0.0 published by the CI (run 37831089676, tag v1.0.0); owner reports the gallery uploaded and the page checked, and the item public
+updated:      2026-10-08, 1.0.0 was published then the owner put the item back to private (the rollback decided 2026-10-02); packageId renamed to nelim.ancientbuildings, 1.0.1 to prepare
 audit_revision: 9ad00f701e2f09690debf62764e9af425726deb2
-previous_stage: tested
+previous_stage: published
 ---
 
 # Ancient Buildings Renew — status
