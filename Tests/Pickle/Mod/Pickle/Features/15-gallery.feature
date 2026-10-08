@@ -49,6 +49,7 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (203, 188)
     And a "ConFence" is built at (204, 188)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (200, 185) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
     When I wait 60 ticks
@@ -80,6 +81,7 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (202, 188)
     And a "ConFence" is built at (203, 188)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (197, 187)
     When I wait 60 ticks
@@ -101,6 +103,7 @@ Feature: gallery: a day at the last stop of an old road
     And I spawn a "MealSimple" at (198, 189)
     And I spawn a "MealSimple" at (198, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
     And a colonist "Ravi" exists
@@ -131,6 +134,7 @@ Feature: gallery: a day at the last stop of an old road
     And I spawn a "MealSimple" at (199, 189)
     And I spawn a "MealSimple" at (199, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
     And a colonist "Ravi" exists
     And "Ravi" gender is male
@@ -162,6 +166,7 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (201, 189)
     And Ancient Buildings Renew: the "AB_AirConditioner" at (199, 189) is powered on
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
     And a colonist "Mei" exists
@@ -206,6 +211,7 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (201, 185)
     And I spawn a "MealSimple" at (203, 188)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
     And a colonist "Ravi" exists
@@ -249,6 +255,7 @@ Feature: gallery: a day at the last stop of an old road
     And I wait 120 ticks
     Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     When I wait 60 ticks
