@@ -30,7 +30,9 @@ research, no dependency:
 | `ConFence` | concrete fence | Structure |
 
 Their stats, costs, power draw, comps and graphics are SyndicateGamingNetwork's, unchanged. So
-are the eight textures the original ships, byte for byte. This port adds no texture to the buildings.
+are the eight textures the original ships, byte for byte. One texture is added by this port,
+`AB_LamppostLit.png`: the original lamppost sprite with a soft cone of light drawn under it (the cone was
+generated with DALL-E by the maintainer, then cleaned and composed by script, and shifted from orange to a warm yellow by script on 2026-10-08; its sources are in `Art/`).
 
 **The two Workshop images are not theirs.** `About/Preview.png` is a banner made for this port:
 the mod's own corner of road at dusk, with the fence, the barrier, the lamppost and the vending

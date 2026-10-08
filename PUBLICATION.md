@@ -39,7 +39,7 @@ against `Mod/README.template.md`, and the page after the publish. The converted 
 characters, under Steam's 8,000-byte limit.
 
 The template opens with the `UNOFFICIAL` paragraph, and ends with `IF I GO QUIET`, `AI-GENERATED` (Claude
-Code, Codex for the audits, DALL-E for the preview background and the icon), `THANKS`, the pointer to
+Code, Codex for the audits, DALL-E for the preview background, the icon and the lamppost light cone), `THANKS`, the pointer to
 `ATTRIBUTION.md` and the licence, and the `[url=...]Source code on GitHub[/url]` line, in the order
 `PUBLISHING.md` sets.
 
@@ -205,4 +205,4 @@ Menus and windows are plain screen captures and are not staged.
 **First run (ticket 8cf7, 2026-10-06, five scenarios, all green; the series is now seven).** The Pickle Tools steps worked (zoom 6, Nelim
 placed and dressed, Shogun spawned). Reading the captures found: the "no power" status icon drawn on the stove, vending machine and
 air conditioner despite the presentation mode (Pickle Tools fixed it; ticket ba88 confirmed it gone); a grey stain near Nelim (cleaned by `all filth
-is cleaned`, added); the drawn light cone brown instead of yellow, so the cone sprite was dropped on 2026-10-07 (the lamppost draws its original 1 x 2 sprite again; the light is the warm yellow glowColor (255,222,150) alone). Ticket ba88 also showed a thought bubble over Shogun (2) and Nelim touching the barrier (7).
+is cleaned`, added); the drawn light cone brown instead of yellow, so the cone texture was recoloured to a warm yellow (hue shifted by script) on 2026-10-08 and kept (it had briefly been dropped on 2026-10-07). Ticket ba88 also showed a thought bubble over Shogun (2) and Nelim touching the barrier (7).
