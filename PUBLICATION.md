@@ -17,8 +17,7 @@ Not restated from `AUDIT.md`; only what is specific to this mod.
   together, the lamppost at night, the air conditioner, the vending machine and stove, the road, the barrier and fence, the
   vending machine close. The upload by hand remains (see "Gallery").
 - The owner's manual validations (table below) are hers.
-- A dry-run of the publish workflow is owed on the final commit: `Mod/` changed after the green dry-run of 2026-09-25
-  (French wording, lamppost light, ModIcon), so that SHA is void. `.github/publish-tag.yml` exists.
+- The dry-run of the publish workflow is green on the final content: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, 2026-10-08 (see STATUS.md). Any later change of Mod/, of the 1.0.0 note or of the workflow voids it.
 - The page still carries the description `0.1.0` sent, which lacks the pointer to `ATTRIBUTION.md` and the licence
   (see "Description").
 - The rollback target is chosen (see "Fail fast").
