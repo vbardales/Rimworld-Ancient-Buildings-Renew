@@ -2,9 +2,9 @@
 
 All notable changes to this mod are documented here.
 
-## [1.0.1] — unreleased
+## [1.0.1] — 2026-10-08
 
-On release: the CI creates the `v1.0.1` tag and the matching GitHub release.
+Released by the CI (run 37836720872, tag `v1.0.1`, SHA 1cd35ff94791f61330a0827d9694fb5f852943bd).
 
 ### Changed
 
