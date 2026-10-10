@@ -95,8 +95,7 @@ and `PUBLISHING.md`; it is hers to change.
 | 6 | The description read once more, on the page after the publish | **Done by the owner, reported 2026-10-08** ("fait" in chat); not readable by this session |
 | 7 | Then, and only then, the visibility, the comments subscription and "Watch all activity" of the mod and of its parents (`PUBLISHING.md`) | **Done by the owner**: item public (reported 2026-10-08); thanks comment posted on 2566355159 |
 
-The save migration between the two mods is dropped (owner decision, 2026-10-11): compatibility with saves of the original is not guaranteed and not tested (`TESTING.md`); the description's
-sentence that a save moves between them is a consequence of keeping the `defName`s, not a tested result.
+Save migration from the original is dropped (owner decision, 2026-10-11): not guaranteed, not tested (`TESTING.md`). The description must not promise it. Sentence to put in `Mod/About/About.xml` (line 50) and `Mod/README.template.md` (line 38) with the next `Mod/` change (1.0.2), replacing "The original defNames are kept, so a save moves between the two mods without losing a building.":  ``` The original defNames are kept, but a save made with the original mod is not supported: switching an existing colony between the two mods is untested and may lose buildings. The two cannot run together: the original is declared incompatible above. Run one or the other. ```
 
 ## Mature content checkboxes
 
