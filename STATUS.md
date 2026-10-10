@@ -19,8 +19,8 @@ pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: 2611536c430caaf8816dff3d62619361156b9e51
+publication_changelog_review_sha: 8d24895fc4776d9e6ffcf79138824958d9fa82f7
 remaining:
-  - unverified: "publication_changelog_review_sha: Virginie's review of PUBLICATION.md and CHANGELOG.md for the 1.0 line is not recorded. Ask her; a session writes the field only on her confirmation in chat."
   - unverified: "echo_review_sha: no decision recorded on keeping Art/echo.png (AUDIT.md 10.a). The Preview was accepted by the owner and published; ask her to confirm keep, then record the commit."
   - unverified: "social_preview_sha256: the GitHub social preview upload of Mod/About/Preview.png (AUDIT.md 10.f) is not recorded; this session cannot read the repository setting. Upload by the owner or confirm, then record the sha256."
   - unverified: "Steam page, item visibility and the new packageId on Steam are not readable by this session; the owner reported them done on 2026-10-08."
@@ -71,6 +71,10 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 ## Gallery
 
 `Art/Gallery/0` to `7`, contiguous, `0-preview.png` byte-identical to `Mod/About/Preview.png` (653 490 bytes), uploaded by hand by the owner on 2026-10-08. Order: 0 preview, 1 the six buildings together at dusk, 2 the lamppost at night, 3 the air conditioner in a wall, 4 the vending machine and the stove, 5 the road comes in, 6 the barrier and the fence up close, 7 the vending machine up close. Mature content boxes: none.
+
+## Reviews
+
+- PUBLICATION.md and CHANGELOG.md (1.0 line): confirmed by Virginie in chat on 2026-10-10, commit `8d24895fc4776d9e6ffcf79138824958d9fa82f7` (`publication_changelog_review_sha`).
 
 ## History
 
