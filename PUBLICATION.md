@@ -163,6 +163,15 @@ emoticons). To post only after item 3806708945 is public; Virginie rewrites it i
 Your concrete fence, lamppost and vending machine are the worn, lived-in look I wanted in a colony, so they went to 1.6 as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url]: your original textures are preserved and credited to you, and your unused air-conditioner texture finally got a def :) If you'd rather it came down, say so and it does.
 ```
 
+### Use This Instead, 3396308787
+
+Posted by the owner on 2026-10-10 (rule of `USE_THIS_INSTEAD.md`), under her own account on
+https://steamcommunity.com/sharedfiles/filedetails/?id=3396308787 ; the row is `posted`.
+
+```
+Replacement request: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2566355159]"Ancient" Buildings[/url] (SyndicateGamingNetwork, ancientbld.core, 1.3) is replaced by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url] (Nelim, nelim.ancientbuildings, 1.6). Old Workshop ID 2566355159, new 3806708945. The original has not been updated since 2021; the port keeps the same five defNames and credits the original author. It is unofficial (no permission from the original author) and declared incompatible with the original. Thanks for the mod!
+```
+
 ## Gallery: story and shot list (rule of 2026-10-02, reworked 2026-10-06 for the Sanctuary)
 
 Draft by the session, to be ordered and approved by the owner. Nothing is final until she has opened the images. Scenarios:
