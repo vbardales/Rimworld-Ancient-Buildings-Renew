@@ -141,20 +141,23 @@ If you enabled 1.0.0, enable the mod again in your mod list under its new name. 
 
 ## Fail fast: the rollback target
 
-**Target for 1.0.0, chosen by the owner on 2026-10-02: back to private visibility.** The item is private until she flips it, and this is the first real release, so there is no earlier good version worth republishing (0.1.0 was never tested). If the regression pass comes back red, she sets the item back to private by hand on Steam; the CI never sends visibility. The fix then goes out as a new version, never a re-publication of 1.0.0. The general rule below applies from the second release on.
+**Rollback target now: tag `v1.0.1`, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, the last good published version** (regression green, `STATUS.md`). `v1.0.0` is the one before it, with the old `packageId`: do not roll back to it, it would disable the mod again for everyone who moved to the new id. Private visibility, the target chosen on 2026-10-02 for the first release, remains the fallback if no good SHA exists: the owner sets it by hand on Steam, and she used it once on 2026-10-08 to rename the `packageId`.
 
 A rollback is a **new publication**, not an unpublication: the workflow is dispatched with `ref` = the full
 SHA of the last good commit and the next patch number, and the change note reads "Rolls back to <what>,
 because <what failed>". The version numbers only go up and a tag that exists is refused. The CI never sends
 visibility: making the item private again is a manual act of the owner on Steam.
 
-`AUDIT.md`, `prepublished -> published`: before the `publish`, every scenario that failed has a green replay,
-the gallery is done and the owner's manual validations are made. The regression pass may follow.
+Before any later `publish` (`AUDIT.md`, `prepareRelease -> publish`): every scenario that failed has a green replay on a build
+that holds its fix, and the owner's validations are made. The regression of the whole suite runs after the commit, in small
+tickets, and its verdict goes to `STATUS.md` and `docs/runs/`. A red regression is a defect of the published version: roll back to
+the target above, then fix apart.
 
 - Scenarios that failed and were replayed green (2026-09-24 to 28): the identifier scenario in English and French, the incompatibility
   scenario, the wall cooling (eight fix tickets), the lamppost cone and the French wording. Nothing red is open in the suite; the
   gallery scenarios are captures, not assertions.
-- **The rollback target** is back to private visibility (above). Tag `v1.0.0` becomes the next target once it exists.
+- The regression of 1.0.1 is green (tickets 6598, ca1c, a8bb, `docs/runs/2026-10-10.txt`).
+- Each new good version moves the target: tag it, then write its tag and SHA here.
 
 ## Comments on other mods' pages
 
