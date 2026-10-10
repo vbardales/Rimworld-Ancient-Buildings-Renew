@@ -110,33 +110,15 @@ The workflow sends the block below as written (BBCode), read from this file at t
 version stands alone on the first line**, as `PUBLISHING.md` asks: Steam shows no version for a note that
 does not say it.
 
-### 1.0.0
+### Current version: 1.0.1 (sent)
+
+Sent by CI run 37836720872 on 2026-10-08; the texts of the 1.0.0 and 1.0.1 notes are in `docs/runs/2026-10-10.txt`. For the next version, write its note here
+before the dispatch, with the version alone on the first line, in the form below.
 
 ```
-[b]1.0.0[/b]
+[b]x.y.z[/b]
 
-First release. Port of SyndicateGamingNetwork's "Ancient" Buildings to RimWorld 1.6.
-
-[list]
-[*]The concrete fence can be dragged out in a line again. RimWorld 1.4 removed the field it relied on, and nothing in the log said so. The concrete barrier drags too.
-[*]The vending machine can be linked to others and its filter set on the blueprint.
-[*]The stove offers the two baby-food recipes when Biotech is on.
-[*]New: the ancient air conditioner, a wall cooler for the texture the original shipped and never used. It needs the air conditioning research.
-[*]The lamppost draws a soft, pale cone of light under its head, and its light is a warm yellow instead of the original near-white. The radius is unchanged.
-[*]English and French.
-[/list]
-
-Nothing else was rebalanced. It cannot run beside the original mod.
-```
-
-### 1.0.1
-
-```
-[b]1.0.1[/b]
-
-The mod now identifies itself as nelim.ancientbuildings (it was nelim.ancientbuildingsrenew in 1.0.0). Nothing else changes: same buildings, same textures, same item.
-
-If you enabled 1.0.0, enable the mod again in your mod list under its new name. A save made with 1.0.0 will report the old id as missing until you do, then loads normally.
+What changed for a player, one line each in a [list].
 ```
 
 ## Fail fast: the rollback target

@@ -7,3 +7,33 @@
 2026-09-28 done -> tested closed: 28 scenarios green, every @review capture opened, texts read by the owner in EN and FR, no manual test left (pointer press-and-drag not applicable).
 2026-10-01 audit: tested retained; no .dds tracked (the eight on-disk .dds are gone since, checked 2026-10-10); evidence cut from 39 MB to 2.8 MB; original repository searched, none; ModIcon.png resized to 128 x 128 / 30 319 bytes at the owner's word; French review by Virginie on revision beeb97a.
 2026-10-08 publication: dry-run 37828371973 green on 87242bd; publish run 37831089676 of 1.0.0 (tag v1.0.0, GitHub release by the CI); owner updated the Steam page and uploaded the gallery 0 to 7; thanks comment posted on 2566355159; item set back to private (rollback), packageId renamed to nelim.ancientbuildings (818be66); 1.0.1 dry-run 37836588161 green on 1cd35ff; publish run 37836720872 (tag v1.0.1); item public again at the owner's word.
+2026-10-10 Steam change notes already sent (moved out of PUBLICATION.md, AUDIT.md 14.c); 1.0.0 sent by CI run 37831089676 and 1.0.1 by run 37836720872, texts as posted:
+### 1.0.0
+
+```
+[b]1.0.0[/b]
+
+First release. Port of SyndicateGamingNetwork's "Ancient" Buildings to RimWorld 1.6.
+
+[list]
+[*]The concrete fence can be dragged out in a line again. RimWorld 1.4 removed the field it relied on, and nothing in the log said so. The concrete barrier drags too.
+[*]The vending machine can be linked to others and its filter set on the blueprint.
+[*]The stove offers the two baby-food recipes when Biotech is on.
+[*]New: the ancient air conditioner, a wall cooler for the texture the original shipped and never used. It needs the air conditioning research.
+[*]The lamppost draws a soft, pale cone of light under its head, and its light is a warm yellow instead of the original near-white. The radius is unchanged.
+[*]English and French.
+[/list]
+
+Nothing else was rebalanced. It cannot run beside the original mod.
+```
+
+### 1.0.1
+
+```
+[b]1.0.1[/b]
+
+The mod now identifies itself as nelim.ancientbuildings (it was nelim.ancientbuildingsrenew in 1.0.0). Nothing else changes: same buildings, same textures, same item.
+
+If you enabled 1.0.0, enable the mod again in your mod list under its new name. A save made with 1.0.0 will report the old id as missing until you do, then loads normally.
+```
+

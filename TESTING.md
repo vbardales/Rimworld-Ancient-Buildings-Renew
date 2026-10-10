@@ -1,7 +1,7 @@
 # Test scenarios
 
-In-game validation is pending and will be completed before publication. Everything below is
-what that run has to settle. Record the game version, DLCs, date and results here after testing.
+In-game validation is done and the mod is published (1.0.0, 1.0.1). Everything below is what a run has to settle for a
+new version; the Pickle suite plays it. What ran on the current revision: `docs/runs/2026-10-10.txt`.
 
 **Why this file is short, and why it still matters.** Six `ThingDef`s, no C#, no patch operations
 and no dependencies: there is no modlist interaction to enumerate, so one run covers the lot. But
@@ -241,10 +241,9 @@ whether a translation reads well. Those are the owner's to say and are recorded 
 **Not tested at all:** what RimWorld does with the declaration itself, such as its warning for a
 missing dependency or its load order. `../AUDIT.md`: the game is not what is under test.
 
-## Passing to `tested`
+## The passes and the conditional scenarios
 
-`tested` is claimed only when every line below is true. None is yet: the mod has never been loaded
-by RimWorld, and `tested_on` in `STATUS.md` stays empty until then.
+All played green on 1.0.0 and replayed green on 1.0.1 (`docs/runs/2026-10-10.txt`).
 
 **The passes, and what each covers.** A vert on one says nothing about the others. The commands, the
 filters and the number of scenarios each should play are in
@@ -260,7 +259,7 @@ filters and the number of scenarios each should play are in
 | Original mod replaced | Core, the original `ancientbld.core` first, then swapped for this mod, on a copy of a save | **opportunistic, not a gate**: the existing-save migration protocol above, only if a suitable save turns up |
 | With optional mods | not applicable | the mod declares no `loadAfter` and needs nothing, so there is no optional set to stage |
 
-**The three checks for `done -> tested`**, from `../AUDIT.md`:
+**Conditions for a new version** (`../AUDIT.md`, `playTests`):
 
 1. **No scenario parked in `@wip`.** The suite has seven `.feature` files and none carries the tag:
    `grep -rn "@wip" Tests/Pickle/Mod/Pickle/Features` finds nothing, checked 2026-09-24. Search that
@@ -288,7 +287,7 @@ stays on disk and is ignored by git; what is versioned is the day's summary in `
 
 ## Settled without the game
 
-Rerun on 2026-09-12: all six checkers passed. Run again after changes to the defs or
+Rerun on 2026-10-10 on revision `2611536`: all six checkers passed. Run again after changes to the defs or
 translations. From this repository's root, with PowerShell 7 and RimWorld 1.6 installed:
 
 ```powershell
@@ -320,10 +319,8 @@ consult their parameters for a different installation location.
   exactly one step each in the installed Pickle build and compiles the suite's two local patterns, and
   the step project builds. A deliberately undefined line was reported, so the check bites. Static: it
   proves the text of a step exists, not that a scenario passes.
-
-The two Workshop images were checked the same day and are not part of the run either: the banner
-read at 268 px with its title, its lamp pool and three separated concrete volumes, the icon read
-at 32 px, and both are inside the weight limits at 612 KB and 22 KB.
+The two Workshop images were checked 2026-10-10 and are not part of the run: the Preview and the icon were opened and read (the icon at 128 px),
+and both are inside the weight limits (Preview 661 234 bytes, icon 33 635 bytes).
 
 ## Known and accepted
 
