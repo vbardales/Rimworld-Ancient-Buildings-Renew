@@ -18,7 +18,7 @@ tested_on:    "2026-10-08/09 regression on the 1.0.1 tree: tickets 6598 (minimal
 pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-09-24 to 28); 1.0.1 regression green (docs/runs/2026-10-10.txt)"
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
-code_review_sha: 2611536c430caaf8816dff3d62619361156b9e51
+code_review_sha: 0cec113797653634443e640271f5bec67daaca30
 social_preview_sha256: 4541665a56f923f84243b1784cc0667ded519a795b265004eb5b5c03a15a90c3
 publication_changelog_review_sha: 8d24895fc4776d9e6ffcf79138824958d9fa82f7
 remaining:
@@ -45,7 +45,7 @@ protocols_read_sha: 16007896331ea3763fbec4af416b1d7890281028
 | Settings | `not_applicable`: no assembly, no `ModSettings`, no `MainButtonDef`, so no empty page and no shortcut. |
 | Translations | EN from the Defs, FR in `Mod/Languages/French` (12 of 12), reviewed by Virginie 2026-10-01, confirmed 2026-10-08. See `Translation audit` below. |
 | Pickle | 28 scenarios in 14 features, all green once; 1.0.1 regression green (below). |
-| Code review | `code_review_sha` = `2611536`. Since the previous review (`1159c8a`, 2026-10-08) the only change in `Mod/` is the `packageId` line of `Mod/About/About.xml` (commit `818be66`); the Pickle features and `About.xml` of the test mod moved to the new id in the same commit. No other use of the old id remains outside the CHANGELOG, the PUBLICATION change note and history. |
+| Code review | `code_review_sha` = `0cec113` (re-set 2026-10-10 after the icon change: the only `Mod/` files changed since `2611536` are the regenerated `ModIcon.png` and `Preview.png`, both opened and read, no code). Since the previous review (`1159c8a`, 2026-10-08) the only change in `Mod/` is the `packageId` line of `Mod/About/About.xml` (commit `818be66`); the Pickle features and `About.xml` of the test mod moved to the new id in the same commit. No other use of the old id remains outside the CHANGELOG, the PUBLICATION change note and history. |
 | Docs | `CHANGELOG.md` `[1.0.1]` dated 2026-10-08 (it still said `unreleased`). Description in `Mod/About/About.xml` opens with UNOFFICIAL, ends with `Source code on GitHub`, no em dash. `PUBLICATION.md` has the 1.0.0 and 1.0.1 change notes. |
 | Licence | `silent`, evidence in `Audit/2026-09-13-rights/`. Original repository: none found (2026-10-01; GitLab and Codeberg not searched). |
 
