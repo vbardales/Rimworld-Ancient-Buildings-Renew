@@ -28,7 +28,7 @@ remaining:
   - unverified: "ModIcon.png 32 px readability: the owner decides if it passes (render opened 2026-10-01). Art/ModIcon-signature-candidate.png is an untracked candidate, not this session's."
 updated:      2026-10-10, full audit, retained workflow_stage followUp[1.0.1], STATUS.md cleaned (dated sections folded into docs/runs/)
 session:      local_810f6b45-91d6-4f3f-b930-e68dc60d9da4
-protocols_read_sha: 0a26b474351c17123636905372a620598b216884
+protocols_read_sha: 9693ecf66ecb8af3d4f38213b4149e759f84333e
 ---
 
 # Ancient Buildings Renew: status
