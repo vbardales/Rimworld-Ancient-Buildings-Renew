@@ -19,10 +19,10 @@ pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: 2611536c430caaf8816dff3d62619361156b9e51
+social_preview_sha256: 54b60b2f0c81b0ce6f9ab619f86e3e107cc5de76779970e7a9db0b976917575f
 publication_changelog_review_sha: 8d24895fc4776d9e6ffcf79138824958d9fa82f7
 remaining:
   - unverified: "echo_review_sha: no decision recorded on keeping Art/echo.png (AUDIT.md 10.a). The Preview was accepted by the owner and published; ask her to confirm keep, then record the commit."
-  - unverified: "social_preview_sha256: the GitHub social preview upload of Mod/About/Preview.png (AUDIT.md 10.f) is not recorded; this session cannot read the repository setting. Upload by the owner or confirm, then record the sha256."
   - unverified: "Steam page, item visibility and the new packageId on Steam are not readable by this session; the owner reported them done on 2026-10-08."
   - unverified: "existing-save migration: opportunistic, not a gate (decision of 2026-09-24). Run the TESTING.md protocol only if a save with the original mod's buildings turns up."
   - unverified: "ModIcon.png 32 px readability: the owner decides if it passes (render opened 2026-10-01). Art/ModIcon-signature-candidate.png is an untracked candidate, not this session's."
@@ -75,6 +75,8 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 ## Reviews
 
 - PUBLICATION.md and CHANGELOG.md (1.0 line): confirmed by Virginie in chat on 2026-10-10, commit `8d24895fc4776d9e6ffcf79138824958d9fa82f7` (`publication_changelog_review_sha`).
+
+- GitHub social preview: upload confirmed by Virginie in chat on 2026-10-10; the repository page `og:image` (repository-images.githubusercontent.com/1365538522/70896796-...) downloaded by the session is byte-identical to `Mod/About/Preview.png`, sha256 `54b60b2f0c81b0ce6f9ab619f86e3e107cc5de76779970e7a9db0b976917575f` (`social_preview_sha256`).
 
 ## History
 
