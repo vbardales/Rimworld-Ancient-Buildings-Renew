@@ -95,7 +95,7 @@ and `PUBLISHING.md`; it is hers to change.
 | 6 | The description read once more, on the page after the publish | **Done by the owner, reported 2026-10-08** ("fait" in chat); not readable by this session |
 | 7 | Then, and only then, the visibility, the comments subscription and "Watch all activity" of the mod and of its parents (`PUBLISHING.md`) | **Done by the owner**: item public (reported 2026-10-08); thanks comment posted on 2566355159 |
 
-The save migration between the two mods is opportunistic and not a gate (`TESTING.md`); the description's
+The save migration between the two mods is dropped (owner decision, 2026-10-11): compatibility with saves of the original is not guaranteed and not tested (`TESTING.md`); the description's
 sentence that a save moves between them is a consequence of keeping the `defName`s, not a tested result.
 
 ## Mature content checkboxes

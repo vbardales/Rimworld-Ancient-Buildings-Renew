@@ -36,7 +36,7 @@ colony. The stove's last two bills require Biotech.
 
 ## Existing-save migration from the original mod
 
-Status: **opportunistic, and not a gate** (decision of 2026-09-24). No migration run is planned, and
+Status: **dropped** (owner decision of 2026-10-11, superseding the 2026-09-24 "opportunistic" status): backward compatibility with saves made with the original mod is not guaranteed and not tested. `tested` does not wait for a run. The protocol below stays for reference only. Former status: opportunistic, and not a gate (decision of 2026-09-24). No migration run is planned, and
 `tested` does not wait for one. If a save that contains the original mod's buildings turns up, the
 protocol below is what to run on a disposable copy, and its result is recorded in `docs/runs/`. For
 the `tested` gate the scenario is **not applicable**, for that reason. Until it has run, the
@@ -206,7 +206,7 @@ section had them; it is replaced.
 | fence joins to wall and rock | vanilla link logic of the atlas texture; a drawing | pending: capture `@review`, or not applicable |
 | the French reads naturally | a judgement | validated by the owner on 2026-09-28 (her statement), after her edits; scenario `07` asserts the final texts |
 | the light of the lamppost reads as lit | looks: a wide soft glow, no cone (the owner asked for it and chose on 2026-09-26 to keep the light points as they are) | **decided: no change** |
-| existing-save migration | opportunistic, not a gate | not applicable, as above |
+| existing-save migration | dropped (2026-10-11) | not applicable, as above |
 
 **How a capture is used.** A scenario tagged `@review` writes a screenshot. The session opens it at full
 size, writes what it shows **and what it does not show** in the day's line of `docs/runs/`, then keeps the
