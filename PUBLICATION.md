@@ -3,24 +3,24 @@
 This sheet records what the Workshop page needs but the rest of the repository does not hold. It serves twice: for the
 first release, and for whoever takes the mod over.
 
-**Status: updated 2026-10-08.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
-2026-09-23 and its `PublishedFileId.txt` is committed and pushed. No Git tag and no GitHub release exist, and none is
-made by hand: the CI creates them after a successful upload. Nothing below has been posted or pasted anywhere. The stage
-is `tested` (`STATUS.md`); the step to `prepublished` is what this file prepares.
+**Status: updated 2026-10-10.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
+2026-09-23. `1.0.0` (CI run 37831089676, tag `v1.0.0`) and `1.0.1` (CI run 37836720872, SHA
+`1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI, which created the tags and the GitHub
+releases. The state is `followUp[1.0.1]` (`STATUS.md`). What this session cannot read on Steam (page, visibility, the new
+`packageId`) is recorded as reported by the owner in `STATUS.md`, `remaining`.
 
-## What blocks the publication
+## Publication history
 
-Not restated from `AUDIT.md`; only what is specific to this mod.
-
-- The gallery is approved (owner, 2026-10-08): seven staged pictures (`15-gallery.feature`, ticket da09, 7 of 7 green, every
-  capture opened) are in `Art/Gallery/` as `1-<name>.jpg` to `7-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in order: the six
+- **Gallery** approved by the owner on 2026-10-08: seven staged pictures (`15-gallery.feature`, ticket da09, 7 of 7 green, every
+  capture opened) in `Art/Gallery/` as `1-<name>.jpg` to `7-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in order: the six
   together, the lamppost at night, the air conditioner, the vending machine and stove, the road, the barrier and fence, the
-  vending machine close. The upload by hand remains (see "Gallery").
-- The owner's manual validations (table below) are hers.
-- The dry-run of the publish workflow is green on the final content: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, 2026-10-08 (see STATUS.md). Any later change of Mod/, of the 1.0.0 note or of the workflow voids it.
-- The page still carries the description `0.1.0` sent, which lacks the pointer to `ATTRIBUTION.md` and the licence
-  (see "Description").
-- The rollback target is chosen (see "Fail fast").
+  vending machine close. Uploaded by hand by the owner on 2026-10-08.
+- **Dry-run** of `1.0.0` green on the final content: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, 2026-10-08.
+  Publish run 37831089676 sent it, with `--preview` and `--description`.
+- **Rollback used once**: the owner set the item back to private on 2026-10-08 to rename the `packageId`; `1.0.1` (dry-run
+  37836588161 green, publish 37836720872) then went out and the item is public again at her word.
+- **Regression of 1.0.1** green (`STATUS.md`, `docs/runs/2026-10-10.txt`).
+- The rollback target is in "Fail fast".
 
 ## Description
 
@@ -29,12 +29,11 @@ BBCode when it is dispatched with `update_description=true` (`.github/publish.co
 `Mod/.steamignore` keeps that file, `README.md` and the `.dds` files out of what players receive. So there is
 no second copy to keep in step with a BBCode block in this file.
 
-`SetItemDescription` runs only at creation, so **the live page is still the text of `0.1.0`**, the
-`About.xml` description of that commit. `update_description=true` replaces it, and it is the only way the
-page is corrected without a hand edit. The private item cannot be read by the dry-run, so it prints the
-converted text with its size and SHA-256 and shows **no diff against the page**: read the printed text once
-against `Mod/README.template.md`, and the page after the publish. The converted text is about 5,550
-characters, under Steam's 8,000-byte limit.
+`SetItemDescription` runs only at creation, so the page held the text of `0.1.0` until the `1.0.0` publish, which
+ran with `update_description=true` and replaced it (5,829 bytes, SHA-256 `d2f45d84...`, under Steam's 8,000-byte
+limit). That flag is the only way the page is corrected without a hand edit. The dry-run cannot read a private
+page, so it showed no diff; the owner reported the page updated on 2026-10-08, and this session cannot read it.
+`1.0.1` sent no description.
 
 The template opens with the `UNOFFICIAL` paragraph, and ends with `IF I GO QUIET`, `AI-GENERATED` (Claude
 Code, Codex for the audits, DALL-E for the preview background, the icon and the lamppost light cone), `THANKS`, the pointer to
@@ -54,8 +53,8 @@ Code, Codex for the audits, DALL-E for the preview background, the icon and the 
 
 ## Screenshots, in this order
 
-The gallery folder is `Art/Gallery/` (it was `Art/Workshop/`, with `01-`...). It holds only the images to upload, numbered on one
-digit from `0-` (`PUBLISHING.md`, Images), nothing else, and it is the workflow's `--gallery-dir`:
+The gallery folder is `Art/Gallery/` (it was `Art/Workshop/`, with `01-`...). It holds only the images to upload, numbered in
+upload order from `0-` (`PUBLISHING.md`, Images), nothing else, and it is the workflow's `--gallery-dir`:
 
 - `0-preview.png`: a **byte-identical copy of `Mod/About/Preview.png`** (the Preview as it is now, with the ModIcon corner; the
   former "copy without the mascot" is dropped). Regenerated with the Preview.
@@ -91,10 +90,10 @@ and `PUBLISHING.md`; it is hers to change.
 | 1 | The fence and the barrier drag out as a line in one gesture (`F1`, `B1`) | **Not applicable, accepted by the owner on 2026-09-28**: the engine has no press-drag-release primitive. The draw style and the cells a drag would lay are asserted by Pickle 08 |
 | 2 | The lamppost stays lit all night, the vending machine keeps a meal sound over days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
 | 3 | The French reads naturally | **Done**: the owner reviewed `FRENCH_REVIEW.md` on 2026-10-01 (`translation_fr: complete`) |
-| 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | The installed copy is what players get; the suite plays the working tree |
-| 5 | The gallery: which captures, in which order, on which colony | A composition is a choice |
-| 6 | The description read once more, on the page after the publish | The dry-run cannot read a private page |
-| 7 | Then, and only then, the visibility, the comments subscription and "Watch all activity" of the mod and of its parents (`PUBLISHING.md`) | Steam, by hand, by the owner |
+| 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | **Done by the owner, reported 2026-10-08** (not readable by this session; `STATUS.md`, `remaining`). The installed copy is what players get; the suite plays the working tree |
+| 5 | The gallery: which captures, in which order, on which colony | **Done**: approved by the owner 2026-10-08, uploaded by hand `0` to `7` |
+| 6 | The description read once more, on the page after the publish | **Done by the owner, reported 2026-10-08** ("fait" in chat); not readable by this session |
+| 7 | Then, and only then, the visibility, the comments subscription and "Watch all activity" of the mod and of its parents (`PUBLISHING.md`) | **Done by the owner**: item public (reported 2026-10-08); thanks comment posted on 2566355159 |
 
 The save migration between the two mods is opportunistic and not a gate (`TESTING.md`); the description's
 sentence that a save moves between them is a consequence of keeping the `defName`s, not a tested result.
