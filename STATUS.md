@@ -14,7 +14,7 @@ licence_at:   Audit/2026-09-13-rights/README.md
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
-tested_on:    "2026-10-08/09 regression on the 1.0.1 tree: tickets 6598 (minimal-en-1), ca1c (sans-biotech-1), a8bb (incompat-original); see docs/runs/2026-10-10.txt"
+tested_on:    "2026-10-11 regression on 6f2b69a: tickets 8c0c (minimal-en-2), c967 (minimal-fr-2), ec53 (sans-biotech-2), f818 (incompat-original-2), all green; see docs/runs/2026-10-11.txt (earlier: 2026-10-08/09 on the 1.0.1 tree, docs/runs/2026-10-10.txt)"
 pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-09-24 to 28); 1.0.1 regression green (docs/runs/2026-10-10.txt)"
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
