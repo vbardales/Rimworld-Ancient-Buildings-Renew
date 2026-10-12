@@ -19,12 +19,10 @@
   "backgroundPosition": "center",
   "backgroundSize": "cover",
   "echo": {
-    "file": "echo.png",
+    "file": "echo-source.png",
     "mode": "alpha",
     "preSized": true,
     "color": "var(--accent)",
-    "width": 300,
-    "height": 260,
     "opacity": 1,
     "veil": false,
     "panelTop": 8,
