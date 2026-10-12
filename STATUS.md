@@ -18,9 +18,9 @@ tested_on:    "2026-10-11 regression on 6f2b69a: tickets 8c0c (minimal-en-2), c9
 pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-09-24 to 28); 1.0.1 regression green (docs/runs/2026-10-10.txt)"
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
-code_review_sha: 0cec113797653634443e640271f5bec67daaca30
+code_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
 social_preview_sha256: b20d39823957f6bcaf818d6f2ff15b25994466381371265078210465a55360b3
-echo_review_sha: 6a3d71d8f3f228c2789c3faef4e151fe10320074
+echo_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
 publication_changelog_review_sha: 8d24895fc4776d9e6ffcf79138824958d9fa82f7
 remaining:
 - unverified: "Preview regenerated 2026-10-12 with Art/echo-source.png as the echo (commit 0e5b766): Mod/About/Preview.png 653 067 bytes, sha256 b20d39823957f6bcaf818d6f2ff15b25994466381371265078210465a55360b3, Art/Gallery/0-preview.png byte copy, Preview.ico regenerated. GitHub social preview uploaded by this session and verified 2026-10-12 (og:image byte-identical, social_preview_sha256 updated). STILL OWED, owner by hand: (1) Workshop header image goes with the next Mod/ publish with --preview (no 1.0.2 planned, so it waits for the next functional version); (2) gallery slot 0 on the Steam page: replace with Art/Gallery/0-preview.png. Known: the echo line art overlaps the subtitle 'Renew (unofficial)', accepted by the owner 2026-10-12."
@@ -82,6 +82,7 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 - GitHub social preview (first upload 2026-10-10 with the previous Preview, 54b60b2f..., replaced the same day by the regenerated Preview, see remaining): upload confirmed by Virginie in chat on 2026-10-10; the repository page `og:image` (repository-images.githubusercontent.com/1365538522/70896796-...) downloaded by the session is byte-identical to `Mod/About/Preview.png`, sha256 `54b60b2f0c81b0ce6f9ab619f86e3e107cc5de76779970e7a9db0b976917575f` (`social_preview_sha256`).
 
 - Echo (AUDIT.md 10.a): decision keep `Art/echo.png`, by Virginie in chat on 2026-10-10, with the regenerated Preview and the eight gallery images in hand (the line-art vending machine and lamppost match the gallery subjects). Commit `6a3d71d8f3f228c2789c3faef4e151fe10320074` (`echo_review_sha`).
+- Echo, 2026-10-12: Preview regenerated with Art/echo-source.png (the line art derived from the gallery images, STYLE_RIMWORLD.md), accepted by Virginie in chat on 2026-10-12 after seeing the render, overlap with the subtitle included (her word: "c'est ok"). Code review re-set the same day: the only Mod/ file changed since 0cec113 is Mod/About/Preview.png, an image, no code. Both SHAs = the commit this change sits on (`echo_review_sha`, `code_review_sha`).
 
 - WSL cleanup (AUDIT.md 14.c), 2026-10-10: under the machine lock (Use-Wsl.ps1, exit 0) removed `~/workshop-cache/steamapps/workshop/content/294100/2566355159` (ancientbld.core, 732K), named only by this mod's `wsl-deps.incompat-original.map`. Kept: the other 23 items of the cache (Sanctuary and Facial Animation set, named by 38 other maps). Verified gone.
 
