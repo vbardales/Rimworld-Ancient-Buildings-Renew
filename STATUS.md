@@ -87,6 +87,18 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 
 - WSL cleanup (AUDIT.md 14.c), 2026-10-10: under the machine lock (Use-Wsl.ps1, exit 0) removed `~/workshop-cache/steamapps/workshop/content/294100/2566355159` (ancientbld.core, 732K), named only by this mod's `wsl-deps.incompat-original.map`. Kept: the other 23 items of the cache (Sanctuary and Facial Animation set, named by 38 other maps). Verified gone.
 
+## 1.1.0 chain confirmation (2026-10-13)
+
+The 1.1.0 line reopens the chain at `code[1.1.0]` (AUDIT.md 15). The version changes only `supportedVersions` (`<li>1.7</li>`, after a green 1.7 run), so each state below is confirmed, not redone. Checks rerun 2026-10-13 on `Mod/` at `f926e8b` (`Mod/` unchanged since `0e5b766`, an image): all clean, no code touched.
+
+- `code`: no C# source, no assembly; nothing built. `Check-XmlFields` (3 files, no unknown field), `Check-DefRefs` (6 defs, no missing reference), `Check-XmlClasses` (19 types resolved), `Check-TypeRefs` (no third-party type), `Check-ConfigErrors` (6 of 6, 26 rules, no config error). `CHANGELOG.md` gets its `[Unreleased]` section when 1.7 turns green.
+- `declareDependencies`: unchanged (none; `incompatibleWith ancientbld.core`; `MayRequire` Biotech on two recipes). Not rechecked on 1.7 yet: it is what the 1.7 run decides.
+- `settings`: `not_applicable` stands (no assembly, no `ModSettings`, no `MainButtonDef`).
+- `localize`: `Check-Translations` PASS (12 source texts, French injections) and `Check-DefInjected` 12 keys, 0 errors. `translation_fr: complete` stands (Virginie 2026-10-01 and 2026-10-08); no text changed.
+- `writeTests`: `Check-Steps` 15 feature files, 36 scenario blocks, 29 patterns compile, every step line resolves. The suite and its 1.7 maps (`Tests/Pickle/wsl-deps.minimal-17.map`, `wsl-deps.sans-biotech-17.map`) are written; `15-gallery` is not part of the 1.7 pass.
+- Open, not a defect: `Check-ModBasics` flags `ATTRIBUTION.md` and `LICENSE` as different between root and `Mod/` (same content in git, line endings differ in the working tree after the 2026-10-13 restore); not rechecked on a clean checkout.
+- `playTests[1.1.0]` is the 1.7 diagnostic: `f7fa` inconclusive (mod steps not built net10.0), `5079` (EN) 21 of 24 passed, 3 failures on the test side (5 s step timeouts, the suite mod's own "did not load any content" error); `a787` (FR) and `9ec4` (no Biotech) queued. See `docs/runs/2026-10-13.txt`.
+
 ## History
 
 The dated sections of this file (audits of 2026-09-13, 09-24 and 10-01, the Pickle suite notes, the publication and rollback notes of 2026-10-08) are folded into `docs/runs/2026-10-10.txt`; the old text is in git (`git log -p STATUS.md`).
