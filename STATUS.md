@@ -31,7 +31,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_810f6b45-91d6-4f3f-b930-e68dc60d9da4
-protocols_read_sha: 62af5f82742c841b95ec95288e9ac77833517ac0
+protocols_read_sha: b1a713a1f6ec6d967734d6a92488778787bb40d5
 ---
 
 # Ancient Buildings Renew: status
