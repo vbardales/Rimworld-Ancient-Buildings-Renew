@@ -32,7 +32,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_810f6b45-91d6-4f3f-b930-e68dc60d9da4
-protocols_read_sha: b1a713a1f6ec6d967734d6a92488778787bb40d5
+protocols_read_sha: 65e09838c8023b798d4ba0ff04df04284a96f11e
 ---
 
 # Ancient Buildings Renew: status
@@ -98,6 +98,8 @@ The 1.1.0 line reopens the chain at `code[1.1.0]` (AUDIT.md 15). The version cha
 - `writeTests`: `Check-Steps` 15 feature files, 36 scenario blocks, 29 patterns compile, every step line resolves. The suite and its 1.7 maps (`Tests/Pickle/wsl-deps.minimal-17.map`, `wsl-deps.sans-biotech-17.map`) are written; `15-gallery` is not part of the 1.7 pass.
 - Open, not a defect: `Check-ModBasics` flags `ATTRIBUTION.md` and `LICENSE` as different between root and `Mod/` (same content in git, line endings differ in the working tree after the 2026-10-13 restore); not rechecked on a clean checkout.
 - `playTests[1.1.0]` is the 1.7 diagnostic: `f7fa` inconclusive (mod steps not built net10.0), `5079` (EN) 21 of 24 passed, 3 failures on the test side (5 s step timeouts, the suite mod's own "did not load any content" error); `a787` (FR) and `9ec4` (no Biotech) queued. See `docs/runs/2026-10-13.txt`.
+- Rules read 2026-10-13 that touch the 1.1.0 commit (AGENTS.md, AUDIT.md, STYLE_RIMWORLD.md): (a) adding `<li>1.7</li>` makes the Preview badge stale: the Preview chain (`Render-Preview.cjs` reads the highest declared version, then the `0-` gallery copy, `Preview.ico`, and the GitHub social preview upload with a new `social_preview_sha256`) is redone in the same commit as the version change; `--version=1.7` may prepare it earlier but is never shipped before a green 1.7 run; (b) the `About.xml` description and the Steam description name no RimWorld version (`Check-Status` WARN `rimworld-version`, open now: "bring them forward to 1.6" in `Mod/About/About.xml` and `PUBLICATION.md`), fixed in the same `Mod/` change as the save-sentence fix.
+- 7.a: the scenarios of the version live in `TESTING.md` (no `TEST_SCENARIOS.md`); its section "Existing-save migration" stays for reference only (owner decision 2026-10-11).
 
 ## History
 
