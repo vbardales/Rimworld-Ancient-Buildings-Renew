@@ -315,7 +315,7 @@ consult their parameters for a different installation location.
   own 13 809 defs. It is the one that would have caught the air conditioner had its `fillPercent`
   and its `isAirtight` disagreed.
 - The ten `texPath` and `uiIconPath` values each point at a file that exists, case included.
-- The Pickle suite is statically sound: `Tests/Pickle/Check-Steps.ps1` resolves all 80 step lines to
+- The Pickle suite is statically sound: the shared `scripts/Check-Steps.ps1` resolves all 80 step lines to
   exactly one step each in the installed Pickle build and compiles the suite's two local patterns, and
   the step project builds. A deliberately undefined line was reported, so the check bites. Static: it
   proves the text of a step exists, not that a scenario passes.

@@ -7,10 +7,9 @@ Runs are logged here from 2026-09-24 (one file per day). Originally:
 the first line of history went here the day the first run played.
 
 The evidence itself - `Player.log`, screenshots, films - stays **on disk**, under
-`Tests/Manual/evidence/<date>/<check>/`, and is ignored by git. `<check>` is `fence`, `barrier`,
-`lamppost`, `vending`, `stove`, `air-conditioner`, `l10n` or `migration`, the sections of
-`TESTING.md`. It is not backed up: if the machine is lost, the summaries here and the history are
-what remains.
+`Tests/Pickle/Evidence/<run>/`, and is ignored by git. The scenarios are the features of
+`Tests/Pickle/Mod/Pickle/Features/`; the manual checks are the sections of `TESTING.md`. It is not
+backed up: if the machine is lost, the summaries here and the history are what remains.
 
 A summary must carry, since the media are not beside it:
 

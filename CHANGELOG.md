@@ -2,6 +2,13 @@
 
 All notable changes to this mod are documented here.
 
+## [Unreleased]
+
+### Changed
+
+- The description no longer promises that a save moves between this mod and the original: the `defName`s are kept, but a save made with the original is not supported and switching an existing colony is untested.
+- The description no longer names a RimWorld version: it says "the latest RimWorld version".
+
 ## [1.0.1] — 2026-10-08
 
 Released by the CI (run 37836720872, tag `v1.0.1`, SHA 1cd35ff94791f61330a0827d9694fb5f852943bd).

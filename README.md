@@ -136,8 +136,8 @@ here it would have bought nothing.
 ## Compatibility with the original
 
 The two cannot run together: `ancientbld.core` is declared in `<incompatibleWith>`. Run one or
-the other. Because the `defName`s match, swapping one for the other in an existing save keeps
-everything already built.
+the other. The `defName`s match, but a save made with the original is not supported: switching an
+existing colony between the two mods is untested and may lose buildings.
 
 ## Repository layout
 

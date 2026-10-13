@@ -40,7 +40,7 @@
 # scenario is about the two sides of the unit, not about power reaching it.
 Feature: the air conditioner cools one side of a wall and heats the other
 
-  @save @review
+  @save @review @timeout:60
   Scenario: the air conditioner cools the room south of it (the lower z) and warms the room north of it
     Given the save "test-colony" is loaded
     And a "Wall" is built at (141, 149)

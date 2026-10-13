@@ -34,6 +34,9 @@ namespace AncientBuildingsRenew.PickleSteps
             return Log.Messages
                 .Where(m => m.type == LogMessageType.Error || m.type == LogMessageType.Warning)
                 .Select(m => m.text ?? string.Empty)
+                // RimWorld 1.7 logs an error for every mod that ships no content. This suite's companion mod
+                // ships steps only, so that line is about the test mod, never about the mod under test.
+                .Where(t => t.IndexOf("Ancient Buildings Renew - Pickle tests did not load any content", StringComparison.Ordinal) < 0)
                 .ToList();
         }
 

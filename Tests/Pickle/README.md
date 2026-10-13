@@ -95,11 +95,11 @@ at `START`, at `END` (the lock returned, which is not the verdict) and, for a de
 
 ```powershell
 dotnet build Tests/Pickle/Source/AncientBuildingsRenew.PickleSteps.csproj -c Release
-powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-Steps.ps1 -Mod AncientBuildingsRenew
 ```
 
 The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: rebuild before every run,
-because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
+because Pickle loads step DLLs when the game starts. The shared `Check-Steps.ps1` (protocols `scripts/`) matches every step line against
 Pickle's own vocabulary read from the installed assemblies and against this suite's two steps, and fails on
 an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
 not that the step does what the scenario hopes. Checked on 2026-09-27: 29 local patterns, 187 step lines, all resolved. A

@@ -7,6 +7,7 @@
 # play in the pass that leaves Biotech out.
 #
 # Played in every pass but the incompatibility one, where two mods define the same defs on purpose.
+@timeout:30
 Feature: the mod loads clean and defines its six buildings
 
   Scenario: the mod is loaded and its six buildings exist

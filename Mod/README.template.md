@@ -4,7 +4,7 @@ Six buildings in the style of the ruins the world is already full of: a concrete
 
 No DLC and no dependencies. Five of the six ask for no research at all and are available from the first day of a colony.
 
-I am not the author of this mod. The buildings, the artwork and the balance are SyndicateGamingNetwork's. All I did was bring them forward to 1.6, fix what the port turned up, write the French, and give one orphaned texture the building it was drawn for. Credit goes to them; mistakes in the port are mine.
+I am not the author of this mod. The buildings, the artwork and the balance are SyndicateGamingNetwork's. All I did was bring them forward to the latest RimWorld version, fix what the port turned up, write the French, and give one orphaned texture the building it was drawn for. Credit goes to them; mistakes in the port are mine.
 
 Original mod: [Ancient Buildings](https://steamcommunity.com/sharedfiles/filedetails/?id=2566355159). It declares 1.3 and nothing further.
 
@@ -35,7 +35,7 @@ The labels are lower case, as the game writes them, and one typo in the lamppost
 
 SyndicateGamingNetwork declared no licence: no file in the mod, nothing in its About.xml, no linked repository, and nothing in the body of the description on its Steam page. It is republished here under the usual convention for abandoned mods: full credit, a link to the original, and removal on request. If SyndicateGamingNetwork would rather this port did not exist, say so and it comes down, with no argument and no delay.
 
-The original defNames are kept, so a save moves between the two mods without losing a building. The two cannot run together: the original is declared incompatible. Run one or the other.
+The original defNames are kept, but a save made with the original mod is not supported: switching an existing colony between the two mods is untested and may lose buildings. The two cannot run together: the original is declared incompatible. Run one or the other.
 
 Content mod: removing it mid-save destroys anything already built from it.
 
