@@ -18,7 +18,7 @@
 # The only animal in the story is a dog, awake at every hour used. Every scenario reloads the save and cleans the filth (the grey stain of run 8cf7).
 # Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes and the filth are Nelim's Pickle Tools'.
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
-@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace
+@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom
 @review
 Feature: gallery: a day at the last stop of an old road
 
