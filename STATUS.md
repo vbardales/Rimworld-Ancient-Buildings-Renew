@@ -9,6 +9,7 @@ repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
 workflow_stage: playTests[1.1.0]
+tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
 upstream_mod_remotes: N/A
