@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.1.0]
+workflow_stage: mountPreview[1.1.0]
 tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
