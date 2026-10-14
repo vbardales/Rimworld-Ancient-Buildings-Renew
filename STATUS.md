@@ -20,7 +20,7 @@ pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
-social_preview_sha256: b20d39823957f6bcaf818d6f2ff15b25994466381371265078210465a55360b3
+social_preview_sha256: d01f18437123111e25359ecd9ec20d60c534e384f5ce2f61ade42f0972928542
 echo_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
 publication_changelog_review_sha: 8d24895fc4776d9e6ffcf79138824958d9fa82f7
 remaining:
@@ -120,3 +120,5 @@ The dated sections of this file (audits of 2026-09-13, 09-24 and 10-01, the Pick
 Repeat this audit after a change to Defs or language resources; reset the affected translation fields to `unchecked` until revalidated.
 
 Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a dead source, `alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing to anyone.
+
+- GitHub social preview replaced 2026-10-14 by this session through Claude in Chrome (repository settings, Social preview) with the 1.7-badge `Mod/About/Preview.png` (652 798 bytes, sha256 d01f1843...2928542, commit 843532c); the served image (repository-images.githubusercontent.com/1365538522/a447e922-...) downloaded and found byte-identical.
