@@ -4,6 +4,10 @@ All notable changes to this mod are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- Declares RimWorld 1.7 in `supportedVersions`, next to 1.6. The mod is XML only and no def changed: it loaded without any error naming it on 1.7 and its in-game scenarios passed there (English pass 24 of 24, pass without Biotech 6 of 6; the French labels were not run on 1.7, because the 1.7 test install has no French language, and are unchanged).
+
 ### Changed
 
 - The description no longer promises that a save moves between this mod and the original: the `defName`s are kept, but a save made with the original is not supported and switching an existing colony is untested.
