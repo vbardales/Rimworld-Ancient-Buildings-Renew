@@ -22,7 +22,7 @@ evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by
 code_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
 social_preview_sha256: d01f18437123111e25359ecd9ec20d60c534e384f5ce2f61ade42f0972928542
 echo_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
-publication_changelog_review_sha: 8d24895fc4776d9e6ffcf79138824958d9fa82f7
+publication_changelog_review_sha: a2f649a80f608af66bb5ea6fb174bac0f263bd93
 remaining:
 - unverified: "Known: the echo line art overlaps the subtitle 'Renew (unofficial)' on the Preview, accepted by the owner 2026-10-12."
   - unverified: "Steam page, item visibility and the new packageId on Steam are not readable by this session; the owner reported them done on 2026-10-08."
@@ -79,6 +79,7 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 ## Reviews
 
 - PUBLICATION.md and CHANGELOG.md (1.0 line): confirmed by Virginie in chat on 2026-10-10, commit `8d24895fc4776d9e6ffcf79138824958d9fa82f7` (`publication_changelog_review_sha`).
+- PUBLICATION.md and CHANGELOG.md (1.1.x line, 1.7 declaration and the 1.1.0 Steam notes): validated by Virginie in chat on 2026-10-14, commit `a2f649a80f608af66bb5ea6fb174bac0f263bd93` (`publication_changelog_review_sha`).
 
 - GitHub social preview (first upload 2026-10-10 with the previous Preview, 54b60b2f..., replaced the same day by the regenerated Preview, see remaining): upload confirmed by Virginie in chat on 2026-10-10; the repository page `og:image` (repository-images.githubusercontent.com/1365538522/70896796-...) downloaded by the session is byte-identical to `Mod/About/Preview.png`, sha256 `54b60b2f0c81b0ce6f9ab619f86e3e107cc5de76779970e7a9db0b976917575f` (`social_preview_sha256`).
 
