@@ -21,7 +21,7 @@ workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and 
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: bf7bca0096b858b07eea137e6ec698b27c6c5ca6
 social_preview_sha256: 0ccf1b8222e9859c85a8c4af59b86f9d7743aa6074156bc9e491fee9d79954e6
-echo_review_sha: 9a71538a7c361e22ef76986e8328eadc7d81f0e3
+echo_review_sha: fba2ab1a74f6ebc2e97697b4890b51282aec4bfc
 publication_changelog_review_sha: a2f649a80f608af66bb5ea6fb174bac0f263bd93
 remaining:
 - unverified: "Known: the echo line art overlaps the subtitle 'Renew (unofficial)' on the Preview, accepted by the owner 2026-10-12."
@@ -125,3 +125,5 @@ Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a 
 - GitHub social preview replaced 2026-10-14 by this session through Claude in Chrome (repository settings, Social preview) with the 1.7-badge `Mod/About/Preview.png` (652 798 bytes, sha256 d01f1843...2928542, commit 843532c); the served image (repository-images.githubusercontent.com/1365538522/a447e922-...) downloaded and found byte-identical.
 
 - GitHub social preview replaced again 2026-10-14 by this session (Claude in Chrome) after the owner asked for the ModIcon badge to be shifted 12.5% toward the corner (`iconBadge.translate` in `Art/Preview.config.json`, commit 3ba3563): `Mod/About/Preview.png` 645 599 bytes, sha256 0ccf1b82...954e6; the served image (repository-images.githubusercontent.com/1365538522/9f65c5eb-...) downloaded and found byte-identical. Supersedes the d01f1843 upload of the same day.
+
+- Echo (AUDIT.md 10.a), 2026-10-14: decision keep `Art/echo-source.png`, by Virginie in chat, after the Preview was regenerated with the 1.7 badge and the ModIcon shifted 12.5% toward the corner (commit 3ba3563). Only the badge and the corner image changed; the echo line art is the same. `echo_review_sha` set to HEAD.
