@@ -118,6 +118,7 @@ namespace AncientBuildingsRenew.PickleSteps
                 defName + " carries a component of class '" + className + "'; its components: " + Names(have));
         }
 
+        /// <summary>Passes when the def carries a power trader comp whose base consumption is the given number of watts.</summary>
         [Then("Ancient Buildings Renew: the def {string} draws {int} watts")]
         public void DrawsWatts(PickleContext ctx, string defName, int watts)
         {
@@ -165,6 +166,7 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(Math.Abs(def.fillPercent - fill) < 0.001f, defName + " has a fill percent of " + def.fillPercent + ", not " + fill);
         }
 
+        /// <summary>Passes when the def has the passability PassThroughOnly, which lets pawns cross its cell.</summary>
         [Then("Ancient Buildings Renew: the def {string} lets pawns walk over it")]
         public void LetsPawnsWalkOver(PickleContext ctx, string defName)
         {
@@ -180,6 +182,7 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(def.building != null && def.building.isFence, defName + " is not flagged isFence, so a pen would leak through it");
         }
 
+        /// <summary>Passes when the def lists the named designator among its related build commands.</summary>
         [Then("Ancient Buildings Renew: the def {string} offers the related build command {string}")]
         public void OffersRelatedCommand(PickleContext ctx, string defName, string related)
         {
@@ -238,6 +241,7 @@ namespace AncientBuildingsRenew.PickleSteps
             des.DesignateMultiCell(cells);
         }
 
+        /// <summary>Passes when the real build designator for the def accepts the given cell on the current map.</summary>
         [Then("Ancient Buildings Renew: the build designator for {string} accepts \\({int}, {int}\\)")]
         public void Accepts(PickleContext ctx, string defName, int x, int z)
         {
@@ -267,6 +271,7 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(DesignatorFor(ctx, defName).Visible, "the build designator for " + defName + " is hidden");
         }
 
+        /// <summary>Passes when the build designator for the def is not shown, as while its research is unfinished.</summary>
         [Then("Ancient Buildings Renew: the build designator for {string} is not available")]
         public void IsNotAvailable(PickleContext ctx, string defName)
         {
@@ -285,6 +290,7 @@ namespace AncientBuildingsRenew.PickleSteps
             Find.ResearchManager.ResetAllProgress();
         }
 
+        /// <summary>Roofs the given cell with a constructed roof, so a scenario can test a refused placement.</summary>
         [Given("Ancient Buildings Renew: a constructed roof covers \\({int}, {int}\\)")]
         public void RoofCovers(PickleContext ctx, int x, int z)
         {
@@ -328,6 +334,7 @@ namespace AncientBuildingsRenew.PickleSteps
 
         // ---- what a built thing does -----------------------------------------------------------
 
+        /// <summary>Passes when the light level on the ground at the cell is above the given value.</summary>
         [Then("Ancient Buildings Renew: the light on the ground at \\({int}, {int}\\) is above {float}")]
         public void LightAbove(PickleContext ctx, int x, int z, float level)
         {
@@ -335,6 +342,7 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(glow > level, "the light on the ground at (" + x + ", " + z + ") is " + glow + ", not above " + level);
         }
 
+        /// <summary>Passes when the light level on the ground at the cell is below the given value.</summary>
         [Then("Ancient Buildings Renew: the light on the ground at \\({int}, {int}\\) is below {float}")]
         public void LightBelow(PickleContext ctx, int x, int z, float level)
         {
@@ -342,6 +350,7 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(glow < level, "the light on the ground at (" + x + ", " + z + ") is " + glow + ", not below " + level);
         }
 
+        /// <summary>Passes when the thing of the given def at the cell has a glower comp that currently glows.</summary>
         [Then("Ancient Buildings Renew: the {string} at \\({int}, {int}\\) is glowing")]
         public void IsGlowing(PickleContext ctx, string defName, int x, int z)
         {
@@ -365,6 +374,7 @@ namespace AncientBuildingsRenew.PickleSteps
             ctx.Assert(rate <= 0f, defName + " at (" + x + ", " + z + ") deteriorates at " + rate + " per day");
         }
 
+        /// <summary>Passes when the thing of the given def at the cell loses hit points over time.</summary>
         [Then("Ancient Buildings Renew: the {string} at \\({int}, {int}\\) deteriorates")]
         public void Deteriorates(PickleContext ctx, string defName, int x, int z)
         {
@@ -376,6 +386,7 @@ namespace AncientBuildingsRenew.PickleSteps
 
         // ---- storage ---------------------------------------------------------------------------
 
+        /// <summary>Passes when the built thing at the cell offers the gizmo that links its storage settings.</summary>
         [Then("Ancient Buildings Renew: the {string} at \\({int}, {int}\\) offers the command that links its storage settings")]
         public void OffersLinkCommand(PickleContext ctx, string defName, int x, int z)
         {
