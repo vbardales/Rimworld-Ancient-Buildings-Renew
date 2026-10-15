@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-workflow_stage: prepareRelease[1.1.0]
+workflow_stage: publish[1.1.0]
 tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
@@ -22,7 +22,7 @@ evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by
 code_review_sha: 3aa55ebb4752013a5ce64f46b810afab963c47c5
 social_preview_sha256: 0ccf1b8222e9859c85a8c4af59b86f9d7743aa6074156bc9e491fee9d79954e6
 echo_review_sha: fba2ab1a74f6ebc2e97697b4890b51282aec4bfc
-publication_changelog_review_sha: a2f649a80f608af66bb5ea6fb174bac0f263bd93
+publication_changelog_review_sha: ae3e4fa13d1d3edd702a486746f394eeb97fd306
 remaining:
 - unverified: "Known: the echo line art overlaps the subtitle 'Renew (unofficial)' on the Preview, accepted by the owner 2026-10-12."
   - unverified: "Steam page, item visibility and the new packageId on Steam are not readable by this session; the owner reported them done on 2026-10-08."
@@ -32,12 +32,12 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_810f6b45-91d6-4f3f-b930-e68dc60d9da4
-protocols_read_sha: 583ce1259235b54ebacca29e1116689d1d24e589
+protocols_read_sha: 6eeb289af92096fa3a7ee40825e3b5221030873d
 ---
 
 # Ancient Buildings Renew: status
 
-**State: `prepareRelease[1.1.0]` (reopened from `dormant` for the 1.7 declaration; the 1.1.0 dry-run on `a90ba6f` is green, the publish waits for the owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI on Workshop item 3806708945. 1.0.1 only renames the `packageId` to `nelim.ancientbuildings`. A new fix or a new RimWorld version reopens the chain at `code[x.y.z]`.
+**State: `publish[1.1.0]` (reopened from `dormant` for the 1.7 declaration; the 1.1.0 dry-run on `a90ba6f` is green, the publish waits for the owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI on Workshop item 3806708945. 1.0.1 only renames the `packageId` to `nelim.ancientbuildings`. A new fix or a new RimWorld version reopens the chain at `code[x.y.z]`.
 
 ## Gates (audit of 2026-10-10, revision `2611536`)
 
@@ -130,3 +130,5 @@ Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a 
 - Echo (AUDIT.md 10.a), 2026-10-14: decision keep `Art/echo-source.png`, by Virginie in chat, after the Preview was regenerated with the 1.7 badge and the ModIcon shifted 12.5% toward the corner (commit 3ba3563). Only the badge and the corner image changed; the echo line art is the same. `echo_review_sha` set to HEAD.
 
 - Dry-run 1.1.0, 2026-10-15: run 38646622004 on a90ba6f4fa39940dc59b40f9933df48e873282b1 (version 1.1.0, mode dry-run, update_preview=true, update_description=true, update_title and update_tags false), green, log read: "Publishing a90ba6f... as version 1.1.0", change note `[b]1.1.0[/b]` with the two bullets, version-order check passed, no build project (tracked Mod/ ships as is), preview to send 645 599 bytes sha256 0ccf1b82...954e6 against 653 490 bytes 54b60b2f... on the page now (would be replaced), description 5 931 characters from Mod/README.template.md (differs from the page: the save sentence and the version wording), "DRY RUN: nothing was sent to Steam", tag-and-release skipped. Not covered by the CI: Steam tag 1.7 (no STEAM_REFRESH_TOKEN in steam-production, so update_tags stays off; the owner sets it by hand with scripts/steam-apply-tags.mjs) and gallery slot 0 (manual).
+
+- Review of PUBLICATION.md and CHANGELOG.md for the 1.1.x line, 2026-10-15: owner confirmed in chat ("je valide"), commit read `ae3e4fa13d1d3edd702a486746f394eeb97fd306`. External read (Codex) checked the same day: French provenance holds, `git diff beeb97a HEAD -- Mod/Languages` and `git diff df0d478 HEAD -- Mod/Languages` are empty (both commits are ancestors of HEAD), the `Mod/Defs` changes since `df0d478` touch only the lamppost shader and glow, no label or description, so `translation_fr: complete` stands. The 1.0.0 CHANGELOG sentence "a save moves between the two mods" stays (append-only); the 1.1.0 entry corrects it.
