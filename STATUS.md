@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-workflow_stage: publish[1.1.0]
+workflow_stage: followUp[1.1.0]
 tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
@@ -37,7 +37,7 @@ protocols_read_sha: 6eeb289af92096fa3a7ee40825e3b5221030873d
 
 # Ancient Buildings Renew: status
 
-**State: `publish[1.1.0]` (reopened from `dormant` for the 1.7 declaration; the 1.1.0 dry-run on `a90ba6f` is green, the publish waits for the owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI on Workshop item 3806708945. 1.0.1 only renames the `packageId` to `nelim.ancientbuildings`. A new fix or a new RimWorld version reopens the chain at `code[x.y.z]`.
+**State: `followUp[1.1.0]` (reopened from `dormant` for the 1.7 declaration; the 1.1.0 dry-run on `a90ba6f` is green, the publish waits for the owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI on Workshop item 3806708945. 1.0.1 only renames the `packageId` to `nelim.ancientbuildings`. A new fix or a new RimWorld version reopens the chain at `code[x.y.z]`.
 
 ## Gates (audit of 2026-10-10, revision `2611536`)
 
@@ -132,3 +132,5 @@ Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a 
 - Dry-run 1.1.0, 2026-10-15: run 38646622004 on a90ba6f4fa39940dc59b40f9933df48e873282b1 (version 1.1.0, mode dry-run, update_preview=true, update_description=true, update_title and update_tags false), green, log read: "Publishing a90ba6f... as version 1.1.0", change note `[b]1.1.0[/b]` with the two bullets, version-order check passed, no build project (tracked Mod/ ships as is), preview to send 645 599 bytes sha256 0ccf1b82...954e6 against 653 490 bytes 54b60b2f... on the page now (would be replaced), description 5 931 characters from Mod/README.template.md (differs from the page: the save sentence and the version wording), "DRY RUN: nothing was sent to Steam", tag-and-release skipped. Not covered by the CI: Steam tag 1.7 (no STEAM_REFRESH_TOKEN in steam-production, so update_tags stays off; the owner sets it by hand with scripts/steam-apply-tags.mjs) and gallery slot 0 (manual).
 
 - Review of PUBLICATION.md and CHANGELOG.md for the 1.1.x line, 2026-10-15: owner confirmed in chat ("je valide"), commit read `ae3e4fa13d1d3edd702a486746f394eeb97fd306`. External read (Codex) checked the same day: French provenance holds, `git diff beeb97a HEAD -- Mod/Languages` and `git diff df0d478 HEAD -- Mod/Languages` are empty (both commits are ancestors of HEAD), the `Mod/Defs` changes since `df0d478` touch only the lamppost shader and glow, no label or description, so `translation_fr: complete` stands. The 1.0.0 CHANGELOG sentence "a save moves between the two mods" stays (append-only); the 1.1.0 entry corrects it.
+
+- Publish 1.1.0, 2026-10-15: CI run 38761642762 on 72f6af2c17d79d1914cf380ef776e47e31b7628f (dry-run 38761474920 green on the same SHA, owner approved steam-production). Steam upload "Success" on Workshop item 3806708945 with update_preview, update_description and update_tags (tags Mod, 1.6, 1.7); jobs publish and tag-and-release green, tag v1.1.0 and its release exist. This session cannot read the Steam page: the owner verifies the public page (header image with the 1.7 badge, description, tags) and replaces gallery slot 0 by hand with Mod/About/Preview.png (645 599 bytes).
