@@ -19,7 +19,7 @@ tested_on:    "2026-10-14 RimWorld 1.7 (English only) on 76a7b44: minimal 608f 2
 pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-09-24 to 28); 1.0.1 regression green (docs/runs/2026-10-10.txt); 1.7 English passes green 2026-10-14 (docs/runs/2026-10-13.txt)"
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
-code_review_sha: bf7bca0096b858b07eea137e6ec698b27c6c5ca6
+code_review_sha: 3aa55ebb4752013a5ce64f46b810afab963c47c5
 social_preview_sha256: 0ccf1b8222e9859c85a8c4af59b86f9d7743aa6074156bc9e491fee9d79954e6
 echo_review_sha: fba2ab1a74f6ebc2e97697b4890b51282aec4bfc
 publication_changelog_review_sha: a2f649a80f608af66bb5ea6fb174bac0f263bd93
@@ -80,6 +80,7 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 
 - PUBLICATION.md and CHANGELOG.md (1.0 line): confirmed by Virginie in chat on 2026-10-10, commit `8d24895fc4776d9e6ffcf79138824958d9fa82f7` (`publication_changelog_review_sha`).
 - PUBLICATION.md and CHANGELOG.md (1.1.x line, 1.7 declaration and the 1.1.0 Steam notes): validated by Virginie in chat on 2026-10-14, commit `a2f649a80f608af66bb5ea6fb174bac0f263bd93` (`publication_changelog_review_sha`).
+- Code review (AUDIT.md 8.m exception, 2026-10-15, owner agreed in chat): `git diff bf7bca0 HEAD -- Mod` read; only `Mod/ATTRIBUTION.md` wording (the .psd removal) and `Preview.png`. Revue du diff : images et texte seuls. `code_review_sha` = `3aa55eb`.
 - Code review (AUDIT.md 8.m exception, 2026-10-14): `git diff 9a71538 HEAD -- Mod` read; it holds only the description text and `supportedVersions` of `About.xml`, the regenerated `Preview.png` and the `README.template.md` wording. Revue du diff : images et texte seuls. `code_review_sha` set to HEAD, no new playTests pass (the 1.7 passes already ran on the same defs).
 
 - GitHub social preview (first upload 2026-10-10 with the previous Preview, 54b60b2f..., replaced the same day by the regenerated Preview, see remaining): upload confirmed by Virginie in chat on 2026-10-10; the repository page `og:image` (repository-images.githubusercontent.com/1365538522/70896796-...) downloaded by the session is byte-identical to `Mod/About/Preview.png`, sha256 `54b60b2f0c81b0ce6f9ab619f86e3e107cc5de76779970e7a9db0b976917575f` (`social_preview_sha256`).

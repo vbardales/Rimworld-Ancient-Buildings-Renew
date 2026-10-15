@@ -69,6 +69,14 @@ asserts Biotech is absent from the passes that keep it.
 
 # the original mod beside it (its Workshop item is in the WSL cache since 2026-09-24)
 -DepMap wsl-deps.incompat-original.map -Language English -Filter '05-original-mod-incompatibility' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/incompat-original
+
+# RimWorld 1.7 (English only: the 1.7 install has no French pack). Add to each: -Game /home/nelim/rimworld17 -PickleSrc /home/nelim/Rimworld-Pickle -NoBatch
+# minimal, 1.7
+-DepMap wsl-deps.minimal-17.map -Language English -Filter '!15-gallery' -EvidenceDir Tests/Pickle/Evidence/p17-minimal-en
+# Biotech left out, 1.7
+-DepMap wsl-deps.sans-biotech-17.map -Language English -Filter '!15-gallery' -EvidenceDir Tests/Pickle/Evidence/p17-sans-biotech
+# the original mod beside it, 1.7
+-DepMap wsl-deps.incompat-original-17.map -Language English -Filter '05-original-mod-incompatibility' -EvidenceDir Tests/Pickle/Evidence/p17-incompat-original
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
