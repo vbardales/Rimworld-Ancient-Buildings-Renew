@@ -15,8 +15,8 @@ licence_at:   Audit/2026-09-13-rights/README.md
 upstream_mod_remotes: N/A
 dependencies: none
 showcase:     complete
-tested_on:    "2026-10-11 regression on 6f2b69a: tickets 8c0c (minimal-en-2), c967 (minimal-fr-2), ec53 (sans-biotech-2), f818 (incompat-original-2), all green; see docs/runs/2026-10-11.txt (earlier: 2026-10-08/09 on the 1.0.1 tree, docs/runs/2026-10-10.txt)"
-pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-09-24 to 28); 1.0.1 regression green (docs/runs/2026-10-10.txt)"
+tested_on:    "2026-10-14 RimWorld 1.7 (English only) on 76a7b44: minimal 608f 24/24, without Biotech d218 6/6, both green, French pass 8d50 ran nothing (no French pack on 1.7); see docs/runs/2026-10-13.txt. Before that 2026-10-11 regression on 6f2b69a: tickets 8c0c (minimal-en-2), c967 (minimal-fr-2), ec53 (sans-biotech-2), f818 (incompat-original-2), all green; see docs/runs/2026-10-11.txt (earlier: 2026-10-08/09 on the 1.0.1 tree, docs/runs/2026-10-10.txt)"
+pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-09-24 to 28); 1.0.1 regression green (docs/runs/2026-10-10.txt); 1.7 English passes green 2026-10-14 (docs/runs/2026-10-13.txt)"
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: bf7bca0096b858b07eea137e6ec698b27c6c5ca6
@@ -37,7 +37,7 @@ protocols_read_sha: 583ce1259235b54ebacca29e1116689d1d24e589
 
 # Ancient Buildings Renew: status
 
-**State: `dormant` (from `followUp[1.0.1]`, owner's order 2026-10-10).** 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI on Workshop item 3806708945. 1.0.1 only renames the `packageId` to `nelim.ancientbuildings`. A new fix or a new RimWorld version reopens the chain at `code[x.y.z]`.
+**State: `prepareRelease[1.1.0]` (reopened from `dormant` for the 1.7 declaration; the 1.1.0 dry-run on `a90ba6f` is green, the publish waits for the owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) are published by the CI on Workshop item 3806708945. 1.0.1 only renames the `packageId` to `nelim.ancientbuildings`. A new fix or a new RimWorld version reopens the chain at `code[x.y.z]`.
 
 ## Gates (audit of 2026-10-10, revision `2611536`)
 
@@ -74,7 +74,7 @@ Rollback target: private visibility (the owner used it once on 2026-10-08, betwe
 
 ## Gallery
 
-`Art/Gallery/0` to `7`, contiguous, `0-preview.png` byte-identical to `Mod/About/Preview.png` (653 490 bytes), uploaded by hand by the owner on 2026-10-08. Order: 0 preview, 1 the six buildings together at dusk, 2 the lamppost at night, 3 the air conditioner in a wall, 4 the vending machine and the stove, 5 the road comes in, 6 the barrier and the fence up close, 7 the vending machine up close. Mature content boxes: none.
+`Art/Gallery/0` to `7`, contiguous, `0-preview.png` byte-identical to `Mod/About/Preview.png` (645 599 bytes since the 1.7 badge, commit 3ba3563; 653 490 bytes when the owner uploaded it by hand on 2026-10-08). Order: 0 preview, 1 the six buildings together at dusk, 2 the lamppost at night, 3 the air conditioner in a wall, 4 the vending machine and the stove, 5 the road comes in, 6 the barrier and the fence up close, 7 the vending machine up close. Mature content boxes: none.
 
 ## Reviews
 

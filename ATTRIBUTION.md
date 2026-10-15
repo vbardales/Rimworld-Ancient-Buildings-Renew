@@ -138,10 +138,10 @@ The balance was not touched, including two places where it is tempting:
 
 ## What was dropped from the published folder
 
-Two files the game never loads.
+Two files the game never loaded.
 
 - `AB_LamppostIcon.psd` — a Photoshop source. RimWorld cannot read `.psd`, and no def points at
-  it. Kept in `Art/`, out of the published folder, so it is not lost from the repository.
+  it. Removed from the repository on 2026-10-15 (owner's decision); it stays in git history.
 - `AB_ConcreteBarrierIcon.png` — deleted outright, and it is the one file that could be. It is
   byte for byte the same as `AB_ConcreteBarrier.png`, which the mod still ships, and it is
   referenced by nothing: the barrier has no `uiIconPath`, so the game builds its menu icon from

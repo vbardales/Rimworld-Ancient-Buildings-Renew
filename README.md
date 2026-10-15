@@ -147,9 +147,7 @@ AncientBuildingsRenew/
   Art/     <- files the game never loads, never published
 ```
 
-`Art/` holds `AB_LamppostIcon.psd`, a Photoshop source that was in the original's published
-folder and does nothing there — RimWorld cannot read `.psd`, and no def points at it. One more
-file was in the same position and was simply deleted: `AB_ConcreteBarrierIcon.png` is byte for
+`AB_LamppostIcon.psd`, a Photoshop source that was in the original's published folder, did nothing there (RimWorld cannot read `.psd`, no def points at it) and was removed from the repository; it stays in git history. One more file was in the same position and was deleted: `AB_ConcreteBarrierIcon.png` is byte for
 byte `AB_ConcreteBarrier.png`, which the mod still ships, and nothing references it.
 
 ## Verification
