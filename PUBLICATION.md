@@ -219,3 +219,17 @@ Menus and windows are plain screen captures and are not staged.
 placed and dressed, Shogun spawned). Reading the captures found: the "no power" status icon drawn on the stove, vending machine and
 air conditioner despite the presentation mode (Pickle Tools fixed it; ticket ba88 confirmed it gone); a grey stain near Nelim (cleaned by `all filth
 is cleaned`, added); the drawn light cone brown instead of yellow, so the cone texture was recoloured to a very pale yellow almost white by script on 2026-10-08 and kept (it had briefly been dropped on 2026-10-07). Ticket ba88 also showed a thought bubble over Shogun (2) and Nelim touching the barrier (7).
+
+## Gallery subtitles
+
+One English line per scene, burned into the bottom of the image (`GALLERY.md`, "Sous-titres"; tool `scripts/Add-Subtitle.ps1`, originals kept in `Art/Gallery-clean/`). None of the seven scenes has an interface window, so each one gets a line; `0-preview.png` gets none. The lines follow the reworked story of `15-gallery.feature` (Ravi at noon, Mei in the afternoon heat, torches at dawn and dusk, the jacket off at 15:00). The images of that story are not shot yet: the file names and final indexes are set at reindexing, after the owner accepts the captures. Until then the column "scene" is the scenario number of the feature.
+
+| scene | file | line |
+|---|---|---|
+| 1 | to set at reindexing | The road comes in at dawn, two torches still burning from the night. |
+| 2 | to set at reindexing | The concrete barrier and the fence run side by side along the road. |
+| 3 | to set at reindexing | Ravi minds the stop while Nelim walks away with a hot meal. |
+| 4 | to set at reindexing | The vending machine still holds sound meals at noon. |
+| 5 | to set at reindexing | In the heat of the afternoon, the old air conditioner keeps the shade cool. |
+| 6 | to set at reindexing | At dusk the torches are lit again and the whole stop rests together. |
+| 7 | to set at reindexing | At night the lamppost burns on the sunlight it stored, with no wire in sight. |
