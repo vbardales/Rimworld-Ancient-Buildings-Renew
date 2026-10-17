@@ -291,7 +291,10 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (202, 191)
     And a "ConFence" is built at (203, 191)
     And a "AB_Lamppost" is built at (200, 188)
-    And I wait 120 ticks
+    And I wait 30 ticks
+    And I wait 30 ticks
+    And I wait 30 ticks
+    And I wait 30 ticks
     Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
