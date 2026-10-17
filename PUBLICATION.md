@@ -203,12 +203,12 @@ in every picture. No tattoos. Her body and face are the fixture's, not rolled.
 
 | # | Time | Picture | What it must prove |
 |---|---|---|---|
-| 1 | 06:00 | the barrier and the fence run as lines, Nelim arrives with Shogun | both drag out as lines |
+| 1 | 06:00 | the barrier and the fence run as lines, two torches still lit, Nelim (tuque) arrives with Shogun | both drag out as lines |
 | 2 | 09:00 | close on the barrier and the fence, Shogun at their foot | the pieces link and read as concrete |
-| 3 | 11:00 | vending machine with meals in it, one-tile stove, Nelim cooks, Shogun waits | one tile each, meals inside |
-| 4 | 12:00 | close on the vending machine, Nelim choosing a meal | the machine holds meals |
-| 5 | 15:00 | the ancient air conditioner set in a wall, Nelim in the cooled shade | it fits in a wall |
-| 6 | 19:00 | all six buildings together at dusk, Nelim and Shogun resting | the whole set |
+| 3 | 11:00 | vending machine with meals in it, one-tile stove, Ravi at the stop, Nelim leaves with a meal, Shogun waits | one tile each, meals inside |
+| 4 | 12:00 | close on the vending machine, Nelim with her meal, Ravi beside her | the machine holds meals |
+| 5 | 15:00 | the ancient air conditioner set in a wall, Nelim (jacket off) and Mei in the cooled shade | it fits in a wall |
+| 6 | 19:00 | all six buildings together at dusk, torches lit, Nelim (jacket back on), Shogun and Ravi resting | the whole set |
 | 7 | 23:00 | the lamppost lit, no conduit anywhere | it is lit, with no power |
 
 **Allowance (owner, 2026-10-06):** anything RimWorld offers is allowed in a gallery picture (props, furniture, plants, set decor, pawns, hairstyles, clothes, animals), other mods included even if they are not hers. As many pictures as wanted, each under 2 MB and all together under 8 MB: the run's PNGs are about 4 MB, so the retained ones are converted to JPEG (`ffmpeg -i x.png -q:v 3 x.jpg`) before they go to `Art/Gallery/`.
