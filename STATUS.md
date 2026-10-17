@@ -22,7 +22,7 @@ evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by
 code_review_sha: 3aa55ebb4752013a5ce64f46b810afab963c47c5
 social_preview_sha256: 0ccf1b8222e9859c85a8c4af59b86f9d7743aa6074156bc9e491fee9d79954e6
 echo_review_sha: fba2ab1a74f6ebc2e97697b4890b51282aec4bfc
-publication_changelog_review_sha: ae3e4fa13d1d3edd702a486746f394eeb97fd306
+publication_changelog_review_sha: 5a74e6dab3bc8020aa387e64336afc39df92efc4
 remaining:
 - unverified: "Known: the echo line art overlaps the subtitle 'Renew (unofficial)' on the Preview, accepted by the owner 2026-10-12."
   - unverified: "Steam page, item visibility and the new packageId on Steam are not readable by this session; the owner reported them done on 2026-10-08."
@@ -134,4 +134,4 @@ Vocabulary for `licence`: `open` explicit licence, `silent` no licence and dead 
 
 - Publish 1.1.0, 2026-10-15: CI run 38761642762 on 72f6af2c17d79d1914cf380ef776e47e31b7628f (dry-run 38761474920 green on same SHA, owner approved steam-production). Steam upload "Success" on Workshop item 3806708945 with update_preview, update_description, update_tags (tags Mod, 1.6, 1.7); jobs publish and tag-and-release green, tag v1.1.0 and release exist. Session cannot read Steam page: owner verifies public page (header image with 1.7 badge, description, tags) and replaces gallery slot 0 by hand with Mod/About/Preview.png (645 599 bytes).
 - Steam page 1.1.0, 2026-10-16: owner confirmed in chat header image shows 1.7 badge ("c'est 1.7"). Description, tags, gallery slot 0 still not confirmed.
-- Gallery reshoot ticket bb37 (20261017-140402-946-bb37), 2026-10-17: 7 scenes of 15-gallery.feature (new story: Ravi, Mei, torches), -DepMap wsl-deps.sanctuary.map, evidence Tests/Pickle/Evidence/gallery-2026-10-17, tree 86e06eb plus uncommitted 15-gallery.feature. Waiting RUN_DONE. Then: open each capture, verdict, reindex, Art/Gallery-clean, Add-Subtitle with lines of PUBLICATION.md "Gallery subtitles".
+- Gallery reshoot ticket bb37 (20261017-140402-946-bb37), 2026-10-17: 7 scenes of 15-gallery.feature (new story: Ravi, Mei, torches), -DepMap wsl-deps.sanctuary.map, evidence Tests/Pickle/Evidence/gallery-2026-10-17, tree 86e06eb plus uncommitted 15-gallery.feature. Waiting RUN_DONE. Then: open each capture, verdict, reindex, Art/Gallery-clean, Add-Subtitle with lines of PUBLICATION.md "Gallery subtitles".- Review of PUBLICATION.md and CHANGELOG.md, 2026-10-17: ChatGPT review of the French texts read; one finding applied (PUBLICATION.md 1.1.0 heading now "sent 2026-10-15"), CHANGELOG.md unchanged (1.1.0 published, append-only, entry already corrects the 1.0.0 save sentence); owner validated in chat ("je valide"), commit read `5a74e6dab3bc8020aa387e64336afc39df92efc4` (`publication_changelog_review_sha`).
