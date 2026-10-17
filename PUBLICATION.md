@@ -109,9 +109,9 @@ The workflow sends the block below as written (BBCode), read from this file at t
 version stands alone on the first line**, as `PUBLISHING.md` asks: Steam shows no version for a note that
 does not say it.
 
-### 1.1.0 (ready, not sent)
+### 1.1.0 (sent 2026-10-15)
 
-The 1.7 run is green (`STATUS.md`, `tested_1_7: yes`, 2026-10-14). To send after the date commit of the dry-run (`AUDIT.md` 12.e) and the owner's review. Version alone on the first line:
+The 1.7 run was green (`STATUS.md`, `tested_1_7: yes`, 2026-10-14). Sent by the CI on 2026-10-15 (run 38761642762, tag `v1.1.0`). Version alone on the first line:
 
 ```
 [b]1.1.0[/b]
