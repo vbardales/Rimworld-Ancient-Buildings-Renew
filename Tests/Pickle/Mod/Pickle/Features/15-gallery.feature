@@ -1,21 +1,22 @@
 # Workshop gallery of Ancient Buildings Renew: one story, in one place, staged (PUBLISHING.md: every gallery capture is a staged photo).
 #
-# The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador.
+# The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador. Two guests pass through it: Ravi (shaved head, orange shirt) runs the stop at noon, Mei (bob, blue shirt) joins for the afternoon heat. What the pictures SHOW is the clue to the hour: lit torches at dawn and dusk (the night is the lamppost alone), the meal Nelim carries away from the stove and the machine, and her jacket, which comes off in the heat of 15:00 and is back on by evening.
+# Faces and clothes carry the mood (set per picture, after the face kits): Nelim keeps her own face (smirk smile) at dawn, morning and night, smiles at the stop, is calm in the afternoon and at dusk; Ravi is neutral then smiling behind his bowler hat, calm at dusk; Mei smiles under a sun hat. Nelim wears a tuque in the cold of 06:00 and 23:00, bare headed at 15:00. Drafted pawns are held neutral so the combat face does not replace these.
 # Time moves a little between pictures and the place is the same: the calm zone of Nelim's tribe, a cream stone square with no roof and no wall
 # shadow (the one neutral light ground among the outdoor places; PickleTools/docs/SANCTUAIRE-LIEUX.md). Each picture takes its own corner of it.
 # Owner's allowance (2026-10-06): anything RimWorld offers is allowed in a gallery picture, other mods included; as many pictures as wanted,
 # each under 2 MB and the whole set under 8 MB (the run's PNGs are about 4 MB: convert the retained ones to JPEG).
-#   1. 06:00  The road comes in: the concrete barrier funnels it, the fence runs beside it. Nelim arrives with Shogun.
+#   1. 06:00  The road comes in: the concrete barrier funnels it, the fence runs beside it, two torches still burn from the night. Nelim arrives with Shogun.
 #   2. 09:00  Close on the barrier and the fence, Nelim at the end of the line, Shogun at its foot.
-#   3. 11:00  The stop: a vending machine with meals in it and the one-tile stove. Nelim cooks, Shogun waits.
-#   4. 12:00  Close on the vending machine and its meals, Nelim choosing one.
-#   5. 15:00  The heat of the afternoon: the ancient air conditioner set in a wall, Nelim in the cooled shade (south of the unit).
-#   6. 19:00  Dusk: the whole set together, Nelim and Shogun resting among the six buildings.
+#   3. 11:00  The stop: a vending machine with meals in it and the one-tile stove. Ravi is there. Nelim leaves the stove with a meal in her hands, Shogun waits.
+#   4. 12:00  Close on the vending machine and its meals, Nelim with the meal she chose, Ravi beside her.
+#   5. 15:00  The heat of the afternoon: the ancient air conditioner set in a wall, Nelim in the cooled shade (south of the unit), jacket off, Mei and Shogun with her.
+#   6. 19:00  Dusk: the whole set together, torches lit again, Nelim (jacket back on), Shogun and Ravi resting among the six buildings.
 #   7. 23:00  Night: the lamppost lit, on sunlight it stored, no conduit anywhere. The pool of light is the lamppost's own (radius 19 covers the square).
 # Why this place: the places were looked at one by one in docs/SANCTUAIRE-LIEUX.md. The gravel yard is a good road but is full of furniture and lamps;
 # the flat open squares (A to J) are dark earth with flowers; the calm zone is clean, level and light, so concrete and a lit lamp read on it.
 # Colours: the jacket is a deep teal (28, 98, 104), the complement of the lamp's amber and of the grey concrete, so Nelim stands out in every picture.
-# The only animal in the story is a dog, awake at every hour used. Every scenario reloads the save and cleans the filth (the grey stain of run 8cf7).
+# The only animal in the story is a dog, awake at every hour used. Ravi has the same shaved head in every picture he is in. Every scenario reloads the save and cleans the filth (the grey stain of run 8cf7).
 # Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes and the filth are Nelim's Pickle Tools'.
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
 @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom
@@ -30,6 +31,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 6
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (194, 187)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (194, 187) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (206, 187)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (206, 187) is lit
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -52,11 +57,14 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (200, 185) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 7
     Then I take a screenshot "gallery 1 - the road comes in"
+    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 2. the barrier and the fence up close
     Given the save "Nelims-tribe" is loaded
@@ -84,6 +92,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (197, 187)
+    And Nelim's Sanctuary: Nelim has her own face
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -115,6 +124,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" stands at (197, 187) facing North
     And I draft "Ravi"
     And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
+    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
+    And Nelim's Pickle Tools: "Ravi" face kit is "neutral"
+    And Nelim's Pickle Tools: "Ravi" face is held neutral
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -145,6 +161,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" stands at (201, 187) facing North
     And I draft "Ravi"
     And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
+    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
+    And Nelim's Pickle Tools: "Ravi" face kit is "smile"
+    And Nelim's Pickle Tools: "Ravi" face is held neutral
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -165,7 +188,7 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (200, 189)
     And a "Wall" is built at (201, 189)
     And Ancient Buildings Renew: the "AB_AirConditioner" at (199, 189) is powered on
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
@@ -179,6 +202,12 @@ Feature: gallery: a day at the last stop of an old road
     And I draft "Mei"
     And I draft "Nelim"
     And Nelim's Pickle Tools: "Mei" hair colour is rgb (60, 35, 25)
+    And Nelim's Pickle Tools: "Nelim" face kit is "calm"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Pickle Tools: "Mei" wears "Apparel_CowboyHat" dyed rgb (225, 200, 140)
+    And Nelim's Pickle Tools: "Mei" face kit is "smile"
+    And Nelim's Pickle Tools: "Mei" face is held neutral
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -193,6 +222,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 19
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 186)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 186) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (207, 186)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (207, 186) is lit
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -217,17 +250,23 @@ Feature: gallery: a day at the last stop of an old road
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
-    And Nelim's Pickle Tools: "Ravi" hairstyle is "Mohawk"
+    And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Ravi" stands at (200, 190) facing South
     And I draft "Ravi"
     And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" face kit is "calm"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Pickle Tools: "Ravi" face kit is "calm"
+    And Nelim's Pickle Tools: "Ravi" face is held neutral
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 8
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
+    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 7. the lamppost at night
     Given the save "Nelims-tribe" is loaded
@@ -258,6 +297,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing North
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
