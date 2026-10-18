@@ -32,7 +32,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: 117fb9642df7e57bece2318904c644a9c39296df
+protocols_read_sha: e552fd9823504a685ddedd14953c3f62a699851b
 ---
 # Ancient Buildings Renew: status
 
@@ -133,3 +133,18 @@ Vocabulary for `licence`: `open` explicit licence, `silent` no licence and dead 
 - Steam page 1.1.0, 2026-10-16: owner confirmed in chat header image shows 1.7 badge ("c'est 1.7"). Description, tags, gallery slot 0 still not confirmed.
 - Gallery reshoot ticket bb37 (20261017-140402-946-bb37), 2026-10-17, tree 86e06eb: 6 of 7 scenes passed, captures `manual--gallery-1..6` in Tests/Pickle/Evidence/gallery-2026-10-17; scene 7 (lamppost at night) failed `Step 'And I wait 120 ticks' timed out after 5s` (one 7.7 s tick, mean 164 ms; cause not proven, other scenes max 959 ms). Fix 973d31a: wait split 4x30 ticks. Scene 7 refiled alone (`-Filter '::7. the lamppost at night'`), waiting RUN_DONE. Then: open each capture, verdict, reindex, Art/Gallery-clean, Add-Subtitle with lines of PUBLICATION.md "Gallery subtitles".
 - Pending from other sessions, 2026-10-17: Audit (local_10336624) asked to review the mod-workflow skills (resume-mod, close-turn, review-gallery; five frictions listed), queued, no answer needed here. Skills compress-restore: BACKLOG, STATUS, TESTING compressed again 2026-10-17 (originals in %LOCALAPPDATA%\caveman-compress\backups\AncientBuildingsRenew; earlier ones kept as *.original.prev-20261017.md).
+
+## Shotlist rating (Audit rule 2026-10-18, estimated before the 2026-10-18 reshoot is played, `15-gallery.feature` at the commit after 809e125)
+
+Stage followUp[1.1.0], published gallery already accepted by the owner: nothing is redone without TM/Audit saying so; the reshoot ticket 20261018-014835-400-aabb was filed before the rule arrived and stays queued. Notes are estimates from the 2026-10-17 captures plus the framing fixes.
+
+| Scene | Note | Main risk |
+|---|---|---|
+| 1 dawn, road comes in | 3 | dawn light barely reads; torches small |
+| 2 barrier and fence close | 3 | static, only pawn and dog give a story |
+| 3 stop at eleven | 3 | meal in hands small; Ravi and Nelim faces at this zoom |
+| 4 vending machine close | 3 | zoom 2.2 untested; extra box beside the machine unexplained |
+| 5 air conditioner at three | 4 | shade cone reads; cool effect only implied |
+| 6 six buildings at dusk | 3 | dusk not visible in light; buildings spread out |
+| 7 lamppost at night | 3 | night not dark; previous run timed out |
+Lowest 3, scenes under 4: 1, 2, 3, 4, 6, 7. No look from the NPT catalogues used yet.
