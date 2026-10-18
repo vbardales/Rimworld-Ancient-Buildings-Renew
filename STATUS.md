@@ -138,14 +138,16 @@ Vocabulary for `licence`: `open` explicit licence, `silent` no licence and dead 
 
 Stage followUp[1.1.0]. Scores are estimates before playing; the plan, outfits, decor, actions and risks are written in the header of `15-gallery.feature`. Earlier ticket cd2d cancelled (scenes were under 4 by the audit). Fixes against the audit: a different outfit, hairstyle and face kit per scene; an action per scene (carries log, steel bar, meal, silver, drink, pemmican, chocolate); decor named per scene and removed after each shot; plants (daylily, rose, bush on the soil ring) and Shogun facing South in every scene; scenes 4 and 5 are a triangle and a diagonal, not a row; each risk has a plan. Redone images stay candidates; the published gallery is replaced only if Virginie accepts them.
 
-| Scene | a | b | c | d | e | f | g | h | i | j | Score |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 dawn, road comes in | y | torches, daylilies, removed | dog, plants | rust parka, mustard tuque, BraidedKnot, calm | carries a log | zoom 3.6, barrier back | y | y | y | barrier, fence | 4 |
-| 2 barrier and fence close | y | stool, roses, removed | dog, roses | cream shirt, brown trousers, Wavy, neutral | carries a steel bar | zoom 3.4, barrier upper third | y | y | y | barrier, fence | 4 |
-| 3 stop at eleven | y | stool, bush, removed | dog, bush | teal jacket, Fringe, smile | leaves the stove with a meal | zoom 2.8 | y | y | y | machine, stove | 4 |
-| 4 vending machine close | y | standing lamp, stool, removed | dog, Ravi | purple robe, Cute, smug; Ravi smile | chooses a meal, Ravi pays | zoom 2.2, triangle | y | y | y | machine | 4 |
-| 5 air conditioner at three | y | stool, daylilies, removed | dog, Mei, daylilies | white shirt, shade cone, Ponytails, calm | holds a cold drink in the shade | zoom 3.2, diagonal | y | y | y | air conditioner | 4 |
-| 6 six buildings at dusk | y | torches, daylilies, removed | dog, Ravi | burgundy cape, Long, calm | eats pemmican | zoom 4.4, tableau | y | y | y | all six | 4 |
-| 7 lamppost at night | y | bushes, removed | dog, bushes | violet jacket, Bob, neutral | carries chocolate through the light | zoom 4.5 | y | y | y | lamppost | 4 |
+| Scene | a | b | c | d | e | f | g | h | i | j | k | Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 dawn, road comes in | y | torches, daylilies, removed | dog, plants | rust parka, mustard tuque, Flowy (long, loose), calm | carries a log | zoom 3.6, barrier back | y | y | y | barrier, fence | y, one story in the header | 4 |
+| 2 barrier and fence close | y | stool, roses, removed | dog, roses | cream shirt, brown trousers, Wavy, neutral | carries a steel bar | zoom 3.4, barrier upper third | y | y | y | barrier, fence | y, one story in the header | 4 |
+| 3 stop at eleven | y | stool, bush, removed | dog, bush | teal jacket, Fringe, smile | leaves the stove with a meal | zoom 2.8 | y | y | y | machine, stove | y, one story in the header | 4 |
+| 4 vending machine close | y | standing lamp, stool, removed | dog, Ravi | purple robe, Cute, smug; Ravi smile | chooses a meal, Ravi pays | zoom 2.2, triangle | y | y | y | machine | y, one story in the header | 4 |
+| 5 air conditioner at three | y | stool, daylilies, removed | dog, Mei, daylilies | white shirt, shade cone, Cleopatra (long, loose), calm | holds a cold drink in the shade | zoom 3.2, diagonal | y | y | y | air conditioner | y, one story in the header | 4 |
+| 6 six buildings at dusk | y | torches, daylilies, removed | dog, Ravi | burgundy cape, Long, calm | eats pemmican | zoom 4.4, tableau | y | y | y | all six | y, one story in the header | 4 |
+| 7 lamppost at night | y | bushes, removed | dog, bushes | violet jacket, Bob, neutral | carries chocolate through the light | zoom 4.5 | y | y | y | lamppost | y, one story in the header | 4 |
+
+Criterion k (2026-10-18): the header of the feature tells one story (who, where, which day, rhythm, seven episodes). Hat rule: Nelim wears a hat only with long loose hair (Flowy, Cleopatra).
 
 Weakest points (still a 4): f (foreground and background are not separate planes on a flat stone square), and the dusk and night light of scenes 6 and 7.

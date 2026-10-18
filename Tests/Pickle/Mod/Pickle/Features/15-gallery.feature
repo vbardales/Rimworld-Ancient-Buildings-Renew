@@ -1,16 +1,17 @@
 # Workshop gallery of Ancient Buildings Renew: one story, in one place, staged (PUBLISHING.md: every gallery capture is a staged photo).
 #
 # The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador. Two guests pass through it: Ravi (shaved head, orange shirt, bowler hat) runs the stop at noon and shares dusk, Mei (bob, blue shirt, cowboy hat) joins for the afternoon heat. What the pictures SHOW is the clue to the hour: lit torches at dawn and dusk, the night is the lamppost alone, the meal Nelim carries away from the stove and the machine, and her clothes, which change with the weather of the day.
+# THE STORY (one, in seven episodes). Who: Nelim (Virginie), who keeps the last stop of an old road, with Shogun, her labrador; Ravi, a traveller who runs the stop at noon and shares the evening; Mei, a walker who comes in for the afternoon heat. Where: the calm zone below, one square, seen from seven corners. Which day: one summer day of the save (5th of Septober, permanent summer, clear sky). Rhythm of time: seven hours of that one day, 06, 09, 11, 12, 15, 20, 23; each episode starts where the one before ended and adds one thing the old buildings do. Episodes: 1 she brings wood at dawn to the road that is funnelled in; 2 she mends the fence in the morning; 3 she cooks at the stove at eleven; 4 at noon Ravi pays the vending machine; 5 in the afternoon heat the old air conditioner cools Nelim and Mei; 6 at dusk the six buildings stand lit together and they eat; 7 at night the lamppost holds the dark alone. Nelim wears a hat only with long loose hair (owner rule 2026-10-18): hair shows under the tuque and the cone through Show Hair, which is in the map.
 # Place for all seven: the calm zone of Nelim's tribe, a cream stone square (about 11 x 11 cells, x 195-205, z 181-191) with no roof and no wall shadow, ringed by flowers and bushes on soil (PickleTools/docs/SANCTUAIRE-LIEUX.md). Weather Clear in every scene. Game time: each scene sets its own hour (6, 9, 11, 12, 15, 20, 23) and lets 60 ticks pass after the setup, so what moves has moved.
 # Zoom N frames 2N cells high and 3.56N wide (SanctuaryBacklot/docs/GALERIE.md). Decor placed by a scene is removed after its shot (`the decor is removed`); built things go with the save reload at the next scenario.
 # Faces: set per picture, after the face kit, held neutral so the job does not replace them. Drafted pawns are held neutral against the combat face. Nelim faces South (toward the camera) so her face reads; Shogun faces South in every scene he is in (animals seen from the front, GALLERY.md).
 #
 # Nelim's looks, one per scene (colours as dyed rgb), all different. Hair colour stays her own dark brown.
-#   1. 06:00 rust parka (150, 60, 50), dark trousers (60, 60, 70), mustard tuque (200, 150, 60); hairstyle BraidedKnot (under the tuque); face kit calm.
+#   1. 06:00 rust parka (150, 60, 50), dark trousers (60, 60, 70), mustard tuque (200, 150, 60); hairstyle Flowy (long, loose, seen under the tuque); face kit calm.
 #   2. 09:00 cream collar shirt (230, 224, 206), brown trousers (90, 70, 50); hairstyle Wavy; face kit neutral, brows BrowNormal (concentrating).
 #   3. 11:00 teal jacket (28, 98, 104), dark trousers (60, 60, 70); hairstyle Fringe; face kit smile.
 #   4. 12:00 purple robe (110, 70, 130); hairstyle Cute; face kit smug.
-#   5. 15:00 white shirt (240, 235, 220), grey trousers (70, 70, 78), straw shade cone (225, 200, 140); hairstyle Ponytails (under the cone: seen at the back); face kit calm.
+#   5. 15:00 white shirt (240, 235, 220), grey trousers (70, 70, 78), straw shade cone (225, 200, 140); hairstyle Cleopatra (long, straight, loose, seen under the cone); face kit calm.
 #   6. 20:00 burgundy cape (110, 30, 50) over a cream collar shirt (230, 224, 206), trousers (60, 60, 70); hairstyle Long; face kit calm.
 #   7. 23:00 violet jacket (60, 50, 110), trousers (50, 50, 60); hairstyle Bob; face kit neutral.
 # Guests: Ravi (Male body, hairstyle Shaved, orange shirt (200, 90, 60), grey trousers (70, 70, 78), bowler hat (90, 70, 50)); Mei (Female body, hairstyle Bob, hair colour (60, 35, 25), blue shirt (70, 110, 170), grey trousers, cowboy hat (225, 200, 140)).
@@ -73,7 +74,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Parka" dyed rgb (150, 60, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "BraidedKnot"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
     And Nelim's Pickle Tools: "Shogun" faces South
@@ -224,7 +225,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 235, 220)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Shadecone" dyed rgb (225, 200, 140)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Cleopatra"
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
     And Nelim's Pickle Tools: "Shogun" faces South
