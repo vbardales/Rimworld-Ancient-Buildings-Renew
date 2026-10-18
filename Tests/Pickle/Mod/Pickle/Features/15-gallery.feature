@@ -31,10 +31,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 6
     And I set the weather to "Clear"
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (194, 187)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (194, 187) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (206, 187)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (206, 187) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 187)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 187) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (205, 187)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (205, 187) is lit
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -57,12 +57,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 4.5
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.6
     Then I take a screenshot "gallery 1 - the road comes in"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -90,13 +91,14 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (203, 188)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
-    And Nelim's Pickle Tools: "Nelim" stands at (202, 186) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (197, 187)
+    And Nelim's Pickle Tools: "Nelim" stands at (202, 187) facing South
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And Nelim's Sanctuary: Nelim has her own face
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.6
     Then I take a screenshot "gallery 2 - the barrier and the fence up close"
 
   Scenario: 3. the stop at eleven, vending machine and stove
@@ -115,6 +117,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
@@ -134,7 +137,7 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 3.2
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.8
     Then I take a screenshot "gallery 3 - the vending machine and the stove"
 
   Scenario: 4. the vending machine up close
@@ -146,8 +149,6 @@ Feature: gallery: a day at the last stop of an old road
     And I set the hour to 12
     And I set the weather to "Clear"
     And a "ABVending" is built at (199, 189)
-    And I spawn a "MealSimple" at (199, 189)
-    And I spawn a "MealSimple" at (199, 189)
     And I spawn a "MealSimple" at (199, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
@@ -192,6 +193,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And a colonist "Mei" exists
     And "Mei" gender is female
     And Nelim's Pickle Tools: "Mei" body type is Female
@@ -211,7 +213,7 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 3.8
+    And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 3.2
     Then I take a screenshot "gallery 5 - the air conditioner in a wall"
 
   Scenario: 6. the six buildings together at dusk
@@ -220,7 +222,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
-    And I set the hour to 19
+    And I set the hour to 20
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 186)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 186) is lit
@@ -247,6 +249,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
@@ -264,7 +267,7 @@ Feature: gallery: a day at the last stop of an old road
     When I wait 60 ticks
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (201, 187) at zoom 5.5
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.4
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -291,18 +294,16 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (202, 191)
     And a "ConFence" is built at (203, 191)
     And a "AB_Lamppost" is built at (200, 188)
-    And I wait 30 ticks
-    And I wait 30 ticks
-    And I wait 30 ticks
-    And I wait 30 ticks
+    And Nelim's Pickle Tools: I let 120 ticks pass
     Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
-    When I wait 60 ticks
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.5
