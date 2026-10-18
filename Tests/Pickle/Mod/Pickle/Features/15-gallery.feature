@@ -1,25 +1,40 @@
 # Workshop gallery of Ancient Buildings Renew: one story, in one place, staged (PUBLISHING.md: every gallery capture is a staged photo).
 #
-# The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador. Two guests pass through it: Ravi (shaved head, orange shirt) runs the stop at noon, Mei (bob, blue shirt) joins for the afternoon heat. What the pictures SHOW is the clue to the hour: lit torches at dawn and dusk (the night is the lamppost alone), the meal Nelim carries away from the stove and the machine, and her jacket, which comes off in the heat of 15:00 and is back on by evening.
-# Faces and clothes carry the mood (set per picture, after the face kits): Nelim keeps her own face (smirk smile) at dawn, morning and night, smiles at the stop, is calm in the afternoon and at dusk; Ravi is neutral then smiling behind his bowler hat, calm at dusk; Mei smiles under a sun hat. Nelim wears a tuque in the cold of 06:00 and 23:00, bare headed at 15:00. Drafted pawns are held neutral so the combat face does not replace these.
-# Time moves a little between pictures and the place is the same: the calm zone of Nelim's tribe, a cream stone square with no roof and no wall
-# shadow (the one neutral light ground among the outdoor places; PickleTools/docs/SANCTUAIRE-LIEUX.md). Each picture takes its own corner of it.
-# Owner's allowance (2026-10-06): anything RimWorld offers is allowed in a gallery picture, other mods included; as many pictures as wanted,
-# each under 2 MB and the whole set under 8 MB (the run's PNGs are about 4 MB: convert the retained ones to JPEG).
-#   1. 06:00  The road comes in: the concrete barrier funnels it, the fence runs beside it, two torches still burn from the night. Nelim arrives with Shogun.
-#   2. 09:00  Close on the barrier and the fence, Nelim at the end of the line, Shogun at its foot.
-#   3. 11:00  The stop: a vending machine with meals in it and the one-tile stove. Ravi is there. Nelim leaves the stove with a meal in her hands, Shogun waits.
-#   4. 12:00  Close on the vending machine and its meals, Nelim with the meal she chose, Ravi beside her.
-#   5. 15:00  The heat of the afternoon: the ancient air conditioner set in a wall, Nelim in the cooled shade (south of the unit), jacket off, Mei and Shogun with her.
-#   6. 19:00  Dusk: the whole set together, torches lit again, Nelim (jacket back on), Shogun and Ravi resting among the six buildings.
-#   7. 23:00  Night: the lamppost lit, on sunlight it stored, no conduit anywhere. The pool of light is the lamppost's own (radius 19 covers the square).
-# Why this place: the places were looked at one by one in docs/SANCTUAIRE-LIEUX.md. The gravel yard is a good road but is full of furniture and lamps;
-# the flat open squares (A to J) are dark earth with flowers; the calm zone is clean, level and light, so concrete and a lit lamp read on it.
-# Colours: the jacket is a deep teal (28, 98, 104), the complement of the lamp's amber and of the grey concrete, so Nelim stands out in every picture.
-# The only animal in the story is a dog, awake at every hour used. Ravi has the same shaved head in every picture he is in. Every scenario reloads the save and cleans the filth (the grey stain of run 8cf7).
-# Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes and the filth are Nelim's Pickle Tools'.
+# The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador. Two guests pass through it: Ravi (shaved head, orange shirt, bowler hat) runs the stop at noon and shares dusk, Mei (bob, blue shirt, cowboy hat) joins for the afternoon heat. What the pictures SHOW is the clue to the hour: lit torches at dawn and dusk, the night is the lamppost alone, the meal Nelim carries away from the stove and the machine, and her clothes, which change with the weather of the day.
+# Place for all seven: the calm zone of Nelim's tribe, a cream stone square (about 11 x 11 cells, x 195-205, z 181-191) with no roof and no wall shadow, ringed by flowers and bushes on soil (PickleTools/docs/SANCTUAIRE-LIEUX.md). Weather Clear in every scene. Game time: each scene sets its own hour (6, 9, 11, 12, 15, 20, 23) and lets 60 ticks pass after the setup, so what moves has moved.
+# Zoom N frames 2N cells high and 3.56N wide (SanctuaryBacklot/docs/GALERIE.md). Decor placed by a scene is removed after its shot (`the decor is removed`); built things go with the save reload at the next scenario.
+# Faces: set per picture, after the face kit, held neutral so the job does not replace them. Drafted pawns are held neutral against the combat face. Nelim faces South (toward the camera) so her face reads; Shogun faces South in every scene he is in (animals seen from the front, GALLERY.md).
+#
+# Nelim's looks, one per scene (colours as dyed rgb), all different. Hair colour stays her own dark brown.
+#   1. 06:00 rust parka (150, 60, 50), dark trousers (60, 60, 70), mustard tuque (200, 150, 60); hairstyle BraidedKnot (under the tuque); face kit calm.
+#   2. 09:00 cream collar shirt (230, 224, 206), brown trousers (90, 70, 50); hairstyle Wavy; face kit neutral, brows BrowNormal (concentrating).
+#   3. 11:00 teal jacket (28, 98, 104), dark trousers (60, 60, 70); hairstyle Fringe; face kit smile.
+#   4. 12:00 purple robe (110, 70, 130); hairstyle Cute; face kit smug.
+#   5. 15:00 white shirt (240, 235, 220), grey trousers (70, 70, 78), straw shade cone (225, 200, 140); hairstyle Ponytails (under the cone: seen at the back); face kit calm.
+#   6. 20:00 burgundy cape (110, 30, 50) over a cream collar shirt (230, 224, 206), trousers (60, 60, 70); hairstyle Long; face kit calm.
+#   7. 23:00 violet jacket (60, 50, 110), trousers (50, 50, 60); hairstyle Bob; face kit neutral.
+# Guests: Ravi (Male body, hairstyle Shaved, orange shirt (200, 90, 60), grey trousers (70, 70, 78), bowler hat (90, 70, 50)); Mei (Female body, hairstyle Bob, hair colour (60, 35, 25), blue shirt (70, 110, 170), grey trousers, cowboy hat (225, 200, 140)).
+#
+# Shot list (a to g of the audit; "R" = main risk and plan, h; the mod is in every picture, j; nothing here is a row of aligned subjects, i):
+#   1. 06:00, frame (200, 187) zoom 3.6. Decor: two lit TorchLamp (195, 187) and (205, 187), two fully grown daylilies (194, 185) and (206, 185). Living: Shogun at (202, 185); the ring of flowers. Action: Nelim carries a log (WoodLog) toward the torches. Concrete barrier row at the back, fence row beside it: the road is funnelled to the stop. Says: the old road comes in at dawn and someone brings wood for the fire.
+#      R: the dawn light does not read, the torches are small. Plan: torches inside the frame, set 1 cell nearer the pawn each; if the picture is flat, the scene goes to 07:00.
+#   2. 09:00, frame (200, 188) zoom 3.4. Decor: a Stool (196, 187), fully grown roses (194, 188) and (206, 188). Living: Shogun at (198, 187). Action: Nelim carries a steel bar (Steel) to mend the fence; off-centre, the barrier fills the upper third. Says: the fence is mended by hand, concrete that was left standing.
+#      R: the roses on soil cells may be refused or covered by wild flowers. Plan: the step fails loudly, then the plant goes to the nearest soil cell of the ring.
+#   3. 11:00, frame (200, 188) zoom 2.8. Decor: a Stool (198, 187), a fully grown bush (194, 187). Living: Shogun at (202, 187). Action: Nelim walks away from the stove with a meal (MealSimple) in her hands; vending machine left, stove centre. Says: the stove cooks, and the meal leaves with its cook.
+#      R: the meal in her hands is small at this zoom. Plan: zoom 2.8 puts a cell at 193 px; if still unreadable, 2.4.
+#   4. 12:00, frame (199, 188) zoom 2.2. Decor: a StandingLamp (202, 189), a Stool (197, 188). Living: Shogun at (201, 186), Ravi (shaved head) at (197, 186), Nelim at (199, 187): a triangle, not a row. Action: Nelim chooses a meal from the machine (MealSimple in her hands), Ravi holds silver (Silver) to pay. Says: the vending machine feeds a traveller, and the keeper takes the coin.
+#      R: the meal laid on the machine lands on a neighbour cell and looks like a second machine. Plan: one meal only; if it still does, it is carried by Ravi instead.
+#   5. 15:00, frame (199, 187) zoom 3.2. Decor: a Stool (196, 187), fully grown daylilies (194, 187) and (206, 187). Living: Shogun at (201, 186), Mei at (203, 185): a diagonal, not a row. Action: Nelim holds a cold drink (Beer) in the cooled shade south of the unit; the ancient air conditioner is set in a wall. Says: the old machine makes a shade of cold in the heat of the afternoon.
+#      R: the cooling is only implied by the shade. Plan: the unit is powered on, the shade cone shows it; Mei under her cowboy hat reads as heat.
+#   6. 20:00, frame (200, 187) zoom 4.4. Decor: two lit TorchLamp (195, 186) and (207, 186), fully grown daylilies (194, 189) and (206, 189). Living: Shogun at (202, 186), Ravi at (200, 190). Action: Nelim eats the last of the stove's pemmican (Pemmican), Ravi rests. The whole set is built: barrier, fence, wall with the unit, lamppost, vending machine, stove. Says: the day ends among the six buildings, lit by torches.
+#      R: dusk reads as day. Plan: hour 20 with torches lit; if still bright, hour 21.
+#   7. 23:00, frame (200, 187) zoom 4.5. Decor: fully grown bushes (194, 186) and (206, 186). Living: Shogun at (202, 187). Action: Nelim carries a bar of chocolate (Chocolate) through the pool of light. The lamppost at (200, 188), barrier and fence at the back and the front; no conduit. Says: the lamppost holds the night with the sunlight it stored.
+#      R: the night reads as evening, and a 5 s wait cut the first run. Plan: the waits use "I let N ticks pass" (240 s budget); the lamppost glow is asserted before the pawns are placed.
+#
+# Why this place: the calm zone is clean, level and light, so concrete and a lit lamp read on it. Every scenario reloads the save and cleans the filth.
+# Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes, the decor and the filth are Nelim's Pickle Tools'.
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran.
-@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom
+@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.stagedecor
 @review
 Feature: gallery: a day at the last stop of an old road
 
@@ -35,6 +50,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 187) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (205, 187)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (205, 187) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 185) fully grown
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -53,14 +70,19 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (202, 188)
     And a "ConFence" is built at (203, 188)
     And a "ConFence" is built at (204, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Parka" dyed rgb (150, 60, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "BraidedKnot"
     And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
     And Nelim's Pickle Tools: "Shogun" faces South
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
-    When I wait 60 ticks
+    And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
+    And Nelim's Pickle Tools: "Nelim" face kit is "calm"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.6
@@ -75,6 +97,9 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 9
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "Stool" at (196, 187)
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (194, 188) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (206, 188) fully grown
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
     And a "ConcreteBarrier" is built at (199, 190)
@@ -89,17 +114,23 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (201, 188)
     And a "ConFence" is built at (202, 188)
     And a "ConFence" is built at (203, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Wavy"
     And Nelim's Pickle Tools: "Nelim" stands at (202, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
     And Nelim's Pickle Tools: "Shogun" faces South
-    And Nelim's Sanctuary: Nelim has her own face
-    When I wait 60 ticks
+    And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Steel"
+    And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.6
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.4
     Then I take a screenshot "gallery 2 - the barrier and the fence up close"
+    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 3. the stop at eleven, vending machine and stove
     Given the save "Nelims-tribe" is loaded
@@ -109,36 +140,28 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 11
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "Stool" at (198, 187)
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 187) fully grown
     And a "ABVending" is built at (198, 189)
     And a "ABKitchenstove" is built at (200, 189)
     And I spawn a "MealSimple" at (198, 189)
-    And I spawn a "MealSimple" at (198, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Fringe"
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing South
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     And Nelim's Pickle Tools: "Shogun" faces South
-    And a colonist "Ravi" exists
-    And "Ravi" gender is male
-    And Nelim's Pickle Tools: "Ravi" body type is Male
-    And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
-    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
-    And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
-    And Nelim's Pickle Tools: "Ravi" stands at (197, 187) facing North
-    And I draft "Ravi"
     And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Ravi" face kit is "neutral"
-    And Nelim's Pickle Tools: "Ravi" face is held neutral
-    When I wait 60 ticks
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.8
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.8
     Then I take a screenshot "gallery 3 - the vending machine and the stove"
+    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 4. the vending machine up close
     Given the save "Nelims-tribe" is loaded
@@ -148,32 +171,38 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 12
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "StandingLamp" at (202, 189)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 188)
     And a "ABVending" is built at (199, 189)
     And I spawn a "MealSimple" at (199, 189)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Robe" dyed rgb (110, 70, 130)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Cute"
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
+    And Nelim's Pickle Tools: "Shogun" faces South
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
     And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
-    And Nelim's Pickle Tools: "Ravi" stands at (201, 187) facing North
+    And Nelim's Pickle Tools: "Ravi" stands at (197, 186) facing South
     And I draft "Ravi"
     And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Ravi" carries the item "Silver"
+    And Nelim's Pickle Tools: "Nelim" face kit is "smug"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Ravi" face kit is "smile"
     And Nelim's Pickle Tools: "Ravi" face is held neutral
-    When I wait 60 ticks
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.2
     Then I take a screenshot "gallery 4 - the vending machine up close"
+    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 5. the air conditioner at three
     Given the save "Nelims-tribe" is loaded
@@ -183,16 +212,21 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 15
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "Stool" at (196, 187)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 187) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 187) fully grown
     And a "Wall" is built at (197, 189)
     And a "Wall" is built at (198, 189)
     And a "AB_AirConditioner" is built at (199, 189)
     And a "Wall" is built at (200, 189)
     And a "Wall" is built at (201, 189)
     And Ancient Buildings Renew: the "AB_AirConditioner" at (199, 189) is powered on
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 235, 220)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Shadecone" dyed rgb (225, 200, 140)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 187)
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
     And Nelim's Pickle Tools: "Shogun" faces South
     And a colonist "Mei" exists
     And "Mei" gender is female
@@ -200,9 +234,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Mei" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (70, 110, 170)
     And Nelim's Pickle Tools: "Mei" wears "Apparel_Pants" dyed rgb (70, 70, 78)
-    And Nelim's Pickle Tools: "Mei" stands at (203, 187) facing North
+    And Nelim's Pickle Tools: "Mei" stands at (203, 185) facing South
     And I draft "Mei"
     And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Beer"
     And Nelim's Pickle Tools: "Mei" hair colour is rgb (60, 35, 25)
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
@@ -210,11 +245,12 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Mei" wears "Apparel_CowboyHat" dyed rgb (225, 200, 140)
     And Nelim's Pickle Tools: "Mei" face kit is "smile"
     And Nelim's Pickle Tools: "Mei" face is held neutral
-    When I wait 60 ticks
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 3.2
     Then I take a screenshot "gallery 5 - the air conditioner in a wall"
+    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 6. the six buildings together at dusk
     Given the save "Nelims-tribe" is loaded
@@ -228,6 +264,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 186) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (207, 186)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (207, 186) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 189) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 189) fully grown
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -245,9 +283,11 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (200, 185)
     And a "Wall" is built at (201, 185)
     And I spawn a "MealSimple" at (203, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (110, 30, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
-    And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing West
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
+    And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
     And Nelim's Pickle Tools: "Shogun" faces South
     And a colonist "Ravi" exists
@@ -259,12 +299,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" stands at (200, 190) facing South
     And I draft "Ravi"
     And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Ravi" face kit is "calm"
     And Nelim's Pickle Tools: "Ravi" face is held neutral
-    When I wait 60 ticks
+    When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.4
@@ -279,6 +320,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 23
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (206, 186) fully grown
     And a "ConcreteBarrier" is built at (197, 185)
     And a "ConcreteBarrier" is built at (198, 185)
     And a "ConcreteBarrier" is built at (199, 185)
@@ -296,15 +339,20 @@ Feature: gallery: a day at the last stop of an old road
     And a "AB_Lamppost" is built at (200, 188)
     And Nelim's Pickle Tools: I let 120 ticks pass
     Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (60, 50, 110)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 50, 60)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     And Nelim's Pickle Tools: "Shogun" faces South
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
+    And I draft "Nelim"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Chocolate"
+    And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.5
     Then I take a screenshot "gallery 7 - the lamppost at night"
+    And Nelim's Pickle Tools: the decor is removed

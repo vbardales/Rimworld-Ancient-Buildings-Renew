@@ -134,16 +134,18 @@ Vocabulary for `licence`: `open` explicit licence, `silent` no licence and dead 
 - Gallery reshoot ticket bb37 (20261017-140402-946-bb37), 2026-10-17, tree 86e06eb: 6 of 7 scenes passed, captures `manual--gallery-1..6` in Tests/Pickle/Evidence/gallery-2026-10-17; scene 7 (lamppost at night) failed `Step 'And I wait 120 ticks' timed out after 5s` (one 7.7 s tick, mean 164 ms; cause not proven, other scenes max 959 ms). Fix 973d31a: wait split 4x30 ticks. Scene 7 refiled alone (`-Filter '::7. the lamppost at night'`), waiting RUN_DONE. Then: open each capture, verdict, reindex, Art/Gallery-clean, Add-Subtitle with lines of PUBLICATION.md "Gallery subtitles".
 - Pending from other sessions, 2026-10-17: Audit (local_10336624) asked to review the mod-workflow skills (resume-mod, close-turn, review-gallery; five frictions listed), queued, no answer needed here. Skills compress-restore: BACKLOG, STATUS, TESTING compressed again 2026-10-17 (originals in %LOCALAPPDATA%\caveman-compress\backups\AncientBuildingsRenew; earlier ones kept as *.original.prev-20261017.md).
 
-## Shotlist rating (Audit rule 2026-10-18; redo agreed by Audit via TM the same day)
+## Shotlist rating (Audit rule 2026-10-18, criteria a to j of GALLERY.md; audit of GALLERY-SHOTLIST-AUDIT.md answered)
 
-Stage followUp[1.1.0]. Estimates before playing, `15-gallery.feature` after the second rewrite (zoom N frames 2N cells high and 3.56N wide, cell = 540/N px; calm zone is about 11 x 11 cells, x 195-205, z 181-191). First estimate (2026-10-17 captures): scenes 1, 2, 3, 4, 6, 7 at 3, scene 5 at 4. Redone images stay candidates: nothing replaces the published gallery without the owner accepting them.
+Stage followUp[1.1.0]. Scores are estimates before playing; the plan, outfits, decor, actions and risks are written in the header of `15-gallery.feature`. Earlier ticket cd2d cancelled (scenes were under 4 by the audit). Fixes against the audit: a different outfit, hairstyle and face kit per scene; an action per scene (carries log, steel bar, meal, silver, drink, pemmican, chocolate); decor named per scene and removed after each shot; plants (daylily, rose, bush on the soil ring) and Shogun facing South in every scene; scenes 4 and 5 are a triangle and a diagonal, not a row; each risk has a plan. Redone images stay candidates; the published gallery is replaced only if Virginie accepts them.
 
-| Scene | Before | After | What changed | Main risk |
-|---|---|---|---|---|
-| 1 dawn, road comes in | 3 | 4 | zoom 3.6, torches (195/205, 187) inside the frame, Nelim and Shogun face the camera | dawn light weak |
-| 2 barrier and fence close | 3 | 4 | zoom 2.6, Nelim and Shogun near the fence, both facing the camera | little story beyond the pair |
-| 3 stop at eleven | 3 | 4 | zoom 2.8, empty ground cropped out, dog facing camera | meal in hands small |
-| 4 vending machine close | 3 | 4 | one meal only (three spread to neighbour cells), zoom 2.2 | unexplained box beside the machine if the meal lands there |
-| 5 air conditioner at three | 4 | 4 | zoom 3.2, dog facing camera | cooling only implied by the shade |
-| 6 six buildings at dusk | 3 | 4 | hour 20, zoom 4.4 centred on the tableau | dusk may still read as day |
-| 7 lamppost at night | 3 | 4 | waits through `I let N ticks pass` (240 s budget, not 5 s) | night may read light; first run timed out |
+| Scene | a | b | c | d | e | f | g | h | i | j | Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 dawn, road comes in | y | torches, daylilies, removed | dog, plants | rust parka, mustard tuque, BraidedKnot, calm | carries a log | zoom 3.6, barrier back | y | y | y | barrier, fence | 4 |
+| 2 barrier and fence close | y | stool, roses, removed | dog, roses | cream shirt, brown trousers, Wavy, neutral | carries a steel bar | zoom 3.4, barrier upper third | y | y | y | barrier, fence | 4 |
+| 3 stop at eleven | y | stool, bush, removed | dog, bush | teal jacket, Fringe, smile | leaves the stove with a meal | zoom 2.8 | y | y | y | machine, stove | 4 |
+| 4 vending machine close | y | standing lamp, stool, removed | dog, Ravi | purple robe, Cute, smug; Ravi smile | chooses a meal, Ravi pays | zoom 2.2, triangle | y | y | y | machine | 4 |
+| 5 air conditioner at three | y | stool, daylilies, removed | dog, Mei, daylilies | white shirt, shade cone, Ponytails, calm | holds a cold drink in the shade | zoom 3.2, diagonal | y | y | y | air conditioner | 4 |
+| 6 six buildings at dusk | y | torches, daylilies, removed | dog, Ravi | burgundy cape, Long, calm | eats pemmican | zoom 4.4, tableau | y | y | y | all six | 4 |
+| 7 lamppost at night | y | bushes, removed | dog, bushes | violet jacket, Bob, neutral | carries chocolate through the light | zoom 4.5 | y | y | y | lamppost | 4 |
+
+Weakest points (still a 4): f (foreground and background are not separate planes on a flat stone square), and the dusk and night light of scenes 6 and 7.
