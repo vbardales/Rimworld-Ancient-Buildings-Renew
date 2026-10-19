@@ -21,11 +21,11 @@
 #      R: the dawn light does not read, the torches are small. Plan: torches inside the frame, set 1 cell nearer the pawn each; if the picture is flat, the scene goes to 07:00.
 #   2. 09:00, frame (200, 188) zoom 3.4. Decor: a Stool (196, 187), fully grown roses (194, 188) and (206, 188). Living: Shogun at (198, 187). Action: Nelim carries a steel bar (Steel) to mend the fence; off-centre, the barrier fills the upper third. Says: the fence is mended by hand, concrete that was left standing.
 #      R: the roses on soil cells may be refused or covered by wild flowers. Plan: the step fails loudly, then the plant goes to the nearest soil cell of the ring.
-#   3. 11:00, frame (200, 188) zoom 2.8. Decor: a Stool (198, 187), a fully grown bush (194, 187). Living: Shogun at (202, 187). Action: Nelim walks away from the stove with a meal (MealSimple) in her hands; vending machine left, stove centre. Says: the stove cooks, and the meal leaves with its cook.
+#   3. 11:00, frame (200, 188) zoom 2.8. Decor: a Stool (198, 187), a fully grown bush (194, 187). Living: Shogun at (202, 187). Action: Nelim walks away from the stove with pemmican (Pemmican) in her hands; vending machine left, stove centre. Says: the stove cooks, and the meal leaves with its cook.
 #      R: the meal in her hands is small at this zoom. Plan: zoom 2.8 puts a cell at 193 px; if still unreadable, 2.4.
-#   4. 12:00, frame (199, 188) zoom 2.2. Decor: a StandingLamp (202, 189), a Stool (197, 188). Living: Shogun at (201, 186), Ravi (shaved head) at (197, 186), Nelim at (199, 187): a triangle, not a row. Action: Nelim chooses a meal from the machine (MealSimple in her hands), Ravi holds silver (Silver) to pay. Says: the vending machine feeds a traveller, and the keeper takes the coin.
+#   4. 12:00, frame (199, 188) zoom 2.8. Decor: a StandingLamp (202, 189), a Stool (197, 188). Living: Shogun at (201, 186), Ravi (shaved head) at (197, 186), Nelim at (199, 187): a triangle, not a row. Action: Ravi hands over a meal (MealSimple) from the machine, Nelim holds the silver (Silver) she is paid. Says: the vending machine feeds a traveller, and the keeper takes the coin.
 #      R: the meal laid on the machine lands on a neighbour cell and looks like a second machine. Plan: one meal only; if it still does, it is carried by Ravi instead.
-#   5. 15:00, frame (199, 187) zoom 3.2. Decor: a Stool (196, 187), fully grown daylilies (194, 187) and (206, 187). Living: Shogun at (201, 186), Mei at (203, 185): a diagonal, not a row. Action: Nelim holds a cold drink (Beer) in the cooled shade south of the unit; the ancient air conditioner is set in a wall. Says: the old machine makes a shade of cold in the heat of the afternoon.
+#   5. 15:00, frame (199, 187) zoom 3.2. Decor: a Stool (196, 187), fully grown daylilies (194, 187) and (206, 187). Living: Shogun at (201, 186), Mei at (203, 185): a diagonal, not a row. Action: Nelim wipes her brow with a cloth (Cloth) in the cooled shade south of the unit; the ancient air conditioner is set in a wall. Says: the old machine makes a shade of cold in the heat of the afternoon.
 #      R: the cooling is only implied by the shade. Plan: the unit is powered on, the shade cone shows it; Mei under her cowboy hat reads as heat.
 #   6. 20:00, frame (200, 187) zoom 4.4. Decor: two lit TorchLamp (195, 186) and (207, 186), fully grown daylilies (194, 189) and (206, 189). Living: Shogun at (202, 186), Ravi at (200, 190). Action: Nelim eats the last of the stove's pemmican (Pemmican), Ravi rests. The whole set is built: barrier, fence, wall with the unit, lamppost, vending machine, stove. Says: the day ends among the six buildings, lit by torches.
 #      R: dusk reads as day. Plan: hour 20 with torches lit; if still bright, hour 21.
@@ -77,7 +77,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 185) facing South
     And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
@@ -87,6 +87,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.6
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 1 - the road comes in"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -120,7 +121,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Wavy"
     And Nelim's Pickle Tools: "Nelim" stands at (202, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing South
     And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Steel"
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
@@ -130,6 +131,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.4
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 2 - the barrier and the fence up close"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -151,9 +153,9 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Fringe"
     And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 187) facing South
     And I draft "Nelim"
-    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
     And Nelim's Pickle Tools: "Nelim" face kit is "smile"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
@@ -161,6 +163,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.8
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 3 - the vending machine and the stove"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -180,7 +183,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Cute"
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing South
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
@@ -190,8 +193,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" stands at (197, 186) facing South
     And I draft "Ravi"
     And I draft "Nelim"
-    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
-    And Nelim's Pickle Tools: "Ravi" carries the item "Silver"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Silver"
+    And Nelim's Pickle Tools: "Ravi" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Nelim" face kit is "smug"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
@@ -201,7 +204,9 @@ Feature: gallery: a day at the last stop of an old road
     When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.2
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.8
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Ravi" facial expression is "normal+blink"
     Then I take a screenshot "gallery 4 - the vending machine up close"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -228,7 +233,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Cleopatra"
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing South
     And a colonist "Mei" exists
     And "Mei" gender is female
     And Nelim's Pickle Tools: "Mei" body type is Female
@@ -238,7 +243,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Mei" stands at (203, 185) facing South
     And I draft "Mei"
     And I draft "Nelim"
-    And Nelim's Pickle Tools: "Nelim" carries the item "Beer"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Mei" hair colour is rgb (60, 35, 25)
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
@@ -250,6 +255,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 3.2
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Mei" facial expression is "normal+blink"
     Then I take a screenshot "gallery 5 - the air conditioner in a wall"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -290,7 +297,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
     And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
@@ -310,6 +317,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.4
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Ravi" facial expression is "normal+blink"
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -345,7 +354,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
-    And Nelim's Pickle Tools: "Shogun" faces South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 187) facing South
     And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Chocolate"
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
@@ -355,5 +364,6 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.5
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 7 - the lamppost at night"
     And Nelim's Pickle Tools: the decor is removed
