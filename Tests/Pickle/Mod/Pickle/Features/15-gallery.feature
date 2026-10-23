@@ -59,8 +59,8 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (200, 188)
     And a "ConFence" is built at (201, 188)
     And a "ConFence" is built at (202, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Parka" dyed rgb (150, 60, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Parka" dyed rgb (150, 60, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" stands at (203, 187) facing West
@@ -108,8 +108,8 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (199, 188)
     And a "ConFence" is built at (201, 188)
     And a "ConFence" is built at (202, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
@@ -144,8 +144,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
     And a "ABVending" is built at (198, 189)
     And a "ABKitchenstove" is built at (200, 189)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Fringe"
     And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
@@ -184,8 +184,8 @@ Feature: gallery: a day at the last stop of an old road
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
     And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
-    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" stands at (197, 186) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "Silver"
     And Nelim's Pickle Tools: "Ravi" carries the item "MealSimple"
@@ -223,8 +223,8 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (200, 189)
     And a "Wall" is built at (201, 189)
     And Ancient Buildings Renew: the "AB_AirConditioner" at (199, 189) is powered on
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 235, 220)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (240, 235, 220)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Shadecone" dyed rgb (225, 200, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Cleopatra"
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
@@ -234,8 +234,8 @@ Feature: gallery: a day at the last stop of an old road
     And "Mei" gender is female
     And Nelim's Pickle Tools: "Mei" body type is Female
     And Nelim's Pickle Tools: "Mei" hairstyle is "Bob"
-    And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (70, 110, 170)
     And Nelim's Pickle Tools: "Mei" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (70, 110, 170)
     And Nelim's Pickle Tools: "Mei" stands at (203, 185) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Mei" hair colour is rgb (60, 35, 25)
@@ -281,9 +281,9 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (197, 185)
     And a "AB_AirConditioner" is built at (198, 185)
     And a "Wall" is built at (199, 185)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (110, 30, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
     And Nelim's Pickle Tools: "Nelim" stands at (204, 186) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (200, 186)
@@ -292,8 +292,8 @@ Feature: gallery: a day at the last stop of an old road
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
     And Nelim's Pickle Tools: "Ravi" hairstyle is "Shaved"
-    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
+    And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Ravi" stands at (196, 187) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
@@ -342,8 +342,8 @@ Feature: gallery: a day at the last stop of an old road
     And a "AB_Lamppost" is built at (200, 188)
     And Nelim's Pickle Tools: I let 120 ticks pass
     Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (60, 50, 110)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 50, 60)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (60, 50, 110)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
