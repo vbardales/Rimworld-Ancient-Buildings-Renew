@@ -43,10 +43,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 6
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 187)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 187) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (205, 187)
@@ -78,7 +80,6 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 185) facing South
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
@@ -88,6 +89,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.6
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
+    And Nelim's Pickle Tools: "Nelim" face state is logged
     Then I take a screenshot "gallery 1 - the road comes in"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -95,10 +98,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 9
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "Stool" at (196, 187)
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (194, 188) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (206, 188) fully grown
@@ -122,7 +127,6 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (202, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing South
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Steel"
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
@@ -139,10 +143,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 11
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 187)
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 187) fully grown
     And a "ABVending" is built at (198, 189)
@@ -154,9 +160,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 187) facing South
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: I let 60 ticks pass
@@ -171,10 +176,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 12
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "StandingLamp" at (202, 189)
     And Nelim's Pickle Tools: I place the decor "Stool" at (197, 188)
     And a "ABVending" is built at (199, 189)
@@ -191,15 +198,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Ravi" stands at (197, 186) facing South
-    And I draft "Ravi"
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Silver"
     And Nelim's Pickle Tools: "Ravi" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Nelim" face kit is "smug"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Ravi" face kit is "smile"
+    And Nelim's Pickle Tools: "Ravi" face kit is "calm"
     And Nelim's Pickle Tools: "Ravi" face is held neutral
     When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
@@ -214,10 +219,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 15
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "Stool" at (196, 187)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 187) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 187) fully grown
@@ -241,15 +248,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Mei" wears "Apparel_BasicShirt" dyed rgb (70, 110, 170)
     And Nelim's Pickle Tools: "Mei" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Mei" stands at (203, 185) facing South
-    And I draft "Mei"
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Mei" hair colour is rgb (60, 35, 25)
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Mei" wears "Apparel_CowboyHat" dyed rgb (225, 200, 140)
-    And Nelim's Pickle Tools: "Mei" face kit is "smile"
+    And Nelim's Pickle Tools: "Mei" face kit is "calm"
     And Nelim's Pickle Tools: "Mei" face is held neutral
     When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
@@ -264,10 +269,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 20
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 186)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 186) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (207, 186)
@@ -305,8 +312,6 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_Pants" dyed rgb (70, 70, 78)
     And Nelim's Pickle Tools: "Ravi" stands at (200, 190) facing South
-    And I draft "Ravi"
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
@@ -326,10 +331,12 @@ Feature: gallery: a day at the last stop of an old road
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 23
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (206, 186) fully grown
     And a "ConcreteBarrier" is built at (197, 185)
@@ -355,7 +362,6 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 187) facing South
-    And I draft "Nelim"
     And Nelim's Pickle Tools: "Nelim" carries the item "Chocolate"
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
