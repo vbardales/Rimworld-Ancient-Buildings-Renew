@@ -18,8 +18,8 @@
 # Guests: Ravi (Male body, hairstyle Shaved, orange shirt (200, 90, 60), grey trousers (70, 70, 78), bowler hat (90, 70, 50) in scene 4; face kit calm in scenes 4 and 6); Mei (Female body, hairstyle Bob, hair colour (60, 35, 25), blue shirt (70, 110, 170), grey trousers, cowboy hat (225, 200, 140); face kit calm). Guests wear a hat freely: only Nelim follows the long-loose-hair rule.
 #
 # Shot list v2 (2026-10-23, after the 50fd captures: at zoom 3.4 to 4.4 Nelim was a 130 px figure on a grey slab, and rows of nine barrier cells read as flat slabs). Rules for every shot: (P) the pawn at zoom 3.2 or closer, so the head is at least 90 px; (L) two planes: one named object in the bottom third of the frame (south cells, z 183 to 185) in front, the buildings behind; (R5) a row of buildings is five cells at most; (S) hours 6, 9, 15, 21 and 23 give long shadows or lamp light, hours 11 and 12 are flat and lean on colour and on the machine. "R" = main risk and plan (h); a step never played is named in its R line; the mod is in every picture (j); nothing here is a row of aligned subjects (i).
-#   1. 06:00, frame (200, 186) zoom 3.2 (x 194-206, z 183-190). Back: concrete barrier row (198-202, 190) and fence row (198-202, 188), a channel of five cells: the road is funnelled. Middle: Nelim at (200, 186), facing South. Front: two lit TorchLamp (197, 184) and (203, 184). Sides: fully grown daylilies (194, 185) and (206, 185). Living: Shogun at (202, 185) facing South, seen from the front. Action: Nelim carries a log (WoodLog) toward the torches. Says: the old road comes in at dawn between the concrete, and someone brings wood for the fire.
-#      R: the dawn light does not read, the torches are small. Plan: torches two cells from the bottom edge, long shadows of 06:00; if flat, the scene goes to 07:00. R: faces were red and angry on 50fd (never replayed): no pawn drafted, kit calm, 20 degrees, face state logged here for NPT.
+#   1. 06:00, WIDE opening shot, frame (200, 187) zoom 4.4 (x 193.1-206.9, z 182.6-191.4; a cell is 123 px, 17 px on the 268 px Steam thumbnail). Back: concrete barrier row (198-202, 190) and fence row (198-202, 188), a channel of five cells that funnels the road. Middle: Nelim in mid-stride. Front: two lit TorchLamp (197, 184) and (203, 184), a woodpile (a stack of WoodLog) at (196, 185) and a Stool at (204, 185): the stop is lived in. Sides: fully grown daylilies (194, 185) and (206, 185) and the ring of flowers. Living: Shogun at (199, 185) turned West, watching her come. Action: Nelim walks with a log (WoodLog) on her shoulder from the east end of the fence toward the woodpile, in profile, leaving the channel. The instant: she has just passed the end of the fence and is three steps from the woodpile; next she drops the log on it. How it is obtained: she stands at (203, 187), `I order "Nelim" to (198, 185)`, the game runs 40 ticks (`game speed is normal`, `I let 40 ticks pass`), then `game speed is paused`; the log is put in her hands after the pause (`carries the item`), which holds on a paused game. Says: the old road comes in at dawn between the concrete, and someone brings wood for the fire. Thumbnail at 268 px: the dark channel of barrier and fence over the pale stone, two orange torch flames, a small walking figure with a log.
+#      R: the dawn light does not read, the torches are small, and the mid-stride pose is unplayed: the pawn may stop before the pause (the `I let` step may advance a paused game, or not). Plan: torches two cells from the bottom edge, long shadows of 06:00, scene to 07:00 if flat; the walk is checked in the log (`the movement of the colonist "Nelim" is logged for 5 seconds`) and, if the pawn has already arrived, the order goes farther (to (196, 184)) with 20 ticks. If the log leaves her hands on the walk, only the carry is applied after the pause. Faces: kit calm, 20 degrees, `normal+blink` last, face state logged here for NPT.
 #   2. 09:00, frame (201, 187) zoom 3.0 (x 195.7-206.3, z 184-190). Back: barrier row (199-203, 190), the upper third. Middle: fence row (199-203, 188) and Nelim at (202, 186) just south of it, off-centre to the right. Front: a Stool (197, 185). Sides: fully grown roses (194, 187) and (206, 187). Living: Shogun at (198, 186) facing South. Action: Nelim carries a steel bar (Steel) to mend the fence, in a cream shirt against the dark fence. Says: the fence is mended by hand, concrete that was left standing.
 #      R: the steel bar was a grey blob at zoom 3.4. Plan: zoom 3.0; if still unreadable the bar becomes Plasteel (a light blue bar). R: roses on soil cells may be refused or covered by wild flowers. Plan: the step fails loudly, then the plant goes to the nearest soil cell of the ring.
 #   3. 11:00 (flat light), frame (199, 188) zoom 2.8 (x 194-204, z 185.4-190.6). Back: vending machine (198, 189) and stove (200, 189), two buildings side by side, the stove centre. Middle: Nelim at (200, 187) walking away from the stove, facing South. Front: a Stool (198, 185) and a fully grown bush (194, 186). Living: Shogun at (202, 186) facing South. Action: Nelim carries pemmican (Pemmican). Says: the stove cooks, and the meal leaves with its cook.
@@ -54,8 +54,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the decor "TorchLamp" at (197, 184) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 184)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 184) is lit
+    And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 185) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 185) fully grown
+    And I spawn a "WoodLog" at (196, 185)
     And a "ConcreteBarrier" is built at (198, 190)
     And a "ConcreteBarrier" is built at (199, 190)
     And a "ConcreteBarrier" is built at (200, 190)
@@ -70,17 +72,21 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (200, 150, 60)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Flowy"
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 186) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 185) facing South
-    And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
+    And Nelim's Pickle Tools: "Nelim" stands at (203, 187) facing West
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 185)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 185) facing West
     And Nelim's Pickle Tools: "Nelim" face kit is "calm"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    When Nelim's Pickle Tools: I let 60 ticks pass
-    And Nelim's Pickle Tools: all filth is cleaned
+    And I order "Nelim" to (198, 185)
+    And game speed is normal
+    And Nelim's Pickle Tools: I let 40 ticks pass
+    And game speed is paused
+    And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
+    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
+    When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 186) at zoom 3.2
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.4
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     And Nelim's Pickle Tools: "Nelim" face state is logged

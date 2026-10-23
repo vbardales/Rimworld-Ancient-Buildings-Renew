@@ -140,7 +140,7 @@ Vocabulary for `licence`: `open` explicit licence, `silent` no licence and dead 
 
 Main risk and counter-plan per shot (criterion h; same words as the "R:" lines of the header):
 
-1. Dawn: the light does not read and the torches are small. Plan: torches two cells from the bottom edge, long shadows of 06:00, scene to 07:00 if flat. Faces: no pawn drafted, kit calm, 20 degrees, `normal+blink` last, face state logged here for NPT.
+1. Dawn (v3, wide opening, zoom 4.4, Nelim mid-stride by `I order` + 40 ticks + pause): the light does not read, the torches are small, the mid-stride pose is unplayed (pawn may stop, log may leave her hands: carry applied after the pause). Plan: torches two cells from the bottom edge, long shadows of 06:00, scene to 07:00 if flat. Faces: no pawn drafted, kit calm, 20 degrees, `normal+blink` last, face state logged here for NPT.
 2. Barrier and fence: the steel bar is a grey blob. Plan: zoom 3.0, else Plasteel (light blue). Roses may be refused on soil cells: the step fails loudly, then the nearest soil cell of the ring.
 3. Stop at eleven: the meal in her hands is small, light is flat. Plan: zoom 2.8, teal jacket for colour, zoom 2.4 if unreadable.
 4. Vending machine: a meal laid on the machine reads as a second machine. Plan: no meal on the ground, Ravi carries it. Bowler hat and purple robe never seen: colour contrast (orange shirt, purple robe, black machine).
