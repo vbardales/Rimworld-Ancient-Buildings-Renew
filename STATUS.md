@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-workflow_stage: followUp[1.1.0]
+workflow_stage: shootGallery[1.1.1]
 tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
@@ -30,13 +30,13 @@ remaining:
 - open: "Workshop header image (og:image of the item) is still the Preview of before 2026-10-12: it goes with the 1.1.0 publish with --preview, now carrying the 1.7 badge (Mod/About/Preview.png sha256 0ccf1b82...954e6, commit 3ba3563, badge shifted 12.5% toward the corner; GitHub social preview uploaded and verified 2026-10-14; gallery slot 0 on the Steam page still shows the 2026-10-12 Preview and must be replaced by hand or by this session with the same file). 1.1.0 (1.7 declared, tested_1_7: yes since 2026-10-14) waits for: the owner's review of PUBLICATION.md and CHANGELOG.md for the 1.1.x line, code_review_sha, the dry-run date commit, then the CI publish."
 - deferred: "No 1.0.2 now (owner decision 2026-10-11: not enough functional change to justify a release). The save-sentence fix (About.xml line 50, README.template.md line 38, README.md line 139, CHANGELOG.md line 94; text in PUBLICATION.md) and the CI template regeneration ride with the next functional version. CI template stale (CI/CD session, 2026-10-11): stamp 82de20b8aa50, current 7fb8f006c206 (Release-Admin 40f56f2, adds build-check.sh --ci and build.yml). Before the next dry-run (1.0.2): generate-publish-workflow.sh ../AncientBuildingsRenew --replace with the arguments of .github/publish.config.json. Never edit a copy by hand. .github/scripts, tests, workflows are copies of the Release-Admin template, none local."
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
-updated:      2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
+updated:      2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: b08c1315abc7369296b6456f460e266731c95817
+protocols_read_sha: 2be537a70be1b40fd555b6fe1d8bb1e0dd280524
 ---
 # Ancient Buildings Renew: status
 
-**State: `followUp[1.1.0]` (reopened from `dormant` for the 1.7 declaration; 1.1.0 dry-run on `a90ba6f` green, publish waits for owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) published by CI on Workshop item 3806708945. 1.0.1 only renames `packageId` to `nelim.ancientbuildings`. New fix or new RimWorld version reopens chain at `code[x.y.z]`.
+**State: `shootGallery[1.1.1]` (gallery redo for the next release, 1.1.0 published and in followUp until then);** earlier `followUp[1.1.0]` (reopened from `dormant` for the 1.7 declaration; 1.1.0 dry-run on `a90ba6f` green, publish waits for owner).** Previous state: `dormant` from `followUp[1.0.1]` (owner's order 2026-10-10). 1.0.0 (CI run 37831089676, tag `v1.0.0`) and 1.0.1 (CI run 37836720872, SHA `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) published by CI on Workshop item 3806708945. 1.0.1 only renames `packageId` to `nelim.ancientbuildings`. New fix or new RimWorld version reopens chain at `code[x.y.z]`.
 
 ## Gates (audit of 2026-10-10, revision `2611536`)
 
