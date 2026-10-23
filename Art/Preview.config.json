@@ -1,45 +1,28 @@
 {
-  "modIconSource": "ModIcon-source.png",
-  "title": "Ancient Buildings Renew (unofficial)",
-  "titleSize": 46,
-  "titleParts": [
-    {
-      "text": "Ancient Buildings",
-      "scale": 1
-    }
-  ],
-  "suffix": "Renew",
-  "tag": "(unofficial)",
-  "tagInline": true,
-  "copyLines": [
-    "Six buildings in the style of the ruins already on the map."
-  ],
-  "layout": "panel",
+  "panel": {
+    "title": "Ancient Buildings Renew (unofficial)",
+    "titleSize": 46,
+    "titleParts": [
+      {
+        "text": "Ancient Buildings",
+        "scale": 1
+      }
+    ],
+    "suffix": "Renew",
+    "tag": "(unofficial)",
+    "tagInline": true,
+    "copyLines": [
+      "Six buildings in the style of the ruins already on the map."
+    ]
+  },
   "backgroundFile": "Preview-source.png",
-  "backgroundPosition": "center",
-  "backgroundSize": "cover",
   "echo": {
     "file": "echo-source.png",
-    "mode": "alpha",
-    "preSized": true,
-    "color": "var(--accent)",
-    "opacity": 1,
-    "veil": false,
-    "panelTop": 8,
-    "panelRight": 2,
-    "panelWidth": 50,
-    "flipX": true
+    "color": "var(--accent)"
   },
   "iconBadge": {
     "file": "ModIcon-source.png",
-    "corner": "bottom-right",
-    "translate": "12.5%,12.5%",
-    "width": 220,
-    "outline": false,
-    "veil": "radial",
-    "veilSize": 275,
-    "veilLeft": -55,
-    "veilBottom": -61
+    "corner": "bottom-right"
   },
   "palette": {
     "veil": "#292F38",
