@@ -10,12 +10,12 @@
 # Nelim's looks, one per scene (colours as dyed rgb), all different. Hair colour stays her own dark brown.
 #   1. 06:00 rust parka (150, 60, 50), dark trousers (60, 60, 70), mustard tuque (200, 150, 60); hairstyle Flowy (long, loose, seen under the tuque); face kit calm.
 #   2. 09:00 cream collar shirt (230, 224, 206), brown trousers (90, 70, 50); hairstyle Wavy; face kit neutral, brows BrowNormal (concentrating).
-#   3. 11:00 teal jacket (28, 98, 104), dark trousers (60, 60, 70); hairstyle Fringe; face kit smile.
+#   3. 11:00 teal jacket (28, 98, 104), dark trousers (60, 60, 70); hairstyle Fringe; face kit calm (kit smile sets rosy cheeks).
 #   4. 12:00 purple robe (110, 70, 130); hairstyle Cute; face kit smug.
 #   5. 15:00 white shirt (240, 235, 220), grey trousers (70, 70, 78), straw shade cone (225, 200, 140); hairstyle Cleopatra (long, straight, loose, seen under the cone); face kit calm.
 #   6. 21:00 burgundy cape (110, 30, 50) over a cream collar shirt (230, 224, 206), trousers (60, 60, 70); hairstyle Long; face kit calm.
 #   7. 23:00 violet jacket (60, 50, 110), trousers (50, 50, 60); hairstyle Bob; face kit neutral.
-# Guests: Ravi (Male body, hairstyle Shaved, orange shirt (200, 90, 60), grey trousers (70, 70, 78), bowler hat (90, 70, 50)); Mei (Female body, hairstyle Bob, hair colour (60, 35, 25), blue shirt (70, 110, 170), grey trousers, cowboy hat (225, 200, 140)).
+# Guests: Ravi (Male body, hairstyle Shaved, orange shirt (200, 90, 60), grey trousers (70, 70, 78), bowler hat (90, 70, 50) in scene 4; face kit calm in scenes 4 and 6); Mei (Female body, hairstyle Bob, hair colour (60, 35, 25), blue shirt (70, 110, 170), grey trousers, cowboy hat (225, 200, 140); face kit calm). Guests wear a hat freely: only Nelim follows the long-loose-hair rule.
 #
 # Shot list (a to g of the audit; "R" = main risk and plan, h; the mod is in every picture, j; nothing here is a row of aligned subjects, i):
 #   1. 06:00, frame (200, 187) zoom 3.6. Decor: two lit TorchLamp (195, 187) and (205, 187), two fully grown daylilies (194, 185) and (206, 185). Living: Shogun at (202, 185); the ring of flowers. Action: Nelim carries a log (WoodLog) toward the torches. Concrete barrier row at the back, fence row beside it: the road is funnelled to the stop. Says: the old road comes in at dawn and someone brings wood for the fire.

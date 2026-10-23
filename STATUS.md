@@ -143,8 +143,8 @@ Stage followUp[1.1.0]. Scores are estimates before playing; the plan, outfits, d
 | Scene | a | b | c | d | e | f | g | h | i | j | k | Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 dawn, road comes in | y | torches, daylilies, removed | dog, plants | rust parka, mustard tuque, Flowy (long, loose), calm | carries a log | zoom 3.6, barrier back | y | y | y | barrier, fence | y, one story in the header | 4 |
-| 2 barrier and fence close | y | stool, roses, removed | dog, roses | cream shirt, brown trousers, Wavy, neutral | carries a steel bar | zoom 3.4, barrier upper third | y | y | y | barrier, fence | y, one story in the header | 4 |
-| 3 stop at eleven | y | stool, bush, removed | dog, bush | teal jacket, Fringe, smile | leaves the stove with a meal | zoom 2.8 | y | y | y | machine, stove | y, one story in the header | 4 |
+| 2 barrier and fence close | y | stool, roses, removed | dog, roses | cream shirt, brown trousers, Wavy, neutral | carries a steel bar | zoom 3.0, barrier upper third | y | y | y | barrier, fence | y, one story in the header | 4 |
+| 3 stop at eleven | y | stool, bush, removed | dog, bush | teal jacket, Fringe, calm | leaves the stove with a meal | zoom 2.8 | y | y | y | machine, stove | y, one story in the header | 4 |
 | 4 vending machine close | y | standing lamp, stool, removed | dog, Ravi | purple robe, Cute, smug; Ravi smile | chooses a meal, Ravi pays | zoom 2.2, triangle | y | y | y | machine | y, one story in the header | 4 |
 | 5 air conditioner at three | y | stool, daylilies, removed | dog, Mei, daylilies | white shirt, shade cone, Cleopatra (long, loose), calm | holds a cold drink in the shade | zoom 3.2, diagonal | y | y | y | air conditioner | y, one story in the header | 4 |
 | 6 six buildings at dusk | y | torches, daylilies, removed | dog, Ravi | burgundy cape, Long, calm | eats pemmican | zoom 4.4, tableau | y | y | y | all six | y, one story in the header | 4 |
