@@ -5,6 +5,9 @@
 -->
 <SettingsBlock>
   <ModSettings Class="HatHairControl.HatHairControlSettings">
+    <hideHatsIndoors>False</hideHatsIndoors>
+    <hideHatsWhileSleeping>False</hideHatsWhileSleeping>
+    <showHatsOnlyWhenDrafted>False</showHatsOnlyWhenDrafted>
     <showHairDefs>
       <li>Apparel_Headwrap</li>
       <li>Apparel_Beret</li>
