@@ -1,10 +1,11 @@
 # Workshop gallery of Ancient Buildings Renew: one story, in one place, staged (PUBLISHING.md: every gallery capture is a staged photo).
 #
 # The story: a day at the last stop of an old road, told by Nelim (the one colonist of the fixture, so Virginie) and Shogun, her labrador. Two guests pass through it: Ravi (shaved head, orange shirt, bowler hat) runs the stop at noon and shares dusk, Mei (bob, blue shirt, cowboy hat) joins for the afternoon heat. What the pictures SHOW is the clue to the hour: lit torches at dawn and dusk, the night is the lamppost alone, the meal Nelim carries away from the stove and the machine, and her clothes, which change with the weather of the day.
-# THE STORY (one, in seven episodes). Who: Nelim (Virginie), who keeps the last stop of an old road, with Shogun, her labrador; Ravi, a traveller who runs the stop at noon and shares the evening; Mei, a walker who comes in for the afternoon heat. Where: the calm zone below, one square, seen from seven corners. Which day: one summer day of the save (5th of Septober, permanent summer, clear sky). Rhythm of time: seven hours of that one day, 06, 09, 11, 12, 15, 20, 23; each episode starts where the one before ended and adds one thing the old buildings do. Episodes: 1 she brings wood at dawn to the road that is funnelled in; 2 she mends the fence in the morning; 3 she cooks at the stove at eleven; 4 at noon Ravi pays the vending machine; 5 in the afternoon heat the old air conditioner cools Nelim and Mei; 6 at dusk the six buildings stand lit together and they eat; 7 at night the lamppost holds the dark alone. Nelim wears a hat only with long loose hair (owner rule 2026-10-18): hair shows under the tuque and the cone through Show Hair, which is in the map.
-# Place for all seven: the calm zone of Nelim's tribe, a cream stone square (about 11 x 11 cells, x 195-205, z 181-191) with no roof and no wall shadow, ringed by flowers and bushes on soil (PickleTools/docs/SANCTUAIRE-LIEUX.md). Weather Clear in every scene. Game time: each scene sets its own hour (6, 9, 11, 12, 15, 20, 23) and lets 60 ticks pass after the setup, so what moves has moved.
+# THE STORY (one, in seven episodes). Who: Nelim (Virginie), who keeps the last stop of an old road, with Shogun, her labrador; Ravi, a traveller who runs the stop at noon and shares the evening; Mei, a walker who comes in for the afternoon heat. Where: the calm zone below, one square, seen from seven corners. Which day: one summer day of the save (5th of Septober, permanent summer, clear sky). Rhythm of time: seven hours of that one day, 06, 09, 11, 12, 15, 21, 23; each episode starts where the one before ended and adds one thing the old buildings do. Episodes: 1 she brings wood at dawn to the road that is funnelled in; 2 she mends the fence in the morning; 3 she cooks at the stove at eleven; 4 at noon Ravi pays the vending machine; 5 in the afternoon heat the old air conditioner cools Nelim and Mei; 6 at dusk the six buildings stand lit together and they eat; 7 at night the lamppost holds the dark alone. Nelim wears a hat only with long loose hair (owner rule 2026-10-18): hair shows under the tuque and the cone through Show Hair, which is in the map.
+# Place for all seven: the calm zone of Nelim's tribe, a cream stone square (about 11 x 11 cells, x 195-205, z 181-191) with no roof and no wall shadow, ringed by flowers and bushes on soil (PickleTools/docs/SANCTUAIRE-LIEUX.md). Weather Clear in every scene. Game time: each scene sets its own hour (6, 9, 11, 12, 15, 21, 23) and lets 60 ticks pass after the setup, so what moves has moved.
 # Zoom N frames 2N cells high and 3.56N wide (SanctuaryBacklot/docs/GALERIE.md). Decor placed by a scene is removed after its shot (`the decor is removed`); built things go with the save reload at the next scenario.
 # Faces: set per picture, after the face kit, held neutral so the job does not replace them. Drafted pawns are held neutral against the combat face. Nelim faces South (toward the camera) so her face reads; Shogun faces South in every scene he is in (animals seen from the front, GALLERY.md).
+# Read on ticket 50fd (2026-10-23), fixed here, to be checked on the next run: (1) frame steps timed out at 40 s (now 150 s, PickleTools b3d11d9); (2) red, angry faces on drafted pawns: no pawn is drafted any more (stands at ... facing South holds a pawn on a paused game), kit calm instead of smile (smile sets rosy cheeks), map at 20 degrees against heat blush, face state logged in scene 1 for NPT; (3) a second labrador in profile: a Sanctuary animal walking back in, so every animal but Shogun is kept out of x 180-220, z 176-198 on every frame.
 #
 # Nelim's looks, one per scene (colours as dyed rgb), all different. Hair colour stays her own dark brown.
 #   1. 06:00 rust parka (150, 60, 50), dark trousers (60, 60, 70), mustard tuque (200, 150, 60); hairstyle Flowy (long, loose, seen under the tuque); face kit calm.
@@ -12,14 +13,14 @@
 #   3. 11:00 teal jacket (28, 98, 104), dark trousers (60, 60, 70); hairstyle Fringe; face kit smile.
 #   4. 12:00 purple robe (110, 70, 130); hairstyle Cute; face kit smug.
 #   5. 15:00 white shirt (240, 235, 220), grey trousers (70, 70, 78), straw shade cone (225, 200, 140); hairstyle Cleopatra (long, straight, loose, seen under the cone); face kit calm.
-#   6. 20:00 burgundy cape (110, 30, 50) over a cream collar shirt (230, 224, 206), trousers (60, 60, 70); hairstyle Long; face kit calm.
+#   6. 21:00 burgundy cape (110, 30, 50) over a cream collar shirt (230, 224, 206), trousers (60, 60, 70); hairstyle Long; face kit calm.
 #   7. 23:00 violet jacket (60, 50, 110), trousers (50, 50, 60); hairstyle Bob; face kit neutral.
 # Guests: Ravi (Male body, hairstyle Shaved, orange shirt (200, 90, 60), grey trousers (70, 70, 78), bowler hat (90, 70, 50)); Mei (Female body, hairstyle Bob, hair colour (60, 35, 25), blue shirt (70, 110, 170), grey trousers, cowboy hat (225, 200, 140)).
 #
 # Shot list (a to g of the audit; "R" = main risk and plan, h; the mod is in every picture, j; nothing here is a row of aligned subjects, i):
 #   1. 06:00, frame (200, 187) zoom 3.6. Decor: two lit TorchLamp (195, 187) and (205, 187), two fully grown daylilies (194, 185) and (206, 185). Living: Shogun at (202, 185); the ring of flowers. Action: Nelim carries a log (WoodLog) toward the torches. Concrete barrier row at the back, fence row beside it: the road is funnelled to the stop. Says: the old road comes in at dawn and someone brings wood for the fire.
 #      R: the dawn light does not read, the torches are small. Plan: torches inside the frame, set 1 cell nearer the pawn each; if the picture is flat, the scene goes to 07:00.
-#   2. 09:00, frame (200, 188) zoom 3.4. Decor: a Stool (196, 187), fully grown roses (194, 188) and (206, 188). Living: Shogun at (198, 187). Action: Nelim carries a steel bar (Steel) to mend the fence; off-centre, the barrier fills the upper third. Says: the fence is mended by hand, concrete that was left standing.
+#   2. 09:00, frame (201, 188) zoom 3.0. Decor: a Stool (196, 187), fully grown roses (194, 188) and (206, 188). Living: Shogun at (198, 187). Action: Nelim carries a steel bar (Steel) to mend the fence; off-centre, the barrier fills the upper third. Says: the fence is mended by hand, concrete that was left standing.
 #      R: the roses on soil cells may be refused or covered by wild flowers. Plan: the step fails loudly, then the plant goes to the nearest soil cell of the ring.
 #   3. 11:00, frame (200, 188) zoom 2.8. Decor: a Stool (198, 187), a fully grown bush (194, 187). Living: Shogun at (202, 187). Action: Nelim walks away from the stove with pemmican (Pemmican) in her hands; vending machine left, stove centre. Says: the stove cooks, and the meal leaves with its cook.
 #      R: the meal in her hands is small at this zoom. Plan: zoom 2.8 puts a cell at 193 px; if still unreadable, 2.4.
@@ -27,8 +28,8 @@
 #      R: the meal laid on the machine lands on a neighbour cell and looks like a second machine. Plan: one meal only; if it still does, it is carried by Ravi instead.
 #   5. 15:00, frame (199, 187) zoom 3.2. Decor: a Stool (196, 187), fully grown daylilies (194, 187) and (206, 187). Living: Shogun at (201, 186), Mei at (203, 185): a diagonal, not a row. Action: Nelim wipes her brow with a cloth (Cloth) in the cooled shade south of the unit; the ancient air conditioner is set in a wall. Says: the old machine makes a shade of cold in the heat of the afternoon.
 #      R: the cooling is only implied by the shade. Plan: the unit is powered on, the shade cone shows it; Mei under her cowboy hat reads as heat.
-#   6. 20:00, frame (200, 187) zoom 4.4. Decor: two lit TorchLamp (195, 186) and (207, 186), fully grown daylilies (194, 189) and (206, 189). Living: Shogun at (202, 186), Ravi at (200, 190). Action: Nelim eats the last of the stove's pemmican (Pemmican), Ravi rests. The whole set is built: barrier, fence, wall with the unit, lamppost, vending machine, stove. Says: the day ends among the six buildings, lit by torches.
-#      R: dusk reads as day. Plan: hour 20 with torches lit; if still bright, hour 21.
+#   6. 21:00, frame (200, 187) zoom 4.4. Decor: two lit TorchLamp (195, 186) and (207, 186), fully grown daylilies (194, 189) and (206, 189). Living: Shogun at (203, 185), Ravi at (200, 190). Action: Nelim eats the last of the stove's pemmican (Pemmican), Ravi rests. The whole set is built: barrier, fence, wall with the unit, lamppost, vending machine, stove. Says: the day ends among the six buildings, lit by torches.
+#      R: dusk reads as day. Plan: hour 21 with torches lit (hour 20 read as day on ticket 50fd); if still bright, hour 22.
 #   7. 23:00, frame (200, 187) zoom 4.5. Decor: fully grown bushes (194, 186) and (206, 186). Living: Shogun at (202, 187). Action: Nelim carries a bar of chocolate (Chocolate) through the pool of light. The lamppost at (200, 188), barrier and fence at the back and the front; no conduit. Says: the lamppost holds the night with the sunlight it stored.
 #      R: the night reads as evening, and a 5 s wait cut the first run. Plan: the waits use "I let N ticks pass" (240 s budget); the lamppost glow is asserted before the pawns are placed.
 #
@@ -134,7 +135,7 @@ Feature: gallery: a day at the last stop of an old road
     When Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.4
+    And Nelim's Pickle Tools: I frame the cell (201, 188) at zoom 3.0
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 2 - the barrier and the fence up close"
     And Nelim's Pickle Tools: the decor is removed
@@ -272,7 +273,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
-    And I set the hour to 20
+    And I set the hour to 21
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 186)
@@ -303,8 +304,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
     And Nelim's Pickle Tools: "Nelim" stands at (201, 187) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (203, 185)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (203, 185) facing South
     And a colonist "Ravi" exists
     And "Ravi" gender is male
     And Nelim's Pickle Tools: "Ravi" body type is Male
