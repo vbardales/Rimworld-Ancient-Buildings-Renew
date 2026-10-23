@@ -150,23 +150,21 @@ Main risk and counter-plan per shot (criterion h; same words as the "R:" lines o
 
 Never played (compiled or assumed): `animals except "Shogun" are kept out of the area`, `thermal state ... logged`, `face state is logged`, no-draft hold by `stands at ... facing South` (NPT's word), frame steps at 3.2, 3.0, 2.8 after the 150 s timeout fix. Replay of shot 1 alone is the first test of all of them.
 
-## Shotlist rating, v1 table below is superseded by the v2 plan of 2026-10-23 (header of 15-gallery.feature: zoom 3.0 to 3.6, planes, five-cell rows, no scenario written yet) (Audit rule 2026-10-18, criteria a to j of GALLERY.md; audit of GALLERY-SHOTLIST-AUDIT.md answered)
+## Shotlist v3 (2026-10-23; plan in the header of `15-gallery.feature`; Opus director's pass kept)
 
-Stage followUp[1.1.0]. Scores are estimates before playing; the plan, outfits, decor, actions and risks are written in the header of `15-gallery.feature`. Earlier ticket cd2d cancelled (scenes were under 4 by the audit). Fixes against the audit: a different outfit, hairstyle and face kit per scene; an action per scene (carries log, steel bar, meal, silver, drink, pemmican, chocolate); decor named per scene and removed after each shot; plants (daylily, rose, bush on the soil ring) and Shogun facing South in every scene; scenes 4 and 5 are a triangle and a diagonal, not a row; each risk has a plan. Redone images stay candidates; the published gallery is replaced only if Virginie accepts them.
+Story: one summer day, the wood is the thread (dawn, fence, stove, traveller, shade, torches, night); Shogun in every shot doing something; outfits A (parka, dawn), B (cream shirt, 09 to 15), C (cape over the shirt, 21 and 23); one hairstyle, Flowy. Variety: wide 1 and 6, medium 2, 4, 5, 7, close 3. Opening 1, closing 7. Kept from the pass: no pose facing the camera (each living thing faces its job), mid-gesture by `I order` + ticks + pause, three outfits with reasons, one hairstyle, wood thread, distinct frame centres, close shot at 2.2, Shogun's gesture per shot, line 33 error fixed. Not kept: parka on the stool (no step), filth and ash as decor (no step to add filth), tables and jugs (defName unread). Scenarios 1 is v3; scenarios 2 to 7 are still v2 text, to rewrite after the owner rates the plan.
 
-| Scene | a | b | c | d | e | f | g | h | i | j | k | Score |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 dawn, road comes in | y | torches, daylilies, removed | dog, plants | rust parka, mustard tuque, Flowy (long, loose), calm | carries a log | zoom 3.6, barrier back | y | y | y | barrier, fence | y, one story in the header | 4 |
-| 2 barrier and fence close | y | stool, roses, removed | dog, roses | cream shirt, brown trousers, Wavy, neutral | carries a steel bar | zoom 3.0, barrier upper third | y | y | y | barrier, fence | y, one story in the header | 4 |
-| 3 stop at eleven | y | stool, bush, removed | dog, bush | teal jacket, Fringe, calm | leaves the stove with a meal | zoom 2.8 | y | y | y | machine, stove | y, one story in the header | 4 |
-| 4 vending machine close | y | standing lamp, stool, removed | dog, Ravi | purple robe, Cute, smug; Ravi smile | chooses a meal, Ravi pays | zoom 2.2, triangle | y | y | y | machine | y, one story in the header | 4 |
-| 5 air conditioner at three | y | stool, daylilies, removed | dog, Mei, daylilies | white shirt, shade cone, Cleopatra (long, loose), calm | holds a cold drink in the shade | zoom 3.2, diagonal | y | y | y | air conditioner | y, one story in the header | 4 |
-| 6 six buildings at dusk | y | torches, daylilies, removed | dog, Ravi | burgundy cape, Long, calm | eats pemmican | zoom 4.4, tableau | y | y | y | all six | y, one story in the header | 4 |
-| 7 lamppost at night | y | bushes, removed | dog, bushes | violet jacket, Bob, neutral | carries chocolate through the light | zoom 4.5 | y | y | y | lamppost | y, one story in the header | 4 |
+| Scene | a time | b decor | c living | d pawns | e action and instant | f composition | g subject | h risk and plan | i not a plate | j mod | k story | Score | Main risk |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 dawn | 06, calm zone, Clear, 40 ticks | 2 lit torches, woodpile, stool, daylilies | dog watching West, flowers | outfit A, Flowy, calm | walks with a log, 3 steps from the pile | wide 4.4, (200, 187) | the road comes in | torches small; order farther if she stops | channel + walker | barrier, fence | wood brought | 4 | mid-stride pose never played |
+| 2 fence | 09, Clear | open fence cell, Steel stack, stool, roses, wood stack | dog sniffing Steel | outfit B, neutral | walks to the gap with the bar | medium 3.0, (201, 187) | the fence is mended | bar is a blob; Plasteel | gap + figure | fence, barrier | wood beside the fence | 4 | bar unreadable |
+| 3 stove | 11, Clear, flat | stool, 2 logs, bush | dog following the meal | outfit B, calm | turns from the stove with pemmican | close 2.2, (199, 188) | the stove cooks | meal small; dog's gaze | two buildings + one pawn | vending, stove | wood burned | 4 | flat light, small meal |
+| 4 machine | 12, Clear, flat | lamp, stool, Silver stack | dog at Ravi's heels | B + Ravi, smug | Ravi mid-step with meal, coin out | medium 3.0, (198, 187) | the machine feeds a traveller | no meal on ground | triangle | vending | wood left aside | 3.5 | two ordered pawns, small coin |
+| 5 air conditioner | 15, Clear | stool, logs, daylilies, wall | dog lying (step to ask) | B + shade cone, Mei | Mei mid-stride into shade, cloth offered | medium 3.0, (200, 186) | the shade of cold | cooling implied; cone | diagonal | air conditioner | wood left in shade | 3.5 | lie step missing |
+| 6 dusk | 21, Clear | 2 lit torches, small woodpile | dog sitting between | outfit C, Ravi | hand-off one step short | wide 4.4, (201, 187) | six buildings lit | dusk reads as day; 22 h | two depths | all six | wood burns | 4 | 21 h light |
+| 7 night | 23, Clear | torches unlit, logs, bushes | dog lying, FRONT | outfit C, neutral | she walks out of the light, from behind | medium 3.6, (200, 188) | the lamppost holds the night | evening look; hour 0 | lit dog + leaver | lamppost | wood cold | 3.5 | lie step, glow assertion |
 
-Criterion k (2026-10-18): the header of the feature tells one story (who, where, which day, rhythm, seven episodes). Hat rule: Nelim wears a hat only with long loose hair (Flowy, Cleopatra).
-
-Weakest points (still a 4): f (foreground and background are not separate planes on a flat stone square), and the dusk and night light of scenes 6 and 7.
+Scenes at 3.5 are below the 4 needed before a ticket: 4 and 7 wait on a second ordered pawn and the lie step, 5 on the lie step (NPT, via the TM). Estimates, not verdicts; verdicts go next to them after the run.
 
 ## Pickle evidence state (2026-10-20, Inbox migration redone: all six folders moved to Inbox, Prune-Evidence -Apply, the three nr-* greens (8 skipped by tag counted red by the script) minified and moved back by hand; Inbox and Parked empty, Evidence 1.67 MB; gallery replay ticket 50fd queued, evidence to Tests/Pickle/Inbox/gallery-2026-10-19-2)
 
