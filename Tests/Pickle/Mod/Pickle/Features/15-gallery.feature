@@ -13,15 +13,15 @@
 #      R: the dawn light does not read, the torches are small, and the mid-stride pose is unplayed: the pawn may stop before the pause (the `I let` step may advance a paused game, or not). Plan: torches two cells from the bottom edge, long shadows of 06:00, scene to 07:00 if flat; the walk is checked in the log (`the movement of the colonist "Nelim" is logged for 5 seconds`) and, if the pawn has already arrived, the order goes farther (to (196, 184)) with 20 ticks. If the log leaves her hands on the walk, only the carry is applied after the pause. Faces: Nelim's own face, 20 degrees, `normal+blink` last, face state logged here for NPT.
 #   2. 09:00, medium, frame (200, 187) zoom 3.0 (x 194.7-205.3, z 184-190; every named cell is inside). Back: barrier row (198-202, 190), the upper third. Middle: fence row (198, 199, 201, 202 at z 188) with ONE cell left open at (200, 188); a Steel stack on the ground at (199, 187) beside the gap. Nelim walks toward the gap, carrying a steel bar (Steel). Front: a Stool (197, 185), a half-built stack of WoodLog (the dawn wood) at (196, 185), fully grown roses (195, 187) and (205, 187). Living: Shogun at (198, 187) sniffing the Steel stack, facing East. The instant: she is one step before the gap, about to set the bar in it. Obtained: Nelim stands at (203, 186) facing West, `I order "Nelim" to (200, 187)`, `game speed is normal`, 40 ticks, `game speed is paused`, then carries Steel. Outfit B, beige shirt, Nelim's own face. Says: the fence is mended by hand, concrete that was left standing. Thumbnail at 268 px: the open gap in the dark fence and the figure at it.
 #      R: the steel bar is a grey blob. Plan: the Steel stack on the ground beside the gap carries the idea, the bar in her hands may be Plasteel (light blue); roses on soil cells may be refused: the step fails loudly, then the nearest soil cell of the ring. The open fence cell must not be built.
-#   3. 11:00 (flat light), CLOSE, frame (199, 188) zoom 2.2 (x 195.1-202.9, z 185.8-190.2). Back: the vending machine (198, 189) and the stove (200, 189) side by side. Middle: Nelim turning away from the stove toward the stool with pemmican (Pemmican) in her hands. Front: a Stool (197, 186), two WoodLog at (201, 187) beside the stove (the dawn wood), a bush (194, 186). Living: Shogun at (199, 187) following the meal, facing her (West). The instant: she has just taken the meal and is on the first step of her turn. Obtained: Nelim stands at (200, 188) facing South, `I order "Nelim" to (197, 187)`, 30 ticks, pause, carries Pemmican. Says: the stove cooks, and the meal leaves with its cook. Thumbnail at 268 px: stove and machine at 34 px a cell, the beige shirt against the black stove.
+#   3. 11:00 (flat light), CLOSE, frame (199, 188) zoom 2.2 (x 195.1-202.9, z 185.8-190.2). Back: the vending machine (198, 189) and the stove (200, 189) side by side. Middle: Nelim turning away from the stove toward the stool with pemmican (Pemmican) in her hands. Front: a Stool (197, 186), two WoodLog at (201, 187) beside the stove (the dawn wood), a bush (196, 188). Living: Shogun at (199, 186) following the meal, facing her (West). The instant: she has just taken the meal and is on the first step of her turn. Obtained: Nelim stands at (200, 188) facing South, `I order "Nelim" to (197, 187)`, 30 ticks, pause, carries Pemmican. Says: the stove cooks, and the meal leaves with its cook. Thumbnail at 268 px: stove and machine at 34 px a cell, the beige shirt against the black stove.
 #      R: 11:00 is flat and the meal is small. Plan: zoom 2.2 puts a cell at 245 px, the beige shirt stands against the black stove; if the meal is unreadable, Shogun's gaze at it tells it.
-#   4. 12:00 (flat light), medium, frame (198, 187) zoom 3.0 (x 192.7-203.3, z 184-190). Back: the vending machine (199, 189) with a StandingLamp (202, 189) beside it. Middle: Soren ordered away from the machine toward the Stool, caught mid-step with his meal (MealSimple) in hand; Nelim at (199, 187) facing East toward him, holding the Silver (Silver) she is paid. Front: a Stool (196, 186), a Silver stack at (200, 188). Living: Shogun at Soren's heels at (197, 187), facing him (East). The instant: Soren has just paid and turned; Nelim still has the coin out. Obtained: Soren stands at (199, 188), `I order "Soren" to (196, 187)`, 25 ticks, pause, carries MealSimple; Nelim stands at (199, 187) facing East. Says: the vending machine feeds a passer-by, and the keeper takes the coin. Thumbnail at 268 px: Soren's blue-grey shirt against the black machine, the lit lamp.
+#   4. 12:00 (flat light), medium, frame (198, 187) zoom 3.0 (x 192.7-203.3, z 184-190). Back: the vending machine (199, 189) with a StandingLamp (202, 189) beside it. Middle: Soren ordered away from the machine toward the Stool, caught mid-step with his meal (MealSimple) in hand; Nelim at (199, 187) facing East toward him, holding the Silver (Silver) she is paid. Front: a Stool (196, 186), a Silver stack at (200, 188). Living: Shogun at Soren's heels at (197, 186), facing him (East). The instant: Soren has just paid and turned; Nelim still has the coin out. Obtained: Soren stands at (199, 188), `I order "Soren" to (196, 187)`, 25 ticks, pause, carries MealSimple; Nelim stands at (199, 187) facing East. Says: the vending machine feeds a passer-by, and the keeper takes the coin. Thumbnail at 268 px: Soren's blue-grey shirt against the black machine, the lit lamp.
 #      R: a meal laid on the machine reads as a second machine, the coin is small, 12:00 is flat. Plan: no meal on the ground (Soren carries it only); the blue-grey shirt, the orange tuque of Nelim is not in this shot, and the lit lamp give the colour; if the coin is unreadable, the Silver stack on the ground says it.
-#   5. 15:00, medium, frame (200, 186) zoom 3.0 (x 194.7-205.3, z 183-189). Back: a wall of five cells (197-201, 189) holding the air conditioner at (199, 189), powered on. Middle: Nelim in the shade south of the unit at (199, 187), turned East toward Miel and holding out a Cloth (Cloth); Miel caught mid-stride into the shade. Front: the Stool (196, 185) in the shade, a stack of WoodLog (the day's wood, left in the shade) at (197, 186), fully grown daylilies (194, 187) and (206, 187). Living: Shogun lying in the cool at (201, 186) with his head to the unit (a lie or sleep step is asked of NPT; until it exists he stands facing the unit, West). The instant: Miel has just come in out of the sun, Nelim offers the cloth. Obtained: Miel stands at (204, 185), `I order "Miel" to (201, 187)`, 30 ticks, pause; Nelim stands at (199, 187) facing East, carries Cloth. Says: the old machine makes a shade of cold in the heat of the afternoon. Thumbnail at 268 px: the dark wall with the pale unit, the white shade cone, Miel's black curls in motion.
+#   5. 15:00, medium, frame (199, 187) zoom 3.2 (x 193.3-204.7, z 183.8-190.2). Back: a wall of five cells (197-201, 189) holding the air conditioner at (199, 189), powered on. Middle: Nelim in the shade south of the unit at (199, 187), turned East toward Miel and holding out a Cloth (Cloth); Miel caught mid-stride into the shade. Front: the Stool (196, 185) in the shade, a stack of WoodLog (the day's wood, left in the shade) at (197, 186), fully grown daylilies (195, 187) and (204, 188). Living: Shogun lying in the cool at (201, 186) with his head to the unit (a lie or sleep step is asked of NPT; until it exists he stands facing the unit, West). The instant: Miel has just come in out of the sun, Nelim offers the cloth. Obtained: Miel stands at (204, 185), `I order "Miel" to (201, 187)`, 30 ticks, pause; Nelim stands at (199, 187) facing East, carries Cloth. Says: the old machine makes a shade of cold in the heat of the afternoon. Thumbnail at 268 px: the dark wall with the pale unit, the white shade cone, Miel's black curls in motion.
 #      R: the cooling is only implied by the shade. Plan: unit powered on, beige shirt and straw cone against the dark wall, Miel's ochre shirt and bare curls read as heat; the lying dog needs a step from NPT (fallback: he faces the unit).
 #   6. 21:00, WIDE, frame (201, 187) zoom 4.4 (x 194.1-207.9, z 182.6-191.4), an echo of shot 1 from the same corner. Two depths, not a row: far, the barrier (196-198, 190) and fence (196-198, 188) at the left, the lamppost (203, 190), the vending machine (203, 188) and the stove (204, 188) at the right; near, the wall with the unit, wall (197, 185), unit (198, 185), wall (199, 185), at the lower left. Middle: Nelim walks the last step toward Soren holding out the last pemmican (Pemmican); Soren walks the other way to meet her, both in motion. Front: two lit TorchLamp (195, 184) and (206, 184), the woodpile now small at (196, 183). Living: Shogun at (200, 186) between them, head turned East toward the pemmican (`stands at ... facing East`; he is held still, not seated). The instant: she is one step from handing it over. Obtained: Nelim stands at (204, 186) facing West, `I order "Nelim" to (201, 187)`, `game speed is normal`, 25 ticks, `game speed is paused`, carries Pemmican; Soren stands at (196, 187) facing East and is ordered to (199, 187) with the same 25 ticks. Outfit C (cape over the beige shirt), Nelim's own face, Soren kit calm. Says: the day ends among the six buildings, the wood burning in the torches. Thumbnail at 268 px: six dark buildings, two flames, two small figures facing each other.
 #      R: dusk read as day at 20:00 on 50fd, and Soren's face was red and angry on that capture. Plan: hour 21 with torches lit, hour 22 if still bright; no pawn drafted, Nelim's own face, 20 degrees, `normal+blink` last; Shogun placed between the pawns, not behind either.
-#   7. 23:00, medium, frame (200, 188) zoom 3.6 (x 193.6-206.4, z 184.6-191.4). Back: the lamppost (200, 188), glowing, with the barrier row (197-201, 185) behind and the fence row (197-201, 191). Middle: Nelim walking North out of the pool of light toward the road, seen from behind (order from (200, 187) to (200, 190), 40 ticks, pause); no chocolate (unreadable at this zoom). Front: the day left behind: two TorchLamp (197, 184) and (203, 184) placed and NOT lit, a few WoodLog at (203, 186), bushes (194, 186) and (206, 186). Living: Shogun lying in the light at (199, 186), the one animal seen from the FRONT of the series, facing South. The instant: she is leaving; he stays. Obtained as the others walk; the lamppost glow is asserted before the pawns are placed. Says: the lamppost holds the night with the sunlight it stored, and the dog keeps it. Thumbnail at 268 px: the glowing lamppost, the lit dog, a figure leaving into the dark.
+#   7. 23:00, medium, frame (200, 188) zoom 3.6 (x 193.6-206.4, z 184.6-191.4). Back: the lamppost (200, 188), glowing, with the barrier row (197-201, 185) behind and the fence row (197-201, 191). Middle: Nelim walking North out of the pool of light toward the road, seen from behind (order from (199, 187) to (199, 190), the lamppost stays on her left, 40 ticks, pause); no chocolate (unreadable at this zoom). Front: the day left behind: two TorchLamp (196, 186) and (204, 186) placed and NOT lit, a few WoodLog at (203, 186), bushes (195, 186) and (205, 186). Living: Shogun lying in the light at (199, 185), the one animal seen from the FRONT of the series, facing South. The instant: she is leaving; he stays. Obtained as the others walk; the lamppost glow is asserted before the pawns are placed. Says: the lamppost holds the night with the sunlight it stored, and the dog keeps it. Thumbnail at 268 px: the glowing lamppost, the lit dog, a figure leaving into the dark.
 #      R: the night reads as evening, and the glow assertion was never played. Plan: waits by `I let N ticks pass`, glow asserted first, hour 0 if flat; the lying dog needs a step from NPT (fallback: he stands facing South).
 #
 # Why this place: the calm zone is clean, level and light, so concrete and a lit lamp read on it. Every scenario reloads the save and cleans the filth.
@@ -138,23 +138,28 @@ Feature: gallery: a day at the last stop of an old road
     And I set the hour to 11
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: I place the decor "Stool" at (198, 185)
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (196, 188) fully grown
+    And I spawn a "WoodLog" at (201, 187)
     And a "ABVending" is built at (198, 189)
     And a "ABKitchenstove" is built at (200, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing South
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 186)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 186) facing West
+    And I order "Nelim" to (197, 187)
+    And game speed is normal
+    And Nelim's Pickle Tools: I let 30 ticks pass
+    And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
-    When Nelim's Pickle Tools: I let 60 ticks pass
-    And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
+    When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.8
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.2
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 3 - the vending machine and the stove"
     And Nelim's Pickle Tools: the decor is removed
@@ -170,14 +175,15 @@ Feature: gallery: a day at the last stop of an old road
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "StandingLamp" at (202, 189)
-    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 185)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (196, 186)
+    And I spawn a "Silver" at (200, 188)
     And a "ABVending" is built at (199, 189)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (197, 186)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (197, 186) facing East
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And "Soren" gender is male
     And Nelim's Pickle Tools: "Soren" body type is Male
@@ -190,7 +196,11 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" body tattoo is "NoTattoo_Body"
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants" dyed rgb (84, 72, 60)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (96, 120, 140)
-    And Nelim's Pickle Tools: "Soren" stands at (197, 186) facing South
+    And Nelim's Pickle Tools: "Soren" stands at (199, 188) facing West
+    And I order "Soren" to (196, 187)
+    And game speed is normal
+    And Nelim's Pickle Tools: I let 25 ticks pass
+    And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Silver"
     And Nelim's Pickle Tools: "Soren" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
@@ -198,10 +208,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" face kit is "calm"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthLittle"
     And Nelim's Pickle Tools: "Soren" face is held neutral
-    When Nelim's Pickle Tools: I let 60 ticks pass
-    And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the movement of the colonist "Soren" is logged for 5 seconds
+    When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.8
+    And Nelim's Pickle Tools: I frame the cell (198, 187) at zoom 3.0
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     Then I take a screenshot "gallery 4 - the vending machine up close"
@@ -218,8 +228,9 @@ Feature: gallery: a day at the last stop of an old road
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "Stool" at (196, 185)
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 187) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 187) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 187) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 188) fully grown
+    And I spawn a "WoodLog" at (197, 186)
     And a "Wall" is built at (197, 189)
     And a "Wall" is built at (198, 189)
     And a "AB_AirConditioner" is built at (199, 189)
@@ -230,9 +241,9 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Shadecone" dyed rgb (225, 200, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing West
     And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
     And "Miel" gender is female
     And Nelim's Pickle Tools: "Miel" body type is Female
@@ -245,17 +256,21 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Miel" body tattoo is "NoTattoo_Body"
     And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (110, 130, 90)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_BasicShirt" dyed rgb (190, 150, 70)
-    And Nelim's Pickle Tools: "Miel" stands at (203, 185) facing South
+    And Nelim's Pickle Tools: "Miel" stands at (204, 185) facing West
+    And I order "Miel" to (201, 187)
+    And game speed is normal
+    And Nelim's Pickle Tools: I let 30 ticks pass
+    And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Miel" face kit is "calm"
     And Nelim's Pickle Tools: "Miel" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Miel" face is held neutral
-    When Nelim's Pickle Tools: I let 60 ticks pass
-    And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the movement of the colonist "Miel" is logged for 5 seconds
+    When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 3.0
+    And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 3.2
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Miel" facial expression is "normal+blink"
     Then I take a screenshot "gallery 5 - the air conditioner in a wall"
@@ -339,8 +354,11 @@ Feature: gallery: a day at the last stop of an old road
     And I set the hour to 23
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (206, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 186)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (195, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (205, 186) fully grown
+    And I spawn a "WoodLog" at (203, 186)
     And a "ConcreteBarrier" is built at (197, 185)
     And a "ConcreteBarrier" is built at (198, 185)
     And a "ConcreteBarrier" is built at (199, 185)
@@ -358,16 +376,19 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 100, 70)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 187) facing South
-    And Nelim's Pickle Tools: "Nelim" carries the item "Chocolate"
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
+    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 185)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 185) facing South
+    And I order "Nelim" to (199, 190)
+    And game speed is normal
+    And Nelim's Pickle Tools: I let 40 ticks pass
+    And game speed is paused
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
-    When Nelim's Pickle Tools: I let 60 ticks pass
-    And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
+    When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.6
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.6
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 7 - the lamppost at night"
     And Nelim's Pickle Tools: the decor is removed
