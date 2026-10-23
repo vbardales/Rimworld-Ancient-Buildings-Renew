@@ -66,13 +66,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (203, 187) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 185)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 185) facing West
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
     And I order "Nelim" to (198, 185)
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -113,13 +113,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing East
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
     And I order "Nelim" to (200, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Steel"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -292,16 +292,16 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BasicShirt" dyed rgb (200, 90, 60)
     And Nelim's Pickle Tools: "Ravi" wears "Apparel_BowlerHat" dyed rgb (90, 70, 50)
     And Nelim's Pickle Tools: "Ravi" stands at (196, 187) facing East
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Ravi" face kit is "calm"
-    And Nelim's Pickle Tools: "Ravi" face is held neutral
     And I order "Nelim" to (201, 187)
     And I order "Ravi" to (199, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 25 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Ravi" face kit is "calm"
+    And Nelim's Pickle Tools: "Ravi" face is held neutral
 
     And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
