@@ -6,7 +6,7 @@
 # GAME PAUSED MID-PLAY (owner, 2026-10-23): nobody stands facing the photographer. Each living thing faces what it does. A moving pawn is obtained by `I order "X" to (x, z)`, `game speed is normal`, `I let N ticks pass`, `game speed is paused`; the held item is put in the hands after the pause (`carries the item` holds on a paused game). `stands at ... facing D` only places a pawn that is meant to be still. Nobody is drafted (drafted pawns get the angry combat face). Faces: kit and brows per scene, held neutral, `normal+blink` last. Only Shogun faces the camera, in shot 7 (criterion c).
 #
 # Nelim matches her canon (NELIM-PROFIL.md, owner 2026-10-23: inspired by it, vanilla garments): palette emerald, deep blue, brown, beige, gold, with orange as her personal accent; hair of her canon family, Roo_HD_Hair_Highpony (high ponytail with side locks) bare, Roo_Royal_LongHD ("Neat Long", loose, never a bun) under a hat, shown by Hat Hair Control; her own face in every scene (`Nelim's Sanctuary: Nelim has her own face`: BrowNormal, MouthSmirkSmile, blink), held neutral, `normal+blink` last. Her body, eyes (Eyes_DarkBrown), tattoo and trousers are the fixture's. Three outfits, each with its reason (owner rule of continuity, 2026-10-23), the brown trousers (90, 70, 50) all day, dressed first: (A) 06:00 deep blue parka (24, 54, 110) and orange tuque (214, 120, 40), the cold-weather palette: the dawn is cold. (B) 09:00 to 15:00 beige collar shirt (226, 212, 184), the daily and heat palette: she took the parka off when the sun rose; 15:00 adds the straw shade cone (225, 200, 140). (C) 21:00 and 23:00 emerald cape (20, 100, 70) over the beige shirt: the evening cools again.
-# Guests, from the Sanctuary's own people (owner, 2026-10-23: only NSB residents; profiles in SanctuaryBacklot/docs, looks inspired by them, vanilla garments): Soren Furius (Male body, `Roo_HD_Hair_Tidy`, hair (40, 26, 20), green eyes by `Eyes_Green`, blue-grey shirt (96, 120, 140), brown trousers (84, 72, 60), no hat, kit calm with the mouth MouthLittle, which is not red; the male alter ego of Nelim, steward and healer; the one man of every male capture); Miel Aveline (Female body, `Roo_Royal_LongcurlsHD` long black curls, hair (22, 18, 18), amber eyes by `Eyes_Golden`, ochre shirt (190, 150, 70), sage trousers (110, 130, 90), no hat so the curls stay free, kit calm with the mouth MouthClassicSmile; restorer of old buildings and friend of Nelim). Neither look is marked OK yet in `LOOKS-VALIDATION.md`: the owner is asked before play. Only Nelim follows the long-loose-hair-under-a-hat rule; neither guest wears a hat.
+# Guests, from the Sanctuary's own people (owner, 2026-10-23: only NSB residents; profiles in SanctuaryBacklot/docs, looks inspired by them, vanilla garments): Soren Furius (Male body, `Roo_HD_Hair_Tidy`, hair (40, 28, 22), skin (236, 204, 184), green eyes by `Eyes_Green` (never played), no tattoo, blue-grey shirt (96, 120, 140), brown trousers (84, 72, 60), no hat, kit calm with the mouth MouthLittle, which is not red; the male alter ego of Nelim, steward and healer; the one man of every male capture); Miel Aveline (Female body, `Roo_Royal_LongcurlsHD` long black curls, hair (40, 26, 20), skin (166, 112, 62), amber eyes by `Eyes_Golden`, no face tattoo (NoTattoo_Face, NoTattoo_Body: the sacred-grass tattoo frightened the owner), ochre shirt (190, 150, 70), sage trousers (110, 130, 90), no hat so the curls stay free, kit calm with the mouth MouthClassicSmile; restorer of old buildings and friend of Nelim). Neither look is marked OK yet in `LOOKS-VALIDATION.md` (values from the NSB session, 2026-10-23); they are created per scenario like NSB does (`a colonist "X" of kind "Colonist" exists`, head type, hairstyle, hair colour, gene, skin, tattoos). Only Nelim follows the long-loose-hair-under-a-hat rule; neither guest wears a hat.
 #
 # Shotlist v3 (2026-10-23, after the 50fd captures and the Opus director's pass). Variety: wide 1 and 6, medium 2, 4, 5, 7, close 3; each shot has its own centre. Opening = 1 (the road comes in), closing = 7 (the dog keeps the light). "R" = main risk and counter-plan. Scenarios 2 to 7 below are still the v2 text: they are rewritten to this list after the owner rates it.
 #   1. 06:00, WIDE opening shot, frame (200, 187) zoom 4.4 (x 193.1-206.9, z 182.6-191.4; a cell is 123 px, 17 px on the 268 px Steam thumbnail). Back: concrete barrier row (198-202, 190) and fence row (198-202, 188), a channel of five cells that funnels the road. Middle: Nelim in mid-stride. Front: two lit TorchLamp (197, 184) and (203, 184), a woodpile (a stack of WoodLog) at (196, 185) and a Stool at (204, 185): the stop is lived in. Sides: fully grown daylilies (194, 185) and (206, 185) and the ring of flowers. Living: Shogun at (199, 185) turned West, watching her come. Action: Nelim walks with a log (WoodLog) on her shoulder from the east end of the fence toward the woodpile, in profile, leaving the channel. The instant: she has just passed the end of the fence and is three steps from the woodpile; next she drops the log on it. How it is obtained: she stands at (203, 187), `I order "Nelim" to (198, 185)`, the game runs 40 ticks (`game speed is normal`, `I let 40 ticks pass`), then `game speed is paused`; the log is put in her hands after the pause (`carries the item`), which holds on a paused game. Says: the old road comes in at dawn between the concrete, and someone brings wood for the fire. Thumbnail at 268 px: the dark channel of barrier and fence over the pale stone, two orange torch flames, a small walking figure with a log.
@@ -178,12 +178,16 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing South
-    And a colonist "Soren" exists
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And "Soren" gender is male
     And Nelim's Pickle Tools: "Soren" body type is Male
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageNormal"
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 26, 20)
+    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 28, 22)
     And Nelim's Pickle Tools: "Soren" has the gene "Eyes_Green"
+    And Nelim's Pickle Tools: "Soren" skin colour is rgb (236, 204, 184)
+    And Nelim's Pickle Tools: "Soren" face tattoo is "NoTattoo_Face"
+    And Nelim's Pickle Tools: "Soren" body tattoo is "NoTattoo_Body"
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants" dyed rgb (84, 72, 60)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (96, 120, 140)
     And Nelim's Pickle Tools: "Soren" stands at (197, 186) facing South
@@ -229,16 +233,20 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing South
-    And a colonist "Miel" exists
+    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
     And "Miel" gender is female
     And Nelim's Pickle Tools: "Miel" body type is Female
+    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageNormal"
     And Nelim's Pickle Tools: "Miel" hairstyle is "Roo_Royal_LongcurlsHD"
+    And Nelim's Pickle Tools: "Miel" hair colour is rgb (40, 26, 20)
     And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Golden"
+    And Nelim's Pickle Tools: "Miel" skin colour is rgb (166, 112, 62)
+    And Nelim's Pickle Tools: "Miel" face tattoo is "NoTattoo_Face"
+    And Nelim's Pickle Tools: "Miel" body tattoo is "NoTattoo_Body"
     And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (110, 130, 90)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_BasicShirt" dyed rgb (190, 150, 70)
     And Nelim's Pickle Tools: "Miel" stands at (203, 185) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
-    And Nelim's Pickle Tools: "Miel" hair colour is rgb (22, 18, 18)
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Miel" face kit is "calm"
@@ -287,12 +295,16 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" stands at (204, 186) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (200, 186)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (200, 186) facing East
-    And a colonist "Soren" exists
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And "Soren" gender is male
     And Nelim's Pickle Tools: "Soren" body type is Male
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageNormal"
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 26, 20)
+    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 28, 22)
     And Nelim's Pickle Tools: "Soren" has the gene "Eyes_Green"
+    And Nelim's Pickle Tools: "Soren" skin colour is rgb (236, 204, 184)
+    And Nelim's Pickle Tools: "Soren" face tattoo is "NoTattoo_Face"
+    And Nelim's Pickle Tools: "Soren" body tattoo is "NoTattoo_Body"
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants" dyed rgb (84, 72, 60)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (96, 120, 140)
     And Nelim's Pickle Tools: "Soren" stands at (196, 187) facing East
