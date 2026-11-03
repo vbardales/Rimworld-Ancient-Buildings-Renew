@@ -20,7 +20,7 @@
     "file": "echo-source.png",
     "color": "var(--accent)"
   },
-  "iconBadge": {
+  "icon": {
     "file": "ModIcon-source.png",
     "corner": "bottom-right"
   },
