@@ -173,3 +173,23 @@ Scenes at 3.5 are below the 4 needed before a ticket: 4 and 7 wait on a second o
 Inbox and Parked empty; pickle-reports-archive holds nothing of this mod. Evidence/ (1.55 MB, each folder has RELEASE.md with its condition): nr-minimal-en-2, nr-minimal-fr-2, nr-sans-biotech-2 (1.6 non-regression of 2026-10-15, defs unchanged since 2026-10-08), p17-minimal-en-3, p17-sans-biotech-2, p17-incompat-original (1.7, 2026-10-14 and 2026-10-15). Prune-Evidence is blind to the game version: it flags the 1.7 folders as superseded by the 1.6 ones, and it removed nr-incompat-original-2 (1.6 incompatibility, replaced only by the 1.7 run); do not -Apply again without reading. History lines: docs/runs/.
 - Resume 2026-11-05: protocols re-read (d27c011), Preview regenerated after the echo.width/height removal (echo centred, no clipping, no overlap with title or copy; opened and read). Ticket 7c72 still awaited, nothing else changed.
 - 2026-11-05: test shape converted (generated Tests/Test-Mod.ps1, 5 passed, c362d9e). Features 01, 04, 05 now use the shared LoadAudit steps (b81a65e; local LoggedMessageSteps.cs deleted; NPT answered the 3 coverage points, new steps added). Preview regenerated with the new config (e438784), GitHub social preview replaced and verified (sha 9eb209ef...c77c9f). Tickets bb77 (01+04, sans-biotech map) and 398d (05, incompat-original map) filed on e438784, evidence Tests/Pickle/Inbox/loadaudit-*-2026-11-05; 7c72 (gallery) still pending. 1.7 passes wait for a green 1.6 (pt17 LoadAudit restaged by NPT 12:50). Keep the tree on e438784.
+
+## NSB (sync 2026-11-05, stage shootGallery; shotlist and scenarios NOT rewritten: tree stays on e438784 until ticket 7c72 is read)
+
+Rules said back (owner, 2026-11-05): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs the owner's express validation; changing a colonist's properties needs it too (none held, so the roster values apply); every outfit is free, the shotlist says which and why.
+Reads: Places read: 2026-11-05 (calm-zone rows of SANCTUAIRE-LIEUX.md, EMBELLISSEMENT-LIEUX.md rules only). Tribe read: 2026-11-05 (profiles of Nelim, Soren, Miel, Shogun; CATALOGUE-ANIMAUX.md, GALERIE-COLONS.md, LOOKS-VALIDATION.md; NSB-ROSTER.md and APPARENCES-CANON.md not opened).
+Changed in NSB since the shotlist (2026-10-23), commits to 2026-10-31 plus a dirty tree: Nelim has a full wardrobe (2026-11-04/05); Soren and Miel looks differ from my feature (below); calm-zone unchanged (200, 187), shooting zones stay free. Not updated yet: scenarios 2 to 7 are still v2 text and scene 1 is being played; to apply at the rewrite after 7c72. No owner question: roster values are used, no property change.
+
+| Place | Shots | Changes made for the gallery | Last read |
+|---|---|---|---|
+| calm-zone (200, 187) | 1 to 7 | decor per scene as the shotlist (torches, stools, woodpiles, plants); removed after each shot | 2026-11-05 |
+
+| Colonist | Shots | Outfit per shot (garment, why) | Last read | Exceptions |
+|---|---|---|---|---|
+| Nelim | 1 to 7 | 1 dawn: cold set (`Apparel_FSFurCoat` deep blue, `Apparel_FSFurHat`, `VAE_Footwear_Boots`, over `LTS_Tunika` and `Apparel_Pants`; dawn is cold, owner asked me to pick). 2, 3, 4 (09 to 12): daily `LTS_Tunika` emerald, earrings. 5 (15): heat `Apparel_FSDesertRobe` + `Apparel_Headwrap`. 6 (21): party `LTS_LacedDress` deep blue (last shared meal). 7 (23): cold set again (night cools, echoes shot 1). Hair: `Roo_HD_Hair_Highpony` bare, `Roo_Royal_LongHD` under a hat. Planned, to confirm at the rewrite | 2026-11-05 | none |
+| Soren | 4, 6 | daily `VAE_Apparel_DoctorScrubs` + `VAE_Apparel_LabCoat` (steward and healer, no mask). To align with roster at the rewrite: `Eyes_SkyBlue` (mine: Eyes_Green), `Hair_DarkReddish` #403326 (mine (40,28,22)), `MouthClassicSmile` (mine MouthLittle), `MonoScarredBrows`, `EyeThin`, `LidSimple` | 2026-11-05 | none (roster values, no change); looks not marked OK in LOOKS-VALIDATION.md |
+| Miel | 5 | heat `Apparel_FSDesertRobe` + `Apparel_FSDesertWrap` (afternoon heat). To align with roster: `Roo_Royal_NaturalcurlsHD`, `Hair_DarkBlack`, `Eyes_Orange` (mine Eyes_Golden), `GES_Skin_Chocolate` #431A16 (mine (166,112,62)), `MouthLipsBig`, `BrowTriangle`, `Thin` body, `STribalTat_Body_SacredGrass` on the body only, `NoTattoo_Face` | 2026-11-05 | none (roster values, no change); her ochre shirt and bare curls of my v3 are replaced by the heat outfit | 
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+|---|---|---|---|---|
+| Shogun | 1 to 7 | `Apparel_leatherdogcollar` (default, NSB) | 2026-11-05 | none |
