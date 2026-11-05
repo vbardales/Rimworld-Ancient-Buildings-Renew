@@ -17,11 +17,11 @@
 #
 # It starts from the main menu, not from a save: the defs are read while the game loads. The tag below stops
 # the error it is about from failing the scenario on its own account.
-@requires:ancientbld.core @allow-errors
+@requires:ancientbld.core @requires:nelim.pickletools.loadaudit @allow-errors
 Feature: the declared incompatibility with the original mod is still true
 
   Scenario: the original mod loads beside this one and still carries the field 1.6 removed
     Given the main menu is open
     Then mod "ancientbld.core" is loaded
     And mod "nelim.ancientbuildings" is loaded
-    And Ancient Buildings Renew: an error or a warning was logged naming "placingDraggableDimensions" and "ThingDef"
+    And Nelim's Pickle Tools: the game log holds a warning or an error naming "placingDraggableDimensions" and "ThingDef"

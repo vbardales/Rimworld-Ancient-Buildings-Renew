@@ -8,7 +8,7 @@
 #
 # Tagged @without-biotech so the passes that keep Biotech leave it out with !@without-biotech: in one of them
 # its first line would fail, which is the line that stops a staging accident from passing as this pass.
-@without-biotech
+@without-biotech @requires:nelim.pickletools.loadaudit
 Feature: without Biotech the stove's baby-food recipes stay out of the way
 
   Scenario: Biotech is left out, and so are its recipes
@@ -21,5 +21,5 @@ Feature: without Biotech the stove's baby-food recipes stay out of the way
   Scenario: the stove loaded without an unresolved recipe
     Given the main menu is open
     Then def "ABKitchenstove" of type "ThingDef" exists
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "ABKitchenstove"
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "Make_BabyFood"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "ABKitchenstove"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "Make_BabyFood"

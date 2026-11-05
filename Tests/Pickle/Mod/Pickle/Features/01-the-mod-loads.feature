@@ -3,11 +3,11 @@
 # No save is loaded, on purpose. The errors this mod can produce are logged while the defs load, before any
 # scenario is armed, and Pickle's own "no errors were logged" only sees what is logged after it is armed, so
 # it would pass on a mod that failed to load. These scenarios read RimWorld's own log instead, through the
-# suite's two local steps (Source/LoggedMessageSteps.cs), and they need no map, which also lets this file
+# Nelim's Pickle Tools load steps (LoadAudit), and they need no map, which also lets this file
 # play in the pass that leaves Biotech out.
 #
 # Played in every pass but the incompatibility one, where two mods define the same defs on purpose.
-@timeout:30
+@timeout:30 @requires:nelim.pickletools.loadaudit
 Feature: the mod loads clean and defines its six buildings
 
   Scenario: the mod is loaded and its six buildings exist
@@ -22,16 +22,16 @@ Feature: the mod loads clean and defines its six buildings
 
   Scenario: nothing logged while the defs loaded names one of them
     Given the main menu is open
-    Then Ancient Buildings Renew: nothing logged as an error or a warning names "ConFence"
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "ConcreteBarrier"
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "AB_Lamppost"
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "ABVending"
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "ABKitchenstove"
-    And Ancient Buildings Renew: nothing logged as an error or a warning names "AB_AirConditioner"
+    Then Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "ConFence"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "ConcreteBarrier"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "AB_Lamppost"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "ABVending"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "ABKitchenstove"
+    And Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "AB_AirConditioner"
 
   Scenario: the mod's own identifier appears in no error or warning
     Given the main menu is open
-    Then Ancient Buildings Renew: nothing logged as an error or a warning names "nelim.ancientbuildings"
+    Then Nelim's Pickle Tools: the load of the mod "nelim.ancientbuildings" is clean, and no warning or error names "nelim.ancientbuildings"
     And no warnings from mod "nelim.ancientbuildings"
 
   # The one defect this port exists to fix, in its loaded form. The fence declared a field RimWorld 1.4

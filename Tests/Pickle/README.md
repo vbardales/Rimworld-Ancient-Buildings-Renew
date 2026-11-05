@@ -23,7 +23,7 @@ why. Nothing in this folder is part of `Mod/`, which is what Steam receives whol
 | `14-air-conditioner-grille` | minimal, English, `@save @review` | two units, facing North and East, side by side, one capture: the drawn grille bar visibly moves from the bottom edge to the left edge, green since 2026-09-28 |
 
 Fourteen features, twenty-eight scenarios, generated from `Mod/Defs` and `Mod/Languages/French` where they are
-text. Local steps: `Source/LoggedMessageSteps.cs` (two, for the log) and `Source/BuildingSteps.cs` (the rest, all
+text. Local steps: `Source/BuildingSteps.cs` (all
 prefixed "Ancient Buildings Renew: ").
 
 ## Two limits worth knowing before reading a green
@@ -31,7 +31,7 @@ prefixed "Ancient Buildings Renew: ").
 **Pickle's "no errors were logged" cannot see the errors this mod can produce.** It reads what is logged
 after a scenario is armed, and arming clears the buffer; a def that fails to load logs its error at startup,
 before any scenario. So `01` and `04` do not use it. They read RimWorld's own log, `Verse.Log.Messages`,
-through this suite's two steps. That log is bounded, so a long modlist can push an early line out, which is
+through the shared LoadAudit steps of Nelim's Pickle Tools. The shared steps read the game log from its start, so a long modlist can push an early line out, which is
 why every pass here stages a small set. `02` and `03` do use the shipped step, and it is right for them: they
 ask about what happens after the map is loaded.
 
