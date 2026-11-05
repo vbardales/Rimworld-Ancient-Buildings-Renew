@@ -33,7 +33,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: e9e3fdafc25dfa5049d5ba3e3d1d3fd3806a6c53
+protocols_read_sha: d27c0115d80530a25988fd639f7eb0502ebf4fa8
 ---
 # Ancient Buildings Renew: status
 
@@ -171,3 +171,4 @@ Scenes at 3.5 are below the 4 needed before a ticket: 4 and 7 wait on a second o
 ## Pickle evidence state (2026-10-20, Inbox migration redone: all six folders moved to Inbox, Prune-Evidence -Apply, the three nr-* greens (8 skipped by tag counted red by the script) minified and moved back by hand; Inbox and Parked empty, Evidence 1.67 MB; gallery replay ticket 50fd queued, evidence to Tests/Pickle/Inbox/gallery-2026-10-19-2)
 
 Inbox and Parked empty; pickle-reports-archive holds nothing of this mod. Evidence/ (1.55 MB, each folder has RELEASE.md with its condition): nr-minimal-en-2, nr-minimal-fr-2, nr-sans-biotech-2 (1.6 non-regression of 2026-10-15, defs unchanged since 2026-10-08), p17-minimal-en-3, p17-sans-biotech-2, p17-incompat-original (1.7, 2026-10-14 and 2026-10-15). Prune-Evidence is blind to the game version: it flags the 1.7 folders as superseded by the 1.6 ones, and it removed nr-incompat-original-2 (1.6 incompatibility, replaced only by the 1.7 run); do not -Apply again without reading. History lines: docs/runs/.
+- Resume 2026-11-05: protocols re-read (d27c011), Preview regenerated after the echo.width/height removal (echo centred, no clipping, no overlap with title or copy; opened and read). Ticket 7c72 still awaited, nothing else changed.
