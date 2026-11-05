@@ -20,7 +20,7 @@ pickle_scenarios: "28 scenarios in 14 features, every one has a green run (2026-
 workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and v1.0.1; the owner set the item public on 2026-10-08, her word in chat; this session cannot read the page)"
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: docs/runs/README.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: 425e4c3b2a773a6bb35113f98a1e3e7c69b8d70b
-social_preview_sha256: a6cec67ec3e35ed1e3620eb16d31fced53837f1bd1681f77f718055fe7861164
+social_preview_sha256: 9eb209ef5afefdbfea5821b5322e75a4b932757278754cf7fe48964fa4c77c9f
 echo_review_sha: 425e4c3b2a773a6bb35113f98a1e3e7c69b8d70b
 publication_changelog_review_sha: 5a74e6dab3bc8020aa387e64336afc39df92efc4
 remaining:
@@ -172,3 +172,4 @@ Scenes at 3.5 are below the 4 needed before a ticket: 4 and 7 wait on a second o
 
 Inbox and Parked empty; pickle-reports-archive holds nothing of this mod. Evidence/ (1.55 MB, each folder has RELEASE.md with its condition): nr-minimal-en-2, nr-minimal-fr-2, nr-sans-biotech-2 (1.6 non-regression of 2026-10-15, defs unchanged since 2026-10-08), p17-minimal-en-3, p17-sans-biotech-2, p17-incompat-original (1.7, 2026-10-14 and 2026-10-15). Prune-Evidence is blind to the game version: it flags the 1.7 folders as superseded by the 1.6 ones, and it removed nr-incompat-original-2 (1.6 incompatibility, replaced only by the 1.7 run); do not -Apply again without reading. History lines: docs/runs/.
 - Resume 2026-11-05: protocols re-read (d27c011), Preview regenerated after the echo.width/height removal (echo centred, no clipping, no overlap with title or copy; opened and read). Ticket 7c72 still awaited, nothing else changed.
+- 2026-11-05: test shape converted (generated Tests/Test-Mod.ps1, 5 passed, c362d9e). Features 01, 04, 05 now use the shared LoadAudit steps (b81a65e; local LoggedMessageSteps.cs deleted; NPT answered the 3 coverage points, new steps added). Preview regenerated with the new config (e438784), GitHub social preview replaced and verified (sha 9eb209ef...c77c9f). Tickets bb77 (01+04, sans-biotech map) and 398d (05, incompat-original map) filed on e438784, evidence Tests/Pickle/Inbox/loadaudit-*-2026-11-05; 7c72 (gallery) still pending. 1.7 passes wait for a green 1.6 (pt17 LoadAudit restaged by NPT 12:50). Keep the tree on e438784.
