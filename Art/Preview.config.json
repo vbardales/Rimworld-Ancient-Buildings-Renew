@@ -3,7 +3,7 @@
     "title": "Ancient Buildings Renew (unofficial)",
     "titleParts": [
       { "text": "Ancient Buildings" },
-      { "text": "Renew (unofficial)", "tag": true }
+      { "text": "Renew (unofficial)", "suffix": true }
     ],
     "description": "Six buildings in the style of the ruins already on the map."
   },
