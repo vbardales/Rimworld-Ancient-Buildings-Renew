@@ -33,7 +33,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: b706c05a
+protocols_read_sha: 28785802f833b595d4add3702a39c6c162346fbc
 ---
 # Ancient Buildings Renew: status
 
@@ -210,3 +210,4 @@ Changed in NSB since the shotlist (2026-10-23), commits to 2026-10-31 plus a dir
 
 Estimate 4.5 (5 - 0.5 a, the hour waits for the probe). Steps all exist (N of the item spawned, forced to haul, counted). Waits on NSB validations (calm zone, Shogun). Next: owner agrees, then probes ticket, then rewrite of scenario 1 with `git rm` of its old captures in the same commit.
 - 2026-11-06 (8) owner yes (chat, 'y') to shot 1 v4. Probe scenario '0. light probe at hours 4 to 8' added (logged only) and ticket 20261106-150833-549-e343 filed (filter 15-gallery::light probe, sanctuary-lg map, evidence Tests/Pickle/Inbox/light-probe-2026-11-06). Read [light] lines in Player.log: first hour with sun glow < 0.9 sets the hour of shot 1. Then rewrite scenario 1 to v4 and git rm its old captures (Inbox gallery-lg-4) in the same commit.
+- Resume 2026-11-06 (9): protocols re-read (28785802, no diff touched this stage), TM REGISTER sent. Ticket e343 (light probe) passed 1 of 1, peak 3910 MiB, Player.log read: sun glow hour 4 = 0.47, hour 5 = 0.80, hour 6 to 8 = 1.00 (Clear). First hour under 0.9 is 05:00: shot 1 v4 is set at 05:00. Scenario 1 NOT rewritten yet (waits on the NSB validations: calm zone, Shogun; rewrite then `git rm` of the old captures in the same commit). Inbox light-probe-2026-11-06 can be deleted (read); gallery-lg-4-2026-11-06 stays until the rewrite is played.
