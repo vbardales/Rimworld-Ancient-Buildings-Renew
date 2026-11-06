@@ -396,3 +396,19 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 7 - the lamppost at night"
     And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 0. light probe at hours 4 to 7
+    Given the save "Nelims-tribe" is loaded
+    And game speed is paused
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
+    And I set the weather to "Clear"
+    And I set the hour to 4
+    And Nelim's Pickle Tools: the light of the map is logged
+    And I set the hour to 5
+    And Nelim's Pickle Tools: the light of the map is logged
+    And I set the hour to 6
+    And Nelim's Pickle Tools: the light of the map is logged
+    And I set the hour to 7
+    And Nelim's Pickle Tools: the light of the map is logged
+    Then I set the hour to 8
+    And Nelim's Pickle Tools: the light of the map is logged
