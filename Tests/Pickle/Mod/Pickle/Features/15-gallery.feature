@@ -38,8 +38,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 6
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (197, 184)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (197, 184) is lit
@@ -65,6 +67,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: "Nelim" stands at (203, 187) facing West
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 185)
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 2 expected
     And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 185) facing West
     And I order "Nelim" to (198, 185)
     And game speed is normal
@@ -80,6 +83,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     And Nelim's Pickle Tools: "Nelim" face state is logged
+    And Nelim's Pickle Tools: the light of the map is logged
     Then I take a screenshot "gallery 1 - the road comes in"
     And Nelim's Pickle Tools: the decor is removed
 
