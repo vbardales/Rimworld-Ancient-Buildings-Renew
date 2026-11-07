@@ -1,0 +1,96 @@
+# Pass "sanctuary-gallery" (2026-11-07, shotlist v5): copy of SanctuaryBacklot/Tests/Pickle/wsl-deps.sanctuary-daily.map (the NSB wardrobe stack the owner validated: VAE, LTS Raiments, Lisa's Work, FashionRIMsta, Ponpeco, Swimwear, facial animation) plus the Backlot itself (its steps place the pawns and frame the calm zone). Needed by the cold, heat, party and daily outfits of the gallery scenarios. Header of 15-gallery.feature, STATUS.md.
+nelim.sanctuarybacklot path:SanctuaryBacklot/Mod
+
+# Look validation pass (feature sanctuary-looks): the sanctuary pass PLUS the mods the character profiles call for and the map lacks (owner, 2026-10-19): Roo's HD Hairstyles (Roo_Royal_*, Roo_HD_*), Tribal Tattoos (STribalTat_*), Tattoos Expanded (Body_rose, Body_Koi). NOT PLAYED.
+#
+#   Submit-PickleRun.ps1 -Mod SanctuaryBacklot -DepMap wsl-deps.sanctuary-looks.map -Filter "::looks-" -EvidenceDir Tests/Pickle/Inbox/looks-1
+# The passes of the Sanctuaire de Nelim: the studio fixtures (including Nelims-tribe), the camera steps, the stage decor, the animal steps (coat steps) and the clear screen.
+#
+#   Submit-PickleRun.ps1 -Mod SanctuaryBacklot -DepMap wsl-deps.sanctuary.map -Filter "::infirmary-views"   (the Backlot's own suite; its scenarios stage Nelim's Pickle Tools by the path: lines below)
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+nelim.pickletools.stagedecor path:PickleTools/StageDecor/Mod
+nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
+nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
+# The bundle is committed under PickleTools/Mod: this shell replaces it, so the tools above are the only copy of their steps (see StandaloneBase).
+nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
+# Minimum list, 2026-10-07/08 (owner). The staging activates in file order, then sorts by loadAfter/dependencies.
+# Bodies and trousers, as proven by Venus Touch Waistlines' gallery pass WITHOUT TailorMade (VenusTouchWaistlines/docs/runs/2026-10-08_gallery-no-tailormade-1):
+# Female Body Variants and Female Apparel Variants load BEFORE WDI (else their Naked_*_Female textures shadow WDI's); AB's Visible Pants is indispensable (without it Venus does nothing).
+# Seeds: Tests/Pickle/config/sanctuary/ (AB's settings; Venus's, whose name must be Mod_local-<packageId>_<Class>.xml because it is staged by path:).
+# Not staged: TailorMade (not needed), Apparel Paper Pattern (not required: AB lists it in loadAfter only), THIGAPPE (does the same fitting as Venus, dropped), Reel's textures (owner: not added), Kas.GeneralCollection (optional, Workshop id 3789119336).
+tiagocc0.FemaleBodyVariants 3798082132
+tiagocc0.FemaleApparelVariants 3799726535
+# UnderWhere (owner 2026-11-04: underwear shots of Nelim, Miel, Emi) before WDI, as NPT stages it.
+Malistaticy.UnderWhere 1870010563
+# Children Wear Anything (owner 2026-11-05): lifts the child apparel restriction, so UnderWhere fits child bodies (Emi was refused). Scales adult garments down on children.
+LoneKin.ChildrenWearAnything 3688530033
+wdi.realistic.bodies 3527486510
+ab.vplrf 2986402536
+nelim.venustouch.waistlines path:VenusTouchWaistlines/Mod
+# Facial animation: base (blinks included: its `blink` animation), experimentals, Vanilla Textures Expanded, Akeron Extras (needs VTE), EyeGenes3, the performance patch. Moving Vanilla Eyes (VEFA) is listed further down.
+Nals.FacialAnimation 1635901197
+nals.facialanimationexperimentals 2581693737
+VanillaExpanded.VTEXE.FacialAnims 2816938779
+Newton.AKNExtras.FacialAnimations 2889716301
+lucius.eyegenes3 3745223213
+astryl.FacialAnimationPerformancePatch 3790129900
+# Facial animation fixes (owner, 2026-10-08): Init Fix animates newly spawned pawns at once, Load Fix refreshes pawn graphics after a save loads (both after Nals.FacialAnimation). Cuter Kids (3807706870, children only) is added on the owner's word.
+# [VK] closed eyes: new eyelids for the Experimentals, 1.6. FAE (2890697696) is NOT used and Dynamic Eyebrows (3813572847) is NOT used (owner, 2026-10-08).
+vk.addeyes.EX 3694711465
+# VEFA = Vanilla Experimentals for Facial Animation (SunshineyDays, sd.fa.movingvanillaeyes): moving eyes, half-lidded tiredness, tears, hot and cold overlays, smiles; reads the VTE lids and mouths. Back 2026-10-08 on the owner's word, after its HasNegativeBlushThought exception (run d445) was a reason to remove it. Its seed (config/sanctuary) sets enableBlushLimiting to False to avoid that exception.
+sd.fa.movingvanillaeyes 3753978140
+SleepyFrieren.beautygenefa 3685072616
+ria.cuterkidsforfacialanimation 3807706870
+Moshii.NLFA.InitFix 3609895011
+ccj.nlfaloadfix 3721489042
+
+# Added for the look validation: ids from NPT's wsl-deps.look-catalogue.map.
+Shenanigans.TribalTattoos 2782262247
+Qux.Tattoos 2569243583
+Rooboid.RooTattoo 2555588467
+# Roo's Birthmarks and Blemishes (owner resubscribed 2026-11-04): RBBirthmark* face and body marks, RBWrinkleB of the Roster.
+Rooboid.BirthmarksandBlemishes 2890180936
+rooboid.hdhair.continued 3559870636
+# Vanilla Hair Expanded: Miel's VHE_SideBraid (ticket 089c failed "no hairstyle VHE_SideBraid" without it).
+VanillaExpanded.VHE 1888705256
+# Hair under hats: Hat Hair Control replaces Show Hair Under Stuff here (owner, 2026-10-20), seed in config/sanctuary-looks. Clothing candidates for the alt outfits (owner: choose, test).
+lordfelix.HatHairControl 3760821540
+Dress.Cinderella 3627646170
+homebrew.fairycoreapparel2 3812924898
+KRJS.JoseonCostume1 3043633660
+
+# Intimacy - Friends n Lovers, Way Better Romance (owner links, 2026-10-30; Simple Trans dropped, RJW genes chosen instead). Non-Binary Gender (3109763692) removed 2026-10-30 (owner): WBR lists it as incompatibleWith, the load order could not be sorted (ticket dfe1).
+LovelyDovey.Sex.WithEuterpe 3498422643
+divineDerivative.Romance 2877731755
+# Not staged: Menstruation Framework (3798109827) and Cramps (3800043803), gameplay only (one UI icon, no pawn graphics); dropped 2026-11-04 on the owner's word, for the game list, not the captures.
+# Body hair outside the tattoo slot (owner, 2026-11-04): Lucius's Body Hair Framework, then Morton's Body Hair (Not Tattoos), which requires it. Nelim keeps Body_Heart. Setting a pawn's body hair needs a new NPT step (none yet).
+# lucius.bodyhairframework 3823805934  (1.7 only: blocks the 1.6 start, run bd95 exit 3; kept in wsl-deps.sanctuary-nelim.map for the 1.7 ticket)
+# morton.truebodyhair 3825963278  (needs the framework, 1.7 only)
+
+# RJW genes for gender and sexuality (owner, 2026-10-30): local RimWorld Mods folder (not Steam), folder names rjw and rjw-genes; Harmony and Biotech are automatic.
+rim.job.world rjw
+vegapnk.rjw.genes rjw-genes
+archersaiter.rjw.traits rjw-traits
+
+# Daily-outfit captures from the Roster (owner, 2026-11-04, "go captures"): copy of wsl-deps.sanctuary-looks.map plus the skins and the garments the Roster column AM names.
+LazyFridayStudio.GenesExpandedSkin 3214172563
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VAPPE 1814987817
+Mlie.FashionRIMsta 3592569869
+ponpeco.KidsClothes 3237739433
+ponpeco.PonpecoAccessories 3298397484
+
+# [LTS] Raiments (NSB pick 2026-11-04, photographed by NPT): Nelim's light daily outfit for 20 degrees (LTS_Tunika + LTS_Skirt). Its pants-only pieces do not show on this stack (NPT isolation ticket dd05).
+limetreesnake.raiments 3751997843
+# Lisa's Work Apparel (owner, 2026-11-04: a new caregiver outfit for Nelim): scrubs, surgeon apron, stethoscope. No dependency.
+Hysteria82.MousekinWorkApparel 3709891968
+# Ponpeco Pajamas (owner 2026-11-04: Nelim sleep outfit, the basic shirt looked torn): Apparel_PonpecoPajamaA/B, slippers.
+ponpeco.PonpecoPajamas 3482959515
+# Swimwear (kaitorisenkou, owner 2026-11-04: Nelim swimwear). Its loadFolders stop at v1.5: whether the 1.6 game loads its defs is checked by the swim ticket.
+kaitorisenkou.Swimwear 2840348927
+
+# NSB face fit (test only, owner 2026-11-06): Miel lip colours, recoloured copies of VTE MouthLipsBig. Local mod in Tests/Pickle/LocalMods.
+nelim.nsb.facefit path:SanctuaryBacklot/Tests/Pickle/LocalMods/NsbFaceFit
