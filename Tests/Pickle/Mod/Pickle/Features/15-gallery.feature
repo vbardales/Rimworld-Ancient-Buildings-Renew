@@ -36,23 +36,37 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 1. the road comes in at dawn
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
-    And I set the hour to 6
+    And I set the hour to 5
     And I set the weather to "Clear"
-    And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (197, 184)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (197, 184) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 184)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 184) is lit
+    And Nelim's Pickle Tools: the light of the map is logged
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 185)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 185) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 184)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 184) is lit
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (197, 187)
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 189) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 187) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (206, 189) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (193, 184) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 183) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 185) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (206, 185) fully grown
-    And I spawn a "WoodLog" at (196, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (207, 187) fully grown
+    And Nelim's Pickle Tools: 6 of the item "WoodLog" are spawned at (196, 189)
+    And Nelim's Pickle Tools: 6 of the item "WoodLog" are spawned at (196, 188)
+    And Nelim's Pickle Tools: 3 of the item "WoodLog" are spawned at (196, 187)
+    And I spawn a "WoodLog" at (203, 186)
+    And I spawn a "WoodLog" at (205, 186)
+    And I spawn a "WoodLog" at (199, 185)
+    And I spawn a "WoodLog" at (200, 184)
     And a "ConcreteBarrier" is built at (198, 190)
     And a "ConcreteBarrier" is built at (199, 190)
     And a "ConcreteBarrier" is built at (200, 190)
@@ -63,47 +77,60 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (200, 188)
     And a "ConFence" is built at (201, 188)
     And a "ConFence" is built at (202, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Parka" dyed rgb (24, 54, 110)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (214, 120, 40)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
-    And Nelim's Pickle Tools: "Nelim" stands at (203, 187) facing West
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 185)
-    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 2 expected
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 185) facing West
-    And I order "Nelim" to (198, 185)
-    And game speed is normal
-    And Nelim's Pickle Tools: I let 40 ticks pass
-    And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" carries the item "WoodLog"
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
+    And Nelim's Pickle Tools: the "Apparel_Pants" worn by "Nelim" is dyed rgb (101, 67, 33)
+    And Nelim's Pickle Tools: "Nelim" wears "VAE_Footwear_Boots" made of "Leather_Plain"
+    And Nelim's Pickle Tools: the "VAE_Footwear_Boots" worn by "Nelim" is dyed rgb (101, 67, 33)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurCoat" made of "Leather_Plain"
+    And Nelim's Pickle Tools: the "Apparel_FSFurCoat" worn by "Nelim" is dyed rgb (31, 58, 95)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurHat" made of "Cloth"
+    And Nelim's Pickle Tools: the "Apparel_FSFurHat" worn by "Nelim" is dyed rgb (222, 203, 164)
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" stands at (204, 189) facing West
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing North
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "WoodLog" to (197, 189)
+    And game speed is normal
+    And Nelim's Pickle Tools: I let 20 ticks pass
+    And game speed is paused
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.4
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.0
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
-    And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
-    And Nelim's Pickle Tools: "Nelim" face state is logged
-    And Nelim's Pickle Tools: the light of the map is logged
     Then I take a screenshot "gallery 1 - the road comes in"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 2. the barrier and the fence up close
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 9
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (205, 185)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (205, 185) is lit
     And Nelim's Pickle Tools: I place the decor "Stool" at (197, 185)
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (195, 187) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 187) fully grown
-    And I spawn a "WoodLog" at (196, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (206, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 184) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 184) fully grown
+    And Nelim's Pickle Tools: 4 of the item "WoodLog" are spawned at (196, 187)
     And I spawn a "Steel" at (199, 187)
+    And I spawn a "WoodLog" at (199, 187)
     And a "ConcreteBarrier" is built at (198, 190)
     And a "ConcreteBarrier" is built at (199, 190)
     And a "ConcreteBarrier" is built at (200, 190)
@@ -113,20 +140,22 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (199, 188)
     And a "ConFence" is built at (201, 188)
     And a "ConFence" is built at (202, 188)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
+    # the fence cell (200, 188) is left OPEN on purpose: the gap the steel bar goes into
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (198, 187)
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing East
-    And I order "Nelim" to (200, 187)
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "Steel" to (200, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" carries the item "Steel"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.0
@@ -134,87 +163,116 @@ Feature: gallery: a day at the last stop of an old road
     Then I take a screenshot "gallery 2 - the barrier and the fence up close"
     And Nelim's Pickle Tools: the decor is removed
 
-  Scenario: 3. the stop at eleven, vending machine and stove
+  Scenario: 3. the stove at eleven
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 11
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 186)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 189)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "Stool" at (202, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (197, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (203, 187) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (196, 188) fully grown
-    And I spawn a "WoodLog" at (201, 187)
-    And a "ABVending" is built at (198, 189)
+    And I spawn a "WoodLog" at (198, 189)
+    And I spawn a "WoodLog" at (202, 189)
     And a "ABKitchenstove" is built at (200, 189)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing South
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 186) facing West
-    And I order "Nelim" to (197, 187)
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing East
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "MealSimple" to (202, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 30 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.2
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.2
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
-    Then I take a screenshot "gallery 3 - the vending machine and the stove"
+    Then I take a screenshot "gallery 3 - the stove"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 4. the vending machine up close
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 12
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "StandingLamp" at (202, 189)
-    And Nelim's Pickle Tools: I place the decor "Stool" at (196, 186)
+    And Nelim's Pickle Tools: the decor "StandingLamp" at (202, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "Stool" at (195, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (194, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (202, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (193, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (203, 187) fully grown
+    And Nelim's Pickle Tools: 4 of the item "WoodLog" are spawned at (194, 188)
     And I spawn a "Silver" at (200, 188)
     And a "ABVending" is built at (199, 189)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (197, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (197, 186) facing East
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 187) facing North
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
-    And "Soren" gender is male
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
     And Nelim's Pickle Tools: "Soren" body type is Male
-    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageNormal"
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 28, 22)
-    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_Green"
-    And Nelim's Pickle Tools: "Soren" skin colour is rgb (236, 204, 184)
-    And Nelim's Pickle Tools: "Soren" face tattoo is "NoTattoo_Face"
-    And Nelim's Pickle Tools: "Soren" body tattoo is "NoTattoo_Body"
-    And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants" dyed rgb (84, 72, 60)
-    And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (96, 120, 140)
+    And Nelim's Pickle Tools: "Soren" beard is "NoBeard"
+    And Nelim's Pickle Tools: "Soren" face tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" body tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelCollaredShirt" made of "Cloth"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelCollaredShirt" worn by "Soren" is dyed rgb (112, 128, 144)
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelLeatherVest" made of "Leather_Plain"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelLeatherVest" worn by "Soren" is dyed rgb (107, 79, 58)
+    And Nelim's Pickle Tools: "Soren" wears "VAE_Apparel_Trousers" made of "Cloth"
+    And Nelim's Pickle Tools: the "VAE_Apparel_Trousers" worn by "Soren" is dyed rgb (60, 70, 80)
+    And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
+    And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
+    And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
+    And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
+    And Nelim's Pickle Tools: "Soren" face kit is "calm"
+    And Nelim's Pickle Tools: "Soren" face is held neutral
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (195, 187) facing East
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And Nelim's Pickle Tools: "Soren" stands at (199, 188) facing West
-    And I order "Soren" to (196, 187)
+    And Nelim's Pickle Tools: "Soren" is forced to haul 1 of the item "MealSimple" to (196, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 25 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" carries the item "Silver"
-    And Nelim's Pickle Tools: "Soren" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Soren" face kit is "calm"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthLittle"
     And Nelim's Pickle Tools: "Soren" face is held neutral
-    And Nelim's Pickle Tools: the movement of the colonist "Soren" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (198, 187) at zoom 3.0
@@ -223,72 +281,98 @@ Feature: gallery: a day at the last stop of an old road
     Then I take a screenshot "gallery 4 - the vending machine up close"
     And Nelim's Pickle Tools: the decor is removed
 
-  Scenario: 5. the air conditioner at three
+  Scenario: 5. the cold unit at three
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 15
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: I place the decor "Stool" at (196, 185)
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 187) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 188) fully grown
+    And Nelim's Pickle Tools: I place the decor "StandingLamp" at (195, 189)
+    And Nelim's Pickle Tools: the decor "StandingLamp" at (195, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "Stool" at (196, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 188) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (203, 187) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (195, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (203, 186) fully grown
     And I spawn a "WoodLog" at (197, 186)
+    And Nelim's Pickle Tools: 4 of the item "MealSimple" are spawned at (198, 188)
+    And Nelim's Pickle Tools: 4 of the item "Pemmican" are spawned at (200, 188)
     And a "Wall" is built at (197, 189)
     And a "Wall" is built at (198, 189)
     And a "AB_AirConditioner" is built at (199, 189)
     And a "Wall" is built at (200, 189)
     And a "Wall" is built at (201, 189)
     And Ancient Buildings Renew: the "AB_AirConditioner" at (199, 189) is powered on
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Shadecone" dyed rgb (225, 200, 140)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSDesertRobe" made of "Cloth"
+    And Nelim's Pickle Tools: the "Apparel_FSDesertRobe" worn by "Nelim" is dyed rgb (222, 203, 164)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Headwrap" made of "Cloth"
+    And Nelim's Pickle Tools: the "Apparel_Headwrap" worn by "Nelim" is dyed rgb (40, 100, 200)
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing West
-    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
-    And "Miel" gender is female
-    And Nelim's Pickle Tools: "Miel" body type is Female
-    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageNormal"
-    And Nelim's Pickle Tools: "Miel" hairstyle is "Roo_Royal_LongcurlsHD"
-    And Nelim's Pickle Tools: "Miel" hair colour is rgb (40, 26, 20)
-    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Golden"
-    And Nelim's Pickle Tools: "Miel" skin colour is rgb (166, 112, 62)
-    And Nelim's Pickle Tools: "Miel" face tattoo is "NoTattoo_Face"
-    And Nelim's Pickle Tools: "Miel" body tattoo is "NoTattoo_Body"
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (110, 130, 90)
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_BasicShirt" dyed rgb (190, 150, 70)
-    And Nelim's Pickle Tools: "Miel" stands at (204, 185) facing West
-    And I order "Miel" to (201, 187)
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
+    And Nelim's Pickle Tools: "Soren" body type is Male
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" beard is "NoBeard"
+    And Nelim's Pickle Tools: "Soren" face tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" body tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelSafariShirt" made of "Cloth"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelSafariShirt" worn by "Soren" is dyed rgb (225, 215, 190)
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelSafariPants" made of "Cloth"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelSafariPants" worn by "Soren" is dyed rgb (200, 180, 140)
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelCap" made of "Cloth"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelCap" worn by "Soren" is dyed rgb (112, 128, 144)
+    And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
+    And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
+    And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
+    And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
+    And Nelim's Pickle Tools: "Soren" face kit is "calm"
+    And Nelim's Pickle Tools: "Soren" face is held neutral
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (197, 187) facing North
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
+    And Nelim's Pickle Tools: "Soren" stands at (203, 186) facing West
+    And Nelim's Pickle Tools: "Soren" is forced to haul 1 of the item "MealSimple" to (201, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 30 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Miel" face kit is "calm"
-    And Nelim's Pickle Tools: "Miel" mouth is "MouthClassicSmile"
-    And Nelim's Pickle Tools: "Miel" face is held neutral
-    And Nelim's Pickle Tools: the movement of the colonist "Miel" is logged for 5 seconds
+    And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 3.2
+    And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 2.4
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
-    And Nelim's Pickle Tools: "Miel" facial expression is "normal+blink"
-    Then I take a screenshot "gallery 5 - the air conditioner in a wall"
+    And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
+    Then I take a screenshot "gallery 5 - the cold unit"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 6. the six buildings together at dusk
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 21
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
@@ -296,7 +380,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 184) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (206, 184)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (206, 184) is lit
-    And I spawn a "WoodLog" at (196, 183)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (197, 183)
+    And Nelim's Pickle Tools: the decor "Brazier" at (197, 183) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (207, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 183) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 183) fully grown
+    And Nelim's Pickle Tools: 3 of the item "WoodLog" are spawned at (196, 183)
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -309,39 +399,52 @@ Feature: gallery: a day at the last stop of an old road
     And a "Wall" is built at (197, 185)
     And a "AB_AirConditioner" is built at (198, 185)
     And a "Wall" is built at (199, 185)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 100, 70)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_LacedDress" made of "Synthread"
+    And Nelim's Pickle Tools: the "LTS_LacedDress" worn by "Nelim" is dyed rgb (31, 58, 95)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (204, 186) facing West
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (200, 186)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (200, 186) facing East
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
-    And "Soren" gender is male
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
     And Nelim's Pickle Tools: "Soren" body type is Male
-    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageNormal"
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 28, 22)
-    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_Green"
-    And Nelim's Pickle Tools: "Soren" skin colour is rgb (236, 204, 184)
-    And Nelim's Pickle Tools: "Soren" face tattoo is "NoTattoo_Face"
-    And Nelim's Pickle Tools: "Soren" body tattoo is "NoTattoo_Body"
-    And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants" dyed rgb (84, 72, 60)
-    And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (96, 120, 140)
+    And Nelim's Pickle Tools: "Soren" beard is "NoBeard"
+    And Nelim's Pickle Tools: "Soren" face tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" body tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelShirtButtoned" made of "Synthread"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelShirtButtoned" worn by "Soren" is dyed rgb (110, 30, 45)
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelBankerVest" made of "Synthread"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelBankerVest" worn by "Soren" is dyed rgb (20, 80, 95)
+    And Nelim's Pickle Tools: "Soren" wears "LTS_Dresspants" made of "Synthread"
+    And Nelim's Pickle Tools: the "LTS_Dresspants" worn by "Soren" is dyed rgb (107, 79, 58)
+    And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
+    And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
+    And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
+    And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
+    And Nelim's Pickle Tools: "Soren" face kit is "calm"
+    And Nelim's Pickle Tools: "Soren" face is held neutral
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (200, 186) facing East
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And Nelim's Pickle Tools: "Soren" stands at (196, 187) facing East
-    And I order "Nelim" to (201, 187)
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "MealSimple" to (201, 187)
     And I order "Soren" to (199, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 25 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" carries the item "Pemmican"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Soren" face kit is "calm"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthLittle"
     And Nelim's Pickle Tools: "Soren" face is held neutral
-
-    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (201, 187) at zoom 4.4
@@ -353,17 +456,22 @@ Feature: gallery: a day at the last stop of an old road
   Scenario: 7. the lamppost at night
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
+    And Nelim's Pickle Tools: all humans but "Nelim" are removed
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (180, 176) to (220, 198)
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I set the hour to 23
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 186)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 186) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (195, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (205, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 184) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (198, 185) fully grown
     And I spawn a "WoodLog" at (203, 186)
     And a "ConcreteBarrier" is built at (197, 185)
     And a "ConcreteBarrier" is built at (198, 185)
@@ -377,21 +485,29 @@ Feature: gallery: a day at the last stop of an old road
     And a "ConFence" is built at (201, 191)
     And a "AB_Lamppost" is built at (200, 188)
     And Nelim's Pickle Tools: I let 120 ticks pass
-    Then Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (90, 70, 50)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (226, 212, 184)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 100, 70)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Ancient Buildings Renew: the "AB_Lamppost" at (200, 188) is glowing
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" is undressed
+    And Nelim's Pickle Tools: "Nelim" wears "LTS_Tunika" made of "Cloth"
+    And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" made of "Cloth"
+    And Nelim's Pickle Tools: the "Apparel_Pants" worn by "Nelim" is dyed rgb (101, 67, 33)
+    And Nelim's Pickle Tools: "Nelim" wears "VAE_Footwear_Boots" made of "Leather_Plain"
+    And Nelim's Pickle Tools: the "VAE_Footwear_Boots" worn by "Nelim" is dyed rgb (101, 67, 33)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurCoat" made of "Leather_Plain"
+    And Nelim's Pickle Tools: the "Apparel_FSFurCoat" worn by "Nelim" is dyed rgb (31, 58, 95)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurHat" made of "Cloth"
+    And Nelim's Pickle Tools: the "Apparel_FSFurHat" worn by "Nelim" is dyed rgb (222, 203, 164)
+    And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing North
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (199, 185)
+    And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 185) facing South
-    And I order "Nelim" to (199, 190)
+    And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "WoodLog" to (199, 190)
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.6
@@ -413,4 +529,18 @@ Feature: gallery: a day at the last stop of an old road
     And I set the hour to 7
     And Nelim's Pickle Tools: the light of the map is logged
     Then I set the hour to 8
+    And Nelim's Pickle Tools: the light of the map is logged
+
+  Scenario: 0b. light probe at hours 20 to 23
+    Given the save "Nelims-tribe" is loaded
+    And game speed is paused
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
+    And I set the weather to "Clear"
+    And I set the hour to 20
+    And Nelim's Pickle Tools: the light of the map is logged
+    And I set the hour to 21
+    And Nelim's Pickle Tools: the light of the map is logged
+    And I set the hour to 22
+    And Nelim's Pickle Tools: the light of the map is logged
+    Then I set the hour to 23
     And Nelim's Pickle Tools: the light of the map is logged
