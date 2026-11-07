@@ -94,3 +94,7 @@ kaitorisenkou.Swimwear 2840348927
 
 # NSB face fit (test only, owner 2026-11-06): Miel lip colours, recoloured copies of VTE MouthLipsBig. Local mod in Tests/Pickle/LocalMods.
 nelim.nsb.facefit path:SanctuaryBacklot/Tests/Pickle/LocalMods/NsbFaceFit
+
+# Animal apparel (2026-11-07, ticket 6957 red: "Shogun has no apparel tracker"): scene 1 dresses Shogun in Apparel_leatherdogcollar. Animal Apparel Framework 3513825850 and Collars and Kit Renew, as NSB's wsl-deps.animal-portraits.map stages them.
+Ingendum.AnimalApparelFramework 3513825850
+nelim.animalapparelcollarsandkit path:AnimalApparelCollarsAndKitRenew/Mod
