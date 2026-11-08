@@ -33,7 +33,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: e50928000bb957ac07098875d03ff6097b1637de
+protocols_read_sha: 6e1f76dfd8a201085e01aa7faff8b5ed6631b5fd
 ---
 # Ancient Buildings Renew: status
 
