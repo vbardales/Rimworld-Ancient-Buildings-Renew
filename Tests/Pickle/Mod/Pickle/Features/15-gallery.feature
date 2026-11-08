@@ -26,6 +26,7 @@
 #   7. 23:00, medium, frame (200, 188) zoom 3.6 (x 193.6-206.4, z 184.6-191.4), Clear, 40 ticks. Back: the lamppost (200, 188), glowing, with the barrier row (197-201, 185) behind and the fence row (197-201, 191) as in the v2 scenario. Middle: Nelim (outfit E, the cold set) walking North out of the pool of light toward the road, seen from behind, carrying one WoodLog (tomorrow's first log, forced to carry it to (199, 190), the lamppost on her left). Front: the day left behind: one TorchLamp (204, 186) lit, burning down, and one TorchLamp (196, 186) placed and not lit, a few WoodLog at (203, 186), Plant_Bush (195, 186) and (205, 186), Plant_Rose (202, 184), Plant_Daylily (197, 186). Living: Shogun standing in the light at (199, 186), the one animal seen from the FRONT of the series, facing South. The instant: she is leaving; he stays. Obtained: `I order "Nelim" to (199, 190)` from (199, 187), 40 ticks, pause, carries the WoodLog; the lamppost glow is asserted before the pawns are placed. Says: the lamppost holds the night with the sunlight it stored, one torch still burning, the dog keeping the light, she leaving with tomorrow's first log. Thumbnail at 268 px: the glowing lamppost, the lit dog, a figure leaving into the dark.
 #      R: the night reads as evening, and the glow assertion was never played; hour 0 if flat; the dog faces the camera on purpose (criterion c needs one front view; the front view of Shogun is validated).
 #   v5.1 (2026-11-08, after run gallery-lg-7-2026-11-08, scenes 4, 5, 7 red): (a) shots 4 and 5: the electric StandingLamp is switched on with `the building "StandingLamp" at (x, z) is powered` then `I let 120 ticks pass` (NPT answer 2026-11-08; the step `the decor is lit` fills fuel or flips a switch, an electric lamp has neither, timeout 10 s); (b) shot 7 Shogun stands at (199, 186) and Plant_Daylily at (197, 186): (199, 185) and (198, 185) hold the ConcreteBarrier row (197-201, 185), cell not standable. Nothing else changed.
+#   v5.2 (2026-11-08, after score-gallery of the lg-7 captures of scenes 2, 3, 6, all REDO on decoration or light): (2) Steel is a stack of 4 at (199, 187) and the single WoodLog moves to (201, 187) so both read beside the fence gap; added Plant_Rose (201, 185), Plant_Daylily (198, 185) and (202, 184), Stool (203, 185) to fill the bare ground; (3) the two WoodLog beside the stove are stacks of 4 ((198, 189), (202, 189)), added Plant_Daylily (201, 186) and Plant_Rose (199, 186) around Nelim's path; (6) before the shot `I let 120 ticks pass` then `AB_Lamppost (203, 190) is glowing` (as shot 7), so the lamppost carries light at hour 21. R: the capture of shot 6 read as DAY although probe 0b says sun glow 0.00 at hours 20 to 23; lead: studio presentation mode lifts the light (asked NPT). Soren smile (MouthClassicSmile, roster brows MonoScarredBrows) reads stern: roster values, no property change, malus assumed.
 #
 # Why this place: the calm zone is clean, level and light, so concrete and a lit lamp read on it. Every scenario reloads the save and cleans the filth.
 # Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes, the decor and the filth are Nelim's Pickle Tools'.
@@ -130,8 +131,12 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 184) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 184) fully grown
     And Nelim's Pickle Tools: 4 of the item "WoodLog" are spawned at (196, 187)
-    And I spawn a "Steel" at (199, 187)
-    And I spawn a "WoodLog" at (199, 187)
+    And Nelim's Pickle Tools: 4 of the item "Steel" are spawned at (199, 187)
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (201, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (198, 185) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (202, 184) fully grown
+    And Nelim's Pickle Tools: I place the decor "Stool" at (203, 185)
+    And I spawn a "WoodLog" at (201, 187)
     And a "ConcreteBarrier" is built at (198, 190)
     And a "ConcreteBarrier" is built at (199, 190)
     And a "ConcreteBarrier" is built at (200, 190)
@@ -182,8 +187,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (197, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (203, 187) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (196, 188) fully grown
-    And I spawn a "WoodLog" at (198, 189)
-    And I spawn a "WoodLog" at (202, 189)
+    And Nelim's Pickle Tools: 4 of the item "WoodLog" are spawned at (198, 189)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (201, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (199, 186) fully grown
+    And Nelim's Pickle Tools: 4 of the item "WoodLog" are spawned at (202, 189)
     And a "ABKitchenstove" is built at (200, 189)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" is undressed
@@ -399,6 +406,8 @@ Feature: gallery: a day at the last stop of an old road
     And a "AB_Lamppost" is built at (203, 190)
     And a "ABVending" is built at (203, 188)
     And a "ABKitchenstove" is built at (204, 188)
+    And Nelim's Pickle Tools: I let 120 ticks pass
+    And Ancient Buildings Renew: the "AB_Lamppost" at (203, 190) is glowing
     And a "Wall" is built at (197, 185)
     And a "AB_AirConditioner" is built at (198, 185)
     And a "Wall" is built at (199, 185)
