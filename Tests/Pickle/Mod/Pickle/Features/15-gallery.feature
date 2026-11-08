@@ -467,6 +467,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.45
+    And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (201, 187) at zoom 4.4
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
@@ -530,6 +532,8 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.15
+    And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.6
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
