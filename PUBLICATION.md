@@ -90,7 +90,7 @@ and `PUBLISHING.md`; it is hers to change.
 |---|---|---|
 | 1 | The fence and the barrier drag out as a line in one gesture (`F1`, `B1`) | **Not applicable, accepted by the owner on 2026-09-28**: the engine has no press-drag-release primitive. The draw style and the cells a drag would lay are asserted by Pickle 08 |
 | 2 | The lamppost stays lit all night, the vending machine keeps a meal sound over days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
-| 3 | The French reads naturally | **Done**: the owner reviewed `FRENCH_REVIEW.md` on 2026-10-01 (`translation_fr: complete`) |
+| 3 | The French reads naturally | **Done**: the owner reviewed `TRANSLATION_REVIEW.md` (named `FRENCH_REVIEW.md` then) on 2026-10-01 (`translation_fr: complete`) |
 | 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | **Done by the owner, reported 2026-10-08** (not readable by this session; `STATUS.md`, `remaining`). The installed copy is what players get; the suite plays the working tree |
 | 5 | The gallery: which captures, in which order, on which colony | **Done**: approved by the owner 2026-10-08, uploaded by hand `0` to `7` |
 | 6 | The description read once more, on the page after the publish | **Done by the owner, reported 2026-10-08** ("fait" in chat); not readable by this session |
