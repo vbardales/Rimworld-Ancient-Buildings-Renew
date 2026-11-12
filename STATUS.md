@@ -69,6 +69,7 @@ Not replayed: French pass (no text changed in 1.0.1), gallery pass (gallery unch
 | 0.1.0 | 2026-09-23 | prepublication, creates private item | none |
 | 1.0.0 | 2026-10-08 | first release | `v1.0.0` |
 | 1.0.1 | 2026-10-08 | `packageId` `nelim.ancientbuildingsrenew` to `nelim.ancientbuildings` | `v1.0.1` |
+| 1.1.0 | 2026-10-15 | 1.7 declared, description and tags (CI run 38761642762, SHA 72f6af2) | `v1.1.0` |
 
 Rollback target: private visibility (owner used once 2026-10-08, between 1.0.0 and 1.0.1; public again after 1.0.1).
 
