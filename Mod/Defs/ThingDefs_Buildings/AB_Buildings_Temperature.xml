@@ -32,7 +32,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>AB_AirConditioner</defName>
     <label>ancient air conditioner</label>
-    <description>A salvaged air-cooling unit that fits into a wall. Cool air comes out one side, while hot exhaust comes out the other. Older and cruder than a modern cooler: it drinks more power and moves less heat, but it is quicker to put together out of less.</description>
+    <description>A salvaged air-cooling unit that fits into a wall. Cool air comes out one side, while hot exhaust comes out the other. Older and cruder than a modern cooler: it uses more power and moves less heat, but it is quicker to build with fewer materials.</description>
     <thingClass>Building_Cooler</thingClass>
     <graphicData>
       <!--

@@ -1,6 +1,6 @@
 # Publication
 
-This sheet records what the Workshop page needs but the rest of the repository does not hold. It serves twice: for the
+This sheet records what the Workshop page needs but the rest of the repository does not hold. It serves two purposes: for the
 first release, and for whoever takes the mod over.
 
 **Status: updated 2026-11-12.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
@@ -15,7 +15,7 @@ first release, and for whoever takes the mod over.
 - **Gallery** approved by the owner on 2026-10-08: seven staged pictures (`15-gallery.feature`, ticket da09, 7 of 7 green, every
   capture opened) in `Art/Gallery/` as `1-<name>.jpg` to `7-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in order: the six
   together, the lamppost at night, the air conditioner, the vending machine and stove, the road, the barrier and fence, the
-  vending machine close. Uploaded by hand by the owner on 2026-10-08.
+  a close-up of the vending machine. Uploaded by hand by the owner on 2026-10-08.
 - **Dry-run** of `1.0.0` green on the final content: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, 2026-10-08.
   Publish run 37831089676 sent it, with `--preview` and `--description`.
 - **Rollback used once**: the owner set the item back to private on 2026-10-08 to rename the `packageId`; `1.0.1` (dry-run
@@ -86,10 +86,10 @@ The gallery is uploaded by hand (`OPERATIONS.md`); the CI/CD session regenerates
 among the things a `publish` does not skip without saying which. This is a proposal drawn from `TESTING.md`
 and `PUBLISHING.md`; it is hers to change.
 
-| # | What to look at | Why a test cannot |
+| # | What to look at | Why a test cannot verify it |
 |---|---|---|
 | 1 | The fence and the barrier drag out as a line in one gesture (`F1`, `B1`) | **Not applicable, accepted by the owner on 2026-09-28**: the engine has no press-drag-release primitive. The draw style and the cells a drag would lay are asserted by Pickle 08 |
-| 2 | The lamppost stays lit all night, the vending machine keeps a meal sound over days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
+| 2 | The lamppost stays lit all night, the vending machine keeps meals sound for days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
 | 3 | The French reads naturally | **Done**: the owner reviewed `TRANSLATION_REVIEW.md` (named `FRENCH_REVIEW.md` then) on 2026-10-01 (`translation_fr: complete`) |
 | 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | **Done by the owner, reported 2026-10-08** (not readable by this session; `STATUS.md`, `remaining`). The installed copy is what players get; the suite plays the working tree |
 | 5 | The gallery: which captures, in which order, on which colony | **Done**: approved by the owner 2026-10-08, uploaded by hand `0` to `7` |
@@ -193,8 +193,8 @@ Draft by the session, to be ordered and approved by the owner. Nothing is final 
 `Tests/Pickle/Mod/Pickle/Features/15-gallery.feature`, pass `-DepMap wsl-deps.sanctuary.map`.
 
 **Story.** *A day at the last stop of an old road*, told by Nelim (the fixture's one colonist: Virginie) and Shogun, her
-labrador. The place is the same for the seven pictures, the calm zone of Nelim's tribe: a cream stone square, no roof, no
-wall shadow, the one level light ground among the outdoor places. Time moves a little between pictures; each takes its own corner.
+Labrador. The place is the same for the seven pictures, the calm zone of Nelim's tribe: a cream stone square, no roof, no
+wall shadow, the only level, light-coloured ground among the outdoor areas. Time moves a little between pictures; each takes its own corner.
 
 **Why this place.** The named places of `PickleTools/docs/SANCTUAIRE-LIEUX.md` were read one by one. The gravel yard is the most
 road-like but is crowded with furniture and lamps; the free squares A to J and the emerald clearing are dark earth or a painted
@@ -207,7 +207,7 @@ in every picture. No tattoos. Her body and face are the fixture's, not rolled.
 | # | Time | Picture | What it must prove |
 |---|---|---|---|
 | 1 | 06:00 | the barrier and the fence run as lines, two torches still lit, Nelim (tuque) arrives with Shogun | both drag out as lines |
-| 2 | 09:00 | close on the barrier and the fence, Shogun at their foot | the pieces link and read as concrete |
+| 2 | 09:00 | close on the barrier and the fence, Shogun beside them | the pieces link and read as concrete |
 | 3 | 11:00 | vending machine with meals in it, one-tile stove, Ravi at the stop, Nelim leaves with a meal, Shogun waits | one tile each, meals inside |
 | 4 | 12:00 | close on the vending machine, Nelim with her meal, Ravi beside her | the machine holds meals |
 | 5 | 15:00 | the ancient air conditioner set in a wall, Nelim (jacket off) and Mei in the cooled shade | it fits in a wall |
