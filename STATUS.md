@@ -113,6 +113,7 @@ Dated sections of this file (audits of 2026-09-13, 09-24, 10-01, Pickle suite no
 
 - **French review, 2026-10-01:** reviewer Virginie (her statement in chat, recorded by session), revision reviewed `beeb97a` (texts of `FRENCH_REVIEW.md`, 12 entries), corrections requested and applied: barrier, lamppost, fence, air conditioner description; air conditioner label kept "climatiseur antique" at her word. Validated as it stands.
 - **French review confirmed, 2026-10-08:** Virginie, in chat: "traduction validée". `Mod/Languages/French` unchanged since `adb5d0c`; `translation_fr: complete` stands.
+- **Review of 2026-11-12 validated by Virginie, 2026-11-12:** her words in chat, "je valide la review", on `TRANSLATION_REVIEW.md` at revision `e438784` (ChatGPT answers: no correction on the 12 French keys; 3 `PUBLICATION.md` remarks applied). `translation_fr: complete` stands.
 - Scope: whole published `Mod/` tree. Two Def files hold six ThingDefs; six labels and six descriptions are complete inventory of owned in-game text. No assembly, C# source, patch, LoadFolders, Keyed resource, grammar resource.
 - English from non-empty Def fields in `Mod/Defs/ThingDefs_Buildings/` (no English DefInjected copy needed). Both files under `Mod/Languages/French/DefInjected/ThingDef/` give all 12 French values. Checked again 2026-10-10: `Check-DefInjected` 12 keys, 0 errors.
 - Gender agreement: all 12 French entries are building labels or descriptions; none addresses a pawn, so no three-segment gender switch applies.
