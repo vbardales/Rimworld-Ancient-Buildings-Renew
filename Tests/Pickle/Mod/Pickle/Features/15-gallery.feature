@@ -210,7 +210,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (198, 187) facing East
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 188) facing East
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 189) facing East
     And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I spawn a "MealSimple" at (201, 188)
     And I order "Nelim" to (202, 187)
@@ -221,8 +221,8 @@ Feature: gallery: a day at the last stop of an old road
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.0
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
     Then I take a screenshot "gallery 3 - the stove"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -452,7 +452,6 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" wears "LTS_Dresspants" made of "Synthread"
     And Nelim's Pickle Tools: the "LTS_Dresspants" worn by "Soren" is dyed rgb (107, 79, 58)
     And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
     And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
     And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
@@ -475,10 +474,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.8
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -533,11 +532,11 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurHat" made of "Cloth"
     And Nelim's Pickle Tools: the "Apparel_FSFurHat" worn by "Nelim" is dyed rgb (222, 203, 164)
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (204, 187) facing West
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 189) facing South
     And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "WoodLog" to (198, 186)
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "WoodLog" to (201, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
@@ -547,8 +546,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.6
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
     Then I take a screenshot "gallery 7 - the lamppost at night"
     And Nelim's Pickle Tools: the decor is removed
 
