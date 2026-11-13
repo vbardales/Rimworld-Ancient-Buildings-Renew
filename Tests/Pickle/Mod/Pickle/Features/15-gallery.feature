@@ -21,12 +21,13 @@
 #      R: no meal on the ground (Soren carries it only: a meal laid on the machine reads as a second machine); the coin is small, the Silver stack on the ground says it; Soren as a paying customer while he is her steward is a story choice (the stop treats everyone alike), stated in the story line.
 #   5. 15:00, CLOSE, frame (199, 188) zoom 2.4 (x 194.7-203.3, z 185.6-190.4), Clear, 30 ticks. Back: a wall of five cells (197-201, 189) holding the air conditioner at (199, 189), powered on. At its foot, stored in its cold: a MealSimple stack (198, 188) and a Pemmican stack (200, 188). Middle: Nelim (outfit C, desert robe, blue head wrap) in the shade at (199, 187) facing East, a Cloth (Cloth) in her hands to wipe her brow; Soren (heat outfit) caught mid-stride into the shade carrying a meal (MealSimple) to the unit, forced to carry it to (201, 187). Front: the Stool (196, 186) in the shade, WoodLog (197, 186) left in the shade (the wood thread), Plant_Daylily (195, 188) and (203, 187), Plant_Bush (195, 186), Plant_Rose (203, 186), and a powered StandingLamp (195, 189) at the west end of the wall (the light source in frame). Living: Shogun at (197, 187) facing North toward the unit, his nose at its cold air. The instant: Soren has just come in out of the sun, food is being put away in the cold. Obtained: Soren stands at (203, 186), `I order "Soren" to (201, 187)`, 30 ticks, pause, carries MealSimple; Nelim stands at (199, 187) facing East, carries Cloth. Says: the old machine makes a shade of cold in the afternoon heat and the food keeps in it: robes and a cap in the heat, a dog at the vent, meals stacked at its foot. Thumbnail at 268 px: the dark wall with the pale unit, the stacked food at its foot, the blue head wrap.
 #      R: cold is invisible, so the objects say it (food at the unit's foot, the dog at the vent, the shade); the wall of five cells needs the wall defName as in the v2 scenario; the unit may not look powered: assert it is on before the pawns are placed.
-#   6. (v5.4, 2026-11-12, after ticket 9483: REDO, image 3.5, the tray covered Nelim's mouth and Soren read as standing) 21:00 (hour chosen by a light probe of hours 20 to 23, as e343: the first hour with sun glow below 0.9 that still shows the torches), WIDE, frame (201, 187) zoom 4.4 (x 194.1-207.9, z 182.6-191.4), an echo of shot 1 from the same corner, Clear, 25 ticks. Two depths, not a row: far, the barrier (196-198, 190) and fence (196-198, 188) at the left, the lamppost (203, 190), the vending machine (203, 188) and the stove (204, 188) at the right; near, the wall with the unit, wall (197, 185), unit (198, 185), wall (199, 185), at the lower left. Middle: Nelim (outfit D, party dress) walks West toward the last meal (MealSimple) that lies on the ground at (200, 187) between them, her hands free so her smile shows (v5.4); Soren (party outfit) walks East toward the same meal, both in motion. Front: two lit TorchLamp (195, 184) and (206, 184), the shot-1 Brazier now LIT at (197, 183) beside the woodpile, now small (196, 183) (the thread closes), Plant_Bush (194, 186) and (207, 186), Plant_Rose (205, 183), Plant_Daylily (199, 183). Living: Shogun (200, 186) beside the meal, head turned East (`stands at ... facing East`). The instant: both are one step from the meal they share. Obtained: the meal is spawned at (200, 187) before the walk; Nelim stands at (204, 186) facing West, `I order "Nelim" to (201, 187)`, `game speed is normal`, 25 ticks, `game speed is paused`; Soren stands at (196, 187) facing East and is ordered to (199, 187), 25 ticks. Says: the day ends among the six buildings, the fire lit at last, two people coming to share the last meal. Thumbnail at 268 px: six dark buildings, three flames, two small figures facing each other.
+#   6. (v5.5 positions, see below; v5.4, 2026-11-12, after ticket 9483: REDO, image 3.5, the tray covered Nelim's mouth and Soren read as standing) 21:00 (hour chosen by a light probe of hours 20 to 23, as e343: the first hour with sun glow below 0.9 that still shows the torches), WIDE, frame (200, 187) zoom 3.8 (x 194.1-207.9, z 182.6-191.4), an echo of shot 1 from the same corner, Clear, 25 ticks. Two depths, not a row: far, the barrier (196-198, 190) and fence (196-198, 188) at the left, the lamppost (203, 190), the vending machine (203, 188) and the stove (204, 188) at the right; near, the wall with the unit, wall (197, 185), unit (198, 185), wall (199, 185), at the lower left. Middle: Nelim (outfit D, party dress) walks West toward the last meal (MealSimple) that lies on the ground at (200, 187) between them, her hands free so her smile shows (v5.4); Soren (party outfit) walks East toward the same meal, both in motion. Front: two lit TorchLamp (195, 184) and (205, 184), the shot-1 Brazier now LIT at (197, 184) beside the woodpile, now small (196, 185) (the thread closes), Plant_Bush (195, 186) and (206, 186), Plant_Rose (203, 184), Plant_Daylily (199, 184). Living: Shogun (200, 186) beside the meal, head turned East (`stands at ... facing East`). The instant: both are one step from the meal they share. Obtained: the meal is spawned at (200, 187) before the walk; Nelim stands at (204, 186) facing West, `I order "Nelim" to (201, 187)`, `game speed is normal`, 25 ticks, `game speed is paused`; Soren stands at (196, 187) facing East and is ordered to (199, 187), 25 ticks. Says: the day ends among the six buildings, the fire lit at last, two people coming to share the last meal. Thumbnail at 268 px: six dark buildings, three flames, two small figures facing each other.
 #      R: dusk read as day at 20:00 on 50fd, so the hour is decided by probe; the six buildings at 19 px a cell may be small at 268 px (zoom 4.0 if so); no pawn drafted, kit calm, 20 degrees, `normal+blink` last; Shogun between the pawns, not behind either.
 #   7. (v5.4, 2026-11-12, after ticket 9483: REDO on adequacy 3.5, both torches burned, the log was hidden from behind, Nelim stood far from the light) 23:00, medium, frame (200, 188) zoom 3.6 (x 193.6-206.4, z 184.6-191.4), Clear, 40 ticks. Back: the lamppost (200, 188), glowing, with the barrier row (197-201, 185) in front and the fence row (197-201, 191) behind as in the v2 scenario. Middle: Nelim (outfit E, the cold set) walking WEST in profile out of the pool of light toward the road, carrying one WoodLog (tomorrow's first log) at her side, forced to carry it to (198, 187), the lamppost close on her right (v5.4: profile, so the log and the face show, and she stays inside the light). Front: the day left behind: one TorchLamp (204, 186) lit, burning down, and one TorchLamp (196, 186) placed then put out with `the building "TorchLamp" at (196, 186) is put out` (v5.4: the placed torch had burned), a few WoodLog at (205, 187), Plant_Bush (195, 186) and (205, 186), Plant_Rose (202, 184), Plant_Daylily (197, 186). Living: Shogun standing in the light at (202, 186), the one animal seen from the FRONT of the series, facing South (v5.4: moved off Nelim's path). The instant: she is leaving; he stays. Obtained: Nelim stands at (203, 187) facing West, forced to carry the WoodLog to (198, 187), 40 ticks, pause, carries the WoodLog; the lamppost glow is asserted before the pawns are placed. Says: the lamppost holds the night with the sunlight it stored, one torch still burning, the dog keeping the light, she leaving with tomorrow's first log. Thumbnail at 268 px: the glowing lamppost, the lit dog, a figure leaving into the dark.
 #      R: the night reads as evening, and the glow assertion was never played; hour 0 if flat; the dog faces the camera on purpose (criterion c needs one front view; the front view of Shogun is validated).
 #   v5.1 (2026-11-08, after run gallery-lg-7-2026-11-08, scenes 4, 5, 7 red): (a) shots 4 and 5: the electric StandingLamp is switched on with `the building "StandingLamp" at (x, z) is powered` then `I let 120 ticks pass` (NPT answer 2026-11-08; the step `the decor is lit` fills fuel or flips a switch, an electric lamp has neither, timeout 10 s); (b) shot 7 Shogun stands at (199, 186) and Plant_Daylily at (197, 186): (199, 185) and (198, 185) hold the ConcreteBarrier row (197-201, 185), cell not standable. Nothing else changed.
 #   v5.2 (2026-11-08, after score-gallery of the lg-7 captures of scenes 2, 3, 6, all REDO on decoration or light): (2) Steel is a stack of 4 at (199, 187) and the single WoodLog moves to (201, 187) so both read beside the fence gap; added Plant_Rose (201, 185), Plant_Daylily (198, 185) and (202, 184), Stool (203, 185) to fill the bare ground; (3) the two WoodLog beside the stove are stacks of 4 ((198, 189), (202, 189)), added Plant_Daylily (201, 186) and Plant_Rose (199, 186) around Nelim's path; (6) before the shot `I let 120 ticks pass` then `AB_Lamppost (203, 190) is glowing` (as shot 7), so the lamppost carries light at hour 21. R: the capture of shot 6 read as DAY although probe 0b says sun glow 0.00 at hours 20 to 23; lead: studio presentation mode lifts the light (asked NPT). Soren smile (MouthClassicSmile, roster brows MonoScarredBrows) reads stern: roster values, no property change, malus assumed.
+#   v5.5 (2026-11-13, after score-gallery of ticket 315c, 3, 6, 7 all REDO: the stove 31 px at 268 px and the tray over Nelim's mouth again, six buildings 19 px a cell and Soren upright, a bare middle band in 7). (3) zoom 2.0 on (200, 188) (a cell 270 px, x 196.5-203.5, z 186-190), Nelim carries NOTHING: the cooked MealSimple lies at (201, 188) in front of the stove and she walks East along z 187 to (202, 187) with her hands free, so the smile shows; the story is the meal waits at the stove, she comes for it. (6) frame (200, 187) zoom 3.8 (a cell 142 px, x 193.2-206.8, z 183.2-190.8), 12 ticks of walking (Soren stood upright after 25), dim 0.35 (dusk read flat at 0.45), decor pulled into the frame: TorchLamp (195, 184) and (205, 184), Brazier (197, 184) lit, WoodLog (196, 185), Plant_Bush (195, 186) and (206, 186), Plant_Rose (203, 184), Plant_Daylily (199, 184). (7) dim 0.25 (was 0.15), the empty middle band filled: WoodLog stack of 4 (198, 189), Stool (203, 189), Plant_Daylily (199, 190), Plant_Rose (202, 190). R: the stove is still about 37 px at 268 px (zoom 2.0 is the closest that keeps Nelim and the barrier in frame); a meal lying on the ground may read as a small object; Soren's brows read stern (roster, no property change, malus assumed); 12 ticks may stop the walk before the meal.
 #
 # Why this place: the calm zone is clean, level and light, so concrete and a lit lamp read on it. Every scenario reloads the save and cleans the filth.
 # Steps: the places (frame the sanctuary, animals removed) are the Backlot's, prefix "Nelim's Sanctuary:"; the camera on a cell, the pawns, the clothes, the decor and the filth are Nelim's Pickle Tools'.
@@ -211,14 +212,15 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (197, 188) facing East
     And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
-    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "MealSimple" to (202, 187)
+    And I spawn a "MealSimple" at (201, 188)
+    And I order "Nelim" to (202, 187)
     And game speed is normal
     And Nelim's Pickle Tools: I let 30 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.4
+    And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.0
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     Then I take a screenshot "gallery 3 - the stove"
     And Nelim's Pickle Tools: the decor is removed
@@ -397,15 +399,15 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (195, 184)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (195, 184) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (206, 184)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (206, 184) is lit
-    And Nelim's Pickle Tools: I place the decor "Brazier" at (197, 183)
-    And Nelim's Pickle Tools: the decor "Brazier" at (197, 183) is lit
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (194, 186) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (207, 186) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 183) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 183) fully grown
-    And Nelim's Pickle Tools: 3 of the item "WoodLog" are spawned at (196, 183)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (205, 184)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (205, 184) is lit
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (197, 184)
+    And Nelim's Pickle Tools: the decor "Brazier" at (197, 184) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (195, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (206, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (203, 184) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 184) fully grown
+    And Nelim's Pickle Tools: 3 of the item "WoodLog" are spawned at (196, 185)
     And a "ConcreteBarrier" is built at (196, 190)
     And a "ConcreteBarrier" is built at (197, 190)
     And a "ConcreteBarrier" is built at (198, 190)
@@ -463,15 +465,15 @@ Feature: gallery: a day at the last stop of an old road
     And I order "Nelim" to (201, 187)
     And I order "Soren" to (199, 187)
     And game speed is normal
-    And Nelim's Pickle Tools: I let 25 ticks pass
+    And Nelim's Pickle Tools: I let 12 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
-    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.45
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.35
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (201, 187) at zoom 4.4
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.8
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
@@ -497,6 +499,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I place the decor "Plant_Bush" at (205, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 184) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (197, 186) fully grown
+    And Nelim's Pickle Tools: 4 of the item "WoodLog" are spawned at (198, 189)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (203, 189)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (199, 190) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 190) fully grown
     And I spawn a "WoodLog" at (205, 187)
     And a "ConcreteBarrier" is built at (197, 185)
     And a "ConcreteBarrier" is built at (198, 185)
@@ -534,7 +540,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
-    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.15
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.25
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.6
