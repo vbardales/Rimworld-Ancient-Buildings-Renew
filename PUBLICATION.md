@@ -90,7 +90,7 @@ and `PUBLISHING.md`; it is hers to change.
 |---|---|---|
 | 1 | The fence and the barrier drag out as a line in one gesture (`F1`, `B1`) | **Not applicable, accepted by the owner on 2026-09-28**: the engine has no press-drag-release primitive. The draw style and the cells a drag would lay are asserted by Pickle 08 |
 | 2 | The lamppost stays lit all night, the vending machine keeps meals sound for days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
-| 3 | The French reads naturally | **Done**: the owner reviewed `TRANSLATION_REVIEW.md` (named `FRENCH_REVIEW.md` then) on 2026-10-01 (`translation_fr: complete`) |
+| 3 | The French reads naturally | **Done**: the owner reviewed `TRANSLATION_REVIEW.md` (named `FRENCH_REVIEW.md` then) on 2026-10-01 (`translation_fr: complete` at that time; the French of `ABVending` and `AB_Lamppost` was reworded on 2026-11-16 and awaits a new validation, `translation_fr: pending_review`) |
 | 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | **Done by the owner, reported 2026-10-08** (not readable by this session; `STATUS.md`, `remaining`). The installed copy is what players get; the suite plays the working tree |
 | 5 | The gallery: which captures, in which order, on which colony | **Done**: approved by the owner 2026-10-08, uploaded by hand `0` to `7` |
 | 6 | The description read once more, on the page after the publish | **Done by the owner, reported 2026-10-08** ("fait" in chat); not readable by this session |
@@ -201,7 +201,7 @@ road-like but is crowded with furniture and lamps; the free squares A to J and t
 carpet; the houses and gardens are not roads. The calm zone keeps concrete and a lit lamp legible. (Not photographed by this session
 beforehand: the choice rests on the descriptions, and each image is read after the run.)
 
-**Subject.** Nelim in a deep teal jacket (28, 98, 104), the complement of the lamp's amber and the grey concrete, so she stands out
+**Subject.** Nelim in a deep teal jacket (28, 98, 104), complementary to the lamp's amber against the grey concrete, so she stands out
 in every picture. No tattoos. Her body and face are the fixture's, not rolled.
 
 | # | Time | Picture | What it must prove |
