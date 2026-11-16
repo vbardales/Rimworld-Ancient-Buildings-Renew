@@ -14,7 +14,7 @@ first release, and for whoever takes the mod over.
 
 - **Gallery** approved by the owner on 2026-10-08: seven staged pictures (`15-gallery.feature`, ticket da09, 7 of 7 green, every
   capture opened) in `Art/Gallery/` as `1-<name>.jpg` to `7-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in order: the six
-  together, the lamppost at night, the air conditioner, the vending machine and stove, the road, the barrier and fence, the
+  together, the lamppost at night, the air conditioner, the vending machine and stove, the road, the barrier and fence, and
   a close-up of the vending machine. Uploaded by hand by the owner on 2026-10-08.
 - **Dry-run** of `1.0.0` green on the final content: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, 2026-10-08.
   Publish run 37831089676 sent it, with `--preview` and `--description`.
@@ -72,7 +72,7 @@ The gallery is uploaded by hand (`OPERATIONS.md`); the CI/CD session regenerates
 
 ## Dependencies and DLCs
 
-**No DLC is required, and no mod.** `supportedVersions` declares 1.6 only.
+**No DLC is required, and no mod.** `supportedVersions` declares 1.6 and 1.7.
 
 | Declared | Identifier | Actually required |
 |---|---|---|
