@@ -3,17 +3,17 @@
 This sheet records what the Workshop page needs but the rest of the repository does not hold. It serves two purposes: for the
 first release, and for whoever takes the mod over.
 
-**Status: updated 2026-11-12.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
+**Status: updated 2026-11-16.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
 2026-09-23. `1.0.0` (CI run 37831089676, tag `v1.0.0`), `1.0.1` (CI run 37836720872, SHA
 `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) and `1.1.0` (2026-10-15, CI run 38761642762, SHA `72f6af2`, tag
-`v1.1.0`) are published by the CI, which created the tags and the GitHub releases. The state is `shootGallery[1.1.1]`
-(`STATUS.md`): the gallery is being redone for the next release. What this session cannot read on Steam (page, visibility, the new
+`v1.1.0`) are published by the CI, which created the tags and the GitHub releases. The state is `writeTests[1.1.1]`
+(`STATUS.md`, moved back from `shootGallery[1.1.1]` by the replay-audit of 2026-11-16 until the description tests are replayed): the gallery is being redone for the next release. What this session cannot read on Steam (page, visibility, the new
 `packageId`) is recorded as reported by the owner in `STATUS.md`, `remaining`.
 
 ## Publication history
 
 - **Gallery** approved by the owner on 2026-10-08: seven staged pictures (`15-gallery.feature`, ticket da09, 7 of 7 green, every
-  capture opened) in `Art/Gallery/` as `1-<name>.jpg` to `7-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in order: the six
+  capture opened) in `Art/Gallery/` as `1-<name>.jpg` to `7-<name>.jpg` (JPEG, 3.9 MB with `0-preview.png`), in order: all six
   together, the lamppost at night, the air conditioner, the vending machine and stove, the road, the barrier and fence, and
   a close-up of the vending machine. Uploaded by hand by the owner on 2026-10-08.
 - **Dry-run** of `1.0.0` green on the final content: run 37828371973, SHA 87242bd64fa428a1ce0be2461596b7eb8cdd07c7, 2026-10-08.
@@ -194,7 +194,7 @@ Draft by the session, to be ordered and approved by the owner. Nothing is final 
 
 **Story.** *A day at the last stop of an old road*, told by Nelim (the fixture's one colonist: Virginie) and Shogun, her
 Labrador. The place is the same for the seven pictures, the calm zone of Nelim's tribe: a cream stone square, no roof, no
-wall shadow, the only level, light-coloured ground among the outdoor areas. Time moves a little between pictures; each takes its own corner.
+wall shadow, the only flat, light-coloured ground among the outdoor areas. Time moves a little between pictures; each takes its own corner.
 
 **Why this place.** The named places of `PickleTools/docs/SANCTUAIRE-LIEUX.md` were read one by one. The gravel yard is the most
 road-like but is crowded with furniture and lamps; the free squares A to J and the emerald clearing are dark earth or a painted
