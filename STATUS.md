@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.1.1]
+workflow_stage: writeTests[1.1.1]
 tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
@@ -24,6 +24,7 @@ social_preview_sha256: 9eb209ef5afefdbfea5821b5322e75a4b932757278754cf7fe48964fa
 echo_review_sha: 425e4c3b2a773a6bb35113f98a1e3e7c69b8d70b
 publication_changelog_review_sha: 5a74e6dab3bc8020aa387e64336afc39df92efc4
 remaining:
+- open: "2026-11-16 REPLAY-AUDIT (ledger ../.replays/AncientBuildingsRenew-20261116.tsv, Check-Replay OK): stage moved back from shootGallery[1.1.1] to writeTests[1.1.1]. Open 7.d: Tests/Pickle/Mod/Pickle/Features/06-labels-en.feature (lines 20 to 24) asserts the old English descriptions of ConcreteBarrier, AB_Lamppost, ABVending, ABKitchenstove and AB_AirConditioner; commit 87a62ce (2026-11-12, translation review 5) reworded them in Mod/Defs, so scenario 06 would fail. Open 7.f: tested sha 76a7b44 predates 87a62ce. To do: update the five strings of 06, then replay 06 alone as a small ticket, record the sha, set code_review_sha (diff 425e4c3b..HEAD of Mod read 2026-11-16: five description wordings and Preview.png, no code), then return to shootGallery[1.1.1]. The gallery work below is untouched meanwhile."
 - open: "2026-11-12 LATEST STATE (read this first, the older open item below is history): ticket 20261112-205807-701-315c filed (scenes 3, 6, 7 v5.4, tree on f3e8ace, map wsl-deps.sanctuary-gallery.map, evidence Tests/Pickle/Inbox/gallery-lg-10-2026-11-12, runner auto): keep Tests and the feature as they are until RUN_DONE, then summary.json, open 3, 6, 7 (Nelim East in profile and face free, mouth free in 6, left torch dark and log visible in 7), score-gallery. Candidates in Art/Gallery-clean: 1 (rated 2026-11-08) and 2 (4.0 borderline). Scenes 4 and 5 need a run and a formal rating (REDO on paper, tray over the face). Then subtitles, one owner review, reindex, mountPreview. TM missions 2026-11-12: replay-audit NOT done (.replays absent), send the REPLAY line to the TM after the gallery scoring; translation review done and validated by Virginie 2026-11-12; source-column rule applies from the next review; no upstream PR possible. Inbox 0, Parked 0."
 - Folded 2026-11-13 (80 KB rule): old STATUS lines 28 to 28 moved to docs/runs/2026-11-13-status-fold.txt, text kept there as it was.
 - unverified: "Known: the echo line art overlaps the subtitle 'Renew (unofficial)' on the Preview, accepted by the owner 2026-10-12."
@@ -32,9 +33,9 @@ remaining:
 - open: "Workshop header image (og:image of the item) is still the Preview of before 2026-10-12: it goes with the 1.1.0 publish with --preview, now carrying the 1.7 badge (Mod/About/Preview.png sha256 0ccf1b82...954e6, commit 3ba3563, badge shifted 12.5% toward the corner; GitHub social preview uploaded and verified 2026-10-14; gallery slot 0 on the Steam page still shows the 2026-10-12 Preview and must be replaced by hand or by this session with the same file). 1.1.0 (1.7 declared, tested_1_7: yes since 2026-10-14) waits for: the owner's review of PUBLICATION.md and CHANGELOG.md for the 1.1.x line, code_review_sha, the dry-run date commit, then the CI publish."
 - deferred: "No 1.0.2 now (owner decision 2026-10-11: not enough functional change to justify a release). The save-sentence fix (About.xml line 50, README.template.md line 38, README.md line 139, CHANGELOG.md line 94; text in PUBLICATION.md) and the CI template regeneration ride with the next functional version. CI template stale (CI/CD session, 2026-10-11): stamp 82de20b8aa50, current 7fb8f006c206 (Release-Admin 40f56f2, adds build-check.sh --ci and build.yml). Before the next dry-run (1.0.2): generate-publish-workflow.sh ../AncientBuildingsRenew --replace with the arguments of .github/publish.config.json. Never edit a copy by hand. .github/scripts, tests, workflows are copies of the Release-Admin template, none local."
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
-updated:      2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
+updated:      2026-11-16, replay-audit moved stage back to writeTests[1.1.1] (7.d, 7.f open); before that 2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: 5778ea249899feb03544794546180c136c95908a
+protocols_read_sha: 7b9117a3cf57cba8c0a500538b54a9fb6e7b6a5b
 ---
 # Ancient Buildings Renew: status
 
