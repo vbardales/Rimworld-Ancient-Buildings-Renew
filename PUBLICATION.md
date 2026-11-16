@@ -3,10 +3,10 @@
 This sheet records what the Workshop page needs but the rest of the repository does not hold. It serves two purposes: for the
 first release, and for whoever takes the mod over.
 
-**Status: updated 2026-11-16.** Workshop item `3806708945` was created private by the `0.1.0` prepublication of
+**Status: updated 2026-11-16.** Workshop item `3806708945` was created as a private item by the `0.1.0` prepublication of
 2026-09-23. `1.0.0` (CI run 37831089676, tag `v1.0.0`), `1.0.1` (CI run 37836720872, SHA
 `1cd35ff94791f61330a0827d9694fb5f852943bd`, tag `v1.0.1`) and `1.1.0` (2026-10-15, CI run 38761642762, SHA `72f6af2`, tag
-`v1.1.0`) are published by the CI, which created the tags and the GitHub releases. The state is `writeTests[1.1.1]`
+`v1.1.0`) were published by the CI, which created the tags and the GitHub releases. The state is `writeTests[1.1.1]`
 (`STATUS.md`, moved back from `shootGallery[1.1.1]` by the replay-audit of 2026-11-16 until the description tests are replayed): the gallery is being redone for the next release. What this session cannot read on Steam (page, visibility, the new
 `packageId`) is recorded as reported by the owner in `STATUS.md`, `remaining`.
 
@@ -64,7 +64,7 @@ upload order from `0-` (`PUBLISHING.md`, Images), nothing else, and it is the wo
   the most demonstrative, not the prettiest. Every image is opened and looked at before it is listed: a green scenario proves the
   journey ran, not that the image shows anything.
 
-The old candidate table (fence with a bend, lamppost, air conditioner with temperatures, link gizmo) is replaced by the staged
+The old candidate table (fence with a bend, lamppost, air conditioner with temperatures, link gizmo) has been replaced by the staged
 series below. The question whether Work Studio's showcase-colony rule applied is answered: the gallery is staged on the Sanctuary
 (`PickleTools/docs/GALERIE.md`).
 
