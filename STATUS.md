@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: pending_review
 settings_audit: not_applicable
 mod:          Ancient Buildings Renew (unofficial)
 packageId:    nelim.ancientbuildings
@@ -266,3 +266,4 @@ Only the original "Ancient" Buildings (2566355159, 1.3, dead) holds our 5 defNam
 - 2026-11-16 /review-translation round 1 (page 1 of 1, answer AncientBuildingsRenew.p1.answer.md): PROPER NOUNS "aucun nom à décider". 4 applied: PUBLICATION.md "supportedVersions declares 1.6 and 1.7" and the gallery-history typo ("and a close-up"); French ABVending.description ("d'autres ingrédients de cuisine") and AB_Lamppost.description (traffic-management function restored). Also the "EN:" comments of the five reworded descriptions in French/DefInjected synced with the English of 87a62ce. 0 rejected, nothing for the owner. Check-Translations PASS, TRANSLATION_REVIEW.md regenerated. Mod/ changed (French text only): code_review_sha stays stale, covered by the replay-audit item. Round recorded with -Applied 4: the review is not finished, round 2 to run. french_review_pending absent.
 - 2026-11-16 PiI answered ECOSYSTEM? (report docs/inventory/ecosystem-steam/AncientBuildingsRenew.md, ecosystem-links block appended): parent 2566355159; linked 3549079451, 3547780744, 3530842173. juc - Ancient Buildings 3549079451 shares 0 defNames with ours (separate rewrite). No patch, retexture or translation: no worklist row, nothing to choose.
 - 2026-11-16 /review-translation round 2 (page 1 of 1): PROPER NOUNS none; French keys untouched. 4 applied: PUBLICATION.md "all six together", "the only flat, light-coloured ground", state header (writeTests[1.1.1] after the replay-audit, status date 2026-11-16), and the stale STATUS open line saying 1.1.0 still waits (it was published 2026-10-15, CI run 38761642762). 3 rejected: "ModIcon cut-out" (valid spelling, taste), "so they went to 1.6" (idiom of a friendly Steam comment draft, clear), "as one new texture" (CHANGELOG.md entry, append-only). Nothing for the owner. Round recorded with -Applied 4, round 3 to run.
+- 2026-11-16 /review-translation round 3 (page 1 of 1): "Aucune correction recommandée", PROPER NOUNS none. Round recorded with -Applied 0: page 1 finished. The three refusals of round 2 are in Docs/review-refusals.md. Two French descriptions changed in rounds 1 to 2 (ABVending, AB_Lamppost): translation_fr set to pending_review until Virginie validates them (the 2026-11-12 validation covered the earlier text). french_review_pending removed.
