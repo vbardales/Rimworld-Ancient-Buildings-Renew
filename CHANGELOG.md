@@ -2,6 +2,12 @@
 
 All notable changes to this mod are documented here.
 
+## [Unreleased]
+
+### Fixed
+
+- The simple kitchen stove can now be cooked at. It carried the electric stove's recipes, but the game only lets colonists cook at the benches listed by the work giver `DoBillsCook`, and the stove was in none: a colony with only this stove could not cook at all. A new patch, `Mod/Patches/AB_Stove_WorkGiver.xml`, adds it to that list.
+
 ## [1.1.0] - 2026-10-15
 
 ### Added

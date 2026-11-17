@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    The kitchen stove carries the vanilla electric stove's recipes, but the game only lets a colonist
+    cook at the benches that the work giver DoBillsCook lists (ElectricStove, FueledStove). Without
+    this entry no colonist ever picks up a bill at ABKitchenstove.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/WorkGiverDef[defName="DoBillsCook"]/fixedBillGiverDefs</xpath>
+    <value>
+      <li>ABKitchenstove</li>
+    </value>
+  </Operation>
+</Patch>
