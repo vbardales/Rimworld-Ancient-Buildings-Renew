@@ -1,0 +1,2 @@
+2026-11-16 label passes on f5d457b (features 06 EN and 07 FR follow the reworded descriptions of 87a62ce, set sans-facultatifs, evidence Tests/Pickle/evidence/labels-en-2026-11-16 and labels-fr-2026-11-16, summary.json read 2026-11-17): English 2 of 2 passed (ticket 2a44), French 2 of 2 passed (ticket 28ea).
+2026-11-16 gallery scene 3 v7 on f5d457b (ticket 3e1d, map sanctuary-gallery): 0 of 1, failed at the DoBill step, no bill job on ABKitchenstove, no ingredient on the map; fixed in 51e3c0b (10 RawPotatoes on the stove), refiled 2026-11-17 as ticket dbc6.
