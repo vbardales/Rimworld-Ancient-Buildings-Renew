@@ -215,6 +215,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
     And I spawn a "MealSimple" at (201, 188)
     And Nelim's Pickle Tools: 10 of the item "RawPotatoes" are spawned at (199, 188)
+    And Nelim's Pickle Tools: the building "ABKitchenstove" at (200, 189) is powered
+    And Nelim's Pickle Tools: I let 120 ticks pass
     And Nelim's Pickle Tools: the building "ABKitchenstove" at (200, 189) has the bill "CookMealSimple"
     And Nelim's Pickle Tools: "Nelim" is forced into the job "DoBill" on the building "ABKitchenstove" at (200, 189)
     And I wait 30 ticks
