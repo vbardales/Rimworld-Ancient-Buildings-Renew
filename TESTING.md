@@ -102,6 +102,7 @@ Clean run = **none of those naming `AB_`, `ConFence`, `ConcreteBarrier` or `ABVe
 - Full cooking bill list there: simple, fine, lavish, survival, bulk forms, pemmican, and — Biotech on — **baby food and bulk baby food**.
 - Draws **300 W**, warms room while working, short-circuits in rain if left outdoors.
 - Meal cooked on it comes out same as from vanilla stove.
+- A colonist picks up a bill at it by the game's own cooking work giver (patch `AB_Stove_WorkGiver.xml`, scenario `16`).
 
 ### ancient air conditioner — Temperature, after research
 
@@ -131,6 +132,7 @@ Owner does not launch game (2026-09-25), neither does this session. Every check 
 | vending machine | offers link-storage command; blueprint has storage settings; meal on it does not deteriorate, same meal on ground does | `10` | green |
 | stove | 300 W, heat pusher, flickable | `11` | green |
 | stove | bill list with and without Biotech | `03`, `04` | green |
+| stove | the game's own `DoBillsCook` gives a colonist the stove's bill (patch `AB_Stove_WorkGiver.xml`); Sanctuary save, English | `16` | written 2026-11-19, to play at `playTests` |
 | air conditioner | hidden until `AirConditioning` finished, then shown | `11` | green |
 | air conditioner | 250 W and temperature control | `11` | green |
 | all six | labels and descriptions, English and French | `06`, `07` | green |
