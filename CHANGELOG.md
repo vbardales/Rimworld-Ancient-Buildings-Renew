@@ -2,6 +2,12 @@
 
 All notable changes to this mod are documented here.
 
+## [Unreleased]
+
+### Changed
+
+- The Steam gallery is validated image by image and the Preview picture is redone from it. No change to the game files of the mod.
+
 ## [1.1.1] - 2026-11-19
 
 ### Fixed
