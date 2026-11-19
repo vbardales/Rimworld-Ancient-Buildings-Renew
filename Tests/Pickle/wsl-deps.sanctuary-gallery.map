@@ -98,3 +98,7 @@ nelim.nsb.facefit path:SanctuaryBacklot/Tests/Pickle/LocalMods/NsbFaceFit
 # Animal apparel (2026-11-07, ticket 6957 red: "Shogun has no apparel tracker"): scene 1 dresses Shogun in Apparel_leatherdogcollar. Animal Apparel Framework 3513825850 and Collars and Kit Renew, as NSB's wsl-deps.animal-portraits.map stages them.
 Ingendum.AnimalApparelFramework 3513825850
 nelim.animalapparelcollarsandkit path:AnimalApparelCollarsAndKitRenew/Mod
+
+# Visual mods (owner rule 2026-11-18, GALLERY.md: captures are shot WITH them when possible; Cat SERVICE.md kind visualmod, PiT test a0de green on this stack): Show Me Your Hands draws hands on held items (the cloth of scene 5, the log of scene 7), Yayo's Animation Continued last (work poses; a still frame shows no difference, walk cycles unverified).
+Mlie.ShowMeYourHands 2475965842
+com.yayo.yayoAni.continued 2877292196
