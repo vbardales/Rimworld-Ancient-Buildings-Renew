@@ -64,6 +64,17 @@ upload order from `0-` (`PUBLISHING.md`, Images), nothing else, and it is the wo
   the most demonstrative, not the prettiest. Every image is opened and looked at before it is listed: a green scenario proves the
   journey ran, not that the image shows anything.
 
+Current series (2026-11-19, `15-gallery.feature`, one summer day at the last stop of an old road, the wood as the thread; originals in `Art/Gallery-clean/`, subtitled copies in `Art/Gallery/`, subtitles in "Gallery subtitles"):
+
+1. `1-road-comes-in.jpg`: dawn, the first log to the cold brazier.
+2. `2-barrier-and-fence.jpg`: the fence mended by hand.
+3. `3-the-stove-at-eleven.jpg`: the stove cooks.
+4. `4-the-vending-machine-at-noon.jpg`: the machine feeds a traveller, the keeper takes the coin.
+5. `5-the-cold-unit-at-three.jpg`: the air conditioner keeps the food cold.
+6. `6-the-six-buildings-at-dusk.jpg`: the six buildings lit, the last meal.
+7. `7-the-lamppost-at-night.jpg`: the lamppost holds the dark.
+
+The series of 2026-10-08 (the six buildings at dusk, lamppost at night...) is the one on the Steam page today; it is replaced by hand at the next publish (git keeps the old files).
 The old candidate table (fence with a bend, lamppost, air conditioner with temperatures, link gizmo) has been replaced by the staged
 series below. The question whether Work Studio's showcase-colony rule applied is answered: the gallery is staged on the Sanctuary
 (`PickleTools/docs/GALERIE.md`).
@@ -92,7 +103,7 @@ and `PUBLISHING.md`; it is hers to change.
 | 2 | The lamppost stays lit all night, the vending machine keeps meals sound for days, the stove warms and short-circuits in rain, the air conditioner cools across a wall | Time and physics |
 | 3 | The French reads naturally | **Done**: the owner reviewed `TRANSLATION_REVIEW.md` (named `FRENCH_REVIEW.md` then) on 2026-10-01 (`translation_fr: complete` at that time; the French of `ABVending` and `AB_Lamppost` was reworded on 2026-11-16 and awaits a new validation, `translation_fr: pending_review`) |
 | 4 | Subscribe to item `3806708945`, start a game with the installed copy, build the six | **Done by the owner, reported 2026-10-08** (not readable by this session; `STATUS.md`, `remaining`). The installed copy is what players get; the suite plays the working tree |
-| 5 | The gallery: which captures, in which order, on which colony | **Done**: approved by the owner 2026-10-08, uploaded by hand `0` to `7` |
+| 5 | The gallery: which captures, in which order, on which colony | **Done for the 2026-10-08 series** (approved by the owner, uploaded by hand `0` to `7`). The series was replaced on 2026-11-19 by seven new pictures decided by the session (the owner validates only the state "ready to publish"); to upload by hand at the next publish |
 | 6 | The description read once more, on the page after the publish | **Done by the owner, reported 2026-10-08** ("fait" in chat); not readable by this session |
 | 7 | Then, and only then, the visibility, the comments subscription and "Watch all activity" of the mod and of its parents (`PUBLISHING.md`) | **Done by the owner**: item public (reported 2026-10-08); thanks comment posted on 2566355159 |
 
@@ -101,7 +112,7 @@ Save migration from the original is dropped (owner decision, 2026-10-11): not gu
 ## Mature content checkboxes
 
 **None of them.** The mod adds six buildings and ships a road corner at dusk and a mascot. The staged gallery shows a colonist in
-a jacket and a dog among concrete, a stove and a lamp: nothing adult; the owner opened and approved every retained image on 2026-10-08, so the answer is final.
+a jacket and a dog among concrete, a stove and a lamp: nothing adult. The new series of 2026-11-19 was opened image by image by the session (Art/Gallery 1 to 7): a woman in a tunic or a coat, a man in a vest, a dog, the six buildings, plants and logs, nothing adult. Answer unchanged.
 
 ## Steam change notes
 
@@ -110,6 +121,21 @@ The workflow sends the block below as written (BBCode), read from this file at t
 version stands alone on the first line**, as `PUBLISHING.md` asks: Steam shows no version for a note that
 does not say it.
 
+### 1.1.1 (to send)
+
+Next version. Note written from the `[Unreleased]` section of `CHANGELOG.md`, version alone on the first line:
+
+```
+[b]1.1.1[/b]
+
+[list]
+[*]The simple kitchen stove can now be cooked at: it was in no cooking work giver, so a colony with only this stove could not cook at all. A small patch adds it.
+[*]The descriptions of the five buildings are reworded in English and French (same meaning, plainer wording).
+[*]New gallery pictures on the Steam page.
+[/list]
+
+Full list: [url=https://github.com/vbardales/Rimworld-Ancient-Buildings-Renew/blob/main/CHANGELOG.md]CHANGELOG.md[/url]
+```
 ### 1.1.0 (sent 2026-10-15)
 
 The 1.7 run was green (`STATUS.md`, `tested_1_7: yes`, 2026-10-14). Sent by the CI on 2026-10-15 (run 38761642762, tag `v1.1.0`). Version alone on the first line:
@@ -174,6 +200,22 @@ emoticons). To post only after item 3806708945 is public; Virginie rewrites it i
 
 ```
 Your concrete fence, lamppost and vending machine are the worn, lived-in look I wanted in a colony, so they went to 1.6 as [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url]: your original textures are preserved and credited to you, and your unused air-conditioner texture finally got a def :) If you'd rather it came down, say so and it does.
+```
+
+### Gallery mods not yet in the register (2026-11-19)
+
+The other gallery mods already have a posted or not-applicable row in `WORKSHOP_COMMENTS.md`; this mod was added to their "Covers" column. Two visual mods installed for the captures have no row yet (rows `drafted`). Virginie rewrites and posts them in her own voice, under 1,000 characters, only after the next release is public.
+
+Show Me Your Hands, 2475965842:
+
+```
+Show Me Your Hands is installed for every picture of the gallery of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url], so a tool or a log a colonist carries is drawn in their hands. It is the little detail that makes a paused game look lived in :) Thank you for keeping it up to date!
+```
+
+Yayo's Animation (Continued), 2877292196:
+
+```
+Yayo's Animation (Continued) is installed for the gallery pictures of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806708945]Ancient Buildings Renew (unofficial)[/url], where colonists are caught mid-action. Thank you to YAYO for the original and to Soky for carrying it on :)
 ```
 
 ### Use This Instead, 3396308787

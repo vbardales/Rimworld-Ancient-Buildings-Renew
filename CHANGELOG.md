@@ -7,6 +7,9 @@ All notable changes to this mod are documented here.
 ### Fixed
 
 - The simple kitchen stove can now be cooked at. It carried the electric stove's recipes, but the game only lets colonists cook at the benches listed by the work giver `DoBillsCook`, and the stove was in none: a colony with only this stove could not cook at all. A new patch, `Mod/Patches/AB_Stove_WorkGiver.xml`, adds it to that list.
+### Changed
+
+- The in-game descriptions of the stove, the vending machine, the barrier, the lamppost and the air conditioner are reworded, in English and in French (the French of the vending machine and the lamppost was validated again on 2026-11-16): same meaning, plainer wording ("stovetop", "uses more power", "provides light").
 
 ## [1.1.0] - 2026-10-15
 
