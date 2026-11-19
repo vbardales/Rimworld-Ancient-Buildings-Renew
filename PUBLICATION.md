@@ -225,14 +225,14 @@ is cleaned`, added); the drawn light cone brown instead of yellow, so the cone t
 
 ## Gallery subtitles
 
-One English line per scene, burned into the bottom of the image (`GALLERY.md`, "Sous-titres"; tool `scripts/Add-Subtitle.ps1`, originals kept in `Art/Gallery-clean/`). None of the seven scenes has an interface window, so each one gets a line; `0-preview.png` gets none. The lines follow the reworked story of `15-gallery.feature` (Ravi at noon, Mei in the afternoon heat, torches at dawn and dusk, the jacket off at 15:00). The images of that story are not shot yet: the file names and final indexes are set at reindexing, after the owner accepts the captures. Until then the column "scene" is the scenario number of the feature.
+One English line per scene, burned into the bottom of the image (`GALLERY.md`, "Sous-titres"; tool `scripts/Add-Subtitle.ps1`, originals kept in `Art/Gallery-clean/`). None of the seven scenes has an interface window, so each one gets a line; `0-preview.png` gets none. The lines follow the story of `15-gallery.feature` (one summer day at the last stop of an old road, the wood as the thread). Burned 2026-11-19.
 
 | scene | file | line |
 |---|---|---|
-| 1 | to set at reindexing | The road comes in at dawn, two torches still burning from the night. |
-| 2 | to set at reindexing | The concrete barrier and the fence run side by side along the road. |
-| 3 | to set at reindexing | Ravi minds the stop while Nelim walks away with a hot meal. |
-| 4 | to set at reindexing | The vending machine still holds sound meals at noon. |
-| 5 | to set at reindexing | In the heat of the afternoon, the old air conditioner keeps the shade cool. |
-| 6 | to set at reindexing | At dusk the torches are lit again and the whole stop rests together. |
-| 7 | to set at reindexing | At night the lamppost burns on the sunlight it stored, with no wire in sight. |
+| 1 | 1-road-comes-in.jpg | At dawn Nelim brings the first log to the cold brazier. |
+| 2 | 2-barrier-and-fence.jpg | Nelim mends the old fence, steel and wood stacked at the gap. |
+| 3 | 3-the-stove-at-eleven.jpg | The old stove cooks again, a meal ready beside Nelim. |
+| 4 | 4-the-vending-machine-at-noon.jpg | At noon the vending machine feeds a traveller and Nelim takes the coin. |
+| 5 | 5-the-cold-unit-at-three.jpg | In the afternoon heat the old air conditioner keeps the food cold. |
+| 6 | 6-the-six-buildings-at-dusk.jpg | At dusk the six buildings stand lit and two people share the last meal. |
+| 7 | 7-the-lamppost-at-night.jpg | At night the lamppost holds the dark while Nelim carries out tomorrow's first log. |
