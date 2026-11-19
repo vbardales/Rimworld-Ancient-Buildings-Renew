@@ -150,6 +150,37 @@ Two files the game never loaded.
 `About/PublishedFileId.txt` was not carried over, for the obvious reason: it names
 SyndicateGamingNetwork's Workshop item.
 
+## Gallery set
+
+The gallery images were played in the Sanctuary of Nelim (Sanctuary Backlot, development only) with the mods below. None of them ships with this mod and none is required; they are credited because the pictures show their work. Nothing here is a dependency.
+
+| Mod | Author | Workshop id | What the gallery uses it for |
+|---|---|---|---|
+| [LTS] Raiments | LimeTreeSnake | [3751997843](https://steamcommunity.com/sharedfiles/filedetails/?id=3751997843) | Nelim's tunic and party dress, Soren's trousers |
+| FashionRIMsta (Continued) | spoonshortage and Nackblad | [3592569869](https://steamcommunity.com/sharedfiles/filedetails/?id=3592569869) | Nelim's cold set (coat, fur hat) and heat set (desert robe) |
+| Vanilla Apparel Expanded | Oskar Potocki, Trunken, Sarg | [1814987817](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817) | boots, Soren's trousers |
+| Lisa's Work Apparel | Hysteria82 | [3709891968](https://steamcommunity.com/sharedfiles/filedetails/?id=3709891968) | Soren's shirts, vests and cap |
+| Ponpeco Accessories | ponpeco | [3298397484](https://steamcommunity.com/sharedfiles/filedetails/?id=3298397484) | Nelim's small earrings |
+| Roo's HD Hairstyles (continued) | Qux | [3559870636](https://steamcommunity.com/sharedfiles/filedetails/?id=3559870636) | Nelim's high ponytail, Soren's tidy hair |
+| WDI's Realistic Bodies | Windonsi, Starkz | [3527486510](https://steamcommunity.com/sharedfiles/filedetails/?id=3527486510) | the colonists' bodies |
+| Female Body Variants Continued | DanZinagri and tiagocc0 | [3798082132](https://steamcommunity.com/sharedfiles/filedetails/?id=3798082132) | Nelim's body |
+| Female Apparel Variants Continued | DanZinagri and tiagocc0 | [3799726535](https://steamcommunity.com/sharedfiles/filedetails/?id=3799726535) | how the clothes sit on the body |
+| AB's Visible Pants | aedbia | [2986402536](https://steamcommunity.com/sharedfiles/filedetails/?id=2986402536) | the trousers drawn on the legs |
+| [NL] Facial Animation - WIP | Nals | [1635901197](https://steamcommunity.com/sharedfiles/filedetails/?id=1635901197) | the faces and smiles |
+| [NL] Facial Animation - Experimentals | Nals | [2581693737](https://steamcommunity.com/sharedfiles/filedetails/?id=2581693737) | the faces |
+| Vanilla Textures Expanded - [NL] Facial Animation | Oracle of Thessia | [2816938779](https://steamcommunity.com/sharedfiles/filedetails/?id=2816938779) | the faces |
+| Akeron Extras - Facial Animations | Newton Zephyr | [2889716301](https://steamcommunity.com/sharedfiles/filedetails/?id=2889716301) | the faces |
+| EyeGenes3 | Lucius | [3745223213](https://steamcommunity.com/sharedfiles/filedetails/?id=3745223213) | the eyes |
+| Facial Animation Performance Patch | astryl | [3790129900](https://steamcommunity.com/sharedfiles/filedetails/?id=3790129900) | the faces, load patch |
+| [VK]FacialAnimation add closed eyes | Vi/Kirisaki | [3694711465](https://steamcommunity.com/sharedfiles/filedetails/?id=3694711465) | the eyes |
+| Vanilla Experimentals for Facial Animation | SunshineyDays | [3753978140](https://steamcommunity.com/sharedfiles/filedetails/?id=3753978140) | the eyes |
+| Visual beauty for Facial Animation | SleepyFrieren | [3685072616](https://steamcommunity.com/sharedfiles/filedetails/?id=3685072616) | the faces |
+| NL Facial Animation - Init Fix | Moshii | [3609895011](https://steamcommunity.com/sharedfiles/filedetails/?id=3609895011) | the faces, load fix |
+| NL Facial Animation - Load Fix | CCJ | [3721489042](https://steamcommunity.com/sharedfiles/filedetails/?id=3721489042) | the faces, load fix |
+| Show Me Your Hands | Mlie | [2475965842](https://steamcommunity.com/sharedfiles/filedetails/?id=2475965842) | installed for the captures (hands on held tools) |
+| Yayo's Animation (Continued) | YAYO, Soky | [2877292196](https://steamcommunity.com/sharedfiles/filedetails/?id=2877292196) | installed for the captures |
+
+The map of the gallery pass holds other mods (tattoos, Hat Hair Control, further apparel and body packs, RJW family): no scene of this gallery shows their work, so they are not credited.
 ## Notes from the port
 
 - **Five defs, and four of the five needed nothing.** `Check-XmlFields.ps1` reported exactly one
