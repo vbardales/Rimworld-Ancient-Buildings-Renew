@@ -20,7 +20,7 @@ first release, and for whoever takes the mod over.
   Publish run 37831089676 sent it, with `--preview` and `--description`.
 - **Rollback used once**: the owner set the item back to private on 2026-10-08 to rename the `packageId`; `1.0.1` (dry-run
   37836588161 green, publish 37836720872) then went out and the item is public again at her word.
-- **Regression of 1.0.1** green (`STATUS.md`, `docs/runs/2026-10-10.txt`).
+- **Regression of 1.0.1** green (`STATUS.md`, `Docs/runs/pickle.md`).
 - The rollback target is in "Fail fast".
 
 ## Description
@@ -125,7 +125,7 @@ The 1.7 run was green (`STATUS.md`, `tested_1_7: yes`, 2026-10-14). Sent by the 
 
 ### Previous version: 1.0.1 (sent)
 
-Sent by CI run 37836720872 on 2026-10-08; the texts of the 1.0.0 and 1.0.1 notes are in `docs/runs/2026-10-10.txt`. For the next version, write its note here
+Sent by CI run 37836720872 on 2026-10-08; the texts of the 1.0.0 and 1.0.1 notes are in `Docs/runs/pickle.md`. For the next version, write its note here
 before the dispatch, with the version alone on the first line, in the form below.
 
 ```
@@ -145,13 +145,13 @@ visibility: making the item private again is a manual act of the owner on Steam.
 
 Before any later `publish` (`AUDIT.md`, `prepareRelease -> publish`): every scenario that failed has a green replay on a build
 that holds its fix, and the owner's validations are made. The regression of the whole suite runs after the commit, in small
-tickets, and its verdict goes to `STATUS.md` and `docs/runs/`. A red regression is a defect of the published version: roll back to
+tickets, and its verdict goes to `STATUS.md` and `Docs/runs/pickle.md`. A red regression is a defect of the published version: roll back to
 the target above, then fix apart.
 
 - Scenarios that failed and were replayed green (2026-09-24 to 28): the identifier scenario in English and French, the incompatibility
   scenario, the wall cooling (eight fix tickets), the lamppost cone and the French wording. Nothing red is open in the suite; the
   gallery scenarios are captures, not assertions.
-- The regression of 1.0.1 is green (tickets 6598, ca1c, a8bb, `docs/runs/2026-10-10.txt`).
+- The regression of 1.0.1 is green (tickets 6598, ca1c, a8bb, `Docs/runs/pickle.md`).
 - Each new good version moves the target: tag it, then write its tag and SHA here.
 
 ## Comments on other mods' pages

@@ -1,7 +1,7 @@
 # Pickle suite for Ancient Buildings Renew
 
 In-game scenarios for a mod that ships six `ThingDef`s, no code and no patch. **All four passes, features 08 to 11 and their fix tickets have
-played, each scenario has a green run (2026-09-24 to 26, `../../docs/runs/`).** `../../TESTING.md` says what belongs here, what stays manual and
+played, each scenario has a green run (2026-09-24 to 26, `../../Docs/runs/pickle.md`).** `../../TESTING.md` says what belongs here, what stays manual and
 why. Nothing in this folder is part of `Mod/`, which is what Steam receives whole.
 
 ## What is asserted
@@ -115,7 +115,7 @@ deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
 
-- **Read the run history before trusting a value here**: `../../docs/runs/`. Four passes, fix tickets and features 08 to 11 have played (2026-09-24 to 26); the incompatibility scenario was rewritten after its first run.
+- **Read the run history before trusting a value here**: `../../Docs/runs/pickle.md`. Four passes, fix tickets and features 08 to 11 have played (2026-09-24 to 26); the incompatibility scenario was rewritten after its first run.
 - Confirmed by the first passes (2026-09-24): the fence prints `Defenses`, and the four cells on `test-colony` are free (the placement scenario passed).
 - The first incompatibility run showed the game logs no duplicate for the shared defNames; scenario 05 now asserts the original's own
   `placingDraggableDimensions` error instead.
