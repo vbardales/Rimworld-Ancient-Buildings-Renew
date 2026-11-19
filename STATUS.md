@@ -8,7 +8,7 @@ packageId:    nelim.ancientbuildings
 repo:         Rimworld-Ancient-Buildings-Renew
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.1.1]
+workflow_stage: writeReleaseDocs[1.1.1]
 tested_1_7:   yes
 licence:      silent
 licence_at:   Audit/2026-09-13-rights/README.md
@@ -21,7 +21,7 @@ workshop:     "3806708945 (1.0.0 and 1.0.1 published by the CI, tags v1.0.0 and 
 evidence:     "Pickle reports on disk, Tests/Pickle/evidence/<pass>/ (ignored by git). What to keep: ../docs/TEST-EVIDENCE.md. Rights evidence: Audit/2026-09-13-rights/"
 code_review_sha: 7f6b54b299098926a310d0303dcd2d7e6a467a39
 social_preview_sha256: 9eb209ef5afefdbfea5821b5322e75a4b932757278754cf7fe48964fa4c77c9f
-echo_review_sha: 425e4c3b2a773a6bb35113f98a1e3e7c69b8d70b
+echo_review_sha: d092d6f3c2188e1901f579088611a268a0a9f843
 publication_changelog_review_sha: 5a74e6dab3bc8020aa387e64336afc39df92efc4
 remaining:
 - done: "2026-11-17 REPLAY-AUDIT items closed: features 06 and 07 follow the reworded descriptions (f5d457b); tickets 2a44 (EN, 2 of 2) and 28ea (FR, 2 of 2) green on f5d457b, evidence Tests/Pickle/evidence/labels-en-2026-11-16 and labels-fr-2026-11-16 (7.d, 7.f closed). code_review_sha set to HEAD: diff 425e4c3b..HEAD of Mod read 2026-11-16, five description wordings and Preview.png, no code. Stage back to shootGallery[1.1.1]."
@@ -43,6 +43,7 @@ remaining:
 - open: "2026-11-19 ticket 5d55 GREEN (scene 4 v12), rated on the opened capture and 268 px thumbnail: REDO (machine about 43 px and centred, but Soren and Nelim cut at the bottom edge, dog head cut at the right edge, Soren frown from his roster). Capture and run folder deleted. v13 (commit 9ecd91b): zoom 1.6 on (199, 188), decor row at z 189, pawns and dog at z 188. Ticket 20261119-102742-461-6b2e filed (scene 4 alone, evidence Tests/Pickle/Inbox/gallery-lg-28-2026-11-19), keep the tree as it is until RUN_DONE. Candidates: 1, 2 (4.0 borderline), 3, 5, 6, 7."
 - open: "2026-11-19 ticket 6b2e GREEN (scene 4 v13), rated on the opened capture and 268 px thumbnail: REDO (all whole, but machine about 38 px at 268, Nelim over its corner, lower third bare; decoration 3.5). Capture and run folder deleted. v14 (commit 16b40ca): zoom 1.4 on (199, 188), machine and both pawns in one row z 188, Gold (199, 187), Shogun (200, 187), decor row z 189. Ticket 20261119-103203-268-0c21 filed (scene 4 alone, evidence Tests/Pickle/Inbox/gallery-lg-29-2026-11-19), keep the tree as it is until RUN_DONE. Candidates: 1, 2 (4.0 borderline), 3, 5, 6, 7."
 - open: "2026-11-19 ticket 0c21 GREEN (scene 4 v14), rated on the opened capture and 268 px thumbnail: candidate (machine about 43 px, centred, unobstructed; both faces, dog whole; image 4.0, understanding 4.0, decoration 4.0, adequacy 4.0). All seven shots are candidates (Art/Gallery-clean 1 to 7). rate-gallery run by the session: subtitles written in PUBLICATION.md (Gallery subtitles), burned into Art/Gallery 1 to 7 (old published series of 2026-10-08 removed from Art/Gallery, git keeps it), each line read on one line, lines 6 and 7 checked on the opened image. Stage moved to mountPreview[1.1.1]. Next: Preview and ModIcon check, then the state ready to publish (owner validates only that state); code_review_sha set 2026-11-18 on the stove patch; Steam gallery slot replacement goes with the next publish."
+- open: "2026-11-19 mountPreview done (10.a, 10.a bis): echo KEPT (Art/echo-source.png is the line art of the buildings, the gallery shows the same six buildings, no real disagreement) and Preview-source.png KEPT (Preview.png unchanged since 2026-11-05, already liked by the owner, not touched); echo_review_sha set to HEAD. 10.d render checks unchanged (Preview.png not re-rendered, 10.f social preview unchanged). Stage moved to writeReleaseDocs[1.1.1]. Next: 11.a to 11.k (PUBLICATION.md description and gallery table aligned with the new series, gallery-credits INFO: list in ATTRIBUTION.md the gallery mods really used), then the state ready to publish; Steam gallery slots replaced at the next publish."
 - unverified: "Known: the echo line art overlaps the subtitle 'Renew (unofficial)' on the Preview, accepted by the owner 2026-10-12."
   - unverified: "Steam page, item visibility and the new packageId on Steam are not readable by this session; the owner reported them done on 2026-10-08."
   - decided: "existing-save migration: dropped, owner decision 2026-10-11 (chat): backward compatibility with saves of the original ancientbld.core is not guaranteed and not tested. TESTING.md protocol kept for reference only. Open: Mod/About/About.xml line 50 still says a save moves between the two mods; corrected in the 1.1.0 changes (description, commit cd2ec4f, 2026-10-14)."
@@ -51,7 +52,7 @@ remaining:
   - validated: "ModIcon.png 32 px readability: validated by the owner in chat on 2026-10-11 (128 px icon opened by this session, winking mascot and column read well). Art/ModIcon-signature-candidate.png stays an untracked candidate, not this session's."
 updated:      2026-11-17, replay-audit unchanged at shootGallery[1.1.1] (first open 9.a, 8.l fixed in place: run journal lines 2026-11-05 and 2026-11-16, tested_on), labels 06 and 07 green, stage back to shootGallery[1.1.1], scene 3 v7 failed (no ingredients), fixed; before that 2026-11-16, replay-audit moved stage back to writeTests[1.1.1] (7.d, 7.f open); before that 2026-10-23, stage moved from followUp[1.1.0] to shootGallery[1.1.1] (owner, chat: the gallery is redone, no code change; 1.1.0 stays the last published version); before that 2026-10-11, non-reg tickets queued on 6f2b69a (minimal-en, minimal-fr, sans-biotech, incompat-original; ancientbld.core re-downloaded to the WSL cache), protocols re-read; before that 2026-10-10, dormant at the owner's word, cleanup of STATUS, TESTING, PUBLICATION, PROTOCOLS-READ and evidence done (WSL cleanup done)
 session:      local_03bde249-3cf4-43eb-8e1b-d37f223b9025
-protocols_read_sha: e45928eab90345ec0880688a0d9e3e5f40043a5e
+protocols_read_sha: 1cd32514ae4d88b111355eee90d416ebf64a9c86
 ---
 # Ancient Buildings Renew: status
 
