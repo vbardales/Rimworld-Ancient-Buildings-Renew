@@ -2,7 +2,7 @@
 
 All notable changes to this mod are documented here.
 
-## [Unreleased]
+## [1.1.1] - 2026-11-19
 
 ### Fixed
 
