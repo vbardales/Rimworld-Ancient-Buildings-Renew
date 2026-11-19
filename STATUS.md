@@ -119,3 +119,6 @@ Story: one summer day at the last stop of an old road, the WOOD is the thread (f
 ## Ecosystem (PiI, 2026-11-13, docs/inventory/ecosystem-steam/AncientBuildingsRenew.md, protocols e4ad269)
 
 Only the original "Ancient" Buildings (2566355159, 1.3, dead) holds our 5 defNames (stove, vending machine, concrete barrier, lamppost, concrete fence): fork-or-rewrite, expected. Neighbours, no duplicate: juc - Ancient Buildings 3549079451 (other 1.6 rewrite, defName overlap not checked), Minify Ancient Buildings 3547780744 (minifies the ruins), Buildable Ancient Stockpiles 3530842173 (same theme, other buildings). Kept subscribed by PiI: 2566355159 (pickle map), 3549079451.
+
+
+Refresh 2026-11-19 (DELTA for 1.1.2, PiI): nothing new since 2026-11-13. No fork, replacement, duplicate, patch, retexture or translation of the original or of ours; original 2566355159 and the three linked mods (juc 3549079451, Minify 3547780744, Buildable Ancient Stockpiles 3530842173) have no new version. Name neighbours only (Ancient urban ruins family, Dismantle Ancient Junk 2871064871 updated 2026-11-18), unrelated content. Verdict unchanged; no translation to integrate at localize beyond English and French; no worklist row.
