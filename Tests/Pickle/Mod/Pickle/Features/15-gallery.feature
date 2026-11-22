@@ -97,6 +97,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: the render tree of "Nelim" is rebuilt
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: "Nelim" stands at (204, 189) facing West
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 186) facing North
@@ -160,6 +164,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: "Nelim" stands at (203, 186) facing West
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing East
@@ -212,6 +220,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (198, 187) facing East
     And Nelim's Pickle Tools: the animals named "Shogun" are counted, 1 expected
@@ -259,6 +271,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "LTS_Tunika" worn by "Nelim" is dyed rgb (31, 122, 92)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing West
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Soren" loses all genes
@@ -304,7 +320,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     And Nelim's Pickle Tools: the face parts of "Nelim" are logged
-    Then I take a screenshot "gallery 4 - the vending machine up close"
+    And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    Then I take a screenshot "gallery 4- the vending machine up close"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 5. the cold unit at three
@@ -347,6 +364,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: the render tree of "Nelim" is rebuilt
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Soren" loses all genes
@@ -438,6 +459,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "LTS_LacedDress" worn by "Nelim" is dyed rgb (31, 58, 95)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_PAESmallEarrings" made of "Gold"
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: "Nelim" stands at (204, 186) facing West
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Soren" loses all genes
@@ -479,11 +504,15 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the sun glow of the map is held at 0.05
     And Nelim's Pickle Tools: the sun light of the map is dimmed to at most 0.35, lamps kept
     And Nelim's Pickle Tools: the light of the map is refreshed
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.8
+    And Nelim's Pickle Tools: the light of the map is refreshed
+    And Nelim's Pickle Tools: the light at (200, 188) is logged
+    And Nelim's Pickle Tools: the light at (210, 195) is logged
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
@@ -545,6 +574,10 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: the render tree of "Nelim" is rebuilt
     And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" face tattoo is "none"
+    And Nelim's Pickle Tools: "Nelim" face skin is "SkinRosyCheeks"
+    And Nelim's Pickle Tools: the Beauty2 mouth offset is 0.05
+    And Nelim's Pickle Tools: the Beauty2 mouth vertical offset is 0.02
     And Nelim's Pickle Tools: "Nelim" stands at (204, 187) facing West
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 189) facing South
@@ -554,11 +587,15 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
     When Nelim's Pickle Tools: all filth is cleaned
+    And Nelim's Pickle Tools: the sun glow of the map is held at 0.05
     And Nelim's Pickle Tools: the sun light of the map is dimmed to at most 0.10, lamps kept
     And Nelim's Pickle Tools: the light of the map is refreshed
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.6
+    And Nelim's Pickle Tools: the light of the map is refreshed
+    And Nelim's Pickle Tools: the light at (200, 188) is logged
+    And Nelim's Pickle Tools: the light at (210, 195) is logged
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" facial expression "normal+moodCheerful2" is held
     Then I take a screenshot "gallery 7 - the lamppost at night"
