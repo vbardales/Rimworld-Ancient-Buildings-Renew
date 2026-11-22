@@ -298,11 +298,11 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelLeatherVest" made of "Leather_Plain"
     And Nelim's Pickle Tools: the "LisaWork_ApparelLeatherVest" worn by "Soren" is dyed rgb (107, 79, 58)
     And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthSimpleMouth"
     And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
     And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
     And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
     And Nelim's Pickle Tools: "Soren" face kit is "calm"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthSimpleMouth"
     And Nelim's Pickle Tools: "Soren" face is held neutral
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (200, 187) facing East
@@ -321,6 +321,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     And Nelim's Pickle Tools: the face parts of "Nelim" are logged
     And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    And Nelim's Pickle Tools: "Soren" mouth reads "MouthSimpleMouth"
     Then I take a screenshot "gallery 4- the vending machine up close"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -391,11 +392,11 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelCap" made of "Cloth"
     And Nelim's Pickle Tools: the "LisaWork_ApparelCap" worn by "Soren" is dyed rgb (112, 128, 144)
     And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthSimpleMouth"
     And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
     And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
     And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
     And Nelim's Pickle Tools: "Soren" face kit is "calm"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthSimpleMouth"
     And Nelim's Pickle Tools: "Soren" face is held neutral
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (197, 187) facing North
@@ -413,6 +414,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" facial expression "normal+moodCheerful2" is held
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
+    And Nelim's Pickle Tools: "Soren" mouth reads "MouthSimpleMouth"
     Then I take a screenshot "gallery 5 - the cold unit"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -505,8 +507,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: the sun glow of the map is held at 0.05
-    And Nelim's Pickle Tools: the sun light of the map is dimmed to at most 0.10, lamps kept
-    And Nelim's Pickle Tools: the glow of the lamps is scaled to 150 percent
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.2
     And Nelim's Pickle Tools: the light of the map is refreshed
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
@@ -520,6 +521,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" mouth is "MouthSimpleMouth"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     And Nelim's Pickle Tools: the face parts of "Nelim" are logged
+    And Nelim's Pickle Tools: "Soren" mouth reads "MouthSimpleMouth"
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -590,8 +592,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is paused
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: the sun glow of the map is held at 0.05
-    And Nelim's Pickle Tools: the sun light of the map is dimmed to at most 0.10, lamps kept
-    And Nelim's Pickle Tools: the glow of the lamps is scaled to 150 percent
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.1
     And Nelim's Pickle Tools: the light of the map is refreshed
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
