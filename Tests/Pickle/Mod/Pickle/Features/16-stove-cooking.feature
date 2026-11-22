@@ -7,7 +7,7 @@
 #
 # Played in the Sanctuary (the save with a colonist, Nelim) in English; the stove is spawned, powered and given
 # one meal bill, with potatoes on the floor beside it.
-@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.colonistrace
+@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor
 Feature: a colonist cooks at the stove
 
   Scenario: the game's own cooking work giver gives a colonist the bill of the stove
