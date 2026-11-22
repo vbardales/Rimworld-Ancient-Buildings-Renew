@@ -94,6 +94,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "Apparel_FSFurCoat" worn by "Nelim" is dyed rgb (31, 58, 95)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurHat" made of "Cloth"
     And Nelim's Pickle Tools: the "Apparel_FSFurHat" worn by "Nelim" is dyed rgb (222, 203, 164)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: the render tree of "Nelim" is rebuilt
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (204, 189) facing West
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
@@ -301,6 +303,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 1.4
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: the face parts of "Nelim" are logged
     Then I take a screenshot "gallery 4 - the vending machine up close"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -341,6 +344,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "Apparel_FSDesertRobe" worn by "Nelim" is dyed rgb (222, 203, 164)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Headwrap" made of "Cloth"
     And Nelim's Pickle Tools: the "Apparel_Headwrap" worn by "Nelim" is dyed rgb (40, 100, 200)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: the render tree of "Nelim" is rebuilt
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
@@ -474,7 +479,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
-    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.35
+    And Nelim's Pickle Tools: the sun light of the map is dimmed to at most 0.35, lamps kept
+    And Nelim's Pickle Tools: the light of the map is refreshed
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.8
@@ -482,6 +488,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: the face parts of "Nelim" are logged
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -535,6 +542,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: the "Apparel_FSFurCoat" worn by "Nelim" is dyed rgb (31, 58, 95)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_FSFurHat" made of "Cloth"
     And Nelim's Pickle Tools: the "Apparel_FSFurHat" worn by "Nelim" is dyed rgb (222, 203, 164)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: the render tree of "Nelim" is rebuilt
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (204, 187) facing West
     And Nelim's Pickle Tools: the animal "Shogun" is dressed in "Apparel_leatherdogcollar" dyed "#3b2f2f"
@@ -545,7 +554,8 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
     When Nelim's Pickle Tools: all filth is cleaned
-    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.10
+    And Nelim's Pickle Tools: the sun light of the map is dimmed to at most 0.10, lamps kept
+    And Nelim's Pickle Tools: the light of the map is refreshed
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.6
