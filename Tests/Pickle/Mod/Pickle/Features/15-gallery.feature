@@ -103,12 +103,12 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is normal
     And Nelim's Pickle Tools: I let 20 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: the movement of the colonist "Nelim" is logged for 5 seconds
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.0
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Nelim" facial expression "normal+moodCheerful2" is held
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     Then I take a screenshot "gallery 1 - the road comes in"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -166,11 +166,11 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.0
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Nelim" facial expression "normal+moodCheerful2" is held
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     Then I take a screenshot "gallery 2 - the barrier and the fence up close"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -273,12 +273,12 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" face tattoo is "none"
     And Nelim's Pickle Tools: "Soren" body tattoo is "none"
     And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "VAE_Apparel_Trousers" made of "Cloth"
+    And Nelim's Pickle Tools: the "VAE_Apparel_Trousers" worn by "Soren" is dyed rgb (60, 70, 80)
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelCollaredShirt" made of "Cloth"
     And Nelim's Pickle Tools: the "LisaWork_ApparelCollaredShirt" worn by "Soren" is dyed rgb (112, 128, 144)
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelLeatherVest" made of "Leather_Plain"
     And Nelim's Pickle Tools: the "LisaWork_ApparelLeatherVest" worn by "Soren" is dyed rgb (107, 79, 58)
-    And Nelim's Pickle Tools: "Soren" wears "VAE_Apparel_Trousers" made of "Cloth"
-    And Nelim's Pickle Tools: the "VAE_Apparel_Trousers" worn by "Soren" is dyed rgb (60, 70, 80)
     And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
@@ -358,14 +358,14 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" face tattoo is "none"
     And Nelim's Pickle Tools: "Soren" body tattoo is "none"
     And Nelim's Pickle Tools: "Soren" is undressed
-    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelSafariShirt" made of "Cloth"
-    And Nelim's Pickle Tools: the "LisaWork_ApparelSafariShirt" worn by "Soren" is dyed rgb (225, 215, 190)
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelSafariPants" made of "Cloth"
     And Nelim's Pickle Tools: the "LisaWork_ApparelSafariPants" worn by "Soren" is dyed rgb (200, 180, 140)
+    And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelSafariShirt" made of "Cloth"
+    And Nelim's Pickle Tools: the "LisaWork_ApparelSafariShirt" worn by "Soren" is dyed rgb (225, 215, 190)
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelCap" made of "Cloth"
     And Nelim's Pickle Tools: the "LisaWork_ApparelCap" worn by "Soren" is dyed rgb (112, 128, 144)
     And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
     And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
     And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
@@ -380,13 +380,13 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I let 14 ticks pass
     And game speed is paused
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 188) at zoom 1.6
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Nelim" facial expression "normal+moodCheerful2" is held
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     Then I take a screenshot "gallery 5 - the cold unit"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -544,14 +544,13 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is normal
     And Nelim's Pickle Tools: I let 40 ticks pass
     And game speed is paused
-    And Nelim's Pickle Tools: "Nelim" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.10
     And Nelim's Pickle Tools: the light of the map is logged
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 2.6
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
-    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
+    And Nelim's Pickle Tools: "Nelim" facial expression "normal+moodCheerful2" is held
     Then I take a screenshot "gallery 7 - the lamppost at night"
     And Nelim's Pickle Tools: the decor is removed
 
