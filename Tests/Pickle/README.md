@@ -59,14 +59,15 @@ chosen to save time: they keep out the scenarios that make no sense in that pass
 asserts Biotech is absent from the passes that keep it.
 
 ```text
+# Filter rule (2026-11-22): terms are feature file names with no space, commas mean OR, ! excludes. A term with spaces and no '::' is read as a suite name and plays everything, PickleTools shell suite included (tickets 2e42, 7ab4, 68ae).
 # minimal, English
--Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@without-biotech' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-en
+-Language English -Filter '01-the-mod-loads,02-placement,03-stove-with-biotech,06-labels-en,08-fence-and-barrier-drag,09-lamppost,10-vending-machine,11-stove-and-air-conditioner,12-def-claims,13-wall-cooling,14-air-conditioner-grille,!@without-biotech' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-en
 
 # minimal, French: no map to load, so no @save
--Language French -Filter 'Ancient Buildings Renew - Pickle tests,!@en-only,!@without-biotech,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-fr
+-Language French -Filter '01-the-mod-loads,02-placement,03-stove-with-biotech,07-labels-fr,08-fence-and-barrier-drag,09-lamppost,10-vending-machine,11-stove-and-air-conditioner,12-def-claims,13-wall-cooling,14-air-conditioner-grille,!@without-biotech,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/minimal-fr
 
 # Biotech left out
--DepMap wsl-deps.sans-biotech.map -Language English -Filter 'Ancient Buildings Renew - Pickle tests,!@fr-only,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/sans-biotech
+-DepMap wsl-deps.sans-biotech.map -Language English -Filter '01-the-mod-loads,04-stove-without-biotech,06-labels-en,09-lamppost,11-stove-and-air-conditioner,12-def-claims,13-wall-cooling,14-air-conditioner-grille,!@save' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/sans-biotech
 
 # the original mod beside it (its Workshop item is in the WSL cache since 2026-09-24)
 -DepMap wsl-deps.incompat-original.map -Language English -Filter '05-original-mod-incompatibility' -EvidenceDir AncientBuildingsRenew/Tests/Pickle/evidence/incompat-original
