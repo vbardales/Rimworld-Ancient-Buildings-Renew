@@ -365,7 +365,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: "Soren" wears "LisaWork_ApparelCap" made of "Cloth"
     And Nelim's Pickle Tools: the "LisaWork_ApparelCap" worn by "Soren" is dyed rgb (112, 128, 144)
     And Nelim's Pickle Tools: "Soren" face skin is "SkinNormal"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthLipsSmallSmile"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
     And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
     And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
@@ -480,7 +480,7 @@ Feature: gallery: a day at the last stop of an old road
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.8
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
-    And Nelim's Pickle Tools: "Soren" mouth is "MouthLipsSmallSmile"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthClassicSmile"
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+blink"
     Then I take a screenshot "gallery 6 - the six buildings together at dusk"
     And Nelim's Pickle Tools: the decor is removed
