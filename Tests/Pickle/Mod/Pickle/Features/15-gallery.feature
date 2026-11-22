@@ -406,6 +406,7 @@ Feature: gallery: a day at the last stop of an old road
     And game speed is normal
     And Nelim's Pickle Tools: I let 14 ticks pass
     And game speed is paused
+    And Nelim's Pickle Tools: "Soren" stands at (201, 187) facing West
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: "Soren" face is held neutral
     When Nelim's Pickle Tools: all filth is cleaned
